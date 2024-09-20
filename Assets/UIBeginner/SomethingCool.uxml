@@ -1,15 +1,19 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
     <Style src="project://database/Assets/UIBeginner/SomethingCool.uss?fileID=7433441132597879392&amp;guid=1f9d6ef2f339e694b82197539dbbe36c&amp;type=3#SomethingCool" />
-    <ui:VisualElement class="background">
-        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 1; height: 80%; align-items: stretch;">
-            <ui:ListView name="CharacterList" class="border" style="width: 230px; margin-right: 6px; background-color: rgb(0, 255, 178); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;" />
-            <ui:VisualElement style="flex-grow: 1; align-items: flex-end; justify-content: space-between;">
-                <ui:VisualElement class="border" style="flex-grow: 0; width: 276px; align-items: center; justify-content: center; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; background-color: rgb(0, 234, 255);">
+    <ui:VisualElement name="VisualElement" class="background">
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 1; height: 80%; align-items: stretch; width: 80%;">
+            <ui:ListView name="CharacterList" class="border" style="width: 230px; margin-right: 6px; background-color: rgb(0, 255, 178); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; height: 100%; flex-grow: 1;" />
+            <ui:VisualElement style="flex-grow: 1; align-items: flex-start; justify-content: space-between;">
+                <ui:VisualElement class="border" style="flex-grow: 0; width: 100%; align-items: center; justify-content: center; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; background-color: rgb(0, 234, 255);">
                     <ui:VisualElement class="border" style="flex-grow: 1; width: 120px; height: 120px; background-color: rgb(56, 255, 0); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px;">
                         <ui:VisualElement name="CharacterPortrait" style="flex-grow: 1; -unity-background-scale-mode: scale-to-fit;" />
                     </ui:VisualElement>
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterName" style="-unity-font-style: bold; font-size: 18px;" />
-                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterClass" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterName" class="text-black" style="-unity-font-style: bold; font-size: 18px; color: rgb(0, 0, 0);" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterClass" class="text-black" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center; flex-direction: row; flex-shrink: 1; align-self: auto;">
+                    <ui:Label tabindex="-1" text="Are you sure ???" parse-escape-sequences="true" display-tooltip-when-elided="true" class="text-black square-border" style="margin-right: 0; flex-grow: 1; height: 100%; -unity-text-align: middle-center; font-size: 50%;" />
+                    <ui:Button text="YES" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-grow: 1; height: 100%; font-size: 50%;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

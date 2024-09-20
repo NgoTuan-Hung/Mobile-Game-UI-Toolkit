@@ -19,3 +19,23 @@
     justify-content: center;
     background-color: rgb(37, 106, 115);
 }
+
+.text-black {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.middle-size-text {
+    font-size: 15px;
+}
+
+.square-border {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+}
