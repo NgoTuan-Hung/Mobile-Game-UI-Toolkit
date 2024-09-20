@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX1_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is the best description of how a particle system works in Unity? Select
+      one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.VFX-1
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: A particle system breaks down a complex mesh into its component vertices
+      to simulate many moving parts and produce a visual effect.
+  - IsCorrect: 1
+    Text: A particle system renders many small images or meshes, called particles,
+      to produce a visual effect.
+  - IsCorrect: 0
+    Text: A particle system shoots light through a complex lens, similar to a projector,
+      to produce a visual effect.
+  - IsCorrect: 0
+    Text: A particle system generates individual pixels of varying sizes, each with
+      a different material, to produce a visual effect.
+  m_FeedbackCorrect: Each particle in a system represents an individual graphical
+    element in the effect. The system simulates every particle collectively to create
+    the impression of the complete effect. Individual particles can be 2D images
+    or 3D meshes.
+  m_FeedbackIncorrect: Each particle in a system represents an individual graphical
+    element in the effect. The system simulates every particle collectively to create
+    the impression of the complete effect. Individual particles can be 2D images
+    or 3D meshes.

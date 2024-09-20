@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/Demos/UI/TextScreens.uss?fileID=7433441132597879392&amp;guid=b4cd45086df6e4cef9346a3b538ea803&amp;type=3#TextScreens" />
+    <Style src="project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/Demos/5_Pseudo-classesDemo/Pseudo-classesDemo.uss?fileID=7433441132597879392&amp;guid=f6f523e1862fc4607ba1b4e28967af9b&amp;type=3#Pseudo-classesDemo" />
+    <ui:VisualElement name="background" style="position: absolute; width: 100%; height: 100%; background-color: rgb(217, 217, 217); align-items: center; justify-content: center; flex-direction: row; top: -4px; left: 2px;">
+        <ui:VisualElement name="text-screen__container" style="flex-basis: 30%; height: 100%; padding-left: 2%; flex-wrap: wrap; white-space: normal;">
+            <ui:VisualElement name="text-screen__header" style="flex-basis: 15%; align-items: center; justify-content: flex-start; white-space: nowrap; margin-top: 7%;">
+                <ui:Label text="Title" display-tooltip-when-elided="true" name="text-screen__title" style="flex-basis: 100%; -unity-font-definition: url(&apos;project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&amp;guid=e74ebc05ab3564fb187648ced4e2c0fa&amp;type=2#Roboto-Black SDF&apos;); font-size: 92px; color: rgb(0, 127, 217); align-items: flex-start; -unity-text-align: upper-left; width: 100%;" />
+            </ui:VisualElement>
+            <ui:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." display-tooltip-when-elided="true" name="text-screen__page-text" class="body-text" style="position: relative; font-size: 22px; flex-shrink: 1; white-space: normal; -unity-font-definition: url(&apos;project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); height: auto; width: auto; flex-grow: 0; flex-basis: auto;" />
+            <ui:VisualElement name="text-screen__footer" style="flex-basis: 9%; flex-grow: 1; padding-top: 6%;">
+                <ui:VisualElement name="text-screen__button-panel" style="flex-direction: row; justify-content: space-between; position: relative; width: 100%; height: auto; left: 0; top: 0;">
+                    <ui:Button display-tooltip-when-elided="true" name="text-screen__button-last" enable-rich-text="true" text="⟵BACK" class="button-nextlast next-last-button" style="rotate: 0;" />
+                    <ui:Button text="Action" display-tooltip-when-elided="true" name="text-screen__action-button" class="tutorial-button" style="position: relative; flex-basis: 44%; left: 0; display: none;" />
+                    <ui:Button display-tooltip-when-elided="true" name="text-screen__button-next" text="MORE⟶" class="button-nextlast next-last-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="demo__container" style="flex-basis: 70%; height: 81%; align-items: center; justify-content: center; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; flex-direction: column; top: -5%; margin-left: 0;">
+            <ui:VisualElement name="demo__buttons-group" style="flex-direction: row; width: 100%; flex-basis: 86%;">
+                <ui:VisualElement name="demo__container--1" style="flex-basis: 33%; height: 100%; width: 100%; justify-content: center; margin-left: 3%; margin-right: 3%; margin-top: 3%; margin-bottom: 3%;">
+                    <ui:Button text="button-1" display-tooltip-when-elided="true" name="demo__button--1" class="default-button" style="flex-basis: 33%; width: 100%;" />
+                    <ui:Label text="This button has no pseudo-classes" display-tooltip-when-elided="true" name="demp__label--1" class="button-caption" />
+                </ui:VisualElement>
+                <ui:VisualElement name="demo__container--2" style="flex-basis: 33%; height: 100%; width: 100%; justify-content: center; margin-left: 3%; margin-right: 3%; margin-top: 3%; margin-bottom: 3%;">
+                    <ui:Button text="button-2" display-tooltip-when-elided="true" name="demo__button--2" class="pseudo-class-button" style="flex-basis: 33%; width: 100%;" />
+                    <ui:Label text="This button adds &lt;b&gt;:hover&lt;/b&gt; and &lt;b&gt;:active&lt;/b&gt; pseudo-classes" display-tooltip-when-elided="true" name="demo__label--2" class="button-caption" />
+                </ui:VisualElement>
+                <ui:VisualElement name="demo__container--3" style="flex-basis: 33%; height: 100%; width: 100%; justify-content: center; margin-left: 3%; margin-right: 3%; margin-top: 3%; margin-bottom: 3%;">
+                    <ui:Button text="button-3" display-tooltip-when-elided="true" name="demo__button--3" class="pseudo-class-button" style="flex-basis: 33%; width: 100%; display: flex;" />
+                    <ui:Label text="This button is &lt;b&gt;:disabled&lt;/b&gt;" display-tooltip-when-elided="true" name="demo__label--3" class="button-caption" />
+                </ui:VisualElement>
+                <ui:VisualElement name="demo__container--4" style="flex-basis: 33%; height: 100%; width: 100%; justify-content: center; margin-left: 3%; margin-right: 3%; margin-top: 3%; margin-bottom: 3%;">
+                    <ui:Button text="button-4" display-tooltip-when-elided="true" name="demo__button--4" class="pseudo-class-button" style="flex-basis: 33%; width: 100%; display: flex;" />
+                    <ui:Label text="This button is &lt;b&gt;:disabled&lt;/b&gt; with &lt;b&gt;Picking Mode&lt;/b&gt; set to &lt;b&gt;Ignore&lt;/b&gt;" display-tooltip-when-elided="true" name="demo__label--4" class="button-caption" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="demo__toggle-text-container" style="flex-basis: 26%; width: 91%; flex-direction: row; justify-content: center; left: -7%;">
+                <ui:VisualElement name="demo__toggle-container" style="flex-basis: 47%; justify-content: center; align-items: center; margin-right: 4%;">
+                    <ui:Toggle label="Toggle" name="demo__toggle-1" class="pseudo-class-toggle" />
+                    <ui:Label text="This toggle uses a&#10;&lt;b&gt;:checked&lt;/b&gt; pseudo-class" display-tooltip-when-elided="true" name="demo__toggle-label-1" class="button-caption" style="width: 62%; flex-basis: 51%;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="demo__text-container" style="flex-basis: 35%; justify-content: center;">
+                    <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" text="filler text" name="demo__text-field-1" class="pseudo-class-text-field" style="transition-duration: 0.2s;" />
+                    <ui:Label text="This text field uses a&#10;&lt;b&gt;:focus&lt;/b&gt; pseudo-class" display-tooltip-when-elided="true" name="demo__text-label-1" class="button-caption" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="⟵MENU" display-tooltip-when-elided="true" name="back-button" class="back-button" />
+    </ui:VisualElement>
+</ui:UXML>

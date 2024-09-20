@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4609371495129659455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4568049325337799415}
+  - component: {fileID: 3901791035739672135}
+  - component: {fileID: 9030453853899043638}
+  m_Layer: 5
+  m_Name: DemoSelectionScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4568049325337799415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609371495129659455}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3901791035739672135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609371495129659455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: f8cb647c893b5418fbf3c52d50f43929, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 691eb7f107a474e71b632872649b3fa7, type: 3}
+  m_SortingOrder: 0
+--- !u!114 &9030453853899043638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609371495129659455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40eca96064c94d318824886b2295410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DemoInfo:
+  - {fileID: 11400000, guid: a59f233834c8541b4964840c9ab9bc07, type: 2}
+  - {fileID: 11400000, guid: 5748727ab9680441d93381622e60eeb0, type: 2}
+  - {fileID: 11400000, guid: 13576e73f86de4f62ba34b7f6ab88492, type: 2}
+  - {fileID: 11400000, guid: 073d2878f65604774b926c2b498c1639, type: 2}
+  - {fileID: 11400000, guid: c1c162af52ddd4a6b9f1f5d77cdbc1fb, type: 2}
+  - {fileID: 11400000, guid: 5a2739d2647434865b1df13c81248168, type: 2}
+  - {fileID: 11400000, guid: e6225522b697741cdba011d7763f9f2c, type: 2}
+  - {fileID: 11400000, guid: 5fd5b70f49cdf493d98fa8ab13acf405, type: 2}
+  - {fileID: 11400000, guid: 6800e768839d543f489a41fc74ad2acc, type: 2}
+  - {fileID: 11400000, guid: 037b485871660478ebde5d711b9d1fe4, type: 2}
+  m_ScenePathToUnload: Assets/Demos/0_DemoSelection/DemoSelection.unity

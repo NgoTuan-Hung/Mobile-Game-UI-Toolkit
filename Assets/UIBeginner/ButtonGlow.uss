@@ -1,0 +1,9 @@
+#shit-button > OuterGlow {
+    border-radius: 6px;
+    --glow-color: clear;
+    --glow-size: 10;
+}
+
+#shit-button:hover > OuterGlow {
+    --glow-color: green;
+}

@@ -1,0 +1,25 @@
+{
+  "text": "In the Particle System component, what does the Shape module control? Select one answer.",
+  "skills": "Skill-L2-Art.VFX-2",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "The shape of an individual particle.",
+      "isCorrect": false
+    },
+    {
+      "text": "The volume that particles within a system can exist in – when particles leave this shape, they disappear.",
+      "isCorrect": false
+    },
+    {
+      "text": "The shape of the collider that particles cannot enter – if particles collide with this shape, they disappear.",
+      "isCorrect": false
+    },
+    {
+      "text": "The shape of the volume that is emitting particles – particles can only be spawned within the defined shape.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "This module defines the volume or surface from which particles can be emitted, and the direction of the start velocity. The Shape property defines the shape of the emission volume, and the rest of the module properties properties vary depending on the Shape you choose.",
+"feedbackIncorrect": ""
+}

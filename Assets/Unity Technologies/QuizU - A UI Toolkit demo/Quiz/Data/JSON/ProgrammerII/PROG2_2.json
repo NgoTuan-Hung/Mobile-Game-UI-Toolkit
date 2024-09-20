@@ -1,0 +1,25 @@
+{
+  "text": "If you want to destroy an object when its health reaches 0, what code would be best in the blank below?",
+  "skills": "-",
+  "shuffleOptions": false,
+  "options": [
+    {
+      "text": "health > 0",
+      "isCorrect": false
+    },
+    {
+      "text": "health.0",
+      "isCorrect": false
+    },
+    {
+      "text": "health < 1",
+      "isCorrect": true
+    },
+    {
+      "text": "health < 0",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Since the “health” variable is an int, anything less than 1 would be “0”. The sign for “less than” is “<”.",
+  "feedbackIncorrect": "Since the “health” variable is an int, anything less than 1 would be “0”. The sign for “less than” is “<”."
+}

@@ -1,0 +1,25 @@
+{
+    "text": "Which of the following would you use to control the layout of multiple UI elements in UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "<b>VisualElement</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>USS</b>",
+            "isCorrect": true
+        },
+        {
+            "text": "<b>UXML</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>EventBase</b>",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>USS</b> (Unity Style Sheets) is used to control the layout and appearance of UI elements in UI Toolkit.",
+    "feedbackIncorrect": "The <b>USS</b> (Unity Style Sheets) is used to control the layout and appearance of UI elements in UI Toolkit, not the <b>VisualElement</b>, <b>UXML</b>, or <b>EventBase</b>."
+}

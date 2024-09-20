@@ -1,0 +1,26 @@
+  {
+    "text": "What are two ways to make an object look metallic using the URP/Lit Shader?",
+    "skills": "Skill-L2-Art.Shad.Mat-1",
+    "shuffleOptions": true,
+    "options": [
+      {
+        "text": "By using the Specular workflow or the Metallic workflow in a material.",
+        "isCorrect": true
+      },
+      {
+        "text": "By applying a diffuse map or a metallic map.",
+        "isCorrect": false
+      },
+      {
+        "text": "By applying a diffuse map and a normal map, or a specular map and a height map.",
+        "isCorrect": true
+      },
+      {
+        "text": "By increasing smoothness to 100% to create a specular reflection, or removing the diffuse map to eliminate any diffuse reflection.",
+        "isCorrect": false
+      }
+    ],
+    "feedbackCorrect": "Unity provides two ways to make objects look metallic. The Specular workflow is the more scientific of the two. The Metallic workflow is simpler, but doesn’t strictly follow the rules of physical light.",
+    "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+  }
+  

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: UQueryDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: UQuery
+  m_BodyText:
+  - "<b>UQuery</b> provides a way to find specific visual elements within the visual
+    tree hierarchy based on certain search criteria. This can include:\n\n\u2022
+    <b>Name:</b>  Each element in the UI hierarchy can be assigned a unique name,
+    serving as its identifier. UQuery allows you to search for these names when you
+    need to reference specific UI elements.\n\n\u2022 <b>USS class:</b>  USS (Unity
+    Style Sheets) classes assign styles to your UI elements. These classes can be
+    used as selectors in a UQuery, letting you find all elements of a specific class.
+    (e.g. applying changes to a group of elements sharing the same class).\n\n\u2022
+    <b>Element type:</b> You can query for elements based on their type (such as
+    Buttons, Labels, Images, etc. derived from <b>VisualElement</b>). For example,
+    you can retrieve all the Button elements in your UI, and apply a specific interaction
+    or styling to them.\n\nQueries can be combined to create more complex search
+    criteria."
+  - "You can use UQuery through the following extension methods:\n\n\u2022 <b>Q</b> 
+    (query for a single matching element)\n\u2022 <b>Query</b>  (query for all matching
+    elements)\n\n<i>Query</i> returns a list of elements that match the selection
+    rules. You can filter the return results of Query with the public methods of
+    <b>UQueryBuilder</b>, such as <b>First</b>, <b>Last</b>, <b>AtIndex</b>, <b>Children</b>,
+    and <b>Where</b>.\n\n<i>Q</i> is the shorthand for <b>Query<T>.First()</b>. It
+    returns the first element that matches the selection rules.\n\nMake sure the
+    names or class names are unique when their scope to ensure expected results. "
+  - 'These examples demonstrate use of UQuery (''root''
+
+    is the root of your
+    visual tree).
+
+
+    Query by name:
+
+
+    <b>// Find a list of elements named
+    ''myElement''
+
+    List<VisualElement> result = root.Query("myElement").ToList();
+
+
+    //
+    Find the first element named ''myElement''
+
+    VisualElement result = root.Q("myElement");</b>
+
+
+    Query
+    by class:
+
+
+    <b>// Find all the elements with the class ''yellow'' and assign
+    them to a list:
+
+    List<VisualElement> result = root.Query(className: "yellow").ToList();
+
+
+    //
+    Find the first element with the class ''yellow''
+
+    VisualElement result =
+    root.Q(className: "yellow");</b>'
+  - "Query by element type:\n\n<b>// Find the first button\nLabel myLabel = root.Q<Button>();\n\n//
+    Find the third button\nVisualElement result = root.Query<Button>().AtIndex(2);\n\n//
+    Find the first button named 'myElement' that has a class of 'yellow':\nVisualElement
+    result = root.Query<Button>(name: \"myElement\", className: \"yellow\").First();</b>\n\nThe
+    <b>Q<T>()</b> and <b>Query<T>()</b> methods take two optional parameters: the
+    name of the element and the class of the element. \n\nNote: you can omit the
+    explicit parameter names (<b>\"name: \"</b>) if you pass the arguments in the
+    defined order."
+  - '
+
+    In this example, select different parameters with the <b>UQuery</b> methods
+    to see the result.
+
+
+    Search the UI for elements by name selector or by class
+    selector. You can also combine queries for more complex results.'

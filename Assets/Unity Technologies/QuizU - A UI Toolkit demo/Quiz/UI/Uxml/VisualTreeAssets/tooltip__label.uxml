@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Quiz/UI/Uss/Tooltips.uss?fileID=7433441132597879392&amp;guid=0442139f67f354b4291df394532b86c6&amp;type=3#Tooltips" />
+    <ui:Label text="tooltip__label" display-tooltip-when-elided="true" name="tooltip__label" class="tooltip-label" />
+</ui:UXML>

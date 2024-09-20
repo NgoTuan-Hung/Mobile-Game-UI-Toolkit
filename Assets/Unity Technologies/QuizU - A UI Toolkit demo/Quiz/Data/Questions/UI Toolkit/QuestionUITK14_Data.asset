@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK14_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In UI Toolkit, what is the purpose of <b>BindableElement</b>?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: It allows elements to be bound to data sources
+  - IsCorrect: 0
+    Text: It allows elements to be bound to event handlers
+  - IsCorrect: 0
+    Text: It allows elements to be bound to animations
+  - IsCorrect: 0
+    Text: It is a base class for all interactive UI elements
+  m_FeedbackCorrect: The <b>BindableElement</b> class in UI Toolkit allows elements
+    to be bound to data sources, such as variables or properties in your scripts,
+    allowing them to automatically update to reflect changes in the underlying data.
+  m_FeedbackIncorrect: The <b>BindableElement</b> class in UI Toolkit allows elements
+    to be bound to data sources, such as variables or properties in your scripts.
+    It is not primarily used to bind elements to event handlers or animations, nor
+    is it a base class for all interactive UI elements.

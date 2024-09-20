@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK11_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In UI Toolkit, how can you specify that a style should only apply when
+      an element is hovered over by the mouse?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 1
+    Text: Using <b>:hover</b> pseudo-class
+  - IsCorrect: 0
+    Text: Using <b>hover</b> attribute
+  - IsCorrect: 0
+    Text: Using <b>onMouseHover</b> event
+  - IsCorrect: 0
+    Text: Using <b>HoverHandler</b> class
+  m_FeedbackCorrect: In Unity's UI Toolkit, the <b>:hover</b> pseudo-class is used
+    to apply styles when an element is hovered over by the mouse. This allows you
+    to create interactive and responsive designs in your user interface.
+  m_FeedbackIncorrect: In Unity's UI Toolkit, styles for an element during a hover
+    event are specified using the <b>:hover</b> pseudo-class. Using a hover attribute,
+    onMouseHover event, or a hypothetical HoverHandler class are not valid methods
+    in UI Toolkit to specify styles for a hover event.

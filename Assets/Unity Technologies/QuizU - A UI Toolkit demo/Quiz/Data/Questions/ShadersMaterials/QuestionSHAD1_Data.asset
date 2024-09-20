@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionSHAD1_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is the difference between a shader and a material?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.Shad-1
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: A shader is a script that runs as part of the rendering process, and a
+      material is an asset that specifies properties to a shader.
+  - IsCorrect: 0
+    Text: A shader is used in physically-based rendering to create photorealistic
+      effects, and a material is used to increase performance.
+  - IsCorrect: 0
+    Text: A shader affects how light appears on an object, and a material affects
+      its color.
+  - IsCorrect: 0
+    Text: They are actually the same thing.
+  m_FeedbackCorrect: Shaders and materials work together to define all the characteristics
+    of a mesh surface during the rendering process. A material is an asset that works
+    with a shader to define how meshes will be rendered.
+  m_FeedbackIncorrect: Shaders and materials work together to define all the characteristics
+    of a mesh surface during the rendering process. A material is an asset that works
+    with a shader to define how meshes will be rendered.

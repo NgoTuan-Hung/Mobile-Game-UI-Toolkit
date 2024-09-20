@@ -1,0 +1,25 @@
+{
+    "text": "Which of the following is NOT a valid way to set style properties in UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "Using a UXML file",
+            "isCorrect": false
+        },
+        {
+            "text": "Using a USS file",
+            "isCorrect": false
+        },
+        {
+            "text": "Using a C# script",
+            "isCorrect": false
+        },
+        {
+            "text": "Using a GUI Style",
+            "isCorrect": true
+        }
+    ],
+    "feedbackCorrect": "In UI Toolkit, you can set style properties using a UXML file, a USS file, or a C# script. However, UI Toolkit does not support setting style properties using a GUI Style (IMGUI), as it uses a separate system for styling UI elements.",
+    "feedbackIncorrect": "In UI Toolkit, you can set style properties using a UXML file, a USS file, or a C# script. UI Toolkit does not support setting style properties using a GUI Style, as this is part of Unity's older, immediate mode GUI system (IMGUI)."
+}

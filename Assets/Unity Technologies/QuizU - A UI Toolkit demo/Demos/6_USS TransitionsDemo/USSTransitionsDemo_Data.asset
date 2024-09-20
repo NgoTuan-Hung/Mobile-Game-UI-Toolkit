@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: USSTransitionsDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: USS transitions
+  m_BodyText:
+  - "<b>USS transitions</b> provide an elegant way to animate changes in visual properties
+    over time. They can help create effects like smoothly fading an element in and
+    out, or moving it across the screen over time. This extra bit of \"juice\" can
+    make for a more dynamic and engaging user experience. \n\nLike their CSS counterparts,
+    USS transitions support options for delay and duration. They also include a variety
+    of easing functions to go beyond basic linear animation. \n\nThis can help provide
+    visual feedback to the user as they interact with the UI (e.g., hover effects
+    and focus changes)."
+  - "To create an animation, use the <b>transition</b> property with another property
+    that you want to modify.\n\nFor example, this adds a simple transition to a Button's
+    background color:\n<b>\nButton {\n    transition: background-color 0.3s ease-in-out;\n}</b>\n\nIf
+    the <b>background-color</b> of a Button element changes, it changes gradually
+    over a duration of 0.3 seconds, using an <b>ease-in-out</b> timing.\n\nThe function
+    starts slowly, speeds up, then slows down towards the end of the transition."
+  - "You can also define multiple transitions. This example applies transitions on
+    the scale and background-color properties:\n<b>\n.classA {\n    transition-property:
+    scale, background-color;\n    transition-duration: 1s, 0.5s;\n    transition-delay:
+    0s, 600ms;\n    transition-timing-function: ease-in-sine, ease-out-elastic;\n}</b>\n\nThe
+    first transition is on the scale property. It has a duration of 1s, a delay of
+    0s, and the ease-in-sine easing function.\n\nThe second transition is on the
+    background-color. It has a duration of 0.5s, a delay of 600ms, and the ease-out-elastic
+    easing function."
+  - "Compare the default Button with one that uses USS transitions. \n\nBoth buttons
+    have <b>:hover</b> pseudo-classes, but the addition of a <b>transition-duration</b>
+    property in the latter makes it smoothly change from one state to another.\n\nClick
+    the Toggle to show and hide the example container. This adds and removes a class
+    selector containing a <b>translate</b> value.\n\nSimply using a <i>transition
+    time</i> and <i>easing function</i> creates a USS transition. The container then
+    can smoothly animate on and off screen."

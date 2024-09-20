@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658c41d751d6c4a6b9c43a6310693530, type: 3}
+  m_Name: SquareButtonStyleInfo_Data
+  m_EditorClassIdentifier: 
+  m_Description: This ScriptableObject contains demo for for the USSStylesDemo scene.
+    This displays text when the user hovers over the UI buttons in the scene. This
+    holds text data with the class selector, USS style, and description. Note that
+    the style text has been truncated for space. Edit the USS file for complete details.
+  m_ClassSelectorText: square-button
+  m_UssStyleText: ".square-button {\n    min-width: 100px;\n    min-height: 100px;\n   
+    width: 150px;\n    height: 150px;\n    border-left-width: 5px;\n    border-right-width:
+    5px;\n    border-top-width: 5px;\n    border-bottom-width: 5px;\n    border-radius:
+    10px;\n    background-color: rgb(255, 166, 0);\n    color: rgb(255, 255, 255);\n   
+    font-size: 24px;\n    border-left-color: rgba(149, 149, 149, 0);\n    border-right-color:
+    rgba(149, 149, 149, 0);\n    border-top-color: rgba(149, 149, 149, 0);\n    border-bottom-color:
+    rgba(149, 149, 149, 0);\n}\n"
+  m_DescriptionText: 'This button maintains minimum height and width of 100 pixels. '

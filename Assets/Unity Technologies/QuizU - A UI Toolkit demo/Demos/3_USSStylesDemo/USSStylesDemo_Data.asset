@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: USSStylesDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: USS styles
+  m_BodyText:
+  - "<b>Unity Style Sheets (USS)</b> allow you to define styles in a separate stylesheet
+    file. You can then apply styles to UI elements by assigning class names to those
+    elements.\n\nThe styles control various aspects of a UI element's appearance,
+    such as size, color, and layout properties. A typical USS style might look like
+    this:\n\n<b>.myButton {\n    width: 200px;\n    height: 50px;\n    border-radius:
+    5px;\n    background-color: #2D9CDB;\n    color: white;\n    font-size: 16px;\n   
+    margin: 10px;\n}</b>\n\nThis draws an element with a blue background color, slightly
+    rounded border radius, and white, 16px font."
+  - "UI Toolkit supports <b>pixels (px)</b> and <b>percentages (%)</b> for measuring
+    length. Pixel values are absolute, while percentages are relative to the element\u2019s
+    parent.\n\nUnity's <b>UI Builder</b> has a built-in inspector that shows all
+    matching selectors and styles of the current element. You also can directly edit
+    the USS file.\n\nCascading sets the order of precedence when multiple rules apply.
+    In general, a more specific selector takes precedent over a less specific one:
+    \n\n\u2022<b>Inline styles</b> (defined directly on the element in code or UXML)
+    have the highest specificity and will override any other style rules.\n\n\u2022<b>Type
+    selectors</b> match and style Unity elements based on their types (e.g. <b>Button</b>
+    { ... } applies styles to all Button elements)"
+  - "\u2022<b>Name selectors</b> have higher specificity than class selectors or
+    type selectors.\n\n\u2022<b>Class selectors</b> have higher specificity than
+    type selectors.\n\nIf two rules have the same specificity, the one that is declared
+    later in the code will be applied.\n\nInheritance allows some property values
+    on parent elements to pass down to their child elements. \n\nFor example, if
+    you set a font or color property on a parent element, its child elements inherit
+    that property. Using a different property value on the child element overrides
+    it."
+  - "In this example, compare the default button with its styled counterparts. \n\nAll
+    of the buttons use the same underlying structure, differing only by style rules.
+    Hover over each one to see its USS properties.\n\nSeparating style into a separate
+    USS file means that UI artists and developers can collaborate more effectively,
+    with less merge conflicts and faster iterations."

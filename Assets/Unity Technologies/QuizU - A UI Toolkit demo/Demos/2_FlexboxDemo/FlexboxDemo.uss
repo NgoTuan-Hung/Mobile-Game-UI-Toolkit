@@ -1,0 +1,25 @@
+.controls-slider {
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    font-size: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.controls-slider #unity-dragger {
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    width: 8%;
+    height: 59%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgb(0, 127, 217);
+    border-right-color: rgb(0, 127, 217);
+    border-top-color: rgb(0, 127, 217);
+    border-bottom-color: rgb(0, 127, 217);
+}

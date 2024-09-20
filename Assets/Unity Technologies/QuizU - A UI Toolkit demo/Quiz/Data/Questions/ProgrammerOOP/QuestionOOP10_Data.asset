@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionOOP10_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: Which of the following statements about variables is true?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Maximize code efficiency by correctly executing coding best practices
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: Local variables can be accessed from all methods within a single class.
+  - IsCorrect: 0
+    Text: Private variables in base classes are only accessible from derived (child)
+      classes.
+  - IsCorrect: 0
+    Text: Public variables in derived (child) classes cannot be accessed by its base
+      class.
+  - IsCorrect: 1
+    Text: A Property provides public access to a private variable with getters and
+      setters.
+  m_FeedbackCorrect: Properties act like variables and encapsulate private member
+    variables. This encapsulation gives you greater control over when and how a variable
+    is accessed or set. You could just make a variable public, but using a property
+    is considered best practice.
+  m_FeedbackIncorrect: Properties act like variables and encapsulate private member
+    variables. This encapsulation gives you greater control over when and how a variable
+    is accessed or set. You could just make a variable public, but using a property
+    is considered best practice.
+  m_FeedbackLink: 

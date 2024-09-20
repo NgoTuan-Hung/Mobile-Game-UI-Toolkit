@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionSHAD11_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is a method of applying a material to a GameObject in the Unity Editor?
+  m_Skills: Skill-L2-Art.Mat-1
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: Drag the material from the Project window to the GameObject in the Scene
+      view
+  - IsCorrect: 0
+    Text: Select the material from the Mesh Renderer component
+  - IsCorrect: 0
+    Text: Drag the material from the Project window to one of the Materials listed
+      in the Mesh Renderer
+  - IsCorrect: 1
+    Text: All of the above
+  - IsCorrect: 0
+    Text: None of the above
+  m_FeedbackCorrect: There are several ways to apply a material to GameObject. Practice
+    them all and use the ones that work best for you!
+  m_FeedbackIncorrect: Shaders and materials work together to define all the characteristics
+    of a mesh surface during the rendering process. A material is an asset that works
+    with a shader to define how meshes will be rendered.

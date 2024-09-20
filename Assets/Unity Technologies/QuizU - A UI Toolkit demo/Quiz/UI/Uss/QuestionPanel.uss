@@ -1,0 +1,68 @@
+#unity-low-button {
+    display: none;
+}
+
+#unity-high-button {
+    display: none;
+}
+
+#unity-content-container {
+    justify-content: center;
+}
+
+#unity-dragger {
+    background-color: rgb(219, 219, 219);
+    border-left-color: rgb(111, 111, 111);
+    border-right-color: rgb(111, 111, 111);
+    border-top-color: rgb(111, 111, 111);
+    border-bottom-color: rgb(111, 111, 111);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    scale: 1 0.98;
+}
+
+#unity-tracker {
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    scale: 1 1;
+}
+
+.question-text-medium {
+    font-size: 27px;
+    white-space: normal;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+.question-text-small {
+    flex-basis: 33%;
+    height: 100%;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: flex-start;
+    font-size: 22px;
+    padding-left: 30px;
+    width: 100%;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+}
+
+.question-text-large {
+    font-size: 35px;
+    white-space: normal;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    flex-grow: 0;
+    align-items: flex-start;
+}

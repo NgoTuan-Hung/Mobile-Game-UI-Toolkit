@@ -1,0 +1,25 @@
+{
+  "text": "To change the default particle system, which emits a constant stream of particles, into a single burst of particles, what would you do? Select one answer.",
+  "skills": "Skill-L2-Art.VFX-2",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Disable the Looping property",
+      "isCorrect": true
+    },
+    {
+      "text": "Reduce the Max Particles",
+      "isCorrect": false
+    },
+    {
+      "text": "Enable the Stop Action property",
+      "isCorrect": false
+    },
+    {
+      "text": "Enable the Limit Velocity over Lifetime property",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "If Looping is enabled, the system starts again at the end of its duration time and continues to repeat the cycle. For a single burst particle, Looping should be disabled.",
+  "feedbackIncorrect": ""
+}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionOOP4_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: If you were programming an application that allowed users to configure
+      their own vehicles, how would you use the concept of inheritance to structure
+      the code in a way that minimized redundancies?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Make code more secure and usable by correctly implementing the principles
+    of abstraction and encapsulation, including the use of interfaces
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 1
+    Text: "Create a base \u201CCar\u201D class, then create derived classes for different
+      types of cars."
+  - IsCorrect: 0
+    Text: "Create a method called \u201CInheritCarBehavior\u201D, which pulls in
+      the functionality for a car."
+  - IsCorrect: 0
+    Text: "Create a namespace called \u201CCars\u201D and put all vehicle types in
+      that namespace."
+  - IsCorrect: 0
+    Text: "Create a \u201CCar\u201D event, and have all vehicle types inherit from
+      that event."
+  m_FeedbackCorrect: Inheritance allows you to create child (derived) classes that
+    inherit all behaviors from their parent (base) classes.
+  m_FeedbackIncorrect: Inheritance allows you to create child (derived) classes that
+    inherit all behaviors from their parent (base) classes.
+  m_FeedbackLink: 

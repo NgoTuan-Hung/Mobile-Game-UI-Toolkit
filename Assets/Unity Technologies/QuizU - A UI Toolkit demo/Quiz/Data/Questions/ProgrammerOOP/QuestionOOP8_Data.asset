@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionOOP8_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: How would you recommend changing the following code in order to improve
+      its reusability?
+  - FontSize: 0
+    Text: "void DisplayInfo(string name1, string name2, string address1, string address2,
+      string phone1, string phone2)\n{\n     print(name1);\n     print(name2);\n    
+      \n     print(address1);\n     print(address2);\n     \n     print(phone1);\n    
+      print(phone1);\n}"
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Maximize code efficiency by correctly executing coding best practices
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: Use literal strings instead of variables within the print method calls.
+  - IsCorrect: 0
+    Text: Shorten the variable names to n1, n2, a1, a2, p1, and p2
+  - IsCorrect: 0
+    Text: Have DisplayInfo return an array composed of all of the strings.
+  - IsCorrect: 1
+    Text: Create new methods for displaying names, addresses, and phone numbers,
+      then call those from DisplayInfo.
+  m_FeedbackCorrect: In general, it is good practice to simplify code by extracting
+    methods that are long or complex into separate methods, then to call those methods
+    from within that method.
+  m_FeedbackIncorrect: In general, it is good practice to simplify code by extracting
+    methods that are long or complex into separate methods, then to call those methods
+    from within that method.
+  m_FeedbackLink: 

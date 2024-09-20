@@ -1,0 +1,25 @@
+{
+  "text": "What is the function of an audio source? Select one answer.",
+  "skills": "Implement audio in Unity",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "It plays any 2D audio or 3D audio that is within its range.",
+      "isCorrect": false
+    },
+    {
+      "text": "It is the master audio file, and can be edited and compressed to improve application optimization.",
+      "isCorrect": false
+    },
+    {
+      "text": "It is the audio reference added to a special effect volume, such as a reverb zone, and controls the properties of the effect.",
+      "isCorrect": false
+    },
+    {
+      "text": "It handles the basic properties of an audio clip, such as priority and volume, and plays the clip in the scene.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "The audio source is the object that appears in a scene and manages the actual playing and properties of a selected audio clip.",
+  "feedbackIncorrect": "The audio source is the object that appears in a scene and manages the actual playing and properties of a selected audio clip."
+}

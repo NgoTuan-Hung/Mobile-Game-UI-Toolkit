@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK03_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: How can you specify a style that should be used when a specific condition
+      is met in UI Toolkit?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: Using UI conditions
+  - IsCorrect: 0
+    Text: Using Conditional Styles
+  - IsCorrect: 0
+    Text: Using UI rules
+  - IsCorrect: 1
+    Text: Using Pseudo-classes
+  m_FeedbackCorrect: In UI Toolkit, <b>Pseudo-classes</b> are used to specify a style
+    that should be used when a specific condition is met. This allows you to create
+    dynamic, responsive designs.
+  m_FeedbackIncorrect: In UI Toolkit, <b>Pseudo-classes</b>, not UI conditions, Conditional
+    Styles or UI rules, are used to specify a style that should be used when a specific
+    condition is met. For example, the <b>:hover</b> pseudo-class applies a style
+    when the user's pointer hovers over an element.

@@ -1,0 +1,25 @@
+{
+  "text": "What is a primitive?",
+  "skills": "Create GameObjects",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "A GameObject in a basic 3D shape that can be used as a simple object or placeholder",
+      "isCorrect": true
+    },
+    {
+      "text": "A GameObject created in an older version of Unity",
+      "isCorrect": false
+    },
+    {
+      "text": "A GameObject that does not have physical properties and can’t interact with other GameObjects",
+      "isCorrect": false
+    },
+    {
+      "text": "A 2D GameObject in a 3D Scene",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Primitives are the basic 3D shapes built-in to the Unity Editor. They are useful when you want to create a GameObject quickly and easily.",
+  "feedbackIncorrect": "Primitives are the basic 3D shapes built-in to the Unity Editor. They are useful when you want to create a GameObject quickly and easily."
+}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionOOP9_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 1
+    Text: 'This code logic is  difficult to understand:'
+  - FontSize: 0
+    Text: "public float GetValue()\n{\n     float result;      \n     \n     if (bool1)\n    
+      {\n          result = 1;\n      }\n      else\n      {\n         if (bool2)\n        
+      {\n            result = 2;\n         }\n         else\n         {\n           
+      result = 0;\n         }\n     }\n     return result;\n }\n\n\n"
+  - FontSize: 2
+    Text: 'True or False: the code below would achieve the same result in a simpler
+      way.'
+  - FontSize: 0
+    Text: "public float GetValue() {\n     if (bool1)\n     {\n         return 1;\n    
+      }\n     if (bool2)\n     {\n         return 2;\n     }\n     return 0; \n}\n"
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Maximize code efficiency by correctly executing coding best practices
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 1
+    Text: True
+  - IsCorrect: 0
+    Text: False
+  m_FeedbackCorrect: Code logic should always be easy to evaluate as you read it
+    from top to bottom - the second example eliminates a lot of the unnecessary else
+    statements and achieves the same result.
+  m_FeedbackIncorrect: Code logic should always be easy to evaluate as you read it
+    from top to bottom - the second example eliminates a lot of the unnecessary else
+    statements and achieves the same result.

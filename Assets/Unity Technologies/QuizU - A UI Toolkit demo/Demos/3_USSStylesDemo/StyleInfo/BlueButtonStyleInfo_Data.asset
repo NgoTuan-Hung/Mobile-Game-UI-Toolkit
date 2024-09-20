@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658c41d751d6c4a6b9c43a6310693530, type: 3}
+  m_Name: BlueButtonStyleInfo_Data
+  m_EditorClassIdentifier: 
+  m_Description: This ScriptableObject contains demo for for the USSStylesDemo scene.
+    This displays text when the user hovers over the UI buttons in the scene. This
+    holds text data with the class selector, USS style, and description. Note that
+    the style text has been truncated for space. Edit the USS file for complete details.
+  m_ClassSelectorText: blue-button
+  m_UssStyleText: ".blue-button {\n    width: 200px;\n    height: 50px;\n    border-radius:
+    5px;\n    background-color: rgb(45, 156, 219);\n    color: rgb(255, 255, 255);\n   
+    font-size: 27px;\n    margin: 10px;\n    -unity-font-style: bold;\n}"
+  m_DescriptionText: This button adds a bold font definition with blue background
+    color.

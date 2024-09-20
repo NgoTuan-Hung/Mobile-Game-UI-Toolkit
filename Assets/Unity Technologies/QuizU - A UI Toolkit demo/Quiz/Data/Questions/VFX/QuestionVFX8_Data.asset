@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX8_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: Which of the following is the correct order of contexts in a default VFX
+      Graph? Select one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.VFX-3
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: Initialize > Spawn > Update > Render
+  - IsCorrect: 1
+    Text: Spawn > Initialize > Update > Output
+  - IsCorrect: 0
+    Text: Instantiate > Spawn > Behavior > Render
+  - IsCorrect: 0
+    Text: Spawn > Behavior > Update > Output
+  m_FeedbackCorrect: "<b>Spawn:</b> If active, Unity calls this every Frame, and
+    computes the amount of particles to spawn. <b>Initialize:</b> Unity calls this
+    at the \u201Cbirth\u201D of every particle. This defines the initial state of
+    the particle. <b>Update:</b> Unity calls this every frame for all particles,
+    and uses this to perform simulations; for example, Forces and Collisions. <b>Output:</b>
+    Unity calls this every frame for every particle. This determines the shape of
+    a particle, and performs pre-render transformations."
+  m_FeedbackIncorrect: "<b>Spawn:</b> If active, Unity calls this every Frame, and
+    computes the amount of particles to spawn. <b>Initialize:</b> Unity calls this
+    at the \u201Cbirth\u201D of every particle. This defines the initial state of
+    the particle. <b>Update:</b> Unity calls this every frame for all particles,
+    and uses this to perform simulations; for example, Forces and Collisions. <b>Output:</b>
+    Unity calls this every frame for every particle. This determines the shape of
+    a particle, and performs pre-render transformations."

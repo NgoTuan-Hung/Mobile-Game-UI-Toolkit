@@ -1,0 +1,101 @@
+.level-button {
+    color: rgb(255, 255, 255);
+    background-color: rgba(188, 188, 188, 0);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    text-align: left;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 31%;
+    width: 100%;
+    height: 100%;
+    flex-basis: 100%;
+}
+
+.level-button:hover {
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    transition-duration: 0.3s;
+    scale: 1.2 1.2;
+    -unity-background-image-tint-color: rgba(0, 127, 217, 0.46);
+    background-color: rgba(0, 127, 217, 0.46);
+}
+
+.level-button:active {
+    transition-duration: 0.15s;
+    scale: 1.1 1.1;
+    color: rgb(100, 191, 255);
+}
+
+.level-button--selected {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 149, 255);
+    transition-duration: 0.15s;
+}
+
+.play-button {
+    width: 20%;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&guid=e74ebc05ab3564fb187648ced4e2c0fa&type=2#Roboto-Black SDF');
+    font-size: 40px;
+    background-color: rgb(255, 125, 0);
+    color: rgb(255, 255, 255);
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-basis: 20%;
+    flex-shrink: 1;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 65%;
+    transition-duration: 0.1s;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    letter-spacing: 30px;
+}
+
+.play-button:hover {
+    scale: 1.1 1.1;
+    transition-duration: 0.15s;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+}
+
+.play-button:active {
+    color: rgb(255, 208, 0);
+}

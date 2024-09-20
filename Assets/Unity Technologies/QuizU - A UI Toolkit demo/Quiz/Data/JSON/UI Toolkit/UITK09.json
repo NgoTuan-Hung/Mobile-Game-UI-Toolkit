@@ -1,0 +1,25 @@
+{
+    "text": "In UI Toolkit, which of the following is used to handle events?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "EventTarget",
+            "isCorrect": false
+        },
+        {
+            "text": "EventBase",
+            "isCorrect": true
+        },
+        {
+            "text": "EventSystem",
+            "isCorrect": false
+        },
+        {
+            "text": "EventTrigger",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "<b>EventBase</b> is the base class for all events in UI Toolkit.",
+    "feedbackIncorrect": "<b>EventBase</b> is the base class for all events in UI Toolkit, not EventTarget, EventSystem, or EventTrigger."
+}

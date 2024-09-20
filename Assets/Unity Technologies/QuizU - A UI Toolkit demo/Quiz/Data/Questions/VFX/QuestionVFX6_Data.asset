@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX6_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: How can you tell if a particle has been created with VFX Graph rather than
+      with the Particle System? Select one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.VFX-3
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: If the particles have noise, they were created using VFX Graph, since the
+      Particle System does not support noise
+  - IsCorrect: 0
+    Text: If the individual particles are 3D meshes, they were created using VFX
+      Graph, since the Particle System only supports 2D textures.
+  - IsCorrect: 0
+    Text: If the particles have any elements of transparency, they were created using
+      VFX Graph, since the Particle System does not support transparency.
+  - IsCorrect: 1
+    Text: If you double-click on a VFX Graph object in the Project window, it will
+      open in the VFX Graph window.
+  m_FeedbackCorrect: "It would be very difficult to know just from looking at a particle
+    system whether it was created using VFX Graph or with the Particle System, since
+    they both have very broad, similar capabilities. To be sure, you would want to
+    click on the object and see which system it\u2019s using."
+  m_FeedbackIncorrect: "It would be very difficult to know just from looking at a
+    particle system whether it was created using VFX Graph or with the Particle System,
+    since they both have very broad, similar capabilities. To be sure, you would
+    want to click on the object and see which system it\u2019s using."

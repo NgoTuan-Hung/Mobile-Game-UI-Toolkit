@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionSHAD2_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is the difference between a lit shader and an unlit shader? Select
+      one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.Shad-1
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: A lit shader allows you to add emissive light to an object, so that it
+      can appear to light up. An unlit shader does not, but using unlit shaders increases
+      performance.
+  - IsCorrect: 0
+    Text: A lit shader only works with the Universal Render Pipeline. Other render
+      pipelines use unlit shaders.
+  - IsCorrect: 1
+    Text: A lit shader adds shadows and reflections according to the light that reaches
+      the object. An unlit shader ignores the effects of light.
+  - IsCorrect: 0
+    Text: None of the above.
+  m_FeedbackCorrect: "Lit shaders respond to the light in the scene, and unlit shaders
+    don\u2019t. Unlit shaders are useful for certain artistic effects or for optimized
+    projects that run more efficiently by not using lighting."
+  m_FeedbackIncorrect: "Lit shaders respond to the light in the scene, and unlit
+    shaders don\u2019t. Unlit shaders are useful for certain artistic effects or
+    for optimized projects that run more efficiently by not using lighting."

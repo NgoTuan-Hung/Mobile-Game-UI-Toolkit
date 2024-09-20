@@ -1,0 +1,17 @@
+  {
+    "text": "Why is creating a learning action plan helpful?",
+    "skills": "",
+    "shuffleOptions": false,
+    "options": [
+      {
+        "text": "Making a plan helps you stick with your learning and ultimately achieve your goals.",
+        "isCorrect": true
+      },
+      {
+        "text": "Making a plan won't help you learn Unity.",
+        "isCorrect": false
+      }
+    ],
+    "feedbackCorrect": "",
+    "feedbackIncorrect": ""
+  }

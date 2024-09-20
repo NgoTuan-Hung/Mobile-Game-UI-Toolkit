@@ -1,0 +1,29 @@
+{
+    "text": "What is an example of non-diegetic sound in an interactive experience?",
+    "skills": "Create interactive experiences by synthesizing audio experience design principles",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "Footsteps",
+            "isCorrect": false,
+            "feedback": "Footsteps are an example of diegetic sound, which is sound that originates from within the world of the experience."
+        },
+        {
+            "text": "Wind blowing and other nature effects",
+            "isCorrect": false,
+            "feedback": "Wind blowing and other nature effects are also examples of diegetic sound."
+        },
+        {
+            "text": "Character dialogue",
+            "isCorrect": false,
+            "feedback": "Character dialogue is another example of diegetic sound."
+        },
+        {
+            "text": "Background music",
+            "isCorrect": true,
+            "feedback": "Background music is an example of non-diegetic sound, which is sound that does not originate from within the world of the experience. It is typically used to set the mood or atmosphere of a scene."
+        }
+    ],
+    "feedbackCorrect": "Any audio that the viewer or player can hear, but that entities within the world of the experience can’t hear, is an example of non-diegetic audio. For example, background music that’s used to enhance the mood of a scene, but isn’t playing from an in-environment source such as a radio, is non-diegetic.",
+    "feedbackIncorrect": ""
+}

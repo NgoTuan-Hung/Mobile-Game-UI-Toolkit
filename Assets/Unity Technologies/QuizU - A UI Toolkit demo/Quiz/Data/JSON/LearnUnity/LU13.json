@@ -1,0 +1,25 @@
+{
+  "text": "What does the Directional Light simulate?",
+  "skills": "Identify the default elements in a new Scene",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "The sun",
+      "isCorrect": true
+    },
+    {
+      "text": "Reflected light",
+      "isCorrect": false
+    },
+    {
+      "text": "A spotlight",
+      "isCorrect": false
+    },
+    {
+      "text": "An overhead light in a room",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "The Directional Light object simulates the sun in a Scene built in the 3D Template. You can move and rotate the Directional Light to indicate a time of day or create a mood in your Scene.",
+  "feedbackIncorrect": "The Directional Light object simulates the sun in a Scene built in the 3D Template. You can move and rotate the Directional Light to indicate a time of day or create a mood in your Scene."
+}

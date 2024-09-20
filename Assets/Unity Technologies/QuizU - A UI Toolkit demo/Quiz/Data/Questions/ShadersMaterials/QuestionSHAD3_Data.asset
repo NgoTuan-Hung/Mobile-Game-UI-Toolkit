@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionSHAD3_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: Why do materials sometimes appear bright magenta (pink) in the Unity Editor?
+  m_Skills: Skill-L2-Art.Shad.Mat-2
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: "It\u2019s common to import a material that was originally made for a shader
+      that isn\u2019t present in the current project. To fix, specify a shader that
+      is in the project."
+  - IsCorrect: 0
+    Text: Materials appear pink if they are missing a base map or color. To fix,
+      add a color.
+  - IsCorrect: 0
+    Text: "A material created for one GameObject can\u2019t be applied to another
+      without being configured properly. To fix, adjust the material for each new
+      GameObject."
+  - IsCorrect: 0
+    Text: A pink material indicates an error in the shader script. To fix, correct
+      the error or select a different shader.
+  - IsCorrect: 1
+    Text: When a material is built for a shader of a different render pipeline than
+      the current project, it is bright magenta (pink) to alert you.
+  m_FeedbackCorrect: When a material is built for a shader of a different render
+    pipeline than the current project, it is bright magenta (pink) to alert you.
+  m_FeedbackIncorrect: Shaders and materials work together to define all the characteristics
+    of a mesh surface during the rendering process. A material is an asset that works
+    with a shader to define how meshes will be rendered.

@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Quiz/UI/Uss/MenuScreens.uss?fileID=7433441132597879392&amp;guid=cd0f7ad5384494cd9bd2336a342c02b5&amp;type=3#MenuScreens" />
+    <Style src="project://database/Assets/Quiz/UI/Uss/SettingsScreen.uss?fileID=7433441132597879392&amp;guid=2aca5532fde4441aaa4b8320ef3d97d2&amp;type=3#SettingsScreen" />
+    <Style src="project://database/Assets/Quiz/UI/Uss/Buttons.uss?fileID=7433441132597879392&amp;guid=59a47f2144b8a4a0f86bc110907e20cb&amp;type=3#Buttons" />
+    <ui:VisualElement name="settings__container" picking-mode="Ignore" style="width: 100%; height: 100%; position: absolute; background-color: rgba(0, 127, 217, 0.87); align-items: center; justify-content: center; top: -1px; left: 0;">
+        <ui:VisualElement name="settings__background" style="background-image: url(&apos;project://database/Assets/_ThirdParty/Images/Abstract-background-white-12.jpg?fileID=21300000&amp;guid=b7b45fbf62b9341189a8ca5f5ddef364&amp;type=3#Abstract-background-white-12&apos;); width: 100%; height: 100%; position: absolute; -unity-background-image-tint-color: rgba(255, 255, 255, 0.33); top: -1px; left: 0;" />
+        <ui:Label text="Settings" display-tooltip-when-elided="true" name="screen-label" class="screen-label" />
+        <ui:Button text="←BACK" display-tooltip-when-elided="true" name="back-button" tooltip="Return to main menu" class="back-button" />
+        <ui:VisualElement name="settings__group" picking-mode="Ignore" style="width: 100%; height: 100%; -unity-text-align: upper-center; align-items: center; justify-content: center; -unity-background-scale-mode: scale-to-fit; -unity-background-image-tint-color: rgb(255, 255, 255);">
+            <ui:Label text="SETTINGS" display-tooltip-when-elided="true" name="settings__label" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); font-size: 46px; color: rgb(77, 75, 75); top: 0; letter-spacing: 25px;" />
+            <ui:VisualElement name="settings__panel" style="height: 43%; width: 40%; border-left-color: rgba(60, 60, 60, 0.5); border-right-color: rgba(60, 60, 60, 0.5); border-top-color: rgba(60, 60, 60, 0.5); border-bottom-color: rgba(60, 60, 60, 0.5); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 3%; padding-right: 3%; padding-top: 5%; padding-bottom: 2%; align-items: center; top: 0; background-color: rgb(214, 214, 214);">
+                <ui:VisualElement name="settings__master-slider-group" style="width: 100%; flex-basis: 30%; flex-direction: row;">
+                    <ui:Slider picking-mode="Ignore" label="Master Volume" value="47.3" high-value="100" name="settings__master-volume-slider" class="volume-slider" style="height: 100%; width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                    <ui:Label text="99" display-tooltip-when-elided="true" name="settings__master-volume-label" class="volume-slider-number" />
+                </ui:VisualElement>
+                <ui:VisualElement name="settings__sfx-slider-group" style="width: 100%; flex-basis: 30%; flex-direction: row;">
+                    <ui:Slider picking-mode="Ignore" label="SFX Volume" value="42" high-value="100" name="settings__sfx-volume-slider" class="volume-slider" style="height: 100%; width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                    <ui:Label text="99" display-tooltip-when-elided="true" name="settings__sfx-volume-label" class="volume-slider-number" />
+                </ui:VisualElement>
+                <ui:VisualElement name="settings__music-slider-group" style="width: 100%; flex-basis: 30%; flex-direction: row;">
+                    <ui:Slider picking-mode="Ignore" label="Music Volume" value="42" high-value="100" name="settings__music-volume-slider" class="volume-slider" style="height: 100%; width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                    <ui:Label text="99" display-tooltip-when-elided="true" name="settings__music-volume-label" class="volume-slider-number" />
+                </ui:VisualElement>
+                <ui:Button text="&#10;" display-tooltip-when-elided="true" name="settings__close-button" class="close-button" style="border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); background-color: rgba(188, 188, 188, 0); background-image: url(&apos;project://database/Assets/Quiz/Textures/Icons/Circle256.png?fileID=2800000&amp;guid=f4e41b6527ba545629b1d69d0fa041a4&amp;type=3#Circle256&apos;);">
+                    <ui:VisualElement name="settings__close-button-icon" picking-mode="Ignore" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Quiz/Textures/Icons/QuitIcon.png?fileID=21300000&amp;guid=6ba9ae3c4c95a48ba8b46ef8b35066d5&amp;type=3#QuitIcon&apos;); -unity-background-scale-mode: scale-to-fit; scale: 2.5 2.5; -unity-background-image-tint-color: rgb(255, 255, 255);" />
+                </ui:Button>
+                <ui:VisualElement name="settings__close-button" class="close-button" style="display: none;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

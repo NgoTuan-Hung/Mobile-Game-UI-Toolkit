@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/ButtonGlow.uss?fileID=7433441132597879392&amp;guid=df0b83870ab0a2d41ba4c0804a6b5626&amp;type=3#ButtonGlow" />
+    <GUI.Effects.OuterGlow glow-color="#33FF0000" glow-size="10" corner-segments="0" />
+    <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="shit-button" />
+</ui:UXML>

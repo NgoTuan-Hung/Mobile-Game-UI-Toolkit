@@ -1,0 +1,25 @@
+{
+  "text": "What does the 2D button do?",
+  "skills": "Navigate in 2D space in the Scene view",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Toggles between a 2D and a 3D view of the Scene.",
+      "isCorrect": true
+    },
+    {
+      "text": "Flattens the 3D GameObjects in the Scene to 2D Sprites.",
+      "isCorrect": false
+    },
+    {
+      "text": "In a 3D Scene, it makes the current Scene view look like 2D; in a 2D Scene, it does nothing.",
+      "isCorrect": false
+    },
+    {
+      "text": "None of the above.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "The 2D button can be very useful in a 2D or a 3D Scene. In a 2D Scene, toggle to 3D to see how GameObjects are ordered in the Z dimension. In 3D, toggle to 2D to line up GameObjects in one plane.",
+  "feedbackIncorrect": "The 2D button can be very useful in a 2D or a 3D Scene. In a 2D Scene, toggle to 3D to see how GameObjects are ordered in the Z dimension. In 3D, toggle to 2D to line up GameObjects in one plane."
+}

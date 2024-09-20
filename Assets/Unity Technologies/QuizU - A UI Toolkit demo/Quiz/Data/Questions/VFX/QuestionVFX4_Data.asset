@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX4_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: "You\u2019re trying to make a particle system that produces a steady stream
+      of particles. However, you notice that there are large gaps in the emission
+      of particles. What could be done to resolve these gaps? Select all answers
+      that apply."
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.VFX-2
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: Decrease the Start Lifetime
+  - IsCorrect: 0
+    Text: Increase the Start Speed
+  - IsCorrect: 1
+    Text: Decrease the Rate Over Time
+  - IsCorrect: 1
+    Text: Increase the Max Particles.
+  m_FeedbackCorrect: The Max Particles property represents the maximum number of
+    particles in the system at once. If the limit is reached, some particles are
+    removed. If you wanted to have a steady stream of particles here, you could decrease
+    the Rate over Time to reduce the number emitted per second, decrease the Start
+    Lifetime so that the particles would not stay on screen for as long, or just
+    increase the Max Particles to accommodate more particles on screen at a time.
+  m_FeedbackIncorrect: The Max Particles property represents the maximum number of
+    particles in the system at once. If the limit is reached, some particles are
+    removed. If you wanted to have a steady stream of particles here, you could decrease
+    the Rate over Time to reduce the number emitted per second, decrease the Start
+    Lifetime so that the particles would not stay on screen for as long, or just
+    increase the Max Particles to accommodate more particles on screen at a time.

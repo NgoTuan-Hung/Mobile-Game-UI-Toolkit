@@ -1,0 +1,25 @@
+{
+    "text": "Which method is used to add a child element to a <b>VisualElement</b> in the UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "<b>AddChild()</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>Add()</b>",
+            "isCorrect": true
+        },
+        {
+            "text": "<b>Append()</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>InsertChild()</b>",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>Add()</b> method is used to add a child element to a <b>VisualElement</b> in the UI Toolkit.",
+    "feedbackIncorrect": "The <b>Add()</b> method, not <b>AddChild()</b>, <b>Append()</b>, or <b>InsertChild()</b>, is used to add a child element to a <b>VisualElement</b> in the UI Toolkit."
+}

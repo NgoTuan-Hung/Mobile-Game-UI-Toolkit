@@ -1,0 +1,15 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+
+#ROOTNAMESPACEBEGIN#
+namespace Quiz
+{
+	[CreateAssetMenu(fileName = "#SCRIPTNAME#", menuName = "Quiz/#SCRIPTNAME#")]
+	public class #SCRIPTNAME# : DescriptionSO
+	{
+	 
+	}
+}
+#ROOTNAMESPACEEND#

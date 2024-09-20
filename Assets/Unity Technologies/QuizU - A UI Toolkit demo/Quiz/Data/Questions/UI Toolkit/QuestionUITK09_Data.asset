@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK09_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In UI Toolkit, which of the following is used to handle events?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: EventTarget
+  - IsCorrect: 1
+    Text: EventBase
+  - IsCorrect: 0
+    Text: EventSystem
+  - IsCorrect: 0
+    Text: EventTrigger
+  m_FeedbackCorrect: <b>EventBase</b> is the base class for all events in UI Toolkit.
+  m_FeedbackIncorrect: '<b>EventBase</b> is the base class for all events in UI Toolkit,
+    not EventTarget, EventSystem, or EventTrigger. '

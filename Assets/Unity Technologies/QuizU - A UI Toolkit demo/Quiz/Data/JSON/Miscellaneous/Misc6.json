@@ -1,0 +1,13 @@
+{
+  "text": "In Unity, what is the main purpose of a 'rigidbody' component? Select one answer.",
+  "skills": "Skill-L2-Physics-1",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "To provide a GameObject with a physical presence that can interact with forces, collide with other objects, and be affected by gravity.", "isCorrect": true},
+    {"text": "To control the animation state of a GameObject.", "isCorrect": false},
+    {"text": "To render graphics for a GameObject.", "isCorrect": false},
+    {"text": "To control the audio effects of a GameObject.", "isCorrect": false}
+  ],
+  "feedbackCorrect": "A 'Rigidbody' component in Unity is used to provide a GameObject with a physical presence in the scene, allowing it to interact with forces, collide with other objects, and be affected by gravity.",
+  "feedbackIncorrect": "A 'Rigidbody' component in Unity is used to provide a GameObject with a physical presence in the scene, allowing it to interact with forces, collide with other objects, and be affected by gravity."
+}

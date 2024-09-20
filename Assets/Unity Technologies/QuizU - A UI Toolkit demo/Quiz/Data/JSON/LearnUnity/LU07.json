@@ -1,0 +1,25 @@
+{
+  "text": "What does a Software Developer do?",
+  "skills": "Describe the real-time production cycle",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Codes user interfaces to meet the intent of the project's design and flow and integrates UI systems into features.",
+      "isCorrect": false
+    },
+    {
+      "text": "Finds and reports bugs and writes test cases and plans.",
+      "isCorrect": false
+    },
+    {
+      "text": "Sculpts and model characters and their assets such as hair, accessories, armor, and weapons",
+      "isCorrect": false
+    },
+    {
+      "text": "Designs, develops, tests, and releases new features and tools.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "",
+  "feedbackIncorrect": ""
+}

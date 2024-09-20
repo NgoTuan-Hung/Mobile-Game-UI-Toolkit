@@ -1,0 +1,25 @@
+{
+  "text": "Which of these statements best describes the relationship between scripts and components?",
+  "skills": "Work with components and Scripts",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Every component has a script, and you can create and customize components using scripts.",
+      "isCorrect": true
+    },
+    {
+      "text": "You can create a new component for a GameObject by creating a script, but you can’t customize a built-in component.",
+      "isCorrect": false
+    },
+    {
+      "text": "Scripts and components work together to control the properties and behaviors of a GameObject.",
+      "isCorrect": false
+    },
+    {
+      "text": "Some components are customizable with scripts.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "All components have scripts. Some inputs to the script of the component are displayed as the properties and behaviors that you see in the Inspector window.",
+  "feedbackIncorrect": "All components have scripts. Some inputs to the script of the component are displayed as the properties and behaviors that you see in the Inspector window."
+}

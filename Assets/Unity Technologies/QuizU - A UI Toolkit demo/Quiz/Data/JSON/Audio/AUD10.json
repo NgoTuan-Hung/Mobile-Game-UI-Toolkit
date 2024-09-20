@@ -1,0 +1,13 @@
+{
+  "text": "In your scene you have an audio source with a spatial blend set to 3D. You want the audio source to play at full volume when you’re directly next to it, but then fade out and eventually become silent after a certain distance. How do you accomplish this? Select one answer.",
+  "skills": "Produce customized results by correctly configuring audio in a scene",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "Set the Rolloff Mode to Logarithmic rolloff.", "isCorrect": false},
+    {"text": "Set the Min and Max Distance to be very close to one another.", "isCorrect": false},
+    {"text": "Set the Priority of the audio source to 0.", "isCorrect": false},
+    {"text": "Set the Rolloff Mode to Linear rolloff.", "isCorrect": true}
+  ],
+  "feedbackCorrect": "In order for the audio source to eventually become silent, the Rolloff Mode must be set to Linear. Logarithmic rolloff will cause the sound to attenuate to a certain point, but then remain constant.",
+  "feedbackIncorrect": "In order for the audio source to eventually become silent, the Rolloff Mode must be set to Linear. Logarithmic rolloff will cause the sound to attenuate to a certain point, but then remain constant."
+}

@@ -1,0 +1,27 @@
+.screen-visible {
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    position: absolute;
+}
+
+.screen-hidden {
+    transition-property: all;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    bottom: 100%;
+    transition-delay: 0s;
+    position: absolute;
+}
+
+.screen-label {
+    left: 0;
+    top: 0;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&guid=e74ebc05ab3564fb187648ced4e2c0fa&type=2#Roboto-Black SDF');
+    font-size: 68px;
+    position: absolute;
+    color: rgb(255, 156, 0);
+    display: none;
+}

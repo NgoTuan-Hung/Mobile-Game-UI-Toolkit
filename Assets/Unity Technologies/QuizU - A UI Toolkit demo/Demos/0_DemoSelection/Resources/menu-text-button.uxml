@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Button display-tooltip-when-elided="true" name="button" class="menu-button" style="width: 100%; height: 100%; flex-basis: 100%; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-color: rgba(0, 127, 217, 0); border-right-color: rgba(0, 127, 217, 0); border-top-color: rgba(0, 127, 217, 0); border-bottom-color: rgba(0, 127, 217, 0);">
+        <ui:VisualElement name="button__icon" style="height: 44%;" />
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="button__label" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); font-size: 12px; -unity-text-align: middle-center; letter-spacing: 10px;" />
+    </ui:Button>
+</ui:UXML>

@@ -1,0 +1,13 @@
+{
+  "text": "In Unity, what does the acronym 'FPS' commonly stand for? Select one answer.",
+  "skills": "Skill-L2-PerformanceOptimization-1",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "Frames Per Second", "isCorrect": true},
+    {"text": "First Person Shooter", "isCorrect": false},
+    {"text": "Fast Particle System", "isCorrect": false},
+    {"text": "Fixed Point Sampling", "isCorrect": false}
+  ],
+  "feedbackCorrect": "In the context of Unity and game development, 'FPS' commonly stands for Frames Per Second, a measurement of how quickly a game or application can render images on screen.",
+  "feedbackIncorrect": "In the context of Unity and game development, 'FPS' commonly stands for Frames Per Second, a measurement of how quickly a game or application can render images on screen."
+}

@@ -1,0 +1,137 @@
+.round-outline-slider {
+    flex-basis: 11%;
+    width: 75%;
+    font-size: 95%;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+}
+
+.round-outline-slider:hover {
+    scale: 1.1 1.1;
+    transition-duration: 0.15s;
+    -unity-font-style: bold;
+    font-size: 100%;
+}
+
+.round-outline-slider #unity-dragger {
+    width: 14%;
+    height: 50%;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-color: rgb(0, 127, 217);
+    border-right-color: rgb(0, 127, 217);
+    border-top-color: rgb(0, 127, 217);
+    border-bottom-color: rgb(0, 127, 217);
+    top: 40%;
+}
+
+.round-outline-textfield {
+    flex-basis: 8%;
+    width: 77%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 100%;
+}
+
+.round-outline-textfield:hover {
+    scale: 1.1 1.1;
+    transition-duration: 0.15s;
+    -unity-font-style: bold;
+    font-size: 120%;
+}
+
+.round-outline-textfield #unity-text-input {
+    border-left-color: rgb(0, 127, 217);
+    border-right-color: rgb(0, 127, 217);
+    border-top-color: rgb(0, 127, 217);
+    border-bottom-color: rgb(0, 127, 217);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+}
+
+.container-large {
+    flex-basis: 45%;
+    height: 100%;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(0, 127, 217);
+    border-right-color: rgb(0, 127, 217);
+    border-top-color: rgb(0, 127, 217);
+    border-bottom-color: rgb(0, 127, 217);
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    font-size: 35px;
+    color: rgb(0, 127, 217);
+    background-color: rgba(111, 111, 111, 0.11);
+}
+
+.container-large:hover {
+    scale: 1 1;
+    transition-duration: 0.15s;
+    background-color: rgba(0, 127, 217, 0.25);
+}
+
+.container-small {
+    width: 80%;
+    top: 23%;
+    justify-content: flex-start;
+    background-color: rgba(255, 166, 0, 0.37);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(0, 127, 217);
+    border-right-color: rgb(0, 127, 217);
+    border-top-color: rgb(0, 127, 217);
+    border-bottom-color: rgb(0, 127, 217);
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    align-items: center;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    font-size: 35px;
+    color: rgb(0, 127, 217);
+}
+
+.container-small:hover {
+    scale: 1 1;
+    transition-duration: 0.15s;
+    background-color: rgba(255, 208, 4, 0.43);
+}
+
+.round-outline-button:hover {
+    transition-duration: 0.15s;
+    scale: 1.1 1.1;
+    -unity-font-style: bold;
+    background-color: rgb(0, 127, 217);
+}

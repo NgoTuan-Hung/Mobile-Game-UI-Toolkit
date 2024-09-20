@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAUD1_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: How many audio listeners should be present in a Unity scene?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Implement audio in Unity, Produce customized results by correctly configuring
+    audio in a scene
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: As many as there are sound producing objects
+  - IsCorrect: 0
+    Text: Two
+  - IsCorrect: 0
+    Text: One for each directly interactable object
+  - IsCorrect: 1
+    Text: One
+  m_FeedbackCorrect: There is only ever one audio listener, generally on the main
+    camera.
+  m_FeedbackIncorrect: There is only ever one audio listener, generally on the main
+    camera.
+  m_FeedbackLink: 

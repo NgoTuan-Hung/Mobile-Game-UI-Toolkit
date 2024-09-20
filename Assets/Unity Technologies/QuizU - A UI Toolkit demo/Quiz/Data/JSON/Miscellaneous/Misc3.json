@@ -1,0 +1,13 @@
+{
+  "text": "Which Unity feature allows developers to create and edit animations? Select one answer.",
+  "skills": "Skill-L2-Animation-1",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "Animation Window", "isCorrect": true},
+    {"text": "Animator Component", "isCorrect": false},
+    {"text": "Animation Controller", "isCorrect": false},
+    {"text": "Animator Override Controller", "isCorrect": false}
+  ],
+  "feedbackCorrect": "The Animation Window in Unity allows developers to create and edit animations for their GameObjects.",
+  "feedbackIncorrect": "The Animation Window in Unity allows developers to create and edit animations for their GameObjects."
+}

@@ -1,0 +1,25 @@
+{
+    "text": "What is the difference between a lit shader and an unlit shader? Select one answer.",
+    "skills": "Skill-L2-Art.Shad-1",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "A lit shader allows you to add emissive light to an object, so that it can appear to light up. An unlit shader does not, but using unlit shaders increases performance.",
+            "isCorrect": false
+        },
+        {
+            "text": "A lit shader only works with the Universal Render Pipeline. Other render pipelines use unlit shaders.",
+            "isCorrect": false
+        },
+        {
+            "text": "A lit shader adds shadows and reflections according to the light that reaches the object. An unlit shader ignores the effects of light.",
+            "isCorrect": true
+        },
+        {
+            "text": "None of the above.",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "Lit shaders respond to the light in the scene, and unlit shaders don’t. Unlit shaders are useful for certain artistic effects or for optimized projects that run more efficiently by not using lighting.",
+    "feedbackIncorrect": ""
+}

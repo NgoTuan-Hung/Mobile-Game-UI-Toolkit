@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Demos/UI/TextScreens.uss?fileID=7433441132597879392&amp;guid=b4cd45086df6e4cef9346a3b538ea803&amp;type=3#TextScreens" />
+    <Style src="project://database/Assets/Demos/4%20UQueryDemo/UQueryDemo.uss?fileID=7433441132597879392&amp;guid=7d5aeff3b11a74437b24eb66e4a6aa50&amp;type=3#UQueryDemo" />
+    <ui:VisualElement name="background" style="position: absolute; width: 100%; height: 100%; background-color: rgb(217, 217, 217); align-items: center; justify-content: center; flex-direction: row; top: -2px; left: 2px;">
+        <ui:VisualElement name="text-screen__container" style="flex-basis: 30%; height: 100%; padding-left: 2%; flex-wrap: wrap; white-space: normal;">
+            <ui:VisualElement name="text-screen__header" style="flex-basis: 15%; align-items: center; justify-content: flex-start; white-space: nowrap; margin-top: 7%;">
+                <ui:Label text="Title" display-tooltip-when-elided="true" name="text-screen__title" style="flex-basis: 100%; -unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&amp;guid=e74ebc05ab3564fb187648ced4e2c0fa&amp;type=2#Roboto-Black SDF&apos;); font-size: 92px; color: rgb(0, 127, 217); align-items: flex-start; -unity-text-align: upper-left; width: 100%;" />
+            </ui:VisualElement>
+            <ui:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." display-tooltip-when-elided="true" name="text-screen__page-text" class="body-text" style="position: relative; font-size: 22px; flex-shrink: 1; white-space: normal; -unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); height: auto; width: auto; flex-grow: 0; flex-basis: auto;" />
+            <ui:VisualElement name="text-screen__footer" style="flex-basis: 9%; flex-grow: 1; padding-top: 6%;">
+                <ui:VisualElement name="text-screen__button-panel" style="flex-direction: row; justify-content: space-between; position: relative; width: 100%; height: auto; left: 0; top: 0;">
+                    <ui:Button display-tooltip-when-elided="true" name="text-screen__button-last" enable-rich-text="true" text="⟵BACK" class="button-nextlast next-last-button" style="rotate: 0;" />
+                    <ui:Button text="Action" display-tooltip-when-elided="true" name="text-screen__action-button" class="tutorial-button" style="position: relative; flex-basis: 44%; left: 0; display: none;" />
+                    <ui:Button display-tooltip-when-elided="true" name="text-screen__button-next" text="MORE⟶" class="button-nextlast next-last-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="spacer" style="flex-basis: 70%; height: 100%;" />
+        <ui:VisualElement name="demo__container" picking-mode="Ignore" style="position: absolute; display: flex; align-items: flex-end; width: 70%; right: 0; height: 100%;">
+            <ui:VisualElement name="demo__top-container" style="flex-basis: 59%; width: 100%; align-items: center; justify-content: center; flex-direction: row; position: relative; padding-left: 3%; padding-right: 3%; padding-top: 3%; padding-bottom: 3%;">
+                <ui:GroupBox text="container-1" name="container-1" class="container-large" style="justify-content: flex-start;">
+                    <ui:Slider picking-mode="Ignore" label="slider-1" value="42" high-value="100" name="slider-1" class="round-outline-slider outline-slider" style="margin-left: 10%; margin-right: 10%; margin-top: 0; margin-bottom: 5%; flex-basis: 13%;" />
+                    <ui:Button text="button-1" display-tooltip-when-elided="true" name="button-1" class="round-outline-button" style="width: 75%; margin-left: 10%; margin-right: 10%; margin-top: 10%; margin-bottom: 10%;" />
+                </ui:GroupBox>
+                <ui:GroupBox text="container-2" name="container-2" class="container-large" style="justify-content: flex-start;">
+                    <ui:Button text="button-3" display-tooltip-when-elided="true" name="button-3" class="round-outline-button" style="flex-basis: 13%; margin-left: 0; margin-right: 0; margin-top: 6%; margin-bottom: 0; width: 55%; height: 2%;" />
+                    <ui:GroupBox name="container-3" text="container-3" class="container-small" style="top: 16%;">
+                        <ui:Button text="button-2" display-tooltip-when-elided="true" name="button-2" class="round-outline-button" style="flex-basis: 34%; width: 75%; margin-left: 10%; margin-right: 10%; margin-top: 10%; margin-bottom: 10%;" />
+                    </ui:GroupBox>
+                </ui:GroupBox>
+            </ui:VisualElement>
+            <ui:VisualElement name="demo__bottom-container" style="flex-basis: 32%; width: 90%; padding-left: 3%; padding-right: 3%; padding-top: 3%; padding-bottom: 3%; flex-direction: column; margin-right: 3%;">
+                <ui:VisualElement name="demo__dropdown-container" style="flex-basis: 40%; align-items: center; justify-content: center;">
+                    <ui:DropdownField label="Query Selector" index="-1" choices="testA,testB,testC" name="demo__dropdown-field" class="demo-dropdown-field" style="width: 100%;" />
+                </ui:VisualElement>
+                <ui:GroupBox name="demo__description-container" style="flex-basis: 50%; width: 89%; align-items: flex-end;">
+                    <ui:Label display-tooltip-when-elided="true" name="demo__description-text" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); font-size: 24px; color: rgb(60, 72, 71); height: 100%; width: 90%; left: 8%; white-space: normal;" />
+                </ui:GroupBox>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="⟵MENU" display-tooltip-when-elided="true" name="back-button" class="back-button" />
+    </ui:VisualElement>
+</ui:UXML>

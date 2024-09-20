@@ -1,0 +1,25 @@
+{
+    "text": "Which of the following are correctly paired when describing parts of UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "Hierarchy/Structure - USS, Style/Layout - UXML, Functionality/Logic - C#",
+            "isCorrect": false
+        },
+        {
+            "text": "Hierarchy/Structure - UXML, Style/Layout - C#, Functionality/Logic - USS",
+            "isCorrect": false
+        },
+        {
+            "text": "Hierarchy/Structure - UXML, Style/Layout - USS, Functionality/Logic - C#",
+            "isCorrect": true
+        },
+        {
+            "text": "Hierarchy/Structure - C#, Style/Layout - UXML, Functionality/Logic - USS",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "In UI Toolkit, UXML is used for declaring the hierarchy/structure of the UI, USS is used for styling and layout, and C# is used for implementing functionality and logic.",
+    "feedbackIncorrect": "In UI Toolkit, UXML is used for declaring the hierarchy/structure of the UI, USS is used for styling and layout, and C# is used for implementing functionality and logic."
+}

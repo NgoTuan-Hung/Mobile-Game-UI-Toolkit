@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK12_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 1
+    Text: In Unity's UI Toolkit, which class is used to read input from users?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: InputReader
+  - IsCorrect: 0
+    Text: UserEvent
+  - IsCorrect: 1
+    Text: PointerEvent
+  - IsCorrect: 0
+    Text: UserInput
+  m_FeedbackCorrect: <b>PointerEvent</b> is used in Unity's UI Toolkit to read user
+    input, specifically, it handles pointer-based input like mouse and touch events.
+  m_FeedbackIncorrect: The <b>InputReader</b>, <b>UserEvent</b>, and <b>UserInput</b>
+    are not classes used for reading user input in Unity's UI Toolkit. The correct
+    class is <b>PointerEvent</b> which handles pointer-based input like mouse and
+    touch events.

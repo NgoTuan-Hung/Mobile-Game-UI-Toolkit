@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionEQ1_03_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What are the benefits for creators developing content in a real-time engine
+      like Unity?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: "Understand Unity\u2019s history and role within the industries that
+    rely on real-time creation."
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: They can easily create interactive content.
+  - IsCorrect: 0
+    Text: They can iterate on design concepts faster.
+  - IsCorrect: 0
+    Text: They can collaborate with team members.
+  - IsCorrect: 0
+    Text: They can see their final product at all times.
+  - IsCorrect: 1
+    Text: All of the above
+  m_FeedbackCorrect: Unity is used in many industries in many different ways, but
+    what they all have in common is the need to see, understand, or interact with
+    physical objects in virtual spaces, making the unreal real.
+  m_FeedbackIncorrect: Unity is used in many industries in many different ways, but
+    what they all have in common is the need to see, understand, or interact with
+    physical objects in virtual spaces, making the unreal real.
+  m_FeedbackLink: 

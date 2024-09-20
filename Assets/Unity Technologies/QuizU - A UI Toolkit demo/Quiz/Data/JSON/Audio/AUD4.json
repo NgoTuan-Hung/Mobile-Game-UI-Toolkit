@@ -1,0 +1,25 @@
+{
+  "text": "In a scene, you want an audio effect to play as soon as the player walks through a door. You’ve set up a trigger for this to happen, but as soon as you press play to test the experience, the audio plays even though the player is nowhere near the door. What might be the cause of this issue? Select one answer.",
+  "skills": "Refine existing audio in a Unity project",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "The audio source must be attached to the collider itself.",
+      "isCorrect": false
+    },
+    {
+      "text": "The audio clip is set to loop.",
+      "isCorrect": false
+    },
+    {
+      "text": "The collider isn’t set to OnTrigger.",
+      "isCorrect": false
+    },
+    {
+      "text": "Play on Awake is checked on the audio source.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "When a new audio source is created, Play on Awake is automatically checked. This option must be unchecked if you wish to trigger the sound to play at a certain time.",
+  "feedbackIncorrect": "When a new audio source is created, Play on Awake is automatically checked. This option must be unchecked if you wish to trigger the sound to play at a certain time."
+}

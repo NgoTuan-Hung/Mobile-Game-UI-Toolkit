@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/Demos/UI/TextScreens.uss?fileID=7433441132597879392&amp;guid=b4cd45086df6e4cef9346a3b538ea803&amp;type=3#TextScreens" />
+    <Style src="project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/Demos/7_EventsDemo/EventsDemo.uss?fileID=7433441132597879392&amp;guid=9b6c9cdf3c17141b6890b6b54370259d&amp;type=3#EventsDemo" />
+    <ui:VisualElement name="background" style="position: absolute; width: 100%; height: 100%; background-color: rgb(217, 217, 217); align-items: center; justify-content: center; flex-direction: row; top: -2px; left: 2px;">
+        <ui:VisualElement name="text-screen__container" style="flex-basis: 30%; height: 100%; padding-left: 2%; flex-wrap: wrap; white-space: normal;">
+            <ui:VisualElement name="text-screen__header" style="flex-basis: 15%; align-items: center; justify-content: flex-start; white-space: nowrap; margin-top: 7%;">
+                <ui:Label text="Title" display-tooltip-when-elided="true" name="text-screen__title" style="flex-basis: 100%; -unity-font-definition: url(&apos;project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&amp;guid=e74ebc05ab3564fb187648ced4e2c0fa&amp;type=2#Roboto-Black SDF&apos;); font-size: 92px; color: rgb(0, 127, 217); align-items: flex-start; -unity-text-align: upper-left; width: 100%;" />
+            </ui:VisualElement>
+            <ui:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." display-tooltip-when-elided="true" name="text-screen__page-text" class="body-text" style="position: relative; font-size: 22px; flex-shrink: 1; white-space: normal; -unity-font-definition: url(&apos;project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); height: auto; width: auto; flex-grow: 0; flex-basis: auto;" />
+            <ui:VisualElement name="text-screen__footer" style="flex-basis: 9%; flex-grow: 1; padding-top: 6%;">
+                <ui:VisualElement name="text-screen__button-panel" style="flex-direction: row; justify-content: space-between; position: relative; width: 100%; height: auto; left: 0; top: 0;">
+                    <ui:Button display-tooltip-when-elided="true" name="text-screen__button-last" enable-rich-text="true" text="⟵BACK" class="button-nextlast next-last-button" style="rotate: 0;" />
+                    <ui:Button text="Action" display-tooltip-when-elided="true" name="text-screen__action-button" class="tutorial-button" style="position: relative; flex-basis: 44%; left: 0; display: none;" />
+                    <ui:Button display-tooltip-when-elided="true" name="text-screen__button-next" text="MORE⟶" class="button-nextlast next-last-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="demo__area" style="flex-basis: 69%; height: 100%; align-items: center; justify-content: center; padding-left: 2%; padding-right: 2%; padding-top: 2%; padding-bottom: 2%; flex-direction: row;">
+            <ui:VisualElement name="demo__right-container" style="flex-basis: 90%; align-items: flex-start; justify-content: center; height: 80%; margin-left: 5%;">
+                <ui:VisualElement name="demo__top-container" class="text-medium" style="flex-basis: 25%; flex-direction: row; width: 85%; align-items: center; -unity-text-align: middle-center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                    <ui:Label text="This TextField uses both an &lt;b&gt;ChangeEvent&lt;/b&gt; and a &lt;b&gt;FocusEvent&lt;/b&gt;" display-tooltip-when-elided="true" name="demo__text-field-instructions" class="text-medium" style="flex-basis: 35%; height: 100%; white-space: normal; color: rgb(0, 127, 217); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                    <ui:VisualElement name="demo__text-field-border" class="round-outline" style="flex-basis: 70%; -unity-font-definition: url(&apos;project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); font-size: 28px; -unity-text-align: middle-left; align-items: center; justify-content: center; flex-direction: column; height: 100%; margin-left: 10%;">
+                        <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" text="Enter text input here..." name="demo__text-field" max-length="80" class="demo-text-field" style="width: 79%; font-size: 22px;" />
+                        <ui:Label text="Label" display-tooltip-when-elided="true" name="demo__text-field-label" class="text-medium" style="margin-top: 10%; width: 90%; align-items: center; justify-content: flex-end; -unity-text-align: upper-center; white-space: normal; flex-basis: 27%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="demo__bottom-container" style="flex-basis: 70%; width: 85%; flex-direction: row; margin-top: 5%;">
+                    <ui:Label text="Use the Slider to adjust the Button&apos;s width. This uses a &lt;b&gt;ChangeEvent&lt;/b&gt; to update&apos;s the Button&apos;s style layout. &#10;&#10;The Button&apos;s &lt;b&gt;GeometryChangedEvent&lt;/b&gt;, in turn, notifies the Label to display the new rectangle size." display-tooltip-when-elided="true" name="demo__button-slider-instructions" enable-rich-text="true" class="text-medium" style="flex-basis: 35%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(0, 127, 217); white-space: normal; -unity-text-align: upper-center;" />
+                    <ui:VisualElement name="demo__button-slider-border" class="round-outline" style="flex-basis: 70%; align-items: center; justify-content: center; flex-direction: column; margin-left: 10%; height: 100%;">
+                        <ui:VisualElement name="demo__slider-container" style="flex-basis: 25%; width: 90%; align-items: center; justify-content: center; margin-top: 0; margin-bottom: 10%;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="demo__slider-label" class="text-medium" style="width: 81%; -unity-text-align: upper-center; margin-bottom: 10%;" />
+                            <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" name="demo__slider" class="text-medium demo-slider" style="height: 105%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="demo__button-container" style="flex-basis: 56%; width: 90%; align-items: center; justify-content: center;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" name="demo__button" class="demo-button" style="width: 100%; height: 72%; flex-basis: 34%; -unity-text-align: middle-center; margin-bottom: 3%;" />
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="demo__button-label" class="text-medium" style="width: 100%; height: 60%; -unity-text-align: upper-center; white-space: normal; margin-top: 10%;">
+                                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="demo__label-label" class="text-medium" style="color: rgb(0, 127, 217); margin-top: 4%; margin-right: 0; margin-left: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; width: 100%; top: -24%; left: 0;" />
+                            </ui:Label>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="⟵MENU" display-tooltip-when-elided="true" name="back-button" class="back-button" />
+    </ui:VisualElement>
+</ui:UXML>

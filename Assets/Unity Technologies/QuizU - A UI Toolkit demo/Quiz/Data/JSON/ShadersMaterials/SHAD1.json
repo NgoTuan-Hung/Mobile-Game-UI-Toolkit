@@ -1,0 +1,25 @@
+{
+  "text": "What is the difference between a shader and a material?",
+  "skills": "Skill-L2-Art.Shad-1",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "A shader is a script that runs as part of the rendering process, and a material is an asset that specifies properties to a shader.",
+      "isCorrect": true
+    },
+    {
+      "text": "A shader is used in physically-based rendering to create photorealistic effects, and a material is used to increase performance if photorealism is not necessary.",
+      "isCorrect": false
+    },
+    {
+      "text": "A shader affects how light appears on an object, and a material affects its color.",
+      "isCorrect": false
+    },
+    {
+      "text": "They are actually the same thing.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered.",
+  "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+}

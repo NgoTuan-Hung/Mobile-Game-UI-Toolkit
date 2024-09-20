@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: FlexboxDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: Flexbox layout
+  m_BodyText:
+  - 'UI Toolkit uses a layout system based on the concept of flexible boxes. This
+    <b>flexbox</b> layout system allows for efficient arrangement of items within
+    a container, even when their sizes are unknown or dynamic.
+
+
+    Visual elements
+    are hierarchical and can act as a flex <b>container</b> for other elements. All
+    direct children are considered flex <b>items</b>.
+
+
+    As you explore UI Toolkit,
+    you will need to understand how these properties influence your UI layout.'
+  - '<b>Flex Direction</b>: This determines the primary axis along which flex items
+    are placed, either in a <b>row (horizontally)</b> or <b>column (vertically)</b>.
+
+
+    <b>Flex
+    Wrap</b>: By default, flex items will all try to fit onto one line (<b>nowrap</b>).
+    You can also allow the items to wrap onto multiple lines, depending on their
+    sizes and the available container space.
+
+
+    <b>Justify Content</b>: This defines
+    how items are aligned along the primary axis. Options include <b>flex-start</b>,
+    <b>flex-end</b>, <b>center</b>, space-around (equal space around the items) and
+    space-between (item evenly distributed along the axis).\n
+
+    <b>Align Items</b>:
+    This defines how items are aligned along the cross axis (perpendicular to the
+    primary axis). Options include <b>auto</b> (let UI Toolkit decide), <b>flex-start</b>,
+    <b>flex-end</b>, <b>center</b>, and <b>stretch</b> (stretch to fill the container
+    but still respect min-width/max-width).'
+  - 'In this example, adjust the flexbox <b>container</b> properties to see the resulting
+    layout on its <b>flex items</b>.
+
+
+    Note: the child items here have a minimum
+    width and height in pixels and have a maximum size based on a percentage of the
+    parent container.
+
+
+    Modify the container''s width and height and then adjust
+    the <b>Wrap</b>, <b>Direction</b>, <b>Justify</b>, and <b>Align</b> settings.
+
+
+    Open
+    the <b>UI Builder</b> for a more exhaustive look at USS''s capabilities. Mastering
+    flexbox layout will allow you to create dynamic and responsive UIs.'

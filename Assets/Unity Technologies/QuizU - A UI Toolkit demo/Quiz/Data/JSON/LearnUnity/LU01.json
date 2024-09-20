@@ -1,0 +1,27 @@
+
+  {
+    "text": "What does the term real-time mean?",
+    "skills": "Understand Unity’s history and role within the industries that rely on real-time creation.",
+    "shuffleOptions": false,
+    "options": [
+      {
+        "text": "The process of offline rendering.",
+        "isCorrect": false
+      },
+      {
+        "text": "How quickly a complex scene - including lights, effects, materials and physics - is rendered on the screen.",
+        "isCorrect": true
+      },
+      {
+        "text": "Waiting a long time to render complex scenes.",
+        "isCorrect": false
+      },
+      {
+        "text": "All of the above.",
+        "isCorrect": false
+      }
+    ],
+    "feedbackCorrect": "",
+    "feedbackIncorrect": "The term real-time describes how quickly an image is rendered (or displayed) on the screen. Eliminating the need to wait for renders has changed the ways creators can work — in fact, creators who move their projects from offline rendering to real-time remove weeks or months from the production cycle, and give themselves more time to experiment with new ideas or polish what’s already been designed."
+  }
+

@@ -1,0 +1,13 @@
+{
+  "text": "In an outdoor night scene you’ve created a soundscape using multiple ambient effects, one of which is of frog song. The frog song is a spatial audio effect, and the max distance is set to be right at the edge of a pond. However, even when the player is at the pond, the frog song is hard to hear over the other effects. What can be done to fix this issue without changing the overall soundscape? Select one answer.",
+  "skills": "Create interactive experiences by synthesizing audio experience design principles; Refine existing audio in a Unity project",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "Lower the volume on all of the other sound effects.", "isCorrect": false},
+    {"text": "Increase the max distance of the frog song to far beyond the pond.", "isCorrect": false},
+    {"text": "Set the frog song audio source to be 2D.", "isCorrect": false},
+    {"text": "Set the frog song priority to be lower than the other audio effects.", "isCorrect": true}
+  ],
+  "feedbackCorrect": "A Priority setting of 0 indicates the most important audio effect in Unity. The lower you set the audio source, the more priority Unity will give to playing that sound over another.",
+  "feedbackIncorrect": "A Priority setting of 0 indicates the most important audio effect in Unity. The lower you set the audio source, the more priority Unity will give to playing that sound over another."
+}

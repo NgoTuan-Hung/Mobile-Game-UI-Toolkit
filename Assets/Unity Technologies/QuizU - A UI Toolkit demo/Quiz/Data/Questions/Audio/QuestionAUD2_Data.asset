@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAUD2_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is an example of non-diegetic sound in an interactive experience?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Create interactive experiences by synthesizing audio experience design
+    principles
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: Footsteps
+  - IsCorrect: 0
+    Text: Wind blowing and other nature effects
+  - IsCorrect: 0
+    Text: Character dialogue
+  - IsCorrect: 1
+    Text: Background music
+  m_FeedbackCorrect: "Any audio that the viewer or player can hear, but that entities
+    within the world of the experience can\u2019t hear, is an example of non-diegetic
+    audio. For example, background music that\u2019s used to enhance the mood of
+    a scene, but isn\u2019t playing from an in-environment source such as a radio,
+    is non-diegetic."
+  m_FeedbackIncorrect: "Any audio that the viewer or player can hear, but that entities
+    within the world of the experience can\u2019t hear, is an example of non-diegetic
+    audio. For example, background music that\u2019s used to enhance the mood of
+    a scene, but isn\u2019t playing from an in-environment source such as a radio,
+    is non-diegetic."
+  m_FeedbackLink: 

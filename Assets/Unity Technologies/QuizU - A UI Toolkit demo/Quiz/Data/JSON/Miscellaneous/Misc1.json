@@ -1,0 +1,13 @@
+{
+  "text": "What is the function of Unity's Transform component? Select one answer.",
+  "skills": "Skill-L2-ObjectManipulation-1",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "It provides physics properties for GameObjects.", "isCorrect": false},
+    {"text": "It allows GameObjects to emit particles.", "isCorrect": false},
+    {"text": "It handles the positioning, rotation, and scaling of GameObjects.", "isCorrect": true},
+    {"text": "It manages the rendering of GameObjects.", "isCorrect": false}
+  ],
+  "feedbackCorrect": "The Transform component in Unity is responsible for handling the position, rotation, and scale of GameObjects.",
+  "feedbackIncorrect": "The Transform component in Unity is responsible for handling the position, rotation, and scale of GameObjects."
+}

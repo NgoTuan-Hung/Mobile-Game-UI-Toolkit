@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Quiz/UI/Uss/QuizGameLandscape.uss?fileID=7433441132597879392&amp;guid=ca098f128b87b49efbb2dc229687d34c&amp;type=3#QuizGameLandscape" />
+    <ui:Label text="Which of the following statements are true about parent (base) and child (derived) classes?" display-tooltip-when-elided="true" name="question-screen__question-text" class="question-text-large" style="flex-grow: 0; flex-shrink: 1;" />
+</ui:UXML>

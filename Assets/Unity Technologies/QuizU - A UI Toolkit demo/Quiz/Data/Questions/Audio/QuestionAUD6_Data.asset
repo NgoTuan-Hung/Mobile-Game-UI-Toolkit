@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAUD6_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is spatial audio? Select one answer.
+  m_Skills: Refine existing audio in a Unity project
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: Audio that exists at a consistent volume regardless of where the listener
+      is within a scene.
+  - IsCorrect: 0
+    Text: "Audio that is \u201Cpart of the world\u201D of the scene that it\u2019s
+      in; for example, the sound of wind that blows through trees."
+  - IsCorrect: 0
+    Text: Audio that only the user of the application can hear, which is often used
+      to enhance the experience, such as a sound effect attached to a UI button.
+  - IsCorrect: 1
+    Text: "Audio that exists in a specific point in 3D space, and will sound different
+      based on the listener\u2019s proximity to the source of the sound."
+  m_FeedbackCorrect: Spatial audio simulates sounds that exist in a physical space.
+    They originate from a set location, and the sound decays based on the distance
+    and orientation of the listener.
+  m_FeedbackIncorrect: Spatial audio simulates sounds that exist in a physical space.
+    They originate from a set location, and the sound decays based on the distance
+    and orientation of the listener.

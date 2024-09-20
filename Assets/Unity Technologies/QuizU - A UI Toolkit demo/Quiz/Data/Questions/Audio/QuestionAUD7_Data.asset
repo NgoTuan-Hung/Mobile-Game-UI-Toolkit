@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAUD7_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: "You\u2019ve added an audio source to your scene of a car alarm going off,
+      and you set the min and max distance appropriately. However, when you test
+      your scene you can hear the car alarm at a high volume even though you\u2019re
+      well out of range. \n\n"
+  - FontSize: 2
+    Text: What is most likely to have occurred? Select one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Produce customized results by correctly configuring audio in a scene
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: The volume rolloff was set to linear.
+  - IsCorrect: 0
+    Text: The priority of the audio source has been set to 1.
+  - IsCorrect: 0
+    Text: The Bypass Effects property has been set to True on the audio source.
+  - IsCorrect: 1
+    Text: "The spatial blend hasn\u2019t been set to 3D."
+  m_FeedbackCorrect: Even with the min and max distance on an audio source set, an
+    audio clip will still play at a consistent volume throughout the scene unless
+    its spatial blend is set to 3D.
+  m_FeedbackIncorrect: Even with the min and max distance on an audio source set,
+    an audio clip will still play at a consistent volume throughout the scene unless
+    its spatial blend is set to 3D.

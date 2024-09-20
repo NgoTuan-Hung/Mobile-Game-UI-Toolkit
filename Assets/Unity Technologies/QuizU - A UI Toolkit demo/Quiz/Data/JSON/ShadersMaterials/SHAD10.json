@@ -1,0 +1,25 @@
+{
+  "text": "In Shader Graph, what is the Master Stack?",
+  "skills": "Skill-L2-Art.Shad.Scr-1",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "The list of end nodes for vertex and fragment shading, which provides an end point for the graph",
+      "isCorrect": true
+    },
+    {
+      "text": "The list of all nodes used in the shader",
+      "isCorrect": false
+    },
+    {
+      "text": "The list of all nodes available to be used in the shader",
+      "isCorrect": false
+    },
+    {
+      "text": "The start point of the graph",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "The Master Stack is the end point of a Shader Graph that defines the final surface appearance of a shader. It lists the major shader properties of a Vertex and a Fragment shader and provides you with the end nodes where you will plug in the necessary values.",
+  "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+}

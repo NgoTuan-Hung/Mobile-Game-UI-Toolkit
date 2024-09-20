@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK18_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In the UI Toolkit, what is the <b>UQueryBuilder</b> used for?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: It is used to construct complex UI animations
+  - IsCorrect: 1
+    Text: It is used to query the UI hierarchy and find elements
+  - IsCorrect: 0
+    Text: It is used to bind UI elements to data sources
+  - IsCorrect: 0
+    Text: It is used to manage multi-threading in the UI
+  m_FeedbackCorrect: The <b>UQueryBuilder</b> is used to query the UI hierarchy and
+    find elements. It allows for complex queries to be constructed to find specific
+    elements.
+  m_FeedbackIncorrect: The <b>UQueryBuilder</b> is not used for constructing UI animations,
+    binding UI elements to data sources, or managing multi-threading. It is used
+    to query the UI hierarchy and find elements.

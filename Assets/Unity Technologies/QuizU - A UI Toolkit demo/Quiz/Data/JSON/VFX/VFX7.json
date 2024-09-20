@@ -1,0 +1,28 @@
+{
+  "text": "Which of the following are true about the differences between VFX Graph and the Particle System? Select all answers that apply.",
+  "skills": "Skill-L2-Art.VFX-3",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "VFX Graph supports a higher particle count than the Particle System.",
+      "isCorrect": true
+    },
+    {
+      "text": "VFX Graph runs on the CPU, while the Particle system runs on the GPU.",
+      "isCorrect": false
+    },
+    {
+      "text": "The Particle System uses Unity’s underlying physics system, allowing particles to interact with other physics-based objects in the scene.",
+      "isCorrect": true
+    },
+    {
+      "text": "Even though the Particle System is a bit simpler to use, VFX Graph is capable of producing more complex simulations and allows for more customizable behaviors.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "VFX Graph supports millions of particles, while the Particle System only supports thousands.\n\nVFX Graph runs on the GPU, while the Particle System runs on the CPU.\n\nThe particles from a Particle System use Unity’s underlying physics system, allowing the particles to interact with other physics-based objects in the scene.\n\nEven though the Particle System is a bit simpler to use, VFX Graph is capable of producing more complex simulations and allows for more customizable behaviors.",
+  "feedbackIncorrect": ""
+}
+
+
+

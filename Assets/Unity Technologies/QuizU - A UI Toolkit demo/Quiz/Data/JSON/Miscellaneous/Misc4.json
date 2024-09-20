@@ -1,0 +1,26 @@
+{
+    "text": "What is the primary purpose of Unity's NavMesh system? Select one answer.",
+    "skills": "Skill-L2-AIPathfinding-1",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "To render complex 3D models more efficiently",
+            "isCorrect": false
+        },
+        {
+            "text": "To manage the physics interactions of GameObjects",
+            "isCorrect": false
+        },
+        {
+            "text": "To create and manage efficient pathfinding for agents",
+            "isCorrect": true
+        },
+        {
+            "text": "To design and manage complex user interfaces",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "Unity's NavMesh system is primarily used for creating and managing efficient pathfinding for agents in a game or application.",
+    "feedbackIncorrect": "Unity's NavMesh system is primarily used for creating and managing efficient pathfinding for agents in a game or application."
+   
+}

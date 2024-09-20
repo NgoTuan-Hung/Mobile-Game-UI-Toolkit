@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Quiz/UI/Uss/MenuScreens.uss?fileID=7433441132597879392&amp;guid=cd0f7ad5384494cd9bd2336a342c02b5&amp;type=3#MenuScreens" />
+    <Style src="project://database/Assets/Quiz/UI/Uss/ProgressBars.uss?fileID=7433441132597879392&amp;guid=c9481d1af1e57437dad9f1af73e9b133&amp;type=3#ProgressBars" />
+    <ui:VisualElement name="splash__container" style="width: 100%; height: 100%; position: absolute; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(217, 217, 217); align-items: center; justify-content: center;">
+        <ui:Label text="SplashScreen" display-tooltip-when-elided="true" name="menu__screen-label" class="screen-label" style="display: none;" />
+        <ui:VisualElement name="menu__start-group" style="width: 75%; height: 55%; -unity-text-align: upper-center; align-items: center; justify-content: center; -unity-background-scale-mode: scale-to-fit;">
+            <ui:Label text="LOADING" display-tooltip-when-elided="true" name="splash__loading-label" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); font-size: 36px; color: rgb(0, 127, 217); -unity-background-scale-mode: scale-to-fit; flex-basis: 15%; margin-top: 11%; -unity-text-align: lower-center; letter-spacing: 43px;" />
+            <ui:ProgressBar value="0.3" name="splash__progress-bar" style="width: 54%; height: 1%; flex-basis: 50%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

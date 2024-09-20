@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK17_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In the UI Toolkit, what is the purpose of a <b>VisualElement</b>?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: It's the base class for all elements in the UI Toolkit
+  - IsCorrect: 0
+    Text: It's used for applying visual effects to UI elements
+  - IsCorrect: 0
+    Text: It's a class used for audio elements in the UI
+  - IsCorrect: 0
+    Text: It's used for creating 3D visual elements in the UI
+  m_FeedbackCorrect: <b>VisualElement</b> is the base class for all elements in the
+    UI Toolkit. It is the core primitive from which all user interface controls and
+    containers derive.
+  m_FeedbackIncorrect: <b>VisualElement</b> is not used for applying visual effects,
+    audio elements, or creating 3D visual elements in the UI. It is the base class
+    for all elements in the UI Toolkit.

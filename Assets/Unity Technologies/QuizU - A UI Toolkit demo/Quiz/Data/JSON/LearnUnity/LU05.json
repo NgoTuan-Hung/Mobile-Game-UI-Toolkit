@@ -1,0 +1,25 @@
+{
+  "text": "What does DCC stand for?",
+  "skills": "Describe the real-time production cycle",
+  "shuffleOptions": false,
+  "options": [
+    {
+      "text": "Direct Consumer Component",
+      "isCorrect": false
+    },
+    {
+      "text": "Digital Creation Community",
+      "isCorrect": false
+    },
+    {
+      "text": "Dynamic Content Creation",
+      "isCorrect": false
+    },
+    {
+      "text": "Digital Content Creation",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "",
+  "feedbackIncorrect": ""
+}

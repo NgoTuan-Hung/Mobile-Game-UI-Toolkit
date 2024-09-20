@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b58886c1fee4362a2b2e72dd8ab2cf, type: 3}
+  m_Name: QuizCreativeCoreAudio_Data
+  m_EditorClassIdentifier: 
+  m_Title: 'Creative Core: Audio'
+  m_Summary: In this quiz, you will assess your knowledge of audio in Unity.
+  m_Objectives:
+  - "\u2022 Implement audio in Unity"
+  - "\u2022 Produce customized results by correctly configuring audio"
+  - "\u2022 Create interactive experiences through audio"
+  - "\u2022 Refine existing audio in a Unity project"
+  m_Icon: {fileID: 21300000, guid: 6750427fbaaa14e21975e64b3ab28bd2, type: 3}
+  m_DifficultyLevel: Beginner
+  m_EstimatedTime: 10 min
+  m_CorrectAnswersToPass: 8
+  m_Questions:
+  - {fileID: 11400000, guid: c6c57554493f44e5d9d5b651a4c9fd70, type: 2}
+  - {fileID: 11400000, guid: 7e4e3653eb5784ef3821e406ed1660a1, type: 2}
+  - {fileID: 11400000, guid: 5f1f609648439481580b638f83e3be61, type: 2}
+  - {fileID: 11400000, guid: 3b33cbd7e58594a5cacb7bfdf219f4a7, type: 2}
+  - {fileID: 11400000, guid: 94e2d97f944f44d7cbb3f8bfda88a8fb, type: 2}
+  - {fileID: 11400000, guid: 158433a09d8564857bcbebeb2c3ba89e, type: 2}
+  - {fileID: 11400000, guid: 345810ffe432243bc99055d71d8a66da, type: 2}
+  - {fileID: 11400000, guid: 81a725cc46b9c4b7d9f8e5a81dba2dbc, type: 2}
+  - {fileID: 11400000, guid: 59e30aaf65a4846ea9e4af825ba597d8, type: 2}
+  - {fileID: 11400000, guid: 1c918a3e777924e5f83874ea2d9b185d, type: 2}

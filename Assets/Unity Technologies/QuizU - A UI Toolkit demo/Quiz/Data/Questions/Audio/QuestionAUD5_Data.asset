@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAUD5_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is the function of an audio source? Select one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Implement audio in Unity
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: It plays any 2D audio or 3D audio that is within its range.
+  - IsCorrect: 0
+    Text: It is the master audio file, and can be edited and compressed to improve
+      application optimization.
+  - IsCorrect: 0
+    Text: It is the audio reference added to a special effect volume, such as a reverb
+      zone, and controls the properties of the effect.
+  - IsCorrect: 1
+    Text: It handles the basic properties of an audio clip, such as priority and
+      volume, and plays the clip in the scene.
+  m_FeedbackCorrect: The audio source is the object that appears in a scene and manages
+    the actual playing and properties of a selected audio clip.
+  m_FeedbackIncorrect: The audio source is the object that appears in a scene and
+    manages the actual playing and properties of a selected audio clip.
+  m_FeedbackLink: 

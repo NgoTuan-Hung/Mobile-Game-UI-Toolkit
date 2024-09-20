@@ -1,0 +1,25 @@
+{
+  "text": "If it says, “Hello there!” in the console, what was the code used to create that message?",
+  "skills": "-",
+  "shuffleOptions": false,
+  "options": [
+    {
+      "text": "Debug(\"Hello there!\");",
+      "isCorrect": false
+    },
+    {
+      "text": "Debug.Log(\"Hello there!\");",
+      "isCorrect": true
+    },
+    {
+      "text": "Debug.Console(\"Hello there!\");",
+      "isCorrect": false
+    },
+    {
+      "text": "Debug.Log(Hello there!);",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Debug.Log() prints messages to the console and can accept String parameters between quotation marks, such as “Hello there!”",
+  "feedbackIncorrect": "Debug.Log() prints messages to the console and can accept String parameters between quotation marks, such as “Hello there!”"
+}

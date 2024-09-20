@@ -1,0 +1,26 @@
+
+{
+  "text": "What is the order of the phases of the real-time production cycle?",
+  "skills": "Describe the real-time production cycle",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Operations > Pre-production > post-production > production",
+      "isCorrect": false
+    },
+    {
+      "text": "Production > operations > post-production > pre-production",
+      "isCorrect": false
+    },
+    {
+      "text": "Pre-production > production > post-production > operations",
+      "isCorrect": true
+    },
+    {
+      "text": "Pre-production > post-production > production > operations",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "",
+  "feedbackIncorrect": ""
+}

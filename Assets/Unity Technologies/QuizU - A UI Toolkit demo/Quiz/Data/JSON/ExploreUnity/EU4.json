@@ -1,0 +1,22 @@
+
+  {
+    "text": "How can the Unity Creator Community be helpful? Select all that apply.",
+    "skills": "",
+    "shuffleOptions": false,
+    "options": [
+      {
+        "text": "You can ask them questions.",
+        "isCorrect": true
+      },
+      {
+        "text": "You can get feedback.",
+        "isCorrect": true
+      },
+      {
+        "text": "You can learn from others.",
+        "isCorrect": true
+      }
+    ],
+    "feedbackCorrect": "",
+    "feedbackIncorrect": ""
+  }

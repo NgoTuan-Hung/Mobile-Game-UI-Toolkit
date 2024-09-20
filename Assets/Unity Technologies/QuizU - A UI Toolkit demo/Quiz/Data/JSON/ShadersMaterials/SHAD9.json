@@ -1,0 +1,25 @@
+{
+  "text": "In Shader Graph, what items are listed in the Blackboard?",
+  "skills": "Skill-L2-Art.Shad.Scr-1",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Input nodes that users of the shader can configure in materials",
+      "isCorrect": true
+    },
+    {
+      "text": "All nodes used in the current graph",
+      "isCorrect": false
+    },
+    {
+      "text": "Nodes that can be added to the graph",
+      "isCorrect": false
+    },
+    {
+      "text": "Nodes not yet connected to the graph flow",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "The Blackboard contains the properties that will be available to artists who use this shader to create materials. Here you can define property types as well as their names, attributes, and default values.",
+  "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+}

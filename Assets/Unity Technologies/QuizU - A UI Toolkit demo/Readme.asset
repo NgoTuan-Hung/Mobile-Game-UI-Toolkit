@@ -1,0 +1,274 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 0d566c1cc44ac4103ae3eaaaecf9018f, type: 3}
+  title: QuizU sample
+  sections:
+  - heading: Welcome to the QuizU project
+    text: This demo project showcases game architecture for creating a UI-based game
+      using UI Toolkit.
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: Getting Started
+    text: Start the project from the <b>Boot</b> scene (enable <b>Quiz > Load Bootstrap
+      Scene on Play</b>)
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: Key Features
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Event-based Architecture:</b> Static GameEvents, UIEvents, etc.  facilitate
+      communication between systems, promoting easier testing and maintenance.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Design Patterns:</b>  The project showcases several core design patterns,
+      including the state pattern and model-view-presenter.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>UI Toolkit:</b> As a UI-driven game, the sample uses <b>UI Toolkit</b>
+      for all interfaces, demonstrating practical usage patterns.
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: Demos
+    text: These individual scenes showcase a feature from UI Toolkit.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>UXML and Visual Trees:</b> UXML, akin to a blueprint for UI structures,
+      forms the foundation of user interface design in UI Toolkit. These files facilitate
+      the creation of a visual tree, a hierarchical structure of UI elements.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Flexboxes:</b> Flexboxes provide an efficient layout model for arranging
+      UI elements dynamically within a container.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Unity Style Sheets (USS):</b> USS allows developers to customize UI
+      elements with pre-defined styles. Reskinning your UI is just a matter of swapping
+      style sheets.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>UQuery:</b> UQuery makes it straightforward to search through a complex
+      hierarchy. Then we can work on specific UI components within the visual tree
+      with ease.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Pseudo-classes:</b> Pseudo-classes create interactive and animated UI
+      elements with minimal extra code, adding extra 'juice' to your visual interface.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>UI Toolkit Event System:</b> UI Toolkit brings its own event system,
+      designed to handle your UI's clicks, changes, and pointer input. This enables
+      interactions and communication between different UI elements, even across complex
+      hierarchies.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Manipulators:</b> Encapsulating related event callbacks into a single
+      class, a manipulator optimizes UI interactions, promotes reusability, and enhances
+      code organization.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Custom Controls:</b> The demo shows how to define and instantiate custom
+      VisualElement through UxmlFactory and UxmlTraits classes. It enables developers
+      to create custom controls that can be reused.
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: QuizU game
+    text: The project includes some sample quiz questions from Unity Learn. Test
+      your knowledge of Unity as you explore the sample. This sample game consists
+      of several screens, made with UI Toolkit.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Splash Screen:</b> This pre-loads the game with an animated progress
+      bar.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Start Screen:</b> This is the first screen, typically featuring the
+      game's logo/ branding and a "start" or "play" button.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Main Menu Screen:</b> This screen navigates to various parts of the
+      game such as the levels, settings, or other menus.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Settings Screen:</b> This is where the player can adjust game preferences,
+      like audio settings.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Level Selection Screen:</b> This screen allows the player to choose
+      the game level or stage they wish to play.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Game Screen:</b> This is where the main gameplay happens. In the context
+      of the QuizU game, this is where questions are presented, and answers are collected.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Pause Screen:</b> This screen is displayed when the game is temporarily
+      halted, providing options to quit or resume the game.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>EndScreen:</b> This screen displays the player's score or performance
+      when the game is complete while showing options to replay or return to the
+      main menu.
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: Naming conventions
+    text: Note the use of suffixes for certain classes. See the below descriptions
+      for details.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Manager:</b> This class handles game-level or global concerns. It may
+      manage the lifecycle of certain types of objects or services, not specific
+      to any particular UI screen (e.g., AudioManager, SequenceManager).
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Controller:</b> This class controls game flow (e.g., GameController).
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Presenter:</b> This class is an intermediary controller in the MVP pattern.
+      This insulates the interface from the data (e.g. LevelSelectionPresenter updates
+      the LevelSelectionScreen (View) using the ScriptableObject data (Model).
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Screen:</b> This is View code for managing one unit of the UI -- a modal
+      screen that derives from the <b>UIScreen</b> base class. Only one screen is
+      active at a time in this "screen stack" pattern.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>Display:</b> This class forms part of a UI of another Screen. For example,
+      the GameScreen is a larger screen that encloses the ResponseDisplay, QuestionDisplay,
+      ProgressDisplay, etc.
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>ScriptableObjects:</b> The C# scripts have an "SO" suffix. The ScriptableObject
+      assets end with the "_Data" suffix.
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: ScriptTemplates
+    text: The <b>ScriptTemplates</b> folder includes two files to set up formatting,
+      namespaces, and base classes for new MonoBehaviours and ScriptableObjects.
+      Modify or create additional templates as needed.
+    linkText: How to customize Unity script templates
+    url: https://support.unity.com/hc/en-us/articles/210223733-How-to-customize-Unity-script-templates
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: Style Guide
+    text: The QuizU game style guide in the <b>_StyleGuide</b> folder outlines conventions
+      for C# programming in Unity. This covers naming, formatting, commenting, and
+      organizing code structures. The emphasis is on readability and maintainability,
+      and the guidelines include rules for casing, line length, braces, etc.
+    linkText: 'Create a C# style guide: Write cleaner code that scales'
+    url: https://resources.unity.com/games/create-code-style-guide-e-book?ungated=true
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: UI Toolkit Documentation
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: The <b>UI Toolkit</b> is a collection of resources, features, and tools
+      that Unity developers can use to create custom user interfaces and extensions
+      for the Unity Editor. It can be used for developing runtime debugging tools,
+      as well as UI for games and applications. The UI Toolkit is inspired by web
+      technologies, so developers with experience in web development will find the
+      core concepts familiar.
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: Read more about UI Toolkit
+    url: https://docs.unity3d.com/Manual/UIElements.html
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: Additional Resources
+    text: The implementations in this project are provided for inspiration and education.
+      In most cases, the code examples favor clarity over compactness.
+    linkText: 
+    url: 
+  - heading: 
+    text: 'Here are some related resources about game architecture and UI Toolkit:'
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: Create modular game architecture in Unity with ScriptableObjects
+    url: https://resources.unity.com/games/create-modular-game-architecture-with-scriptable-objects-ebook
+  - heading: 
+    text: 
+    linkText: "UI Toolkit Sample \u2013 Dragon Crashers"
+    url: https://assetstore.unity.com/packages/essentials/tutorial-projects/ui-toolkit-sample-dragon-crashers-231178
+  - heading: 
+    text: 
+    linkText: User interface design and implementation in Unity
+    url: https://resources.unity.com/games/user-interface-design-and-implementation-in-unity
+  - heading: 
+    text: 
+    linkText: Level up your code with game programming patterns
+    url: https://resources.unity.com/games/level-up-your-code-with-game-programming-patterns
+  loadedLayout: 1

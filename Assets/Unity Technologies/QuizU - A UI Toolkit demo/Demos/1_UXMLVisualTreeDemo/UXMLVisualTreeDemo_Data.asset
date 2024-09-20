@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: UXMLVisualTreeDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: UXML
+  m_BodyText:
+  - 'UXML, or Unity XML, is a markup language used to structure and organize user
+    interfaces in UI Toolkit. The core of this system is the <b>VisualTree</b> structure.
+
+
+    UXML
+    files can also serve as reusable templates for UI elements, much like Prefabs
+    do for GameObjects. When a UXML file (or template) is loaded or instantiated,
+    a corresponding visual tree is created in memory.
+
+
+    Consider UXML files as
+    building blocks for UI structures and controls. UXML supports nesting, allowing
+    your team members to work on individual UXML files and then combine them into
+    a master hierarchy. This can prevent merge conflicts and promote modularity.'
+  - 'The <b>VisualTree</b> structure offers a hierarchical organization for UI elements,
+    with a root element at the top of the hierarchy. Descendants of this root, such
+    as buttons, text fields, and labels, can further have their own child elements,
+    creating a tree-like organization.
+
+
+    All elements within this visual tree
+    derive from the <b>VisualElement</b> base class, the fundamental unit for constructing
+    user interfaces.
+
+
+    This structure allows for efficient manipulation of nested
+    objects, which is often required in complex UIs. Understanding the visual tree
+    can help you optimize rendering and improve performance.'
+  - "Be aware of these concepts when working with UI Toolkit visual tree:\n\n\u2022
+    <b>Draw order:</b> Elements higher in the tree are rendered before their children,
+    meaning children appear \"above\" their parents. This eliminates the need for
+    manual z-coordinates or layer adjustment.\n\n\u2022 <b>Query system:</b> UI Toolkit
+    provides a query system to find and manipulate elements based on type, class,
+    name, or their relationship to other elements. This system enables complex selection
+    and application of styles or behaviors to multiple elements simultaneously.\n\n\u2022<b>Flexbox
+    layout:</b> Works alongside the visual tree to control element positioning. A
+    parent element's flexbox attributes dictate the layout of its child elements,
+    allowing them to adapt and fill available space.\n\n\u2022<b>Event system:</b>
+    UI Toolkit includes its own event system, designed to work with a complex hierarchy
+    of elements. It captures and processes a variety of events such as mouse clicks,
+    key presses, and touch inputs."
+  - "Hover the mouse over each element in the UI to see additional information about
+    its parent structure in the visual tree hierarchy.\n\nUse the <b>UI Builder</b>
+    to examine UXML and USS in closer detail to see how structure and style combine
+    to form the on-screen interface.\n\nNote that a <b>panel</b> is the parent object
+    of a visual tree. It owns the rootVisualElement but itself isn\u2019t a visual
+    element. A visual tree must connect to a panel for its visual elements to render."

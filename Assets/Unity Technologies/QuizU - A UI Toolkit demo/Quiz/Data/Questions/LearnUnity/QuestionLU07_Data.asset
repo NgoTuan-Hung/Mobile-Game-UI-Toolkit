@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionEQ1_07_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What does a <b>software developer</b> do?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Describe the real-time production cycle
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: Codes user interfaces to meet the intent of the project's design and flow
+      and integrates UI systems into features.
+  - IsCorrect: 0
+    Text: Finds and reports bugs and writes test cases and plans.
+  - IsCorrect: 0
+    Text: Sculpts and model characters and their assets such as hair, accessories,
+      armor, and weapons
+  - IsCorrect: 1
+    Text: Designs, develops, tests, and releases new features and tools.
+  m_FeedbackCorrect: A software developer designs, develops, tests, and releases
+    new features and tools.
+  m_FeedbackIncorrect: A software developer designs, develops, tests, and releases
+    new features and tools.
+  m_FeedbackLink: 

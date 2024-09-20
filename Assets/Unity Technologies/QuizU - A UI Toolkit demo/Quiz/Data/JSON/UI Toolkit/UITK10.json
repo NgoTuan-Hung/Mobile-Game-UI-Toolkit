@@ -1,0 +1,25 @@
+{
+    "text": "Which class in UI Toolkit allows you to create a dropdown menu?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "MenuElement",
+            "isCorrect": false
+        },
+        {
+            "text": "DropdownElement",
+            "isCorrect": false
+        },
+        {
+            "text": "PopupMenu",
+            "isCorrect": false
+        },
+        {
+            "text": "DropdownMenu",
+            "isCorrect": true
+        }
+    ],
+    "feedbackCorrect": "The DropdownMenu class in UI Toolkit is used for creating dropdown menus.",
+    "feedbackIncorrect": "The DropdownMenu class in UI Toolkit is used for creating dropdown menus, not MenuElement, DropdownElement, or PopupMenu."
+}

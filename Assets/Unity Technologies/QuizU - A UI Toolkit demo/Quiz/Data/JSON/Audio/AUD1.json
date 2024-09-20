@@ -1,0 +1,29 @@
+{
+    "text": "How many audio listeners should be present in a Unity scene?",
+    "skills": "Implement audio in Unity, Produce customized results by correctly configuring audio in a scene",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "As many as there are sound producing objects",
+            "isCorrect": false,
+            "feedback": "An audio listener plays any audio sources that are within range in a scene. There is only ever one audio listener, generally on the main camera."
+        },
+        {
+            "text": "Two",
+            "isCorrect": false,
+            "feedback": "An audio listener plays any audio sources that are within range in a scene. There is only ever one audio listener, generally on the main camera."
+        },
+        {
+            "text": "One for each directly interactable object",
+            "isCorrect": false,
+            "feedback": "An audio listener plays any audio sources that are within range in a scene. There is only ever one audio listener, generally on the main camera."
+        },
+        {
+            "text": "One",
+            "isCorrect": true,
+            "feedback": "There is only ever one audio listener, generally on the main camera."
+        }
+    ],
+    "feedbackCorrect": "There is only ever one audio listener, generally on the main camera.",
+    "feedbackIncorrect": ""
+}

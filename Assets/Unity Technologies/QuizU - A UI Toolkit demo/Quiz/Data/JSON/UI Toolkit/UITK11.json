@@ -1,0 +1,25 @@
+{
+    "text": "In UI Toolkit, how can you specify that a style should only apply when an element is hovered over by the mouse?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "Using <b>:hover</b> pseudo-class",
+            "isCorrect": true
+        },
+        {
+            "text": "Using hover attribute",
+            "isCorrect": false
+        },
+        {
+            "text": "Using <b>onMouseHover</b> event",
+            "isCorrect": false
+        },
+        {
+            "text": "Using <b>HoverHandler</b> class",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "In Unity's UI Toolkit, the <b>:hover</b> pseudo-class is used to apply styles when an element is hovered over by the mouse. This allows you to create interactive and responsive designs in your user interface.",
+    "feedbackIncorrect": "In Unity's UI Toolkit, styles for an element during a hover event are specified using the <b>:hover</b> pseudo-class. Using a hover attribute, onMouseHover event, or a hypothetical HoverHandler class are not valid methods in UI Toolkit to specify styles for a hover event."
+}

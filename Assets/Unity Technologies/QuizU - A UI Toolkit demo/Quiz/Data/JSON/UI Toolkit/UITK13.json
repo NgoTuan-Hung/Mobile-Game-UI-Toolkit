@@ -1,0 +1,25 @@
+{
+    "text": "In UI Toolkit, which class allows you to create a progress bar?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "ProgressElement",
+            "isCorrect": false
+        },
+        {
+            "text": "ProgressBar",
+            "isCorrect": true
+        },
+        {
+            "text": "ProgressMeter",
+            "isCorrect": false
+        },
+        {
+            "text": "ProgressIndicator",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>ProgressBar</b> class in UI Toolkit is used for creating progress bars.",
+    "feedbackIncorrect": "The <b>ProgressBar</b> class in UI Toolkit is used for creating progress bars, not ProgressElement, ProgressMeter, or ProgressIndicator."
+}

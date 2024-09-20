@@ -1,0 +1,25 @@
+{
+  "text": "Unity’s coordinate system is “Y-up.” What does that mean?",
+  "skills": "Navigate in 3D space in the Scene view",
+  "shuffleOptions": false,
+  "options": [
+    {
+      "text": "Y measures distance from the current viewpoint in the direction of view.",
+      "isCorrect": false
+    },
+    {
+      "text": "Y goes up from zero only; the ground is the lower vertical limit.",
+      "isCorrect": false
+    },
+    {
+      "text": "Y is vertical, and X and Z are horizontal.",
+      "isCorrect": true
+    },
+    {
+      "text": "None of the above.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "“Y-up” means that the Y dimension goes up and down. X and Z are similar to east-west and north-south (depending on your point of view).",
+  "feedbackIncorrect": "“Y-up” means that the Y dimension goes up and down. X and Z are similar to east-west and north-south (depending on your point of view)."
+}

@@ -1,0 +1,30 @@
+  {
+    "text": "What industries can use Unity?",
+    "skills": "Understand Unity’s history and role within the industries that rely on real-time creation.",
+    "shuffleOptions": false,
+    "options": [
+      {
+        "text": "Automotive",
+        "isCorrect": false
+      },
+      {
+        "text": "Architecture",
+        "isCorrect": false
+      },
+      {
+        "text": "Gaming",
+        "isCorrect": false
+      },
+      {
+        "text": "Film",
+        "isCorrect": false
+      },
+      {
+        "text": "All of the above",
+        "isCorrect": true
+      }
+    ],
+    "feedbackCorrect": "",
+    "feedbackIncorrect": "Unity is not limited to any specific industry — any industry that needs to create content, especially interactive content, benefits from creating with Unity. Every day, new and unique experiences created with Unity hit the market."
+  }
+  

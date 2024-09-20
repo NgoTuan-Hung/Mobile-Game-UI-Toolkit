@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionSHAD10_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In Shader Graph, what is the Master Stack?
+  m_Skills: Skill-L2-Art.Shad.Scr-1
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: The list of end nodes for vertex and fragment shading, which provides an
+      end point for the graph
+  - IsCorrect: 0
+    Text: The list of all nodes used in the shader
+  - IsCorrect: 0
+    Text: The list of all nodes available to be used in the shader
+  - IsCorrect: 0
+    Text: The start point of the graph
+  m_FeedbackCorrect: The Master Stack is the end point of a Shader Graph that defines
+    the final surface appearance of a shader. It lists the major shader properties
+    of a Vertex and a Fragment shader and provides you with the end nodes where you
+    will plug in the necessary values.
+  m_FeedbackIncorrect: Shaders and materials work together to define all the characteristics
+    of a mesh surface during the rendering process. A material is an asset that works
+    with a shader to define how meshes will be rendered.

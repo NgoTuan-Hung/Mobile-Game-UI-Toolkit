@@ -1,0 +1,26 @@
+
+  {
+    "text": "Select all of the resources available to creators to learn Unity.",
+    "skills": "",
+    "shuffleOptions": false,
+    "options": [
+      {
+        "text": "Unity Documentation",
+        "isCorrect": true
+      },
+      {
+        "text": "Unity Learn Platform",
+        "isCorrect": true
+      },
+      {
+        "text": "Unity Answers and Forums",
+        "isCorrect": true
+      },
+      {
+        "text": "YouTube",
+        "isCorrect": true
+      }
+    ],
+    "feedbackCorrect": "All of these resources are part of the Unity Learning Ecosystem.",
+    "feedbackIncorrect": "All of these resources are part of the Unity Learning Ecosystem."
+  }

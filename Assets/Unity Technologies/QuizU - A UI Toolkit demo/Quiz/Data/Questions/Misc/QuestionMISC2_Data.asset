@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAU2_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 1
+    Text: In Unity, what does the acronym 'FPS' commonly stand for? Select one answer.
+  m_Skills: Skill-L2-PerformanceOptimization-1
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: Frames Per Second
+  - IsCorrect: 0
+    Text: First Person Shooter
+  - IsCorrect: 0
+    Text: Fast Particle System
+  - IsCorrect: 0
+    Text: Fixed Point Sampling
+  m_FeedbackCorrect: In the context of Unity and game development, 'FPS' commonly
+    stands for Frames Per Second, a measurement of how quickly a game or application
+    can render images on screen.
+  m_FeedbackIncorrect: In the context of Unity and game development, 'FPS' commonly
+    stands for Frames Per Second, a measurement of how quickly a game or application
+    can render images on screen.

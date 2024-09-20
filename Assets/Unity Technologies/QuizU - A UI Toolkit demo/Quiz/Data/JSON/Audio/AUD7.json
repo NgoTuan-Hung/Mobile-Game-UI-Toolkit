@@ -1,0 +1,25 @@
+{
+  "text": "You’ve added an audio source to your scene of a car alarm going off, and you set the min and max distance appropriately. However, when you test your scene you can hear the car alarm at a high volume even though you’re well out of range. What is most likely to have occurred? Select one answer.",
+  "skills": "Produce customized results by correctly configuring audio in a scene",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "The volume rolloff was set to linear.",
+      "isCorrect": false
+    },
+    {
+      "text": "The priority of the audio source has been set to 1.",
+      "isCorrect": false
+    },
+    {
+      "text": "The Bypass Effects property has been set to True on the audio source.",
+      "isCorrect": false
+    },
+    {
+      "text": "The spatial blend hasn’t been set to 3D.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "Even with the min and max distance on an audio source set, an audio clip will still play at a consistent volume throughout the scene unless its spatial blend is set to 3D.",
+  "feedbackIncorrect": "Even with the min and max distance on an audio source set, an audio clip will still play at a consistent volume throughout the scene unless its spatial blend is set to 3D."
+}

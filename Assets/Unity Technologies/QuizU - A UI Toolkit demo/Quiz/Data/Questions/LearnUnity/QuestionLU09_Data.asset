@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionEQ1_09_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: Which of these statements best describes the relationship between scripts
+      and components?
+  m_Skills: Work with components and Scripts
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: Every component has a script, and you can create and customize components
+      using scripts.
+  - IsCorrect: 0
+    Text: "You can create a new component for a GameObject by creating a script,
+      but you can\u2019t customize a built-in component."
+  - IsCorrect: 0
+    Text: Scripts and components work together to control the properties and behaviors
+      of a GameObject.
+  - IsCorrect: 0
+    Text: Some components are customizable with scripts.
+  m_FeedbackCorrect: All components have scripts. Some inputs to the script of the
+    component are displayed as the properties and behaviors that you see in the Inspector
+    window.
+  m_FeedbackIncorrect: All components have scripts. Some inputs to the script of
+    the component are displayed as the properties and behaviors that you see in the
+    Inspector window.

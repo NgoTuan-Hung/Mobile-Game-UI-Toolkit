@@ -1,0 +1,24 @@
+  {
+    "text": "What is a common mistake beginning creators make when they make their first Unity project?",
+    "skills": "",
+    "shuffleOptions": false,
+    "options": [
+      {
+        "text": "They don't make their project idea big enough.",
+        "isCorrect": false
+      },
+      {
+        "text": "They didn't scope their project correctly.",
+        "isCorrect": true
+      },
+      {
+        "text": "They decide to make something too easy.",
+        "isCorrect": false
+      }
+    ],
+    "feedbackCorrect": "",
+    "feedbackIncorrect": "When beginning creators start their first project in Unity they often make a common mistake — they decide to create a project that’s both too big and too hard to make, and then they get frustrated and quit. Basically, they didn’t scope their project properly. Scope means how much effort you or your team will need to put into making the project — everything from design to art to audio to programming."
+  }
+
+
+

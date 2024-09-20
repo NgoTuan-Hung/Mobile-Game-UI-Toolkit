@@ -1,0 +1,25 @@
+{
+    "text": "In the UI Toolkit, what is the purpose of a <b>VisualElement</b>?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "It's the base class for all elements in the UI Toolkit",
+            "isCorrect": true
+        },
+        {
+            "text": "It's used for applying visual effects to UI elements",
+            "isCorrect": false
+        },
+        {
+            "text": "It's a class used for audio elements in the UI",
+            "isCorrect": false
+        },
+        {
+            "text": "It's used for creating 3D visual elements in the UI",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "<b>VisualElement</b> is the base class for all elements in the UI Toolkit. It is the core primitive from which all user interface controls and containers derive.",
+    "feedbackIncorrect": "<b>VisualElement</b> is not used for applying visual effects, audio elements, or creating 3D visual elements in the UI. It is the base class for all elements in the UI Toolkit."
+}

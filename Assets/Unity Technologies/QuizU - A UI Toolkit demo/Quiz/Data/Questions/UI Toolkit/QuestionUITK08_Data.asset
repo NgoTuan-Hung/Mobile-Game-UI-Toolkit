@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK08_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: Which of the following are correctly paired when describing parts of UI
+      Toolkit?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: Hierarchy/Structure - USS, Style/Layout - UXML, Functionality/Logic - C#
+  - IsCorrect: 0
+    Text: Hierarchy/Structure - UXML, Style/Layout - C#, Functionality/Logic - USS
+  - IsCorrect: 1
+    Text: Hierarchy/Structure - UXML, Style/Layout - USS, Functionality/Logic - C#
+  - IsCorrect: 0
+    Text: Hierarchy/Structure - C#, Style/Layout - UXML, Functionality/Logic - USS
+  m_FeedbackCorrect: In UI Toolkit, UXML is used for declaring the hierarchy/structure
+    of the UI, USS is used for styling and layout, and C# is used for implementing
+    functionality and logic.
+  m_FeedbackIncorrect: In UI Toolkit, UXML is used for declaring the hierarchy/structure
+    of the UI, USS is used for styling and layout, and C# is used for implementing
+    functionality and logic.

@@ -1,0 +1,25 @@
+{
+    "text": "In Unity's Visual Effect Graph, what is the purpose of the <b>Spawn Context</b>?",
+    "skills": "Visual Effect Graph",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "It determines the visual style of the particles",
+            "isCorrect": false
+        },
+        {
+            "text": "It generates new particles over time",
+            "isCorrect": true
+        },
+        {
+            "text": "It is used to animate the particles",
+            "isCorrect": false
+        },
+        {
+            "text": "It is used to destroy particles",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>Spawn Context</b> in Unity's Visual Effect Graph is used to generate new particles over time.",
+    "feedbackIncorrect": "The <b>Spawn Context</b> in Unity's Visual Effect Graph is not used to determine the visual style of the particles, animate them, or destroy them. Its main purpose is to generate new particles over time."
+}

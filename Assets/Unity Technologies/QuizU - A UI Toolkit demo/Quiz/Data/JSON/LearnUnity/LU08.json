@@ -1,0 +1,25 @@
+{
+  "text": "What does a 3D artist do?",
+  "skills": "Describe the real-time production cycle",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Creates and implement sound effects, voice overs, and music",
+      "isCorrect": false
+    },
+    {
+      "text": "Creates 3D objects and backgrounds and optimizes graphics performance.",
+      "isCorrect": true
+    },
+    {
+      "text": "Finds and reports bugs and writes test cases and plans.",
+      "isCorrect": false
+    },
+    {
+      "text": "Codes user interfaces to meet the intent of the project's design and flow and integrates UI systems into features.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "",
+  "feedbackIncorrect": ""
+}

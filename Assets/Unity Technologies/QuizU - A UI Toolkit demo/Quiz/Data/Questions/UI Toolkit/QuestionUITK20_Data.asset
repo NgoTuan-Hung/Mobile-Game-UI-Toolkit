@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK20_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is the purpose of the <b>USS</b> file in the UI Toolkit?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: It defines the structure of the UI
+  - IsCorrect: 1
+    Text: It defines the visual style and layout of the UI
+  - IsCorrect: 0
+    Text: It contains the script logic for the UI
+  - IsCorrect: 0
+    Text: It is used for localization of the UI
+  m_FeedbackCorrect: The <b>USS</b> (Unity Style Sheets) file is used to define the
+    visual style and layout of the UI in the UI Toolkit.
+  m_FeedbackIncorrect: The <b>USS</b> (Unity Style Sheets) file is not used to define
+    the structure of the UI, contain the script logic, or for localization. It is
+    used to define the visual style and layout of the UI.

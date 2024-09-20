@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b58886c1fee4362a2b2e72dd8ab2cf, type: 3}
+  m_Name: DiagnosticQuiz_Data
+  m_EditorClassIdentifier: 
+  m_Title: Diagnostic
+  m_Summary: This is an abbreviated Quiz ScriptableObject for testing
+  m_Objectives: "\u2022 This is not a real quiz \u2022Use this sandbox for testing
+    UI layout, content, etc."
+  m_Icon: {fileID: 21300000, guid: ff5ddfa28ba184281a65c67cf56beb77, type: 3}
+  m_DifficultyLevel: Intermediate
+  m_EstimatedTime: 5 min
+  m_CorrectAnswersToPass: 3
+  m_Questions:
+  - {fileID: 11400000, guid: 7b00ccb7106ce4c4db2c48f0decc40a3, type: 2}
+  - {fileID: 11400000, guid: deb7e532801bd4f018e15c3487f74729, type: 2}
+  - {fileID: 11400000, guid: b46fbd31d324342609a25ac8deb59274, type: 2}
+  - {fileID: 11400000, guid: 911e8ec09f9494468ae900e1ac808a35, type: 2}

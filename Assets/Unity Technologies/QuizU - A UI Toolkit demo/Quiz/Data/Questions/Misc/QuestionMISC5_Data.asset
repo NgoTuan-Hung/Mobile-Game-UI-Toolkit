@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAU5_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 1
+    Text: What role does a 'shader' play in Unity? Select one answer.
+  m_Skills: Skill-L2-Rendering-1
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: It determines the physics behavior of a GameObject.
+  - IsCorrect: 0
+    Text: It controls the animation state of a GameObject.
+  - IsCorrect: 1
+    Text: It defines how a GameObject's surface looks when lit by light.
+  - IsCorrect: 0
+    Text: It enables sound effects to be added to a GameObject.
+  m_FeedbackCorrect: A shader in Unity is a type of program that controls how a GameObject's
+    surface appears when it is lit by light, allowing for a wide variety of visual
+    effects.
+  m_FeedbackIncorrect: A shader in Unity is a type of program that controls how a
+    GameObject's surface appears when it is lit by light, allowing for a wide variety
+    of visual effects.

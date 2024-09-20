@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: DemoTemplate_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: Demo Template
+  m_BodyText:
+  - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Pretium vulputate sapien nec sagittis
+    aliquam malesuada. Et odio pellentesque diam volutpat commodo sed egestas egestas.
+    Integer quis auctor elit sed vulputate. Sapien et ligula ullamcorper malesuada
+    proin libero nunc consequat. Faucibus turpis in eu mi bibendum. Dui faucibus
+    in ornare quam viverra. '
+  - 'Sem et tortor consequat id porta nibh. Suscipit tellus mauris a diam maecenas
+    sed enim. Commodo nulla facilisi nullam vehicula ipsum. Dictum fusce ut placerat
+    orci nulla pellentesque dignissim enim. A diam sollicitudin tempor id eu nisl
+    nunc. Neque aliquam vestibulum morbi blandit cursus risus. '
+  - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Pretium vulputate sapien nec sagittis
+    aliquam malesuada. Et odio pellentesque diam volutpat commodo sed egestas egestas.
+    Integer quis auctor elit sed vulputate. Sapien et ligula ullamcorper malesuada
+    proin libero nunc consequat. Faucibus turpis in eu mi bibendum. Dui faucibus
+    in ornare quam viverra. '

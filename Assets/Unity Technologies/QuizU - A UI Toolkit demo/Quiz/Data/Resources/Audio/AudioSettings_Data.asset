@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e604970326d7f4847b5e0a0b114d68e4, type: 3}
+  m_Name: AudioSettings_Data
+  m_EditorClassIdentifier: 
+  m_Description: AudioSettingsSO is a ScriptableObject that holds the AudioMixer,
+    volume settings, mute settings, and AudioClip references for various game events.
+    This allows for easy management of game-wide audio settings and clips in a single
+    location. The ScriptableObject also subscribes to volume change events to keep
+    its volume settings up-to-date.
+  m_AudioMixer: {fileID: 24100000, guid: 908225f2de6954c05820fe81f1241e7b, type: 2}
+  m_MasterVolume: 1
+  m_SoundEffectsVolume: 1
+  m_MusicVolume: 0
+  m_IsMasterMuted: 0
+  m_IsSoundEffectsMuted: 0
+  m_IsMusicMuted: 0
+  m_SuccessSound: {fileID: 8300000, guid: 98251bdd47ba14c28b5360220c5725ae, type: 3}
+  m_FailSound: {fileID: 8300000, guid: 3f952abb650bc4950b5168fca38850f7, type: 3}
+  m_GameWonSound: {fileID: 8300000, guid: edc6f3b9feaae4edda864de7e2f5a725, type: 3}
+  m_GameLostSound: {fileID: 8300000, guid: 3f6feabce6b704d86b3bb9304a0fa76a, type: 3}
+  m_TapClickSound: {fileID: 8300000, guid: 4ff7f22ec123c4d25a5f6d15ca3f9e26, type: 3}

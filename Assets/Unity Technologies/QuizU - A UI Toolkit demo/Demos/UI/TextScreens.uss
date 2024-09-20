@@ -1,0 +1,134 @@
+.round-outline-button {
+    background-color: rgba(0, 127, 217, 0.21);
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: upper-center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-width: 6px;
+    border-right-width: 6px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-basis: 12%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: 50px;
+    min-height: 50px;
+    width: 9%;
+    height: 9%;
+}
+
+.round-outline-button:hover {
+    transition-duration: 0.15s;
+    scale: 1.1 1.1;
+}
+
+.round-outline-container {
+    flex-basis: 45%;
+    height: 100%;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(0, 127, 217);
+    border-right-color: rgb(0, 127, 217);
+    border-top-color: rgb(0, 127, 217);
+    border-bottom-color: rgb(0, 127, 217);
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    font-size: 35px;
+    color: rgb(0, 127, 217);
+}
+
+.next-last-button {
+    background-image: none;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(0, 127, 217, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    flex-basis: 18%;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&guid=e74ebc05ab3564fb187648ced4e2c0fa&type=2#Roboto-Black SDF');
+    font-size: 22px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 71%;
+    color: rgb(0, 127, 217);
+}
+
+.next-last-button:hover {
+    transition-duration: 0.2s;
+    scale: 1.2 1.2;
+    color: rgb(255, 255, 255);
+}
+
+.next-last-button:active {
+    color: rgba(0, 127, 217, 0.46);
+}
+
+.back-button {
+    position: absolute;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    font-size: 43px;
+    color: rgb(255, 255, 255);
+    right: 2%;
+    bottom: 2%;
+    letter-spacing: 14px;
+    display: flex;
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    visibility: visible;
+}
+
+.back-button:hover {
+    scale: 1.2 1.2;
+    transition-duration: 0.2s;
+    color: rgb(0, 127, 217);
+}
+
+.back-button:active {
+    color: rgb(255, 255, 255);
+}
+
+.container-full-screen {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,26 @@
+
+{
+  "text": "To edit the equivalent of a Particle System’s Start Lifetime in a VFX Graph, in which context would you look? Select one answer.",
+  "skills": "Skill-L2-Art.VFX-3",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Initialize",
+      "isCorrect": false
+    },
+    {
+      "text": "Spawn",
+      "isCorrect": true
+    },
+    {
+      "text": "Update",
+      "isCorrect": false
+    },
+    {
+      "text": "Render",
+"isCorrect": false
+}
+],
+"feedbackCorrect": "In the Spawn context, you can add blocks related to the lifetime of the particles, including Set Lifetime and Set Lifetime Random.",
+"feedbackIncorrect": ""
+}

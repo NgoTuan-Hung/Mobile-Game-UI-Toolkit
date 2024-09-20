@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX5_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: To change the default particle system, which emits a constant stream of
+      particles, into a single burst of particles, what would you do? Select one
+      answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.VFX-2
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: Disable the Looping property
+  - IsCorrect: 0
+    Text: Reduce the Max Particles
+  - IsCorrect: 0
+    Text: Enable the Stop Action property
+  - IsCorrect: 0
+    Text: Enable the Limit Velocity over Lifetime property
+  m_FeedbackCorrect: If Looping is enabled, the system starts again at the end of
+    its duration time and continues to repeat the cycle. For a single burst particle,
+    Looping should be disabled.
+  m_FeedbackIncorrect: If Looping is enabled, the system starts again at the end
+    of its duration time and continues to repeat the cycle. For a single burst particle,
+    Looping should be disabled.

@@ -1,0 +1,25 @@
+{
+    "text": "In UI Toolkit, which feature allows you to define how elements should be aligned and spaced within a container?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "Flexbox",
+            "isCorrect": true
+        },
+        {
+            "text": "Grid",
+            "isCorrect": false
+        },
+        {
+            "text": "Stack",
+            "isCorrect": false
+        },
+        {
+            "text": "Box",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "Flexbox allows you to define how elements should be aligned and spaced within a container. It can help you build complex UI layouts and automatically handles layout adjustments for different screen sizes.",
+    "feedbackIncorrect": "In UI Toolkit, the Flexbox feature allows you to define how elements should be aligned and spaced within a container. While Grid, Stack, and Box can be used to arrange elements, they do not offer the same level of control and responsiveness that Flexbox does for aligning and spacing elements."
+}

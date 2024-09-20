@@ -1,0 +1,25 @@
+{
+    "text": "How can you specify a style that should be used when a specific condition is met in UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "Using UI conditions",
+            "isCorrect": false
+        },
+        {
+            "text": "Using Conditional Styles",
+            "isCorrect": false
+        },
+        {
+            "text": "Using UI rules",
+            "isCorrect": false
+        },
+        {
+            "text": "Using Pseudo-classes",
+            "isCorrect": true
+        }
+    ],
+    "feedbackCorrect": "In UI Toolkit, <b>Pseudo-classes</b> are used to specify a style that should be used when a specific condition is met. This allows you to create dynamic, responsive designs.",
+    "feedbackIncorrect": "In UI Toolkit, <b>Pseudo-classes</b>, not UI conditions, Conditional Styles or UI rules, are used to specify a style that should be used when a specific condition is met. For example, the <b>:hover</b> pseudo-class applies a style when the user's pointer hovers over an element."
+}

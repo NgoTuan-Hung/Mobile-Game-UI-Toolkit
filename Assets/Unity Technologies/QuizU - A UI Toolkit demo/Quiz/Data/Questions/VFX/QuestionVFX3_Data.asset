@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX3_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In the Particle System component, what does the Shape module control? Select
+      one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.VFX-2
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: The shape of an individual particle.
+  - IsCorrect: 0
+    Text: "The volume that particles within a system can exist in \u2013 when particles
+      leave this shape, they disappear."
+  - IsCorrect: 0
+    Text: "The shape of the collider that particles cannot enter \u2013 if particles
+      collide with this shape, they disappear."
+  - IsCorrect: 1
+    Text: "The shape of the volume that is emitting particles \u2013 particles can
+      only be spawned within the defined shape."
+  m_FeedbackCorrect: This module defines the volume or surface from which particles
+    can be emitted, and the direction of the start velocity. The Shape property defines
+    the shape of the emission volume, and the rest of the module properties properties
+    vary depending on the Shape you choose.
+  m_FeedbackIncorrect: This module defines the volume or surface from which particles
+    can be emitted, and the direction of the start velocity. The Shape property defines
+    the shape of the emission volume, and the rest of the module properties properties
+    vary depending on the Shape you choose.

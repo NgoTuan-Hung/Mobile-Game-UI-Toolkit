@@ -1,0 +1,25 @@
+{
+  "text": "How can you tell if a particle has been created with VFX Graph rather than with the Particle System? Select one answer.",
+  "skills": "Skill-L2-Art.VFX-3",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "If the particles have noise, they were created using VFX Graph, since the Particle System does not support noise",
+      "isCorrect": false
+    },
+    {
+      "text": "If the individual particles are 3D meshes, they were created using VFX Graph, since the Particle System only supports 2D textures.",
+      "isCorrect": false
+    },
+    {
+      "text": "If the particles have any elements of transparency, they were created using VFX Graph, since the Particle System does not support transparency.",
+      "isCorrect": false
+    },
+    {
+      "text": "If you double-click on a VFX Graph object in the Project window, it will open in the VFX Graph window.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "It would be very difficult to know just from looking at a particle system whether it was created using VFX Graph or with the Particle System, since they both have very broad, similar capabilities. To be sure, you would want to click on the object and see which system it’s using.",
+"feedbackIncorrect": ""
+}

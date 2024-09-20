@@ -1,0 +1,25 @@
+{
+  "text": "You’re trying to make a particle system that produces a steady stream of particles. However, you notice that there are large gaps in the emission of particles. What could be done to resolve these gaps? Select all answers that apply.",
+  "skills": "Skill-L2-Art.VFX-2",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Decrease the Start Lifetime",
+      "isCorrect": true
+    },
+    {
+      "text": "Increase the Start Speed",
+      "isCorrect": false
+    },
+    {
+      "text": "Decrease the Rate Over Time",
+      "isCorrect": true
+    },
+    {
+      "text": "Increase the Max Particles.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "The Max Particles property represents the maximum number of particles in the system at once. If the limit is reached, some particles are removed. If you wanted to have a steady stream of particles here, you could decrease the Rate over Time to reduce the number emitted per second, decrease the Start Lifetime so that the particles would not stay on screen for as long, or just increase the Max Particles to accommodate more particles on screen at a time.",
+  "feedbackIncorrect": ""
+}

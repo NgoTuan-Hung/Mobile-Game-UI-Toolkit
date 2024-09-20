@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6301608da4d6741b484b5b012976ceb1, type: 3}
+  m_Name: 7_EventsSceneInfo_Data
+  m_EditorClassIdentifier: 
+  m_Description: This contains data for the DemoSelectionScreen corresponding to
+    Events Demo scene.
+  m_BuildSettingsIndex: 7
+  m_Title: Events
+  m_Summary: UI Toolkit's event system manages user input and notifications. Event
+    callbacks allows you to customize element behavior and respond to UI interaction
+    and changes.
+  m_Icon: {fileID: 0}

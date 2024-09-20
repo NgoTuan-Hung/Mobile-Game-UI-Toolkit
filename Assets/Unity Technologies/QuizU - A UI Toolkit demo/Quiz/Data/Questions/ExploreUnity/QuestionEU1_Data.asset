@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionEU1_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What is a common mistake beginning creators make when they make their first
+      Unity project?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: 
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: They don't make their project idea big enough.
+  - IsCorrect: 1
+    Text: They didn't scope their project correctly.
+  - IsCorrect: 0
+    Text: They decide to make something too easy.
+  m_FeedbackCorrect: "When beginning creators start their first project in Unity
+    they often make a common mistake \u2014 they decide to create a project that\u2019s
+    both too big and too hard to make, and then they get frustrated and quit. Basically,
+    they didn\u2019t scope their project properly. Scope means how much effort you
+    or your team will need to put into making the project \u2014 everything from
+    design to art to audio to programming."
+  m_FeedbackIncorrect: "When beginning creators start their first project in Unity
+    they often make a common mistake \u2014 they decide to create a project that\u2019s
+    both too big and too hard to make, and then they get frustrated and quit. Basically,
+    they didn\u2019t scope their project properly. Scope means how much effort you
+    or your team will need to put into making the project \u2014 everything from
+    design to art to audio to programming."

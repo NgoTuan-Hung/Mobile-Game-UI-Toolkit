@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="portrait-warning__container" style="width: 100%; height: 82%; justify-content: center;">
+        <ui:VisualElement name="menu__border" style="flex-basis: 5%; margin-bottom: 0; background-color: rgb(0, 127, 217); margin-top: 0; width: 100%; flex-shrink: 0;" />
+        <ui:VisualElement name="menu__start-group" style="width: 100%; height: 100%; -unity-text-align: upper-center; align-items: center; justify-content: center; -unity-background-scale-mode: scale-to-fit; flex-basis: 64%;">
+            <ui:Label text="USE LANDSCAPE" display-tooltip-when-elided="true" name="menu__enter-play" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); font-size: 65%; color: rgb(0, 127, 217); -unity-background-scale-mode: scale-to-fit; position: relative; letter-spacing: 6px; flex-basis: 25%;" />
+            <ui:Label text="ASPECT" display-tooltip-when-elided="true" name="menu__start-label" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&amp;guid=e74ebc05ab3564fb187648ced4e2c0fa&amp;type=2#Roboto-Black SDF&apos;); font-size: 120%; color: rgb(0, 127, 217); -unity-background-scale-mode: scale-to-fit; word-spacing: 0; letter-spacing: 16px; position: relative; flex-basis: 33%;" />
+            <ui:Label text="RATIO" display-tooltip-when-elided="true" name="menu__start-label" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&amp;guid=e74ebc05ab3564fb187648ced4e2c0fa&amp;type=2#Roboto-Black SDF&apos;); font-size: 120%; color: rgb(0, 127, 217); -unity-background-scale-mode: scale-to-fit; word-spacing: 0; letter-spacing: 40px; position: relative; flex-basis: 33%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="menu__border" style="width: 100%; flex-basis: 5%; margin-bottom: 0; background-color: rgb(0, 127, 217); margin-top: 0; flex-shrink: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

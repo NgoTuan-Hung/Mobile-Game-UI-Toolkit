@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b58886c1fee4362a2b2e72dd8ab2cf, type: 3}
+  m_Name: QuizLearnUnity_Data
+  m_EditorClassIdentifier: 
+  m_Title: Learn Unity
+  m_Summary: In this quiz, you will be assessed on various ways and approaches to
+    learning Unity.
+  m_Objectives:
+  - "\u2022 Identify the main challenges on a Unity learning journey."
+  - "\u2022 Identify the key elements of the Unity Learn ecosystem"
+  - "\u2022 Create a personal learning action plan."
+  m_Icon: {fileID: 21300000, guid: 8cd3bc3b259394d87a8bd658670965a2, type: 3}
+  m_DifficultyLevel: Beginner
+  m_EstimatedTime: 10 min
+  m_CorrectAnswersToPass: 10
+  m_Questions:
+  - {fileID: 11400000, guid: 2986cfc247b1a4d2f883719126092b2c, type: 2}
+  - {fileID: 11400000, guid: 65dadf3ebe7bc48dc849d12c8fb81a71, type: 2}
+  - {fileID: 11400000, guid: e61b3bd1ad29d4326964c7bbebd5f53f, type: 2}
+  - {fileID: 11400000, guid: a05db48b242424334b01c5f01f15bf83, type: 2}
+  - {fileID: 11400000, guid: 26a8038137ade4821bd064ce4914ae35, type: 2}
+  - {fileID: 11400000, guid: 08f9ae8b2f7e2412494a75823d3db7ea, type: 2}
+  - {fileID: 11400000, guid: 17398e37e6d7f43aea47562e7e5544ad, type: 2}
+  - {fileID: 11400000, guid: 7b00ccb7106ce4c4db2c48f0decc40a3, type: 2}
+  - {fileID: 11400000, guid: 0a35e8174fa9b496ba5c4745cb27737c, type: 2}
+  - {fileID: 11400000, guid: d2d3d32472cae41c5a8f7355e8354413, type: 2}
+  - {fileID: 11400000, guid: acd997bd1275f438bb72c7ec8ed755b4, type: 2}
+  - {fileID: 11400000, guid: 56e8c434ef0b34809bb147e909599b70, type: 2}
+  - {fileID: 11400000, guid: 911e8ec09f9494468ae900e1ac808a35, type: 2}
+  - {fileID: 11400000, guid: 6ed02436aa63c4dde921d9beb6cc3bdf, type: 2}
+  - {fileID: 11400000, guid: 0dbbe2569362647d29aacae143d78dff, type: 2}

@@ -1,0 +1,93 @@
+#unity-dragger {
+    width: 6%;
+    height: 38%;
+    border-left-color: rgb(0, 127, 217);
+    border-right-color: rgb(0, 127, 217);
+    border-top-color: rgb(0, 127, 217);
+    border-bottom-color: rgb(0, 127, 217);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    top: 45%;
+}
+
+#unity-tracker {
+    height: 15%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.volume-slider {
+}
+
+.volume-slider Label {
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    font-size: 135%;
+    translate: 0 4px;
+    color: rgb(79, 79, 79);
+}
+
+.volume-slider #unity-dragger {
+    width: 8%;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+}
+
+.volume-slider #unity-tracker {
+    background-color: rgb(150, 152, 156);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.volume-slider #unity-dragger:hover {
+    scale: 1.2 1.2;
+}
+
+.volume-slider-number {
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-definition: url('project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&guid=e74ebc05ab3564fb187648ced4e2c0fa&type=2#Roboto-Black SDF');
+    font-size: 44px;
+    top: -10%;
+    left: 6%;
+    color: rgb(0, 127, 217);
+    -unity-text-align: upper-right;
+}
+
+.close-button {
+    position: absolute;
+    top: -8%;
+    right: -4.5%;
+    width: 9%;
+    height: 16%;
+    background-image: url('project://database/Assets/Quiz/Textures/circle.png?fileID=21300000&guid=e0cf8806d35d64013ba4e5d0e6b11fba&type=3#circle');
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: rgb(0, 127, 217);
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button:hover {
+    transition-duration: 0.15s;
+    scale: 1.2 1.2;
+}

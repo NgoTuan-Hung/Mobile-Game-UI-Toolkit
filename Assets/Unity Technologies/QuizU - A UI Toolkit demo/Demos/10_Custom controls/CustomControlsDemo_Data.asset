@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: CustomControlsDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: Custom controls
+  m_BodyText:
+  - 'After becoming familiar with UI Toolkit, you can further enhance your workflow
+    with <b>custom controls</b>.
+
+
+    Create a new C# script that defines your custom
+    control and its behavior. Inherit from the VisualElement class or another UI
+    Toolkit class that''s closer to what you want to create. (e.g. start with the
+    Button class if you want to make a special kind of button)
+
+
+    To use your
+    custom control in <b>UXML</b> file and <b>UI Builder</b>, you''ll need to create
+    <b>UxmlTraits</b> and <b>UxmlFactory</b> classes:
+
+
+    UxmlTraits class allows
+    you to specify what attributes your custom control has in UXML
+
+
+    UxmlFactory
+    class is used to create instances of your custom control.'
+  - "After defining UxmlTraits and UxmlFactory, you should be able to find your custom
+    control in the Library section under the <b>Custom Controls (C#)</b> category
+    in the UI Builder. \n\nDrag the control into the Hierarchy window to use it in
+    your UI.\n\nSelect the custom control in the Hierarchy window and look at the
+    Inspector window. You should see your custom attributes defined in the UxmlTraits
+    listed in the Inspector.\n\nRun your Unity project and interact with your custom
+    control to make sure it behaves as expected. Then, modify the logic and UXML
+    attributes as needed to achieve the desired behavior."
+  - '
+
+    This example demonstrates a simple custom control which toggles a button
+    from an active to inactive color when clicked. The UI Builder can generate an
+    UXML VisualTreeAsset, which a MonoBehaviour can then Instantiate several times
+    to fill the container.
+
+
+    A custom control in this way can promote reuse and
+    consistency. Updating the behavior for all of the custom buttons only necessitates
+    making a change in one place. '
+  - 'This example also demonstrates the use of the <b>VisualTreeAsset.Instantiate</b>
+    method to create a copy of the custom control.
+
+
+    When you instantiate a VisualTreeAsset,
+    it returns the root of the cloned tree wrapped in a <b>TemplateContainer</b>.
+    This TemplateContainer holds all of the elements defined in the UXML template.
+    Use the Add method to add it to the visual tree like any other VisualElement.
+
+
+    Thus,
+    you can create copies of anything that is predefined in a UXML file and make
+    it part of your visual tree. Here, each iteration in the loop clones a new instance
+    of the custom button defined in the template UXML. '

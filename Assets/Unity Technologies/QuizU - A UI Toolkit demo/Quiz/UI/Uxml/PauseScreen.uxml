@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Quiz/UI/Uss/MenuScreens.uss?fileID=7433441132597879392&amp;guid=cd0f7ad5384494cd9bd2336a342c02b5&amp;type=3#MenuScreens" />
+    <Style src="project://database/Assets/Quiz/UI/Uss/Buttons.uss?fileID=7433441132597879392&amp;guid=59a47f2144b8a4a0f86bc110907e20cb&amp;type=3#Buttons" />
+    <Style src="project://database/Assets/Quiz/UI/Uss/MessageBar.uss?fileID=7433441132597879392&amp;guid=47bb1c31b3d1946caaa69f727f6bf77a&amp;type=3#MessageBar" />
+    <ui:VisualElement name="pause__container" style="width: 100%; height: 100%; background-color: rgba(0, 127, 217, 0.87); align-items: center; justify-content: center;">
+        <ui:VisualElement name="pause__background" style="position: absolute; width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/_ThirdParty/Images/Abstract-background-white-12.jpg?fileID=21300000&amp;guid=b7b45fbf62b9341189a8ca5f5ddef364&amp;type=3#Abstract-background-white-12&apos;); -unity-background-image-tint-color: rgba(255, 255, 255, 0.33);" />
+        <ui:VisualElement name="pause__start-group" style="width: 56%; height: 59%; -unity-text-align: upper-center; align-items: center; justify-content: center; background-color: rgb(214, 214, 214); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
+            <ui:Label text="Quit to main menu" display-tooltip-when-elided="true" name="pause__title" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Black%20SDF.asset?fileID=11400000&amp;guid=e74ebc05ab3564fb187648ced4e2c0fa&amp;type=2#Roboto-Black SDF&apos;); font-size: 65px; color: rgb(0, 127, 217); -unity-background-scale-mode: scale-to-fit; position: relative; top: 0;" />
+            <ui:Label text="Discard current progress?" display-tooltip-when-elided="true" name="pause__message" style="-unity-font-definition: url(&apos;project://database/Assets/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&apos;); font-size: 42px; color: rgb(137, 137, 137); -unity-background-scale-mode: scale-to-fit; position: relative; top: 0;" />
+            <ui:VisualElement name="button-group" style="height: 30%; width: 72%; flex-direction: row; justify-content: space-between; margin-top: 10%;">
+                <ui:Button text="RESUME" display-tooltip-when-elided="true" name="back-button" class="blue-button" style="flex-basis: 40%;" />
+                <ui:Button text="QUIT" display-tooltip-when-elided="true" name="quit-button" class="orange-button" style="flex-basis: 40%; background-color: rgb(255, 156, 0);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="Pause Screen" display-tooltip-when-elided="true" name="screen-label" class="screen-label" />
+    </ui:VisualElement>
+</ui:UXML>

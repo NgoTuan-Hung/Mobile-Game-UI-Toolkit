@@ -1,0 +1,27 @@
+
+
+{
+  "text": "Which of the following is the correct order of contexts in a default VFX Graph? Select one answer.",
+  "skills": "Skill-L2-Art.VFX-3",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Initialize > Spawn > Update > Render",
+      "isCorrect": false
+    },
+    {
+      "text": "Spawn > Initialize > Update > Output",
+      "isCorrect": true
+    },
+    {
+      "text": "Instantiate > Spawn > Behavior > Render",
+      "isCorrect": false
+    },
+    {
+      "text": "Spawn > Behavior > Update > Output",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Spawn: If active, Unity calls this every Frame, and computes the amount of particles to spawn.\n\nInitialize: Unity calls this at the “birth” of every particle. This defines the initial state of the particle.\n\nUpdate: Unity calls this every frame for all particles, and uses this to perform simulations; for example, Forces and Collisions.\n\nOutput: Unity calls this every frame for every particle. This determines the shape of a particle, and performs pre-render transformations.",
+  "feedbackIncorrect": ""
+}

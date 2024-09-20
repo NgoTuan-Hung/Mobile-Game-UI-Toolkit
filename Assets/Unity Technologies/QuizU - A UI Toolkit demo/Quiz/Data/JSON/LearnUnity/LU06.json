@@ -1,0 +1,25 @@
+{
+  "text": "What do IDEs do?",
+  "skills": "Describe the real-time production cycle",
+  "shuffleOptions": false,
+  "options": [
+    {
+      "text": "IDEs are programs for writing code in a variety of languages.",
+      "isCorrect": true
+    },
+    {
+      "text": "IDEs are photo editing tools.",
+      "isCorrect": false
+    },
+    {
+      "text": "IDEs are applications for creating 3D models.",
+      "isCorrect": false
+    },
+    {
+      "text": "All of the above.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "",
+  "feedbackIncorrect": ""
+}

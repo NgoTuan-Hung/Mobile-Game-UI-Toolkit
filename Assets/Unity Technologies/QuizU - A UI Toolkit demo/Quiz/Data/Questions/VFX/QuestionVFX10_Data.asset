@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX10_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 1
+    Text: In Unity's Visual Effect Graph, what is the purpose of the <b>Spawn Context</b>?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Visual Effect Graph
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: It determines the visual style of the particles
+  - IsCorrect: 1
+    Text: It generates new particles over time
+  - IsCorrect: 0
+    Text: It is used to animate the particles
+  - IsCorrect: 0
+    Text: It is used to destroy particles
+  m_FeedbackCorrect: The <b>Spawn Context</b> in Unity's Visual Effect Graph is used
+    to generate new particles over time.
+  m_FeedbackIncorrect: The <b>Spawn Context</b> in Unity's Visual Effect Graph is
+    not used to determine the visual style of the particles, animate them, or destroy
+    them. Its main purpose is to generate new particles over time.

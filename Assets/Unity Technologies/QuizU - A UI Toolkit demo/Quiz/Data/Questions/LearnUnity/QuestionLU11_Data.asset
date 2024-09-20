@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionEQ1_11_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What does the 2D button do?
+  m_Skills: Navigate in 2D space in the Scene view
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: Toggles between a 2D and a 3D view of the Scene.
+  - IsCorrect: 0
+    Text: Flattens the 3D GameObjects in the Scene to 2D Sprites.
+  - IsCorrect: 0
+    Text: In a 3D Scene, it makes the current Scene view look like 2D; in a 2D Scene,
+      it does nothing.
+  - IsCorrect: 0
+    Text: None of the above.
+  m_FeedbackCorrect: The 2D button can be very useful in a 2D or a 3D Scene. In a
+    2D Scene, toggle to 3D to see how GameObjects are ordered in the Z dimension.
+    In 3D, toggle to 2D to line up GameObjects in one plane.
+  m_FeedbackIncorrect: The 2D button can be very useful in a 2D or a 3D Scene. In
+    a 2D Scene, toggle to 3D to see how GameObjects are ordered in the Z dimension.
+    In 3D, toggle to 2D to line up GameObjects in one plane.

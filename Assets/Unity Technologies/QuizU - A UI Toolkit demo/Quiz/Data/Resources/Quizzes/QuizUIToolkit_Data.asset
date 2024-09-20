@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b58886c1fee4362a2b2e72dd8ab2cf, type: 3}
+  m_Name: QuizUIToolkit_Data
+  m_EditorClassIdentifier: 
+  m_Title: 'Programmer: UI Toolkit'
+  m_Summary: This quiz covers fundamental aspects of UI Toolkit including usage of
+    different classes and elements.
+  m_Objectives:
+  - "\u2022 Explore Unity's UI Toolkit"
+  - "\u2022 Use layout and design principles in the UI Toolkit"
+  - "\u2022 Create and manipulate interactive UI elements"
+  m_Icon: {fileID: 21300000, guid: ff5ddfa28ba184281a65c67cf56beb77, type: 3}
+  m_DifficultyLevel: Intermediate
+  m_EstimatedTime: 15 min
+  m_CorrectAnswersToPass: 16
+  m_Questions:
+  - {fileID: 11400000, guid: 43c386d8e2c18435da0abbc39d3d3c3c, type: 2}
+  - {fileID: 11400000, guid: 3d864a4525cfc48b2bf3d0208ea6c822, type: 2}
+  - {fileID: 11400000, guid: 4d8a12ffe577f416b9445ebfbb7b5383, type: 2}
+  - {fileID: 11400000, guid: df57ed3aff93e4abab222796cfd31724, type: 2}
+  - {fileID: 11400000, guid: c38335140f0cd4d41a683198c38f0e5e, type: 2}
+  - {fileID: 11400000, guid: 42b399c2d5d4b4795a83b65a57e86c4b, type: 2}
+  - {fileID: 11400000, guid: 085183b12427a4d2cb055cf01de02ff8, type: 2}
+  - {fileID: 11400000, guid: 19c92016bffc84b8e80b4c4fcb65b52e, type: 2}
+  - {fileID: 11400000, guid: d7cc2ba5aa22b4b63947cb22a7fb2e96, type: 2}
+  - {fileID: 11400000, guid: dca0f98ddd90e4ce0a7120020836013f, type: 2}
+  - {fileID: 11400000, guid: 5ba84d84c8baf4cfd9b2b7f0c0eb8164, type: 2}
+  - {fileID: 11400000, guid: 45c286a9b9dc643f0ad83e213f2814a0, type: 2}
+  - {fileID: 11400000, guid: c4c19561e14a846458b85467885b7e2c, type: 2}
+  - {fileID: 11400000, guid: 46723195eda49441faf7de7afac1865e, type: 2}
+  - {fileID: 11400000, guid: 2502ebb07e3e74def8202b6c86be55a5, type: 2}
+  - {fileID: 11400000, guid: 206cd03c3940c4f28a00c3a6475246bf, type: 2}
+  - {fileID: 11400000, guid: f1b24a15595484cc5914661b2822836c, type: 2}
+  - {fileID: 11400000, guid: f347469a02c0143c28910af42a407a2b, type: 2}
+  - {fileID: 11400000, guid: 4c5ec261c720e438c86eb85f01677ce0, type: 2}
+  - {fileID: 11400000, guid: 2e695793a1f0e4a288bb8af79f6f929d, type: 2}

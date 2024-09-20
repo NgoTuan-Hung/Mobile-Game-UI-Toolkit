@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionPROG2_2_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: If you want to destroy an object when its health reaches 0, what code would
+      be best in the blank below?
+  m_QuestionImage: {fileID: 21300000, guid: 003f122164ecf4e85ac1446a40ecff1c, type: 3}
+  m_Skills: '-'
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: health > 0
+  - IsCorrect: 0
+    Text: health.0
+  - IsCorrect: 1
+    Text: health < 1
+  - IsCorrect: 0
+    Text: health < 0
+  m_FeedbackCorrect: "Since the \u201Chealth\u201D variable is an int, anything less
+    than 1 would be \u201C0\u201D. The sign for \u201Cless than\u201D is \u201C<\u201D."
+  m_FeedbackIncorrect: "Since the \u201Chealth\u201D variable is an int, anything
+    less than 1 would be \u201C0\u201D. The sign for \u201Cless than\u201D is \u201C<\u201D."

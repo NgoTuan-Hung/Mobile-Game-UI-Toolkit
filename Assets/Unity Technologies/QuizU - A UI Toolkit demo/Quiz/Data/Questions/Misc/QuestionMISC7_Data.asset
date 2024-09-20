@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAU7_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 1
+    Text: In Unity, what is a 'Prefab'? Select one answer.
+  m_Skills: Skill-L2-AssetManagement-1
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: A script that allows for procedural generation of content.
+  - IsCorrect: 1
+    Text: A pre-packaged asset that can be used to quickly create instances of a
+      GameObject with predefined components and properties.
+  - IsCorrect: 0
+    Text: A tool for optimizing the performance of a game.
+  - IsCorrect: 0
+    Text: A type of shader used for creating realistic textures.
+  m_FeedbackCorrect: A Prefab in Unity is a pre-packaged asset that can be used to
+    quickly create instances of a GameObject with predefined components and properties.
+    This allows for efficient and consistent creation of objects.
+  m_FeedbackIncorrect: A Prefab in Unity is a pre-packaged asset that can be used
+    to quickly create instances of a GameObject with predefined components and properties.
+    This allows for efficient and consistent creation of objects.

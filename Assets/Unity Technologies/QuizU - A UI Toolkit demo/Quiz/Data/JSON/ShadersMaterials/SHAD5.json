@@ -1,0 +1,25 @@
+  {
+    "text": "What is physically based rendering (PBR)?",
+    "skills": "Skill-L2-Art.Shad-1",
+    "shuffleOptions": true,
+    "options": [
+      {
+        "text": "Rendering using shaders that most closely simulate the real-world behavior and properties of light.",
+        "isCorrect": true
+      },
+      {
+        "text": "Rendering in 3D using materials designed to look like real objects.",
+        "isCorrect": false
+      },
+      {
+        "text": "Rendering that uses normal maps and height maps to simulate physical variations on a mesh.",
+        "isCorrect": false
+      },
+      {
+        "text": "Rendering that uses a combination of vertex and fragment shaders to achieve realistic results.",
+        "isCorrect": false
+      }
+    ],
+    "feedbackCorrect": "PBR simulates the real-world principles of physics and light to generate realistic shadows, reflections, ambient light, and other effects of light on 3D surfaces.",
+    "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+  }

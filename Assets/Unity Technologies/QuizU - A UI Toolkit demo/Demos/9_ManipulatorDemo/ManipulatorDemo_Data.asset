@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: ManipulatorDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: Manipulators
+  m_BodyText:
+  - "Manipulators are classes that manage the registration and unregistration of
+    event callbacks. This can help you manage more complex interaction with your
+    UI by separating event logic from the rest of your UI code.\n\nThe main advantage
+    of manipulators is that they allow event handling to be encapsulated in one place
+    and then reused across different elements. \n\nFor example, you could use a manipulator
+    to define a group of related event callbacks, such as those used to handle dragging
+    or multi-touch events. Applying these manipulators to several elements in your
+    scene could make them all draggable or multi-touch."
+  - 'Unity UI Toolkit provides several built-in manipulators, each of which handles
+    different types of inputs:
+
+
+    <b>Manipulator</b>: Inherit from this base class
+    or its subclasses to manage event callbacks.
+
+
+    <b>KeyboardNavigationManipulator</b>:
+    This manipulator handles keyboard-based navigation events.
+
+
+    <b>MouseManipulator</b>:
+    This manages mouse inputs like clicks, movement, or scrolling.
+
+
+    <b>ContextualMenuManipulator</b>:
+    This manipulator displays a contextual menu upon right-click or menu key press.
+
+
+    <b>PointerManipulator</b>:
+    This handles pointer events, useful for touch-based interfaces.
+
+
+    <b>Clickable</b>:
+    This tracks mouse events on an element and triggers a callback upon mouse clicks.'
+  - "To use a Manipulator, you create a new class that extends Manipulator or one
+    of its subclasses.  \n\nOverride <b>RegisterCallbacksOnTarget</b> and <b>UnregisterCallbacksFromTarget</b>
+    to specify what events you want the Manipulator to listen for and what to do
+    as a response.\n\nOnce defined, you can add an instance of your custom manipulator
+    to a VisualElement using the <b>AddManipulator method</b>. The manipulator can
+    then start receiving and handling events for that element."
+  - "This example shows basic mouse dragging behaviour using a custom <b>SimpleDragManipulator</b>.
+    \n\nEdit the MonoBehaviour script to see how it handles three mouse events (mouse
+    down, mouse move, and mouse up) in order to replicate a click-to-drag interface.\n\nAnother
+    script (the <b>ManipulatorDemo</b> in this sample) can then assign the manipulators
+    to several elements to make them draggable."

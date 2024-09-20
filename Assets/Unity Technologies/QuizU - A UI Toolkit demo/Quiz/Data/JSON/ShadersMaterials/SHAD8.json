@@ -1,0 +1,25 @@
+{
+  "text": "Which terms are used in shaders and materials to refer to the color of an object?",
+  "skills": "Skill-L2-Art.Shad.Mat-1",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Diffuse map, base map, and albedo",
+      "isCorrect": true
+    },
+    {
+      "text": "Diffuse map and specular map, and metallic map",
+      "isCorrect": false
+    },
+    {
+      "text": "Base map, normal map, and albedo",
+      "isCorrect": false
+    },
+    {
+      "text": "Base map, normal map, and specular map",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "The URP/Lit Shader calls for a Base Map to specify color. Other shaders commonly call this property Albedo or Diffuse Map (even though, technically, these terms don’t mean exactly the same thing).",
+  "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+}

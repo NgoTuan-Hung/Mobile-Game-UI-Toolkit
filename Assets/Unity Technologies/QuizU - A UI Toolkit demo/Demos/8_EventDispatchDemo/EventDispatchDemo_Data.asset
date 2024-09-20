@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: EventDispatchDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: Event dispatch
+  m_BodyText:
+  - 'UI Toolkit uses an event dispatching and event propagation system. Events are
+    passed or "propagated" through the UI hierarchy in three phases:
+
+
+    <b>Trickling
+    phase (or Capture phase):</b> The event starts at the root of the UI hierarchy
+    and goes down towards the target element.
+
+
+    <b>Target phase:</b> The event
+    reaches the target element, and event listeners on the target handle the event.
+
+
+    <b>Bubbling
+    phase:</b> After the target has processed the event, the event then moves upwards
+    back to the root.
+
+
+    The propagation can be stopped at any time by marking
+    the event as "handled" using the <b>StopPropagation</b> method.'
+  - '
+
+    Listeners can be registered to handle the event during the trickle down
+    or bubble up phases. This gives you flexibility to decide at what point your
+    code should react to the event.
+
+
+    One application is to set up a single handler
+    at the root element, instead of setting up individual handlers for each button.
+    The <b>array-buttons-container</b> illustrates this with its the <b>ClickArrayButton</b>
+    handler.
+
+
+    Click a button and it logs its name to the console. This is accomplished
+    using just one call to <b>RegisterCallback</b> on the container, thanks to event
+    propagation.
+
+
+    Note that each Button''s log appears during the bubble up
+    phase.'
+  - "\nBy default, a callback handles the event during the bubbling up phase, effectively
+    ignoring the trickle down phase. \n\nHowever, you can explicitly set the <b>CallbackEventHandler</b>
+    to register the callback during the trickle down phase if required. This can
+    be useful in scenarios where you want to handle or possibly stop an event before
+    it reaches its target.\n \nOnce the event is handled, you can call <b>StopPropagation</b>
+    to prevent any parent elements from receiving the click event.\n\nFor instance,
+    you might want an event to be handled only at a specific level in the hierarchy
+    and then stop it from bubbling up any further."
+  - "The second example shows a set of nested buttons. Each button has callback methods
+    registered for it, and these methods respond to the <b>ClickEvent</b>. \n\nWhen
+    any of the buttons - parent, child, or grandchild - is clicked, the respective
+    callback method is triggered and outputs a log statement. Note the event's propagation
+    phase next to the element name.\n\nThis showcases how an event starts from the
+    target element (the button that is clicked) and propagates up through the parent
+    elements in the visual tree hierarchy during the bubbling phase. \n\nIn this
+    bubbling phase, each parent element can respond to the event, allowing for nested
+    interactions within the UI."

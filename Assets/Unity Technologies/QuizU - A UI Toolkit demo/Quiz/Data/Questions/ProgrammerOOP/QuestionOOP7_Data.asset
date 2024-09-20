@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionOOP7_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: How would you replace the public variable below with a Property, which
+      has improved security and still can be accessed from other classes.
+  - FontSize: 1
+    Text: '
+
+      public int score;'
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Write efficient, organized, and comprehensible code by correctly implementing
+    the principles of object-oriented programming
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: public Property score;
+  - IsCorrect: 1
+    Text: public int Score { get; set; }
+  - IsCorrect: 0
+    Text: private int score {protected};
+  - IsCorrect: 0
+    Text: public static property score;
+  m_FeedbackCorrect: A property can give access to a private field with the ability
+    to get and set it.
+  m_FeedbackIncorrect: A property can give access to a private field with the ability
+    to get and set it.
+  m_FeedbackLink: 

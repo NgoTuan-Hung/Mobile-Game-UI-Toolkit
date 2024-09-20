@@ -1,0 +1,25 @@
+{
+  "text": "What is the best description of how a particle system works in Unity? Select one answer.",
+  "skills": "Skill-L2-Art.VFX-1",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "A particle system breaks down a complex mesh into its component vertices to simulate many moving parts and produce a visual effect.",
+      "isCorrect": false
+    },
+    {
+      "text": "A particle system renders many small images or meshes, called particles, to produce a visual effect.",
+      "isCorrect": true
+    },
+    {
+      "text": "A particle system shoots light through a complex lens, similar to a projector, to produce a visual effect.",
+      "isCorrect": false
+    },
+    {
+      "text": "A particle system generates individual pixels of varying sizes, each with a different material, to produce a visual effect.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Each particle in a system represents an individual graphical element in the effect. The system simulates every particle collectively to create the impression of the complete effect. Individual particles can be 2D images or 3D meshes.",
+  "feedbackIncorrect": ""
+}

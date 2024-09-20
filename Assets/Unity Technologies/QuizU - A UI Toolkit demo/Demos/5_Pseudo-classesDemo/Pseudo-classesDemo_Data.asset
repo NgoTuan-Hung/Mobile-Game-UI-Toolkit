@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: Pseudo-classesDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: Pseudo-classes
+  m_BodyText:
+  - "A <b>pseudo-class</b> is keyword added to narrow a selector\u2019s scope so
+    it only matches elements under a specific condition. Append a pseudo-class to
+    a selector by adding a colon (<b>:</b>) followed by the pseudo-class name.\n\nFor
+    example, the following USS rule uses the <b>:hover</b> pseudo-class to change
+    the color of Button elements to blue when the mouse pointer enters the element.\\n\n<b>Button:hover
+    {\n    background-color: blue;\n}</b>\n\nThis is a simple mechanism for adding
+    interactivity and can result in a more intuitive and polished user experience.
+    \n\nYou could also use pseudo-classes to gray out a disabled control or change
+    a button's appearance when clicking it."
+  - 'These are more examples of pseudo-classes:\n
+
+    <b>:hover</b> matches an element
+    when the mouse cursor is over it. This is commonly used to style a button just
+    before it''s clicked.\n
+
+    <b>:active</b> matches an element while the user
+    is interacting with it (e.g. a button while being pressed).\n
+
+    <b>:focus</b>
+    matches an element that has focus. For example, when the user is currently able
+    to type into a text field.\n
+
+    <b>:checked</b> matches a Toggle or RadioButton
+    element when it''s checked.\n
+
+    <b>:disabled</b> matches an element when it''s
+    disabled.\n
+
+    <b>:root</b> matches the element that is highest-level element
+    in the visual tree.'
+  - "To use a pseudo-class to select elements in C#:\n\n<b>// Select all disabled
+    buttons\nList<Button> disabledButtons = root.Query<Button>(\":disabled\").ToList();</b>\n\nThis
+    example shows pseudo-classes in USS:\n\n<b>/* Make hovered buttons green */\nButton:hover
+    {\n    color: green;\n}\n\n/* Make active buttons red */\nButton:active {\n   
+    color: red;\n}</b>"
+  - "Explore the example elements to see how pseudo-classes can improve user interactivity.\n\nThe
+    <b>:hover</b> pseudo-class scales <b>button-2</b> and changes its background
+    color when the mouse pointer enters. The <b>:active</b> pseudo-class adds an
+    extra frame of visual feedback on click.\n\nThe MonoBehaviour disables <b>button-3</b>
+    with the VisualElement's <b>SetEnabled</b> method set to false. This shows the
+    button with the style rules from the <b>:disabled</b> pseudo-class. \n\n<b>button-4</b>
+    also has its <b>pickingMode</b> to <b>Ignore</b> to disable mouse and pointer
+    events."

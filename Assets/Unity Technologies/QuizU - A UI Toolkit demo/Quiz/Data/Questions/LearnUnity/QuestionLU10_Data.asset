@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionEQ1_10_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: "Unity\u2019s coordinate system is \u201CY-up.\u201D What does that mean?"
+  m_Skills: Navigate in 3D space in the Scene view
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: Y measures distance from the current viewpoint in the direction of view.
+  - IsCorrect: 0
+    Text: Y goes up from zero only; the ground is the lower vertical limit.
+  - IsCorrect: 1
+    Text: Y is vertical, and X and Z are horizontal.
+  - IsCorrect: 0
+    Text: None of the above.
+  m_FeedbackCorrect: "\u201CY-up\u201D means that the Y dimension goes up and down.
+    X and Z are similar to east-west and north-south (depending on your point of
+    view)."
+  m_FeedbackIncorrect: "\u201CY-up\u201D means that the Y dimension goes up and down.
+    X and Z are similar to east-west and north-south (depending on your point of
+    view)."

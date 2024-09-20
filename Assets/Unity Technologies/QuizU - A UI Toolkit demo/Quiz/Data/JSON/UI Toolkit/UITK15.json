@@ -1,0 +1,25 @@
+{
+    "text": "In UI Toolkit, what does the <b>flex-grow</b> property do in a Flexbox layout?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "It defines the ability for a flex item to grow if necessary",
+            "isCorrect": true
+        },
+        {
+            "text": "It determines the alignment along the main axis",
+            "isCorrect": false
+        },
+        {
+            "text": "It specifies the initial size of the flex item",
+            "isCorrect": false
+        },
+        {
+            "text": "It determines if the flex items are laid out in rows or columns",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>flex-grow</b> property in a Flexbox layout defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion, dictating the amount of space inside the flex container the item should take up.",
+    "feedbackIncorrect": "In a Flexbox layout, the <b>flex-grow</b> property defines the ability for a flex item to grow if necessary. It does not determine the alignment along the main axis, the initial size of the flex item, or whether the flex items are laid out in rows or columns."
+}

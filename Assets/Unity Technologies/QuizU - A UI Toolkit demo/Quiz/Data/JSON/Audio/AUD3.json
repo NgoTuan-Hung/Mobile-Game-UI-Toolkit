@@ -1,0 +1,25 @@
+{
+  "text": "What component is the actual container for audio data in Unity? Select one answer.",
+  "skills": "Implement audio in Unity\nProduce customized results by correctly configuring audio in a scene",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "Audio Source",
+      "isCorrect": false
+    },
+    {
+      "text": "Audio Listener",
+      "isCorrect": false
+    },
+    {
+      "text": "Audio Module",
+      "isCorrect": true
+    },
+    {
+      "text": "Audio Clip",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Unity refers to imported audio files as Audio Clips. An Audio Source is required to play the Audio Clip in the scene, and an Audio Listener must be present to play it on the computer or device’s speakers.",
+  "feedbackIncorrect": "Unity refers to imported audio files as Audio Clips. An Audio Source is required to play the Audio Clip in the scene, and an Audio Listener must be present to play it on the computer or device’s speakers."
+}

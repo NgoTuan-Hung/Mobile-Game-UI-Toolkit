@@ -1,0 +1,25 @@
+{
+  "text": "What is a mesh?",
+  "skills": "Skill-L2-Art.Shad-1",
+  "shuffleOptions": false,
+  "options": [
+    {
+      "text": "The geometric data of a GameObject, consisting of vertices and normals.",
+      "isCorrect": true
+    },
+    {
+      "text": "The exterior surface of a GameObject, to which materials are applied.",
+      "isCorrect": true
+    },
+    {
+      "text": "A series of polygons that define the surface of a GameObject.",
+      "isCorrect": true
+    },
+    {
+      "text": "All of the above.",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "The mesh is the 3D skeleton of your GameObject. It consists of vertices that define polygons, and normals that specify the directions vertices face. Every GameObject in Unity has a mesh. It is the geometric element of the object.",
+  "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+}

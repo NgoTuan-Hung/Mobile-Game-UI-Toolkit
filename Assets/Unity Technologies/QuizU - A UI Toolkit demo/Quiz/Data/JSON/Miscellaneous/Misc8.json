@@ -1,0 +1,13 @@
+{
+  "text": "What is the function of a 'Collider' component in Unity? Select one answer.",
+  "skills": "Skill-L2-Physics-1",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "To provide audio effects to a GameObject.", "isCorrect": false},
+    {"text": "To define the space within which a GameObject can physically interact with other objects.", "isCorrect": true},
+    {"text": "To define the visual appearance of a GameObject.", "isCorrect": false},
+    {"text": "To control the animation states of a GameObject.", "isCorrect": false}
+  ],
+  "feedbackCorrect": "A 'Collider' component in Unity defines the space within which a GameObject can physically interact with other objects. It essentially provides a shape to a GameObject for purposes of physical collisions.",
+  "feedbackIncorrect": "A 'Collider' component in Unity defines the space within which a GameObject can physically interact with other objects. It essentially provides a shape to a GameObject for purposes of physical collisions."
+}

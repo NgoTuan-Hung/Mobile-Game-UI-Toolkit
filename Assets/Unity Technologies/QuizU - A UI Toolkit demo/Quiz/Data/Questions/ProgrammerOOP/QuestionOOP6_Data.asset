@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionOOP6_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: "Which of the following practices are in support of the principle of \u201Cencapsulation\u201D
+      in C#?"
+  - FontSize: 1
+    Text: "1. Using getters and setters \n2. Using public variables only when necessary\n3.
+      Deactivating objects in a scene that are not in use whenever possible. \n4.
+      Using events that communicate only to abstract classes."
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Write efficient, organized, and comprehensible code by correctly implementing
+    the principles of object-oriented programming
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 1
+    Text: 1 and 2 only
+  - IsCorrect: 0
+    Text: 1 and 3 only
+  - IsCorrect: 0
+    Text: 1 and 4 only
+  - IsCorrect: 0
+    Text: 2 and 3 only
+  - IsCorrect: 0
+    Text: 2 and 4 only
+  - IsCorrect: 0
+    Text: 3 and 4 only
+  m_FeedbackCorrect: "A major theme of encapsulation is safety in code \u2014 in
+    other words, the process of ensuring that code is only used as it is intended
+    to be used, and the values and data you are manipulating can\u2019t be corrupted.
+    In encapsulated code, other programmers can\u2019t easily change the values of
+    variables or the properties of objects. Getters and setters help with this, and
+    so does limiting the number of public variables."
+  m_FeedbackIncorrect: "A major theme of encapsulation is safety in code \u2014 in
+    other words, the process of ensuring that code is only used as it is intended
+    to be used, and the values and data you are manipulating can\u2019t be corrupted.
+    In encapsulated code, other programmers can\u2019t easily change the values of
+    variables or the properties of objects. Getters and setters help with this, and
+    so does limiting the number of public variables."
+  m_FeedbackLink: 

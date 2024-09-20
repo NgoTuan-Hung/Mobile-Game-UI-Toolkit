@@ -1,0 +1,33 @@
+.start-button:hover {
+    transition-duration: 0.2s;
+    scale: 1.1 1.1;
+    transform-origin: center 30%;
+    transition-timing-function: ease-in-out-cubic;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 127, 217);
+}
+
+.start-button:active {
+    color: rgba(0, 127, 217, 0.46);
+}
+
+.start-button {
+    position: relative;
+    width: 54%;
+    align-items: center;
+    justify-content: center;
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    transition-duration: 0.15s;
+    background-color: rgba(188, 188, 188, 0);
+    color: rgb(0, 127, 217);
+    transition-timing-function: ease-in-out;
+}
+
+.horizontal-bar {
+    flex-basis: 12%;
+    background-color: rgb(0, 127, 217);
+    width: 100%;
+}

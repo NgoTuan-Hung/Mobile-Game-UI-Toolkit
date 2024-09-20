@@ -1,0 +1,25 @@
+{
+  "text": "What is the difference between a normal map and a height map?",
+  "skills": "Skill-L2-Art.Shad.Mat-1",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "A normal map specifies the direction that a surface is facing at a given point, and a height map specifies how high from the mesh surface to raise the rendered surface.",
+      "isCorrect": true
+    },
+    {
+      "text": "A normal map contains the data of the basic mesh before rendering, and the height map specifies how high from the normal surface to raise the rendered surface.",
+      "isCorrect": false
+    },
+    {
+      "text": "A normal map specifies the normal color to render the mesh, and the height map specifies how high the reflectivity of the surface will be rendered.",
+      "isCorrect": false
+    },
+    {
+      "text": "A normal map specifies the normal properties of the surface, and the height map specifies how those properties change depending on the distance of the surface from the viewer.",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "Normals are values in the mesh data that define the direction each vertex is facing. A normal map sets these values over an entire surface. Height maps indicate the relative height of each pixel from the mesh.",
+  "feedbackIncorrect": "Shaders and materials work together to define all the characteristics of a mesh surface during the rendering process. A material is an asset that works with a shader to define how meshes will be rendered."
+}

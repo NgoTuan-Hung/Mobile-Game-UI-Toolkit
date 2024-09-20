@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionAUD9_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: "You\u2019re creating an outdoors scene and have added  multiple ambient
+      effects, one of which is a frog song. The frog song is a spatial audio effect,
+      and the max distance is set to be right at the edge of a pond. However, even
+      when the player is at the pond, the frog song is hard to hear over the other
+      effects.\n"
+  - FontSize: 2
+    Text: What can be done to fix this issue without changing the overall soundscape?
+      Select one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Create interactive experiences by synthesizing audio experience design
+    principles; Refine existing audio in a Unity project
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: Lower the volume on all of the other sound effects.
+  - IsCorrect: 0
+    Text: Increase the max distance of the frog song to far beyond the pond.
+  - IsCorrect: 0
+    Text: Set the frog song audio source to be 2D.
+  - IsCorrect: 1
+    Text: Set the frog song priority to be lower than the other audio effects.
+  m_FeedbackCorrect: A Priority setting of 0 indicates the most important audio effect
+    in Unity. The lower you set the audio source, the more priority Unity will give
+    to playing that sound over another.
+  m_FeedbackIncorrect: A Priority setting of 0 indicates the most important audio
+    effect in Unity. The lower you set the audio source, the more priority Unity
+    will give to playing that sound over another.

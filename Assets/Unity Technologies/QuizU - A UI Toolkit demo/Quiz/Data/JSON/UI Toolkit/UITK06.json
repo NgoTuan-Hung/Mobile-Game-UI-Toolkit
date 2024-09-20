@@ -1,0 +1,25 @@
+{
+    "text": "What is the purpose of the <b>VisualTreeAsset</b> in UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "To represent a UI hierarchy",
+            "isCorrect": true
+        },
+        {
+            "text": "To hold visual styles for UI elements",
+            "isCorrect": false
+        },
+        {
+            "text": "To apply visual effects to UI elements",
+            "isCorrect": false
+        },
+        {
+            "text": "To manage UI animations",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "A <b>VisualTreeAsset</b> in UI Toolkit represents a UI hierarchy, which you can design in the UI Builder.",
+    "feedbackIncorrect": "A <b>VisualTreeAsset</b> in UI Toolkit represents a UI hierarchy, which you can design in the UI Builder."
+}

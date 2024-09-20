@@ -1,0 +1,25 @@
+{
+  "text": "What file type is best suited for longer audio sequences, such as background music for a desktop application? Select one answer.",
+  "skills": "Produce customized results by correctly configuring audio in a scene",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "WAV",
+      "isCorrect": false
+    },
+    {
+      "text": "AIFF",
+      "isCorrect": false
+    },
+    {
+      "text": "FLAC",
+      "isCorrect": false
+    },
+    {
+      "text": "MP3",
+      "isCorrect": true
+    }
+  ],
+  "feedbackCorrect": "When considering file formats for audio, there’s a trade-off between size and quality. WAV files are uncompressed and therefore their audio quality isn’t reduced in application; however, they can be quite large. Longer audio files, such as background music, are therefore recommended to be in MP3 format, because the quality of the audio will still remain good, but the file size won't be as big.",
+  "feedbackIncorrect": "When considering file formats for audio, there’s a trade-off between size and quality. WAV files are uncompressed and therefore their audio quality isn’t reduced in application; however, they can be quite large. Longer audio files, such as background music, are therefore recommended to be in MP3 format, because the quality of the audio will still remain good, but the file size won't be as big."
+}

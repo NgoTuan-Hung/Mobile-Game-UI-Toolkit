@@ -1,0 +1,25 @@
+{
+    "text": "In UI Toolkit, what is the purpose of a <b>ScrollView</b>?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "To create a scrolling background",
+            "isCorrect": false
+        },
+        {
+            "text": "To create a view that can be scrolled horizontally or vertically",
+            "isCorrect": true
+        },
+        {
+            "text": "To create a view that can be rotated",
+            "isCorrect": false
+        },
+        {
+            "text": "To create a view that can be zoomed in or out",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "In UI Toolkit, a <b>ScrollView</b> is used to create a view that can be scrolled horizontally or vertically. This is especially useful when the content is too large to fit within the visible area.",
+    "feedbackIncorrect": "In UI Toolkit, a <b>ScrollView</b> is not used to create a scrolling background, a view that can be rotated, or a view that can be zoomed in or out. Instead, it's used to create a view that can be scrolled horizontally or vertically, especially when the content is too large to fit within the visible area."
+}

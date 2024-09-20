@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK15_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In UI Toolkit, what does the <b>flex-grow</b> property do in a Flexbox
+      layout?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: It defines the ability for a flex item to grow if necessary
+  - IsCorrect: 0
+    Text: It determines the alignment along the main axis
+  - IsCorrect: 0
+    Text: It specifies the initial size of the flex item
+  - IsCorrect: 0
+    Text: It determines if the flex items are laid out in rows or columns
+  m_FeedbackCorrect: The <b>flex-grow</b> property in a Flexbox layout defines the
+    ability for a flex item to grow if necessary. It accepts a unitless value that
+    serves as a proportion, dictating the amount of space inside the flex container
+    the item should take up.
+  m_FeedbackIncorrect: In a Flexbox layout, the <b>flex-grow</b> property defines
+    the ability for a flex item to grow if necessary. It does not determine the alignment
+    along the main axis, the initial size of the flex item, or whether the flex items
+    are laid out in rows or columns.

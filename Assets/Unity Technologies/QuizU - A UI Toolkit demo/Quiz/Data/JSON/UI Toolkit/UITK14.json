@@ -1,0 +1,25 @@
+{
+    "text": "In UI Toolkit, what is the purpose of <b>BindableElement</b>?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": false,
+    "options": [
+        {
+            "text": "It allows elements to be bound to data sources",
+            "isCorrect": true
+        },
+        {
+            "text": "It allows elements to be bound to event handlers",
+            "isCorrect": false
+        },
+        {
+            "text": "It allows elements to be bound to animations",
+            "isCorrect": false
+        },
+        {
+            "text": "It is a base class for all interactive UI elements",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>BindableElement</b> class in UI Toolkit allows elements to be bound to data sources, such as variables or properties in your scripts, allowing them to automatically update to reflect changes in the underlying data.",
+    "feedbackIncorrect": "The <b>BindableElement</b> class in UI Toolkit allows elements to be bound to data sources, such as variables or properties in your scripts. It is not primarily used to bind elements to event handlers or animations, nor is it a base class for all interactive UI elements."
+}

@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="StartScreen" src="project://database/Assets/Quiz/UI/Uxml/StartScreen.uxml?fileID=9197481963319205126&amp;guid=c4929c40928954e5c8e9371d15f141ec&amp;type=3#StartScreen" />
+    <ui:Template name="MainMenuScreen" src="project://database/Assets/Quiz/UI/Uxml/MainMenuScreen.uxml?fileID=9197481963319205126&amp;guid=f2438693901df415a869e9e7a0969c81&amp;type=3#MainMenuScreen" />
+    <ui:Template name="LevelSelectionScreen" src="project://database/Assets/Quiz/UI/Uxml/LevelSelectionScreen.uxml?fileID=9197481963319205126&amp;guid=a98d6d9418f474321a69a2433d22d09d&amp;type=3#LevelSelectionScreen" />
+    <ui:Template name="GameScreen" src="project://database/Assets/Quiz/UI/Uxml/GameScreen.uxml?fileID=9197481963319205126&amp;guid=97d15941727134c1fa0c341cd8d4736f&amp;type=3#GameScreen" />
+    <ui:Template name="SettingsScreen" src="project://database/Assets/Quiz/UI/Uxml/SettingsScreen.uxml?fileID=9197481963319205126&amp;guid=5572f5d9036ce47119db1914cc08fe98&amp;type=3#SettingsScreen" />
+    <ui:Template name="PauseScreen" src="project://database/Assets/Quiz/UI/Uxml/PauseScreen.uxml?fileID=9197481963319205126&amp;guid=12520324dd69b43f2a2e2050206d0e5c&amp;type=3#PauseScreen" />
+    <ui:Template name="EndScreen" src="project://database/Assets/Quiz/UI/Uxml/EndScreen.uxml?fileID=9197481963319205126&amp;guid=2ede02e73aedd4abcb0fad5e7ee5bcfa&amp;type=3#EndScreen" />
+    <ui:Template name="SplashScreen" src="project://database/Assets/Quiz/UI/Uxml/SplashScreen.uxml?fileID=9197481963319205126&amp;guid=35b105f2d6dd54148a2a7e16da894779&amp;type=3#SplashScreen" />
+    <ui:Instance template="StartScreen" name="StartScreen" picking-mode="Ignore" style="width: 100%; height: 100%; position: absolute;" />
+    <ui:Instance template="MainMenuScreen" name="MainMenuScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%;" />
+    <ui:Instance template="LevelSelectionScreen" name="LevelSelectionScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%;" />
+    <ui:Instance template="GameScreen" name="GameScreen" picking-mode="Ignore" style="width: 100%; height: 100%;" />
+    <ui:Instance template="SettingsScreen" name="SettingsScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%;" />
+    <ui:Instance template="PauseScreen" name="PauseScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%;" />
+    <ui:Instance template="EndScreen" name="EndScreen" picking-mode="Ignore" style="width: 100%; height: 100%; position: absolute;" />
+    <ui:Instance template="SplashScreen" name="SplashScreen" picking-mode="Ignore" style="width: 100%; height: 100%; position: absolute;" />
+</ui:UXML>

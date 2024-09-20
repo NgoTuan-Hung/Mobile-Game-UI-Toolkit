@@ -1,0 +1,25 @@
+{
+    "text": "In Unity's UI Toolkit, which class is used to read input from users?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "<b>InputReader</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>UserEvent</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>PointerEvent</b>",
+            "isCorrect": true
+        },
+        {
+            "text": "<b>UserInput</b>",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "<b>PointerEvent</b> is used in Unity's UI Toolkit to read user input, specifically, it handles pointer-based input like mouse and touch events.",
+    "feedbackIncorrect": "The <b>InputReader</b>, <b>UserEvent</b>, and <b>UserInput</b> are not classes used for reading user input in Unity's UI Toolkit. The correct class is <b>PointerEvent</b> which handles pointer-based input like mouse and touch events."
+}

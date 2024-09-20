@@ -1,0 +1,25 @@
+{
+  "text": "In the main module of the Particle System component, what does the Start Lifetime property determine? Select one answer.",
+  "skills": "Skill-L2-Art.VFX-2",
+  "shuffleOptions": true,
+  "options": [
+    {
+      "text": "How many seconds an individual particle will exist before it disappears",
+      "isCorrect": true
+    },
+    {
+      "text": "How many seconds the entire particle system will exist before it stops emitting particles",
+      "isCorrect": false
+    },
+    {
+      "text": "How many frames it takes for an individual particle to fade in to the scene",
+      "isCorrect": false
+    },
+    {
+      "text": "How many frames the delay is before the particle system begins emitting particles",
+      "isCorrect": false
+    }
+  ],
+  "feedbackCorrect": "The Start Lifetime is the total lifetime of the individual particles in seconds. The Particle System sets this value when it first spawns the particle and counts down. When that value reaches 0, the particle will disappear.",
+  "feedbackIncorrect": ""
+}

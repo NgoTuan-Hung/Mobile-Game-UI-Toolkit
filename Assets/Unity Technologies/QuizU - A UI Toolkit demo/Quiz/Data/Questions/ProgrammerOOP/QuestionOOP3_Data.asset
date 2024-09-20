@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionOOP3_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: Which of the following statements are true about parent (base) and child
+      (derived) classes?
+  - FontSize: 1
+    Text: '1. A class can only inherit from a single class.
+
+      2. Protected variables
+      and methods can be accessed from the child class, even if they are separate
+      scripts.
+
+      3. Private variables and methods can be accessed from the child
+      class, even if they are separate scripts.
+
+      4. If Class C derives from
+      Class B, which derives from Class A, Class C only inherits behaviors from Class
+      B.'
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Make code more secure and usable by correctly implementing the principles
+    of abstraction and encapsulation, including the use of interfaces
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: Only 1 is true.
+  - IsCorrect: 1
+    Text: Only 1 and 2 are true.
+  - IsCorrect: 0
+    Text: Only 2 and 3 are true.
+  - IsCorrect: 0
+    Text: Only 3 and 4 are true.
+  - IsCorrect: 0
+    Text: All are true.
+  m_FeedbackCorrect: For number 3, private variables and methods can only be accessed
+    by derived classes if those classes are nested in their base class. For number
+    4, Class C would actually inherit from all base classes, which would include
+    Class B and Class A.
+  m_FeedbackIncorrect: For number 3, private variables and methods can only be accessed
+    by derived classes if those classes are nested in their base class. For number
+    4, Class C would actually inherit from all base classes, which would include
+    Class B and Class A.
+  m_FeedbackLink: 

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Demos/1%20VisualTreeDemo/VisualTreeDemo.uss?fileID=7433441132597879392&amp;guid=6abafa266351f42e282f583e2830f972&amp;type=3#VisualTreeDemo" />
+    <ui:VisualElement name="parent-container" style="flex-basis: 69%; width: 66%; align-items: center; justify-content: center; flex-direction: row; position: absolute; top: 6%; right: 0;">
+        <ui:GroupBox text="container-1" name="container-1" class="container-large" style="justify-content: flex-start;">
+            <ui:Slider picking-mode="Ignore" label="slider-1" value="42" high-value="100" name="slider-1" class="round-outline-slider" style="margin-left: 10%; margin-right: 10%; margin-top: 0; margin-bottom: 5%; flex-basis: 13%;" />
+            <ui:Button text="button-1" display-tooltip-when-elided="true" name="button-1" class="round-outline-button" style="width: 75%; margin-left: 10%; margin-right: 10%; margin-top: 10%; margin-bottom: 10%;" />
+            <ui:TextField picking-mode="Ignore" label="text-field-1" value="filler text" name="text-field-1" class="round-outline-textfield" style="font-size: 29px;" />
+        </ui:GroupBox>
+        <ui:GroupBox text="container-2" name="container-2" class="container-large" style="justify-content: flex-start;">
+            <ui:GroupBox name="container-3" text="container-3" class="container-small">
+                <ui:Button text="button-2" display-tooltip-when-elided="true" name="button-2" class="round-outline-button" style="flex-basis: 34%; width: 75%; margin-left: 10%; margin-right: 10%; margin-top: 10%; margin-bottom: 10%;" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

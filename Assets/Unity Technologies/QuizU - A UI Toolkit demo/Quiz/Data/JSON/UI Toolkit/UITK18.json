@@ -1,0 +1,25 @@
+{
+    "text": "In the UI Toolkit, what is the <b>UQueryBuilder</b> used for?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "It is used to construct complex UI animations",
+            "isCorrect": false
+        },
+        {
+            "text": "It is used to query the UI hierarchy and find elements",
+            "isCorrect": true
+        },
+        {
+            "text": "It is used to bind UI elements to data sources",
+            "isCorrect": false
+        },
+        {
+            "text": "It is used to manage multi-threading in the UI",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>UQueryBuilder</b> is used to query the UI hierarchy and find elements. It allows for complex queries to be constructed to find specific elements.",
+    "feedbackIncorrect": "The <b>UQueryBuilder</b> is not used for constructing UI animations, binding UI elements to data sources, or managing multi-threading. It is used to query the UI hierarchy and find elements."
+}

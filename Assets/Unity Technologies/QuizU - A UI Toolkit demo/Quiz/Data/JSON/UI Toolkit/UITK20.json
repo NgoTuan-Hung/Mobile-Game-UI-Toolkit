@@ -1,0 +1,25 @@
+{
+    "text": "What is the purpose of the <b>USS</b> file in the UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "It defines the structure of the UI",
+            "isCorrect": false
+        },
+        {
+            "text": "It defines the visual style and layout of the UI",
+            "isCorrect": true
+        },
+        {
+            "text": "It contains the script logic for the UI",
+            "isCorrect": false
+        },
+        {
+            "text": "It is used for localization of the UI",
+            "isCorrect": false
+        }
+    ],
+    "feedbackCorrect": "The <b>USS</b> (Unity Style Sheets) file is used to define the visual style and layout of the UI in the UI Toolkit.",
+    "feedbackIncorrect": "The <b>USS</b> (Unity Style Sheets) file is not used to define the structure of the UI, contain the script logic, or for localization. It is used to define the visual style and layout of the UI."
+}

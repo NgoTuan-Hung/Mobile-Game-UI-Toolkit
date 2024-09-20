@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionEQ1_01_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: What does the term real-time mean?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: "Understand Unity\u2019s history and role within the industries that
+    rely on real-time creation."
+  m_ShuffleAnswers: 0
+  m_Answers:
+  - IsCorrect: 0
+    Text: The process of offline rendering.
+  - IsCorrect: 1
+    Text: How quickly a complex scene - including lights, effects, materials and
+      physics - is rendered on the screen.
+  - IsCorrect: 0
+    Text: Waiting a long time to render complex scenes.
+  - IsCorrect: 0
+    Text: All of the above.
+  m_FeedbackCorrect: "The term real-time describes how quickly an image is rendered
+    (or displayed) on the screen. Eliminating the need to wait for renders has changed
+    the ways creators can work \u2014 in fact, creators who move their projects from
+    offline rendering to real-time remove weeks or months from the production cycle,
+    and give themselves more time to experiment with new ideas or polish what\u2019s
+    already been designed."
+  m_FeedbackIncorrect: "The term real-time describes how quickly an image is rendered
+    (or displayed) on the screen. Eliminating the need to wait for renders has changed
+    the ways creators can work \u2014 in fact, creators who move their projects from
+    offline rendering to real-time remove weeks or months from the production cycle,
+    and give themselves more time to experiment with new ideas or polish what\u2019s
+    already been designed."

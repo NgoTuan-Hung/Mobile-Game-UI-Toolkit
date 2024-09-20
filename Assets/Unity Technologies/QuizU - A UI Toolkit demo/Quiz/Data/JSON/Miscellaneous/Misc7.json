@@ -1,0 +1,13 @@
+{
+  "text": "In Unity, what is a 'Prefab'? Select one answer.",
+  "skills": "Skill-L2-AssetManagement-1",
+  "shuffleOptions": true,
+  "options": [
+    {"text": "A script that allows for procedural generation of content.", "isCorrect": false},
+    {"text": "A pre-packaged asset that can be used to quickly create instances of a GameObject with predefined components and properties.", "isCorrect": true},
+    {"text": "A tool for optimizing the performance of a game.", "isCorrect": false},
+    {"text": "A type of shader used for creating realistic textures.", "isCorrect": false}
+  ],
+  "feedbackCorrect": "A Prefab in Unity is a pre-packaged asset that can be used to quickly create instances of a GameObject with predefined components and properties. This allows for efficient and consistent creation of objects.",
+  "feedbackIncorrect": "A Prefab in Unity is a pre-packaged asset that can be used to quickly create instances of a GameObject with predefined components and properties. This allows for efficient and consistent creation of objects."
+}

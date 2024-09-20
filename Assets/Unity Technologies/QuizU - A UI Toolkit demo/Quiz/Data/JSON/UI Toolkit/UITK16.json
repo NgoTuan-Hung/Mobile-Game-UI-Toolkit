@@ -1,0 +1,25 @@
+{
+    "text": "Which of the following is not a direct subclass of <b>VisualElement</b> in the UI Toolkit?",
+    "skills": "UI Toolkit",
+    "shuffleOptions": true,
+    "options": [
+        {
+            "text": "<b>Button</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>Label</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>ScrollView</b>",
+            "isCorrect": false
+        },
+        {
+            "text": "<b>DropdownMenu</b>",
+            "isCorrect": true
+        }
+    ],
+    "feedbackCorrect": "<b>DropdownMenu</b> is not a direct subclass of <b>VisualElement</b>. It is a part of the UI Toolkit, but it does not derive directly from <b>VisualElement</b>.",
+    "feedbackIncorrect": "<b>DropdownMenu</b> is not a direct subclass of <b>VisualElement</b>. <b>Button</b>, <b>Label</b>, and <b>ScrollView</b> are all direct subclasses of <b>VisualElement</b>."
+}

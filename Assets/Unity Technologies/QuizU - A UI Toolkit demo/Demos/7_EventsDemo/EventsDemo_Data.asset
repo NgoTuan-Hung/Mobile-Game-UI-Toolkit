@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c2d96b525a445ce8f4fb737b923a96, type: 3}
+  m_Name: EventsDemo_Data
+  m_EditorClassIdentifier: 
+  m_Description: 
+  m_Title: Events
+  m_BodyText:
+  - "UI Toolkit features its own <b>event system</b> to relay user actions or notifications
+    to visual elements. This supports a variety of events that can be handled in
+    response to user interaction. For example: \n\n<b>ClickEvent:</b> Triggered when
+    a UI element is clicked.\n\n<b>ChangeEvent:</b> Triggered when the value of a
+    UI element, such as a TextField or a Toggle, is changed.\n\n<b>PointerEvent:</b>
+    Includes common properties relevant for both mouse and touch input (e.g. pointerId,
+    position, clickCount).\n\n<b>MouseEvent:</b> Adds more mouse-specific properties
+    like localMousePosition and mousePosition.\n\n<b>GeometryChangedEvent:</b>  Dispatched
+    when the size, position, or transform of a UI element changes (e.g. perform some
+    other action when an element moves or resizes)."
+  - "Registering an event callback (through the <b>RegisterCallback</b> method) enables
+    the customization of an element's behavior, such as reacting to a mouse click.
+    \n\nHere we define a separate event-handling method and register it to the ClickEvent:\n\n<b>myButton.RegisterCallback<ClickEvent>(OnButtonClick);\n\n...\n\nvoid
+    OnButtonClick(ClickEvent evt)\n{\n    Debug.Log(\"Button clicked!\");\n}</b>"
+  - 'Specific UI elements may raise the same event under different circumstances.
+    For instance, a TextField and Slider both initiate a <b>ChangeEvent</b> but for
+    different user interactions (typing text values versus dragging the slider).
+
+
+    Consider
+    the example elements, which show different types of events at work.
+
+
+    Edit
+    the MonoBehaviour to see how to set up the TextField, Button, and Slider.
+
+
+    Resize
+    the Button width using the Slider. This, in turn, updates the label with a <b>GeometryChangedEvent</b>.'

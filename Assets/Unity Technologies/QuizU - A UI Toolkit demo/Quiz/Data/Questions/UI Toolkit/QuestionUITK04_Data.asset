@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionUITK04_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In UI Toolkit, what is the purpose of a <b>ScrollView</b>?
+  m_QuestionImage: {fileID: 0}
+  m_Skills: UI Toolkit
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 0
+    Text: To create a scrolling background
+  - IsCorrect: 1
+    Text: To create a view that can be scrolled horizontally or vertically
+  - IsCorrect: 0
+    Text: To create a view that can be rotated
+  - IsCorrect: 0
+    Text: To create a view that can be zoomed in or out
+  m_FeedbackCorrect: In UI Toolkit, a <b>ScrollView</b> is used to create a view
+    that can be scrolled horizontally or vertically. This is especially useful when
+    the content is too large to fit within the visible area.
+  m_FeedbackIncorrect: In UI Toolkit, a <b>ScrollView</b> is not used to create a
+    scrolling background, a view that can be rotated, or a view that can be zoomed
+    in or out. Instead, it's used to create a view that can be scrolled horizontally
+    or vertically, especially when the content is too large to fit within the visible
+    area.

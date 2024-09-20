@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15688e9732cf49ef8f9f236dd0808d8, type: 3}
+  m_Name: QuestionVFX2_Data
+  m_EditorClassIdentifier: 
+  m_QuestionText:
+  - FontSize: 2
+    Text: In the main module of the Particle System component, what does the Start
+      Lifetime property determine? Select one answer.
+  m_QuestionImage: {fileID: 0}
+  m_Skills: Skill-L2-Art.VFX-2
+  m_ShuffleAnswers: 1
+  m_Answers:
+  - IsCorrect: 1
+    Text: How many seconds an individual particle will exist before it disappears
+  - IsCorrect: 0
+    Text: How many seconds the entire particle system will exist before it stops
+      emitting particles
+  - IsCorrect: 0
+    Text: How many frames it takes for an individual particle to fade in to the scene
+  - IsCorrect: 0
+    Text: How many frames the delay is before the particle system begins emitting
+      particles
+  m_FeedbackCorrect: The Start Lifetime is the total lifetime of the individual particles
+    in seconds. The Particle System sets this value when it first spawns the particle
+    and counts down. When that value reaches 0, the particle will disappear.
+  m_FeedbackIncorrect: The Start Lifetime is the total lifetime of the individual
+    particles in seconds. The Particle System sets this value when it first spawns
+    the particle and counts down. When that value reaches 0, the particle will disappear.
