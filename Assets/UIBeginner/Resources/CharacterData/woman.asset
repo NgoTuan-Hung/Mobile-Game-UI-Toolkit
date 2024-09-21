@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f831d52274a83bd4fa86ee8e44841481, type: 3}
-  m_Name: New Something Cool Data Holder
+  m_Name: woman
   m_EditorClassIdentifier: 
   name: Meh
   job: 0

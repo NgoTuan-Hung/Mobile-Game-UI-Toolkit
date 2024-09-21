@@ -1,0 +1,30 @@
+.menu-tab {
+    font-size: 80px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.menu-tab:hover {
+    background-color: rgb(144, 153, 183);
+    border-bottom-width: 8px;
+    border-bottom-color: rgb(17, 168, 171);
+}
+
+#body {
+    background-color: rgb(31, 37, 61);
+}
+
+.menu-list {
+    background-color: rgb(80, 89, 123);
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+    border-bottom-left-radius: 27px;
+    overflow: hidden;
+}

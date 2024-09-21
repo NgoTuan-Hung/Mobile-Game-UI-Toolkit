@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/GoodFeel/FeelGood.uss?fileID=7433441132597879392&amp;guid=b8d64e764bed56e40bc36020c4abf289&amp;type=3#FeelGood" />
+    <ui:VisualElement name="body" style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:VisualElement class="menu-list" style="flex-grow: 0; flex-direction: row;">
+            <ui:Label tabindex="-1" text="Graphic" parse-escape-sequences="true" display-tooltip-when-elided="true" class="menu-tab" />
+            <ui:Label tabindex="-1" text="Controller" parse-escape-sequences="true" display-tooltip-when-elided="true" class="menu-tab" />
+            <ui:Label tabindex="-1" text="General" parse-escape-sequences="true" display-tooltip-when-elided="true" class="menu-tab" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
