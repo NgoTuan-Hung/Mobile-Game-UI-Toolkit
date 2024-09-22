@@ -1,0 +1,29 @@
+#SkillHolderOut {
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    background-color: rgb(61, 70, 83);
+    height: 150px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+}
+
+#SkillHolderIn {
+    border-left-color: rgb(56, 86, 114);
+    border-right-color: rgb(56, 86, 114);
+    border-top-color: rgb(56, 86, 114);
+    border-bottom-color: rgb(56, 86, 114);
+    background-color: rgb(13, 70, 127);
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    border-top-width: 7px;
+    border-right-width: 7px;
+    border-bottom-width: 7px;
+    border-left-width: 7px;
+    width: 135px;
+    height: 135px;
+}

@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 0; top: 930px; align-items: center; height: 150px; justify-content: center; flex-direction: row;">
+        <ui:ScrollView name="SkillScrollView" mode="Vertical" style="overflow: visible; flex-direction: row; flex-wrap: wrap; height: 150px;" />
+    </ui:VisualElement>
+</ui:UXML>
