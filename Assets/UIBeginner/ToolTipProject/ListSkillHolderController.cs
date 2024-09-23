@@ -11,14 +11,15 @@ public class ListSkillHolderController : MonoBehaviour
 
     ScrollView skillScrollView;
     VisualElement root;
-    VisualElement skillTooltip;
+    VisualElement skillTooltipRoot, skillTooltip;
     private void OnEnable() 
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
         skillScrollView = root.Q<ScrollView>();
 
-        skillTooltip = skillTooltipTemplate.Instantiate();
+        skillTooltipRoot = skillTooltipTemplate.Instantiate();
+        skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
 
         InitializeSkillHolderList();
     }
@@ -31,33 +32,27 @@ public class ListSkillHolderController : MonoBehaviour
             var newSkillHolder = skillHolderTemplate.Instantiate();
             VisualElement skillHolderIn = newSkillHolder.Q<VisualElement>("SkillHolderIn");
             // add event to skillHolderIn
-            skillHolderIn.RegisterCallback<PointerEnterEvent>(ShowTooltip);
-            skillHolderIn.RegisterCallback<PointerLeaveEvent>(HideTooltip);
+            DragAndDropManipulator dragAndDropManipulator = new DragAndDropManipulator(skillHolderIn);
 
             skillScrollView.Add(newSkillHolder);
         }
+
+        // skillTooltipRoot.style.left = Random.Range(0, 1000);
+        // skillTooltipRoot.style.top = Random.Range(0, 1000);
+        // skillTooltipRoot.style.position = Position.Absolute;
+        // root.Add(skillTooltipRoot);
     }
 
     // Show tooltip on hover at mouse position
-    public void ShowTooltip(PointerEnterEvent evt)
+    public void ShowTooltip(MouseEnterEvent evt)
     {
         var target = evt.target as VisualElement;
         if (target == null) return;
 
-        // skillTooltip.style.left = Input.mousePosition.x;
-        // skillTooltip.style.top = Screen.height - Input.mousePosition.y;
-        skillTooltip.style.left = evt.position.x;
-        skillTooltip.style.top = evt.position.y;
-        skillTooltip.style.position = Position.Absolute;
-        skillTooltip.SetEnabled(false);
-        root.Add(skillTooltip);
-        skillTooltip.SetEnabled(true);
-    }
+        // skillTooltipRoot.style.left = Input.mousePosition.x;
+        // skillTooltipRoot.style.top = Screen.height - Input.mousePosition.y;
 
-    // Hide tooltip on mouse exit
-    public void HideTooltip(PointerLeaveEvent evt)
-    {
-        root.Remove(skillTooltip);
-        skillTooltip.SetEnabled(false);
+        // skillTooltipRoot.style.left = evt.mousePosition.x;
+        // skillTooltipRoot.style.top = evt.mousePosition.y;
     }
 }

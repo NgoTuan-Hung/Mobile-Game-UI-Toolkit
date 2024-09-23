@@ -1,8 +1,10 @@
-#skill-tooltip-root {
+.skill-tooltip {
     opacity: 0;
-    transition: opacity 10s ease-out;
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
 }
 
-#skill-tooltip-root:enabled {
+.skill-tooltip-showup {
     opacity: 1;
 }
