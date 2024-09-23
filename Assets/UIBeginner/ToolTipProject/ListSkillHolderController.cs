@@ -49,12 +49,15 @@ public class ListSkillHolderController : MonoBehaviour
         skillTooltip.style.left = evt.position.x;
         skillTooltip.style.top = evt.position.y;
         skillTooltip.style.position = Position.Absolute;
+        skillTooltip.SetEnabled(false);
         root.Add(skillTooltip);
+        skillTooltip.SetEnabled(true);
     }
 
     // Hide tooltip on mouse exit
     public void HideTooltip(PointerLeaveEvent evt)
     {
         root.Remove(skillTooltip);
+        skillTooltip.SetEnabled(false);
     }
 }

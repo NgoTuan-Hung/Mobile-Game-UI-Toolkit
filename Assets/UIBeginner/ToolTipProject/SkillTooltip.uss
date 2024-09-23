@@ -1,0 +1,8 @@
+#skill-tooltip-root {
+    opacity: 0;
+    transition: opacity 10s ease-out;
+}
+
+#skill-tooltip-root:enabled {
+    opacity: 1;
+}
