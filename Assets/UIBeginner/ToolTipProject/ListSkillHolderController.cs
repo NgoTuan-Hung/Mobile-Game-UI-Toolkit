@@ -10,15 +10,14 @@ public class ListSkillHolderController : MonoBehaviour
     [SerializeField] private VisualTreeAsset skillTooltipTemplate;
     // [SerializeField] private VisualTreeAsset helperLensTemplate;
 
-    ScrollView skillScrollView;
+    List<ScrollView> skillScrollViews;
     VisualElement root;
     VisualElement skillTooltipRoot, skillTooltip, helperLensRoot;
     private void OnEnable() 
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
-        skillScrollView = root.Q<ScrollView>();
-        Debug.Log(root.panel.visualTree.name + "-" + skillScrollView.panel.visualTree.name);
+        skillScrollViews = root.Query<ScrollView>().ToList();
 
         helperLensRoot = root.Q<VisualElement>("helper-lens");
         helperLensRoot.style.position = Position.Absolute;
@@ -34,21 +33,19 @@ public class ListSkillHolderController : MonoBehaviour
     [SerializeField] private int skillCount = 5;
     public void InitializeSkillHolderList()
     {
-        for (int i = 0; i < skillCount; i++)
+        skillScrollViews.ForEach(skillScrollView => 
         {
-            var newSkillHolder = skillHolderTemplate.Instantiate();
-            VisualElement skillHolderIn = newSkillHolder.Q<VisualElement>("SkillHolderIn");
-            // add event to skillHolderIn
-            skillHolderIn.RegisterCallback<MouseDownEvent>(MouseDownEvent);
-            skillHolderIn.RegisterCallback<MouseOutEvent>(MouseOutEvent);
+            for (int i = 0; i < skillCount; i++)
+            {
+                var newSkillHolder = skillHolderTemplate.Instantiate();
+                VisualElement skillHolderIn = newSkillHolder.Q<VisualElement>("SkillHolderIn");
+                // add event to skillHolderIn
+                skillHolderIn.RegisterCallback<MouseDownEvent>(MouseDownEvent);
+                skillHolderIn.RegisterCallback<MouseOutEvent>(MouseOutEvent);
 
-            skillScrollView.Add(newSkillHolder);
-        }
-
-        // skillTooltipRoot.style.left = Random.Range(0, 1000);
-        // skillTooltipRoot.style.top = Random.Range(0, 1000);
-        // skillTooltipRoot.style.position = Position.Absolute;
-        // root.Add(skillTooltipRoot);
+                skillScrollView.Add(newSkillHolder);
+            }
+        });
     }
 
     // Show tooltip on hover at mouse position
@@ -56,12 +53,6 @@ public class ListSkillHolderController : MonoBehaviour
     {
         var target = evt.target as VisualElement;
         if (target == null) return;
-
-        // skillTooltipRoot.style.left = Input.mousePosition.x;
-        // skillTooltipRoot.style.top = Screen.height - Input.mousePosition.y;
-
-        // skillTooltipRoot.style.left = evt.mousePosition.x;
-        // skillTooltipRoot.style.top = evt.mousePosition.y;
     }
 
     public void MouseDownEvent(MouseDownEvent evt)

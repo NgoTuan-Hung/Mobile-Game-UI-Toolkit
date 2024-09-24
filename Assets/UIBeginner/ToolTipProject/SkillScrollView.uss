@@ -6,9 +6,11 @@ ScrollView .unity-scroll-view__content-container {
 }
 
 ScrollView {
-    width: 80%;
+    width: auto;
     height: 150px;
     align-self: center;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .in-use {
