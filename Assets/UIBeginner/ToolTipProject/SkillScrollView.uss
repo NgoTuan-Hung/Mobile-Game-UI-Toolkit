@@ -10,3 +10,13 @@ ScrollView {
     height: 150px;
     align-self: center;
 }
+
+.in-use {
+    opacity: 1;
+}
+
+.not-use {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    opacity: 0.5;
+}

@@ -1,0 +1,8 @@
+.in-use {
+    opacity: 0.5;
+}
+
+.helper-lens {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+}

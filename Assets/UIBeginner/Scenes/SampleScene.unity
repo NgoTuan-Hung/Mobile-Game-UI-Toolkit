@@ -327,6 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillHolderTemplate: {fileID: 9197481963319205126, guid: b4520969730ca9147821e3cfef5ed886, type: 3}
   skillTooltipTemplate: {fileID: 9197481963319205126, guid: c578c08d3d8d43a45a2704bb37590449, type: 3}
+  helperLensTemplate: {fileID: 9197481963319205126, guid: c871b99ade0afe440b4cf9ca74878ac8, type: 3}
   skillCount: 100
 --- !u!1 &2064516911
 GameObject:

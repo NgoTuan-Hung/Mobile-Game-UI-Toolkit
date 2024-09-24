@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/ToolTipProject/HelperLens.uss?fileID=7433441132597879392&amp;guid=fc2d9c2b19abe404ba04a28f9292a9aa&amp;type=3#HelperLens" />
+    <ui:VisualElement name="helper-lens" class="helper-lens" style="flex-grow: 0; width: 150px; height: 150px; background-image: url(&quot;project://database/Assets/UIBeginner/ToolTipProject/loupe.png?fileID=2800000&amp;guid=3ab4ad778fe2ab649ab436c0fb8847f3&amp;type=3#loupe&quot;); opacity: 1;" />
+</ui:UXML>

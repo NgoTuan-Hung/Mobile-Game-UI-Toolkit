@@ -8,18 +8,25 @@ public class ListSkillHolderController : MonoBehaviour
 {
     [SerializeField] private VisualTreeAsset skillHolderTemplate;
     [SerializeField] private VisualTreeAsset skillTooltipTemplate;
+    // [SerializeField] private VisualTreeAsset helperLensTemplate;
 
     ScrollView skillScrollView;
     VisualElement root;
-    VisualElement skillTooltipRoot, skillTooltip;
+    VisualElement skillTooltipRoot, skillTooltip, helperLensRoot;
     private void OnEnable() 
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
         skillScrollView = root.Q<ScrollView>();
+        Debug.Log(root.panel.visualTree.name + "-" + skillScrollView.panel.visualTree.name);
+
+        helperLensRoot = root.Q<VisualElement>("helper-lens");
+        helperLensRoot.style.position = Position.Absolute;
+        DragAndDropManipulator dragAndDropManipulator = new DragAndDropManipulator(helperLensRoot);
 
         skillTooltipRoot = skillTooltipTemplate.Instantiate();
         skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
+
 
         InitializeSkillHolderList();
     }
@@ -32,7 +39,8 @@ public class ListSkillHolderController : MonoBehaviour
             var newSkillHolder = skillHolderTemplate.Instantiate();
             VisualElement skillHolderIn = newSkillHolder.Q<VisualElement>("SkillHolderIn");
             // add event to skillHolderIn
-            DragAndDropManipulator dragAndDropManipulator = new DragAndDropManipulator(skillHolderIn);
+            skillHolderIn.RegisterCallback<MouseDownEvent>(MouseDownEvent);
+            skillHolderIn.RegisterCallback<MouseOutEvent>(MouseOutEvent);
 
             skillScrollView.Add(newSkillHolder);
         }
@@ -54,5 +62,15 @@ public class ListSkillHolderController : MonoBehaviour
 
         // skillTooltipRoot.style.left = evt.mousePosition.x;
         // skillTooltipRoot.style.top = evt.mousePosition.y;
+    }
+
+    public void MouseDownEvent(MouseDownEvent evt)
+    {
+        Debug.Log("OnMouseDown");
+    }
+
+    public void MouseOutEvent(MouseOutEvent evt)
+    {
+        Debug.Log("OnMouseOut");
     }
 }
