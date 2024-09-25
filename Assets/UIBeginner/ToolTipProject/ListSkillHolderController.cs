@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -40,14 +41,15 @@ public class ListSkillHolderController : MonoBehaviour
                 var newSkillHolder = skillHolderTemplate.Instantiate();
                 VisualElement skillHolderIn = newSkillHolder.Q<VisualElement>("SkillHolderIn");
                 // add event to skillHolderIn
-                skillHolderIn.RegisterCallback<MouseDownEvent>(MouseDownEvent);
-                skillHolderIn.RegisterCallback<MouseOutEvent>(MouseOutEvent);
 
                 skillScrollView.Add(newSkillHolder);
             }
 
             skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollView);
+            skillScrollView.RegisterCallback<PointerDownEvent>(SkillScrollViewPointerDown);
         });
+
+        root.pickingMode = PickingMode.Position;
     }
 
     // Show tooltip on hover at mouse position
@@ -57,20 +59,23 @@ public class ListSkillHolderController : MonoBehaviour
         if (target == null) return;
     }
 
-    public void MouseDownEvent(MouseDownEvent evt)
-    {
-        
-    }
-
-    public void MouseOutEvent(MouseOutEvent evt)
-    {
-        
-    }
-
     public void SkillScrollViewEvent(ScrollView scrollView)
     {
         //Debug.Log(scrollView.verticalScroller.value);
 
         // immediately scroll to 
+        scrollView.CaptureMouse();
+    }
+
+    public void SkillScrollViewPointerDown(PointerDownEvent evt)
+    {
+        Debug.Log("OnMouseDown");
+        root.CapturePointer(evt.pointerId);
+    }
+
+    public void skillScrollViewPointerUp(PointerUpEvent evt)
+    {
+        Debug.Log("OnMouseUp");
+        root.ReleasePointer(evt.pointerId);
     }
 }
