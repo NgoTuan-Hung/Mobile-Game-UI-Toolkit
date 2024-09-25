@@ -45,6 +45,8 @@ public class ListSkillHolderController : MonoBehaviour
 
                 skillScrollView.Add(newSkillHolder);
             }
+
+            skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollView);
         });
     }
 
@@ -57,11 +59,18 @@ public class ListSkillHolderController : MonoBehaviour
 
     public void MouseDownEvent(MouseDownEvent evt)
     {
-        Debug.Log("OnMouseDown");
+        
     }
 
     public void MouseOutEvent(MouseOutEvent evt)
     {
-        Debug.Log("OnMouseOut");
+        
+    }
+
+    public void SkillScrollViewEvent(ScrollView scrollView)
+    {
+        //Debug.Log(scrollView.verticalScroller.value);
+
+        // immediately scroll to 
     }
 }
