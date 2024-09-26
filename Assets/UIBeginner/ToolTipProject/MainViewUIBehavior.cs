@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class MainViewUIBehavior : MonoBehaviour
 {
@@ -8,16 +11,7 @@ public class MainViewUIBehavior : MonoBehaviour
 
     private void Awake() {
         baseAction = new BaseAction();
-    }
-
-    private void Update() 
-    {
-        if (CheckTouchIsReleasedThisFrame()) Debug.Log("Release");
-    }
-
-    public bool CheckTouchIsReleasedThisFrame()
-    {
-        return baseAction.BaseMap.Touch.WasReleasedThisFrame();
+        EnhancedTouchSupport.Enable();
     }
 
     private void OnEnable() {

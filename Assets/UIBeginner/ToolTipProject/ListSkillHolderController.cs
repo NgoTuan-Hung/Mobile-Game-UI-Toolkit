@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class ListSkillHolderController : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class ListSkillHolderController : MonoBehaviour
     List<ScrollView> skillScrollViews;
     VisualElement root;
     VisualElement skillTooltipRoot, skillTooltip, helperLensRoot;
+
+    public void Awake()
+    {
+
+    }
     private void OnEnable() 
     {
         var uiDocument = GetComponent<UIDocument>();
@@ -46,10 +53,8 @@ public class ListSkillHolderController : MonoBehaviour
             }
 
             skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollView);
-            skillScrollView.RegisterCallback<PointerDownEvent>(SkillScrollViewPointerDown);
+            skillScrollView.RegisterCallback<PointerDownEvent>((evt) => {SkillScrollViewPointerDown(skillScrollView);});
         });
-
-        root.pickingMode = PickingMode.Position;
     }
 
     // Show tooltip on hover at mouse position
@@ -66,9 +71,56 @@ public class ListSkillHolderController : MonoBehaviour
         // immediately scroll to 
     }
 
-    public void SkillScrollViewPointerDown(PointerDownEvent evt)
+    public void SkillScrollViewPointerDown(ScrollView scrollView)
     {
-        Debug.Log("OnMouseDown");
-        
+        StartCoroutine(HandleScrollSnap(scrollView));
+    }
+
+    [SerializeField] private float scrollSnapCheckDelay = 0.03f;
+    [SerializeField] private float snapTime = 0.3f;
+    public IEnumerator HandleScrollSnap(ScrollView scrollView)
+    {
+        yield return new WaitForSeconds(scrollSnapCheckDelay);
+        float prevPosition = float.MaxValue; 
+        float finalPosition, currentPosition;
+        while (true)
+        {
+            if (scrollView.verticalScroller.value == prevPosition) break;
+            prevPosition = scrollView.verticalScroller.value;
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+        }
+
+        currentPosition = scrollView.verticalScroller.value;
+        finalPosition = (float)Math.Floor(scrollView.verticalScroller.value/scrollView.resolvedStyle.height + 0.5f) * scrollView.resolvedStyle.height;
+
+        float currentTime = 0;
+        while (true)
+        {
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+            currentTime += Time.fixedDeltaTime;
+            if (currentTime > snapTime) break;
+            scrollView.verticalScroller.value = Mathf.Lerp(currentPosition, finalPosition, currentTime / snapTime);
+        }
+    }
+
+    public IEnumerator CheckTouchIsReleasedThisFrame()
+    {
+        bool released = false;
+        while (true)
+        {
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+            foreach (var touch in Touch.activeTouches)
+            {
+                if (touch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
+                {
+                    released = true;
+                    break;
+                }
+            }
+
+            if (released) break;
+        }
+
+        Debug.Log("Release");
     }
 }

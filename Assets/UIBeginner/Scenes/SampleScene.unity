@@ -329,6 +329,8 @@ MonoBehaviour:
   skillHolderTemplate: {fileID: 9197481963319205126, guid: b4520969730ca9147821e3cfef5ed886, type: 3}
   skillTooltipTemplate: {fileID: 9197481963319205126, guid: c578c08d3d8d43a45a2704bb37590449, type: 3}
   skillCount: 10
+  scrollSnapCheckDelay: 0.09
+  snapTime: 0.09
 --- !u!114 &1783247536
 MonoBehaviour:
   m_ObjectHideFlags: 0
