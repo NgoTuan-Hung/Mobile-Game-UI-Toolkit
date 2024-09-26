@@ -54,6 +54,14 @@ public class ListSkillHolderController : MonoBehaviour
 
             skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollView);
             skillScrollView.RegisterCallback<PointerDownEvent>((evt) => {SkillScrollViewPointerDown(skillScrollView);});
+            skillScrollView.RegisterCallback<GeometryChangedEvent>
+            (
+                (evt) => 
+                {
+                    scrollViewHeight = skillScrollView.resolvedStyle.height;
+                    distanceToSnap = scrollViewHeight * distanceToSnapScale;
+                }
+            );
         });
     }
 
@@ -78,14 +86,27 @@ public class ListSkillHolderController : MonoBehaviour
 
     [SerializeField] private float scrollSnapCheckDelay = 0.03f;
     [SerializeField] private float snapTime = 0.3f;
+    private float scrollViewHeight;
+    [SerializeField] private float distanceToSnapScale = 0.5f;
+    [SerializeField] private float distanceToSnap;
     public IEnumerator HandleScrollSnap(ScrollView scrollView)
     {
-        yield return new WaitForSeconds(scrollSnapCheckDelay);
+        while (true)
+        {
+            if (CheckTouchIsReleasedThisFrame()) break;
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+        }
+
         float prevPosition = float.MaxValue; 
         float finalPosition, currentPosition;
         while (true)
         {
-            if (scrollView.verticalScroller.value == prevPosition) break;
+            if (Math.Abs(scrollView.verticalScroller.value - prevPosition) < distanceToSnap)
+            {
+                scrollView.scrollDecelerationRate = 0f;
+                Debug.Log("Snap!");
+                break;
+            }
             prevPosition = scrollView.verticalScroller.value;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
@@ -103,24 +124,16 @@ public class ListSkillHolderController : MonoBehaviour
         }
     }
 
-    public IEnumerator CheckTouchIsReleasedThisFrame()
+    public bool CheckTouchIsReleasedThisFrame()
     {
-        bool released = false;
-        while (true)
+        foreach (var touch in Touch.activeTouches)
         {
-            yield return new WaitForSeconds(Time.fixedDeltaTime);
-            foreach (var touch in Touch.activeTouches)
+            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
             {
-                if (touch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
-                {
-                    released = true;
-                    break;
-                }
+                return true;
             }
-
-            if (released) break;
         }
 
-        Debug.Log("Release");
+        return false;
     }
 }
