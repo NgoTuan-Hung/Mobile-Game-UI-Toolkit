@@ -1,0 +1,40 @@
+{
+    "name": "BaseAction",
+    "maps": [
+        {
+            "name": "BaseMap",
+            "id": "e22c76ff-0bb6-46b1-a094-348db46d5a3d",
+            "actions": [
+                {
+                    "name": "Touch",
+                    "type": "Button",
+                    "id": "a92a01c3-337d-49bd-bcb0-7d89e1b65285",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5e1961aa-373f-4973-936f-ec80537ce998",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BaseScheme",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "BaseScheme",
+            "bindingGroup": "BaseScheme",
+            "devices": []
+        }
+    ]
+}

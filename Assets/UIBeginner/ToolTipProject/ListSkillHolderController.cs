@@ -61,21 +61,14 @@ public class ListSkillHolderController : MonoBehaviour
 
     public void SkillScrollViewEvent(ScrollView scrollView)
     {
-        //Debug.Log(scrollView.verticalScroller.value);
+        // Debug.Log(scrollView.verticalScroller.value);
 
         // immediately scroll to 
-        scrollView.CaptureMouse();
     }
 
     public void SkillScrollViewPointerDown(PointerDownEvent evt)
     {
         Debug.Log("OnMouseDown");
-        root.CapturePointer(evt.pointerId);
-    }
-
-    public void skillScrollViewPointerUp(PointerUpEvent evt)
-    {
-        Debug.Log("OnMouseUp");
-        root.ReleasePointer(evt.pointerId);
+        
     }
 }

@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 1783247534}
   - component: {fileID: 1783247533}
   - component: {fileID: 1783247535}
+  - component: {fileID: 1783247536}
   m_Layer: 0
   m_Name: ListSkill
   m_TagString: Untagged
@@ -328,6 +329,18 @@ MonoBehaviour:
   skillHolderTemplate: {fileID: 9197481963319205126, guid: b4520969730ca9147821e3cfef5ed886, type: 3}
   skillTooltipTemplate: {fileID: 9197481963319205126, guid: c578c08d3d8d43a45a2704bb37590449, type: 3}
   skillCount: 10
+--- !u!114 &1783247536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783247532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491fe2418fee47440a1c2daa6591959d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2064516911
 GameObject:
   m_ObjectHideFlags: 0
