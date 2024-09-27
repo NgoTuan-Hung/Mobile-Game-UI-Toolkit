@@ -18,6 +18,7 @@ public class ListSkillHolderController : MonoBehaviour
     List<ScrollView> skillScrollViews;
     VisualElement root;
     VisualElement skillTooltipRoot, skillTooltip, helperLensRoot;
+    VisualElement testObject;
 
     public void Awake()
     {
@@ -36,6 +37,7 @@ public class ListSkillHolderController : MonoBehaviour
         skillTooltipRoot = skillTooltipTemplate.Instantiate();
         skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
 
+        testObject = root.Q<VisualElement>("test-object");
 
         InitializeSkillHolderList();
     }
@@ -100,13 +102,7 @@ public class ListSkillHolderController : MonoBehaviour
         {
             if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
             {
-                Rect temp = new Rect
-                (
-                    new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y),
-                    new Vector2(0.01f, 0.01f)
-                );
-                print(scrollView.worldBound.center + "-----scroll view pos: " + scrollView.worldBound.Overlaps(temp));
-                print(temp.center);
+                print("position: " + testObject.worldBound.position + "---center: " + testObject.worldBound.center + "----" + testObject.worldBound.size);
                 while (true)
                 {
                     yield return new WaitForSeconds(Time.deltaTime);
@@ -152,10 +148,17 @@ public class ListSkillHolderController : MonoBehaviour
         scrollView.ScrollTo(scrollView.contentContainer.Children().ElementAt(finalIndex));
     }
 
-    public bool CheckTouchIsReleasedThisFrame()
+    public void Update()
     {
-        
+        foreach (var touch in Touch.activeTouches)
+        {
+            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
+            {
+                print(new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
+                
 
-        return false;
+                break;
+            }
+        }
     }
 }
