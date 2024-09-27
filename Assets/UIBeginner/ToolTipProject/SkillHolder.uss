@@ -1,4 +1,4 @@
-#SkillHolderOut {
+#skill-holder-out {
     align-items: center;
     justify-content: center;
     width: 150px;
@@ -10,7 +10,7 @@
     border-bottom-left-radius: 22px;
 }
 
-#SkillHolderIn {
+#skill-holder-in {
     border-left-color: rgb(56, 86, 114);
     border-right-color: rgb(56, 86, 114);
     border-top-color: rgb(56, 86, 114);
@@ -26,4 +26,16 @@
     border-left-width: 7px;
     width: 135px;
     height: 135px;
+}
+
+.out-highlight {
+    background-color: rgb(60, 99, 177);
+}
+
+.in-highlight {
+    background-color: rgb(13, 70, 127);
+    border-left-color: rgb(57, 121, 213);
+    border-right-color: rgb(57, 121, 213);
+    border-top-color: rgb(57, 121, 213);
+    border-bottom-color: rgb(57, 121, 213);
 }
