@@ -19,10 +19,13 @@ public class ListSkillHolderController : MonoBehaviour
     VisualElement root;
     VisualElement skillTooltipRoot, skillTooltip, helperLensRoot;
     VisualElement testObject;
+    [SerializeField] private AudioClip scrollSound;
+    [SerializeField] private AudioSource audioSource;
 
     public void Awake()
     {
         snapInterval = snapTime * snapIntervalPortion;
+        audioSource.clip = scrollSound;
     }
     private void OnEnable() 
     {
@@ -76,11 +79,15 @@ public class ListSkillHolderController : MonoBehaviour
         if (target == null) return;
     }
 
+    int skillScrollViewPreviousIndex = 0;
+    int newIndex = 0;
     public void SkillScrollViewEvent(ScrollView scrollView)
     {
-        // Debug.Log(scrollView.verticalScroller.value);
+        // play sound if scroll view scroll passed a element
+        newIndex = (int)(scrollView.verticalScroller.value / scrollViewHeight);
+        if (newIndex != skillScrollViewPreviousIndex) audioSource.Play();
 
-        // immediately scroll to 
+        skillScrollViewPreviousIndex = newIndex;
     }
 
     public void SkillScrollViewPointerDown(ScrollView scrollView, PointerDownEvent evt)
@@ -96,23 +103,31 @@ public class ListSkillHolderController : MonoBehaviour
     [SerializeField] private float distanceToSnapScale = 0.5f;
     [SerializeField] private float distanceToSnap;
     private float defaultScrollDecelerationRate = 0.135f;
+
+    [SerializeField] private int testIndex;
     public IEnumerator HandleScrollSnap(ScrollView scrollView, PointerDownEvent evt)
     {
+        Touch associatedTouch = new Touch();
         foreach (var touch in Touch.activeTouches)
         {
             if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
             {
-                print("position: " + testObject.worldBound.position + "---center: " + testObject.worldBound.center + "----" + testObject.worldBound.size);
-                while (true)
+                var touchPosition = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
+
+                if (scrollView.worldBound.Overlaps(new Rect(touchPosition, new Vector2(20, 20))))
                 {
-                    yield return new WaitForSeconds(Time.deltaTime);
-
-                    if (touch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
-                    {
-                        break;
-                    }
+                    associatedTouch = touch;
+                    break;
                 }
+            }
+        }
 
+        while (true)
+        {
+            yield return new WaitForSeconds(Time.deltaTime);
+
+            if (associatedTouch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
+            {
                 break;
             }
         }
@@ -147,18 +162,18 @@ public class ListSkillHolderController : MonoBehaviour
         scrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
         scrollView.ScrollTo(scrollView.contentContainer.Children().ElementAt(finalIndex));
     }
+}
 
-    public void Update()
+public class SkillScrollViewUIInfo
+{
+
+}
+
+public static class ScrollViewExtension
+{
+    public static SkillScrollViewUIInfo SkillScrollViewUIInfo(this ScrollView scrollView)
     {
-        foreach (var touch in Touch.activeTouches)
-        {
-            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
-            {
-                print(new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
-                
-
-                break;
-            }
-        }
+        return null;
     }
 }
+

@@ -8,5 +8,5 @@
         <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px;" />
     </ui:VisualElement>
     <ui:Instance template="HelperLens" name="HelperLens" style="width: 150px;" />
-    <ui:VisualElement name="test-object" style="flex-grow: 0; width: 25px; height: 25px; position: absolute; margin-right: 15px;" />
+    <ui:VisualElement name="test-object" />
 </ui:UXML>
