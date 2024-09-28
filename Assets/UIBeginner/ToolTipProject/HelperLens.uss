@@ -1,10 +1,5 @@
-:root
-{
+:root {
     --mobile-heler-lens-size: 150px;
-}
-
-.in-use {
-    opacity: 0.5;
 }
 
 .helper-lens {
@@ -12,5 +7,8 @@
     transition-duration: 0.4s;
     width: 150px;
     height: 150px;
-    opacity: 1;
+}
+
+.in-use {
+    opacity: 0.5;
 }

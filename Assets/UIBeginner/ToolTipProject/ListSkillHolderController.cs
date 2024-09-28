@@ -53,14 +53,14 @@ public class ListSkillHolderController : MonoBehaviour
             for (int i = 0; i < skillCount; i++)
             {
                 var newSkillHolder = skillHolderTemplate.Instantiate();
-                VisualElement skillHolderIn = newSkillHolder.Q<VisualElement>("SkillHolderIn");
-                // add event to skillHolderIn
 
                 skillScrollView.Add(newSkillHolder);
             }
 
-            skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollView);
-            skillScrollView.RegisterCallback<PointerDownEvent>((evt) => {SkillScrollViewPointerDown(skillScrollView, evt);});
+            SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollView, null);
+
+            skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollViewUIInfo);
+            skillScrollView.RegisterCallback<PointerDownEvent>((evt) => {SkillScrollViewPointerDown(skillScrollViewUIInfo);});
             skillScrollView.RegisterCallback<GeometryChangedEvent>
             (
                 (evt) => 
@@ -79,20 +79,20 @@ public class ListSkillHolderController : MonoBehaviour
         if (target == null) return;
     }
 
-    int skillScrollViewPreviousIndex = 0;
-    int newIndex = 0;
-    public void SkillScrollViewEvent(ScrollView scrollView)
+    public void SkillScrollViewEvent(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
         // play sound if scroll view scroll passed a element
-        newIndex = (int)(scrollView.verticalScroller.value / scrollViewHeight);
-        if (newIndex != skillScrollViewPreviousIndex) audioSource.Play();
+        skillScrollViewUIInfo.SkillScrollViewNewIndex = (int)(skillScrollViewUIInfo.ScrollView.verticalScroller.value / scrollViewHeight);
+        if (skillScrollViewUIInfo.SkillScrollViewNewIndex != skillScrollViewUIInfo.SkillScrollViewPreviousIndex) audioSource.Play();
 
-        skillScrollViewPreviousIndex = newIndex;
+        skillScrollViewUIInfo.SkillScrollViewPreviousIndex = skillScrollViewUIInfo.SkillScrollViewNewIndex;
     }
 
-    public void SkillScrollViewPointerDown(ScrollView scrollView, PointerDownEvent evt)
+    public void SkillScrollViewPointerDown(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
-        StartCoroutine(HandleScrollSnap(scrollView, evt));
+        if (skillScrollViewUIInfo.ScrollSnapCoroutine != null) StopCoroutine(skillScrollViewUIInfo.ScrollSnapCoroutine);
+        skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
+        skillScrollViewUIInfo.ScrollSnapCoroutine = StartCoroutine(HandleScrollSnap(skillScrollViewUIInfo.ScrollView));
     }
 
     [SerializeField] private float scrollSnapCheckDelay = 0.03f;
@@ -105,7 +105,7 @@ public class ListSkillHolderController : MonoBehaviour
     private float defaultScrollDecelerationRate = 0.135f;
 
     [SerializeField] private int testIndex;
-    public IEnumerator HandleScrollSnap(ScrollView scrollView, PointerDownEvent evt)
+    public IEnumerator HandleScrollSnap(ScrollView scrollView)
     {
         Touch associatedTouch = new Touch();
         foreach (var touch in Touch.activeTouches)
@@ -162,18 +162,36 @@ public class ListSkillHolderController : MonoBehaviour
         scrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
         scrollView.ScrollTo(scrollView.contentContainer.Children().ElementAt(finalIndex));
     }
+
+    private void Update() 
+    {
+        foreach (var touch in Touch.activeTouches)
+        {
+            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
+            {
+                print(Screen.safeArea.position + "---" + Screen.safeArea.size);
+            }
+        }    
+    }
 }
+
 
 public class SkillScrollViewUIInfo
 {
+    private ScrollView scrollView;
+    private Coroutine scrollSnapCoroutine;
+    private int skillScrollViewPreviousIndex = 0;
+    private int skillScrollViewNewIndex = 0;
 
-}
-
-public static class ScrollViewExtension
-{
-    public static SkillScrollViewUIInfo SkillScrollViewUIInfo(this ScrollView scrollView)
+    public SkillScrollViewUIInfo(ScrollView scrollView, Coroutine scrollSnapCoroutine)
     {
-        return null;
+        this.scrollView = scrollView;
+        this.scrollSnapCoroutine = scrollSnapCoroutine;
     }
+
+    public ScrollView ScrollView { get => scrollView; set => scrollView = value; }
+    public Coroutine ScrollSnapCoroutine { get => scrollSnapCoroutine; set => scrollSnapCoroutine = value; }
+    public int SkillScrollViewPreviousIndex { get => skillScrollViewPreviousIndex; set => skillScrollViewPreviousIndex = value; }
+    public int SkillScrollViewNewIndex { get => skillScrollViewNewIndex; set => skillScrollViewNewIndex = value; }
 }
 
