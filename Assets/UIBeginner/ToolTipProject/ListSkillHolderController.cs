@@ -16,7 +16,7 @@ public class ListSkillHolderController : MonoBehaviour
     // [SerializeField] private VisualTreeAsset helperLensTemplate;
 
     List<ScrollView> skillScrollViews;
-    VisualElement root;
+    VisualElement root, safeAreaVE;
     VisualElement skillTooltipRoot, skillTooltip, helperLensRoot;
     VisualElement testObject;
     [SerializeField] private AudioClip scrollSound;
@@ -31,6 +31,21 @@ public class ListSkillHolderController : MonoBehaviour
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
+
+        safeAreaVE = root.Q<VisualElement>("safe-area") ;
+        Rect safeArea = Screen.safeArea;
+        Vector2 leftTop = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(safeArea.xMin, Screen.height - safeArea.yMax));
+        Vector2 rightBottom = RuntimePanelUtils.ScreenToPanel
+        (   
+            root.panel,
+            new Vector2(Screen.width - safeArea.xMax, safeArea.yMin
+        ));
+
+        safeAreaVE.style.paddingLeft = leftTop.x;
+        safeAreaVE.style.paddingTop = leftTop.y;
+        safeAreaVE.style.paddingRight = rightBottom.x;
+        safeAreaVE.style.paddingBottom = rightBottom.y;
+
         skillScrollViews = root.Query<ScrollView>().ToList();
 
         helperLensRoot = root.Q<VisualElement>("helper-lens");
@@ -39,8 +54,6 @@ public class ListSkillHolderController : MonoBehaviour
 
         skillTooltipRoot = skillTooltipTemplate.Instantiate();
         skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
-
-        testObject = root.Q<VisualElement>("test-object");
 
         InitializeSkillHolderList();
     }
@@ -161,17 +174,6 @@ public class ListSkillHolderController : MonoBehaviour
         }
         scrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
         scrollView.ScrollTo(scrollView.contentContainer.Children().ElementAt(finalIndex));
-    }
-
-    private void Update() 
-    {
-        foreach (var touch in Touch.activeTouches)
-        {
-            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
-            {
-                print(Screen.safeArea.position + "---" + Screen.safeArea.size);
-            }
-        }    
     }
 }
 

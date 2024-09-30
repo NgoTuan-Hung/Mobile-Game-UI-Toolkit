@@ -9,8 +9,6 @@ ScrollView {
     width: auto;
     height: 150px;
     align-self: center;
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
 .in-use {
@@ -21,4 +19,22 @@ ScrollView {
     transition-property: opacity;
     transition-duration: 0.4s;
     opacity: 0.5;
+}
+
+.safe-area {
+    flex-grow: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+.skill-scroll-view-holder {
+    flex-grow: 0;
+    width: 60%;
+    align-self: flex-end;
+    overflow: hidden;
+    height: 60%;
+    left: 0;
+    top: 40%;
 }

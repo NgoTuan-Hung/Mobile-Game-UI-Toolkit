@@ -1,12 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
     <ui:Template name="HelperLens" src="project://database/Assets/UIBeginner/ToolTipProject/HelperLens.uxml?fileID=9197481963319205126&amp;guid=c871b99ade0afe440b4cf9ca74878ac8&amp;type=3#HelperLens" />
     <Style src="project://database/Assets/UIBeginner/ToolTipProject/SkillScrollView.uss?fileID=7433441132597879392&amp;guid=8f37d1eb70233fb41b4cb3f761b6a52a&amp;type=3#SkillScrollView" />
-    <ui:VisualElement name="skill-scroll-view-holder" style="flex-grow: 0; top: 850px; flex-direction: row; align-items: center; justify-content: center; width: 60%; align-self: center; overflow: hidden;">
-        <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px;" />
-        <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px;" />
-        <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px;" />
-        <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px;" />
+    <ui:VisualElement name="safe-area" class="safe-area">
+        <ui:VisualElement name="skill-scroll-view-holder" class="skill-scroll-view-holder">
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; position: absolute; left: 85%; top: 0;" />
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; top: 25%; left: 70%; position: absolute;" />
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; position: absolute; left: 55%; top: 50%;" />
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; position: absolute; top: 75%; left: 40%;" />
+        </ui:VisualElement>
     </ui:VisualElement>
     <ui:Instance template="HelperLens" name="HelperLens" style="width: 150px; position: absolute;" />
-    <ui:VisualElement name="test-object" />
 </ui:UXML>
