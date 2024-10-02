@@ -29,7 +29,7 @@ public class DragAndDropManipulator : PointerManipulator
     private Vector3 pointerStartPosition { get; set; }
     private void OnPointerDown(PointerDownEvent evt)
     {
-        Debug.Log("OnPointerDown");
+        
         targetStartPosition = target.transform.position;
         pointerStartPosition = evt.position;
         target.CapturePointer(evt.pointerId);
@@ -39,6 +39,7 @@ public class DragAndDropManipulator : PointerManipulator
 
     private void OnPointerUp(PointerUpEvent evt)
     {
+        Debug.Log("onPointerUp");
         target.ReleasePointer(evt.pointerId);
         target.RemoveFromClassList("in-use");
         target.AddToClassList("not-use");

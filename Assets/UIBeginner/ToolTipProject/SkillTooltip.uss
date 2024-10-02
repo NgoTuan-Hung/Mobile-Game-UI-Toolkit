@@ -2,7 +2,15 @@
     opacity: 0;
     transition-property: opacity;
     transition-duration: 2s;
-    transition-timing-function: ease-out;
+    transition-timing-function: ease;
+    overflow: hidden;
+    align-items: center;
+    width: 576px;
+    height: 540px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
 }
 
 .skill-tooltip-showup {

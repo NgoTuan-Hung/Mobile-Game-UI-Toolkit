@@ -10,5 +10,9 @@
 }
 
 .in-use {
+    opacity: 1;
+}
+
+.not-use {
     opacity: 0.5;
 }
