@@ -50,10 +50,7 @@ public class ListSkillHolderController : MonoBehaviour
 
         helperLensRoot = root.Q<VisualElement>("helper-lens");
         helperLensRoot.style.position = Position.Absolute;
-        DragAndDropManipulator dragAndDropManipulator = new DragAndDropManipulator(helperLensRoot);
-
-        skillTooltipRoot = skillTooltipTemplate.Instantiate();
-        skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
+        HelperLensDragAndDropManipulator dragAndDropManipulator = new HelperLensDragAndDropManipulator(helperLensRoot, skillTooltipTemplate);
 
         InitializeSkillHolderList();
     }

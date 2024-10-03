@@ -78,13 +78,13 @@
     <Compile Include="Assets\UIBeginner\SimpleCustomEditorShit.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\States\DelayState.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Utilities\Description.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\DragAndDropManipulator.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Events\GameEvents.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\LevelSelectionScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoSelectionSetup.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Scripts\DemoTextScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\GameScreen\ResponseDisplay.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\BootloadScreen.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\HelperLensDragAndDropManipulator.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\10_Custom controls\CustomControlsDemo.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\SettingsPresenter.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\4_UQueryDemo\UQueryDemo.cs" />
@@ -229,7 +229,7 @@
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\_ThirdParty\Images\Abstract-background-white-12.txt" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\8_EventDispatchDemo\EventDispatchDemo.uss" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\ScriptTemplates\81-C# Script-NewBehaviourScript.cs.txt" />
-    <None Include="Assets\UIBeginner\ToolTipProject\SkillTooltip.uss" />
+    <None Include="Assets\UIBeginner\Resources\SkillTooltipSS.uss" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\VisualTreeAssets\tooltip__label.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\EndScreen.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\2_FlexboxDemo\FlexboxDemo.uxml" />

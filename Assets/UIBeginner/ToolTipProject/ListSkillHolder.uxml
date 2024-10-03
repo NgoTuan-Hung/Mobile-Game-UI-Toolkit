@@ -3,10 +3,10 @@
     <Style src="project://database/Assets/UIBeginner/ToolTipProject/SkillScrollView.uss?fileID=7433441132597879392&amp;guid=8f37d1eb70233fb41b4cb3f761b6a52a&amp;type=3#SkillScrollView" />
     <ui:VisualElement name="safe-area" class="safe-area">
         <ui:VisualElement name="skill-scroll-view-holder" class="skill-scroll-view-holder">
-            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; position: absolute; left: 85%; top: 0;" />
-            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; top: 25%; left: 70%; position: absolute;" />
-            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; position: absolute; left: 55%; top: 50%;" />
-            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" style="width: 150px; position: absolute; top: 75%; left: 40%;" />
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="has-helper" style="width: 150px; position: absolute; left: 85%; top: 0;" />
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="has-helper" style="width: 150px; top: 25%; left: 70%; position: absolute;" />
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="has-helper" style="width: 150px; position: absolute; left: 55%; top: 50%;" />
+            <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="has-helper" style="width: 150px; position: absolute; top: 75%; left: 40%;" />
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:Instance template="HelperLens" name="HelperLens" style="width: 150px; position: absolute;" />

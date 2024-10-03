@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/UIBeginner/ToolTipProject/SkillTooltip.uss?fileID=7433441132597879392&amp;guid=fddb750d3aaaa1e4d86a7992ce989043&amp;type=3#SkillTooltip" />
-    <ui:VisualElement name="skill-tooltip" class="skill-tooltip">
+    <Style src="project://database/Assets/UIBeginner/Resources/SkillTooltipSS.uss?fileID=7433441132597879392&amp;guid=fddb750d3aaaa1e4d86a7992ce989043&amp;type=3#SkillTooltipSS" />
+    <ui:VisualElement name="skill-tooltip" picking-mode="Ignore" class="skill-tooltip">
         <ui:VisualElement style="flex-grow: 0; width: 100%; height: 30%; background-image: url(&quot;project://database/Assets/UIBeginner/ToolTipProject/lighting.jpg?fileID=2800000&amp;guid=3c0ef09588156a34da79755c7be89cb8&amp;type=3#lighting&quot;);">
             <ui:Label tabindex="-1" text="Lighting Rain" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 18px; -unity-text-align: lower-left; overflow: hidden; width: 100%; height: 30%; color: rgb(232, 233, 231); top: 50px; left: 11px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&amp;guid=db5974fdd47364381a7edc91a9df9b2f&amp;type=2#Roboto-Medium SDF&quot;);" />
         </ui:VisualElement>

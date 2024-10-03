@@ -28,3 +28,6 @@ ScrollView {
     left: 0;
     top: 40%;
 }
+
+.has-helper {
+}
