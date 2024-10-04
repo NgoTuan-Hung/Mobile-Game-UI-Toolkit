@@ -15,7 +15,8 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
         lens = target.Children().First();
         root = target.parent.parent;
         skillTooltipRoot = skillTooltipTemplate.Instantiate();
-        skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");        
+        skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
+        skillTooltip.RegisterCallback<PointerMoveEvent>(SkillTooltipOnPointerMove);        
         skillTooltip.styleSheets.Add(Resources.Load<StyleSheet>("SkillTooltipSS"));
         skillTooltip.style.left = 99999f;
         root.Add(skillTooltip);
@@ -65,10 +66,9 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
 
         if (clothestHelper != null)
         {
-            Vector2 closestHelperLocalPosition = GetRootLocalPosition(clothestHelper);
-            skillTooltip.style.left = closestHelperLocalPosition.x;
-            skillTooltip.style.top = closestHelperLocalPosition.y;
-            skillTooltip.RemoveFromClassList("skill-tooltip-showup");
+            skillTooltip.CapturePointer(evt.pointerId);
+            skillTooltip.style.left = clothestHelper.worldBound.position.x;
+            skillTooltip.style.top = clothestHelper.worldBound.position.y;
             skillTooltip.AddToClassList("skill-tooltip-showup");
         }
     }
@@ -88,6 +88,15 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
     private void OnPointerCaptureOut(PointerCaptureOutEvent evt)
     {
         
+    }
+
+    private void SkillTooltipOnPointerMove(PointerMoveEvent evt)
+    {
+        if (!skillTooltip.worldBound.Overlaps(new Rect(evt.position, new Vector2(1, 1))))
+        {
+            skillTooltip.ReleasePointer(evt.pointerId);
+            skillTooltip.RemoveFromClassList("skill-tooltip-showup");
+        }
     }
 
     public VisualElement FindClosestHelper(UQueryBuilder<VisualElement> query)
