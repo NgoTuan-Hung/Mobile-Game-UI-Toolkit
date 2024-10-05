@@ -1,7 +1,7 @@
 .skill-tooltip {
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 2s;
+    transition-duration: 0.5s;
     transition-timing-function: ease;
     overflow: hidden;
     align-items: center;
@@ -11,8 +11,22 @@
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
     border-bottom-left-radius: 22px;
+    position: absolute;
 }
 
 .skill-tooltip-showup {
     opacity: 1;
+}
+
+#skill-tooltip__exit-button {
+    position: absolute;
+    align-self: flex-end;
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/x.png?fileID=2800000&guid=bcdf420c72a3c774c8d801911445f8ee&type=3#x");
+    width: 54px;
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
 }

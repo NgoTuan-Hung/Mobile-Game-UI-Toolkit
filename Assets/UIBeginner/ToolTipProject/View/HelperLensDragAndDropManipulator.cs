@@ -16,10 +16,10 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
         root = target.parent.parent;
         skillTooltipRoot = skillTooltipTemplate.Instantiate();
         skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
-        skillTooltip.RegisterCallback<PointerMoveEvent>(SkillTooltipOnPointerMove);        
+        root.Add(skillTooltip);
+        skillTooltip.PlaceBehind(target.parent);
         skillTooltip.styleSheets.Add(Resources.Load<StyleSheet>("SkillTooltipSS"));
         skillTooltip.style.left = 99999f;
-        root.Add(skillTooltip);
     }
 
     protected override void RegisterCallbacksOnTarget()
@@ -66,9 +66,8 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
 
         if (clothestHelper != null)
         {
-            skillTooltip.CapturePointer(evt.pointerId);
-            skillTooltip.style.left = clothestHelper.worldBound.position.x;
-            skillTooltip.style.top = clothestHelper.worldBound.position.y;
+            skillTooltip.style.left = evt.position.x + skillTooltip.worldBound.width > root.worldBound.width ? evt.position.x - skillTooltip.worldBound.width : evt.position.x;
+            skillTooltip.style.top = evt.position.y + skillTooltip.worldBound.height > root.worldBound.height ? evt.position.y - skillTooltip.worldBound.height : clothestHelper.worldBound.position.y;
             skillTooltip.AddToClassList("skill-tooltip-showup");
         }
     }
@@ -88,15 +87,6 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
     private void OnPointerCaptureOut(PointerCaptureOutEvent evt)
     {
         
-    }
-
-    private void SkillTooltipOnPointerMove(PointerMoveEvent evt)
-    {
-        if (!skillTooltip.worldBound.Overlaps(new Rect(evt.position, new Vector2(1, 1))))
-        {
-            skillTooltip.ReleasePointer(evt.pointerId);
-            skillTooltip.RemoveFromClassList("skill-tooltip-showup");
-        }
     }
 
     public VisualElement FindClosestHelper(UQueryBuilder<VisualElement> query)

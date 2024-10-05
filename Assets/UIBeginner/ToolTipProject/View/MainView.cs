@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-public class ListSkillHolderController : MonoBehaviour
+public class MainView : MonoBehaviour
 {
     [SerializeField] private VisualTreeAsset skillHolderTemplate;
     [SerializeField] private VisualTreeAsset skillTooltipTemplate;
