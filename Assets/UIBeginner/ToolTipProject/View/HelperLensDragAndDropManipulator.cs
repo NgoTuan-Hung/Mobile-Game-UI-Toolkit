@@ -61,6 +61,7 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
 
         UQueryBuilder<VisualElement> allHelpers = root.Query<VisualElement>(className: "has-helper");
         UQueryBuilder<VisualElement> overlappingHelper = allHelpers.Where(OverlappingHelper);
+        overlappingHelper = overlappingHelper.Where(IsVisible);
 
         VisualElement clothestHelper = FindClosestHelper(overlappingHelper);
 
@@ -103,6 +104,11 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
     public bool OverlappingHelper(VisualElement helper)
     {
         return lens.worldBound.Overlaps(helper.worldBound);
+    }
+
+    public bool IsVisible(VisualElement helper)
+    {
+        return !helper.ClassListContains("helper-invisible");
     }
 
     public Vector2 GetRootLocalPosition(VisualElement helper)

@@ -58,14 +58,24 @@ public class MainView : MonoBehaviour
     [SerializeField] private int skillCount = 5;
     public void InitializeSkillHolderList()
     {
+        List<SkillData> skillDatas = Resources.LoadAll<SkillData>("SkillData").ToList();
+
+        skillDatas.ForEach(skillData => 
+        {
+            var newSkillHolder = skillHolderTemplate.Instantiate();
+            new skillHolderView(skillData, newSkillHolder);
+
+            newSkillHolder.style.height = skillScrollViews[skillData.skillButtonIndex].contentContainer.resolvedStyle.height;
+            newSkillHolder.AddToClassList("has-helper");
+            newSkillHolder.AddToClassList("helper-type-skill-info");
+            newSkillHolder.AddToClassList("helper-invisible");
+
+            skillScrollViews[skillData.skillButtonIndex].contentContainer.Add(newSkillHolder);
+        });
+
         skillScrollViews.ForEach(skillScrollView => 
         {
-            for (int i = 0; i < skillCount; i++)
-            {
-                var newSkillHolder = skillHolderTemplate.Instantiate();
-
-                skillScrollView.Add(newSkillHolder);
-            }
+            skillScrollView.contentContainer.Children().First().RemoveFromClassList("helper-invisible");
 
             SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollView, null);
 
@@ -73,11 +83,7 @@ public class MainView : MonoBehaviour
             skillScrollView.RegisterCallback<PointerDownEvent>((evt) => {SkillScrollViewPointerDown(skillScrollViewUIInfo);});
             skillScrollView.RegisterCallback<GeometryChangedEvent>
             (
-                (evt) => 
-                {
-                    scrollViewHeight = skillScrollView.resolvedStyle.height;
-                    distanceToSnap = scrollViewHeight * distanceToSnapScale;
-                }
+                (evt) => SkillScrollViewGeometryChanged(skillScrollViewUIInfo)
             );
         });
     }
@@ -92,8 +98,13 @@ public class MainView : MonoBehaviour
     public void SkillScrollViewEvent(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
         // play sound if scroll view scroll passed a element
-        skillScrollViewUIInfo.SkillScrollViewNewIndex = (int)(skillScrollViewUIInfo.ScrollView.verticalScroller.value / scrollViewHeight);
-        if (skillScrollViewUIInfo.SkillScrollViewNewIndex != skillScrollViewUIInfo.SkillScrollViewPreviousIndex) audioSource.Play();
+        skillScrollViewUIInfo.SkillScrollViewNewIndex = (int)(skillScrollViewUIInfo.ScrollView.verticalScroller.value / skillScrollViewUIInfo.ScrollViewHeight);
+        if (skillScrollViewUIInfo.SkillScrollViewNewIndex != skillScrollViewUIInfo.SkillScrollViewPreviousIndex)
+        {
+            audioSource.Play();
+            skillScrollViewUIInfo.ScrollView.contentContainer.ElementAt(skillScrollViewUIInfo.SkillScrollViewNewIndex).RemoveFromClassList("helper-invisible");
+            skillScrollViewUIInfo.ScrollView.contentContainer.ElementAt(skillScrollViewUIInfo.SkillScrollViewPreviousIndex).AddToClassList("helper-invisible");
+        }
 
         skillScrollViewUIInfo.SkillScrollViewPreviousIndex = skillScrollViewUIInfo.SkillScrollViewNewIndex;
     }
@@ -102,20 +113,24 @@ public class MainView : MonoBehaviour
     {
         if (skillScrollViewUIInfo.ScrollSnapCoroutine != null) StopCoroutine(skillScrollViewUIInfo.ScrollSnapCoroutine);
         skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
-        skillScrollViewUIInfo.ScrollSnapCoroutine = StartCoroutine(HandleScrollSnap(skillScrollViewUIInfo.ScrollView));
+        skillScrollViewUIInfo.ScrollSnapCoroutine = StartCoroutine(HandleScrollSnap(skillScrollViewUIInfo));
+    }
+    
+    public void SkillScrollViewGeometryChanged(SkillScrollViewUIInfo skillScrollViewUIInfo)
+    {
+        skillScrollViewUIInfo.ScrollViewHeight = skillScrollViewUIInfo.ScrollView.resolvedStyle.height;
+        skillScrollViewUIInfo.DistanceToSnap = skillScrollViewUIInfo.ScrollViewHeight * distanceToSnapScale;
     }
 
     [SerializeField] private float scrollSnapCheckDelay = 0.03f;
     [SerializeField] private float snapTime = 0.3f;
     [SerializeField] private float snapIntervalPortion = 0.1f;
     private float snapInterval;
-    private float scrollViewHeight;
     [SerializeField] private float distanceToSnapScale = 0.5f;
-    [SerializeField] private float distanceToSnap;
     private float defaultScrollDecelerationRate = 0.135f;
 
     [SerializeField] private int testIndex;
-    public IEnumerator HandleScrollSnap(ScrollView scrollView)
+    public IEnumerator HandleScrollSnap(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
         Touch associatedTouch = new Touch();
         foreach (var touch in Touch.activeTouches)
@@ -124,7 +139,7 @@ public class MainView : MonoBehaviour
             {
                 var touchPosition = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
 
-                if (scrollView.worldBound.Overlaps(new Rect(touchPosition, new Vector2(20, 20))))
+                if (skillScrollViewUIInfo.ScrollView.worldBound.Overlaps(new Rect(touchPosition, new Vector2(20, 20))))
                 {
                     associatedTouch = touch;
                     break;
@@ -147,30 +162,30 @@ public class MainView : MonoBehaviour
         int finalIndex;
         while (true)
         {
-            if (Math.Abs(scrollView.verticalScroller.value - prevPosition) < distanceToSnap)
+            if (Math.Abs(skillScrollViewUIInfo.ScrollView.verticalScroller.value - prevPosition) < skillScrollViewUIInfo.DistanceToSnap)
             {
-                scrollView.scrollDecelerationRate = 0f;
+                skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = 0f;
                 break;
             }
-            prevPosition = scrollView.verticalScroller.value;
+            prevPosition = skillScrollViewUIInfo.ScrollView.verticalScroller.value;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
 
-        currentPosition = scrollView.verticalScroller.value;
-        finalIndex = (int)Math.Floor(scrollView.verticalScroller.value/scrollViewHeight + 0.5f);
-        finalPosition = finalIndex * scrollViewHeight;
+        currentPosition = skillScrollViewUIInfo.ScrollView.verticalScroller.value;
+        finalIndex = (int)Math.Floor(skillScrollViewUIInfo.ScrollView.verticalScroller.value/skillScrollViewUIInfo.ScrollViewHeight + 0.5f);
+        finalPosition = finalIndex * skillScrollViewUIInfo.ScrollViewHeight;
 
         float currentTime = 0, progress;
         while (true)
         {
             progress = currentTime / snapTime;
             if (progress > 1.01f) break;
-            scrollView.verticalScroller.value = Mathf.Lerp(currentPosition, finalPosition, progress);
+            skillScrollViewUIInfo.ScrollView.verticalScroller.value = Mathf.Lerp(currentPosition, finalPosition, progress);
             yield return new WaitForSeconds(snapInterval);
             currentTime += snapInterval;
         }
-        scrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
-        scrollView.ScrollTo(scrollView.contentContainer.Children().ElementAt(finalIndex));
+        skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
+        skillScrollViewUIInfo.ScrollView.ScrollTo(skillScrollViewUIInfo.ScrollView.contentContainer.Children().ElementAt(finalIndex));
     }
 }
 
@@ -181,6 +196,8 @@ public class SkillScrollViewUIInfo
     private Coroutine scrollSnapCoroutine;
     private int skillScrollViewPreviousIndex = 0;
     private int skillScrollViewNewIndex = 0;
+    private float scrollViewHeight = 0f;
+    private float distanceToSnap = 0f;
 
     public SkillScrollViewUIInfo(ScrollView scrollView, Coroutine scrollSnapCoroutine)
     {
@@ -192,5 +209,7 @@ public class SkillScrollViewUIInfo
     public Coroutine ScrollSnapCoroutine { get => scrollSnapCoroutine; set => scrollSnapCoroutine = value; }
     public int SkillScrollViewPreviousIndex { get => skillScrollViewPreviousIndex; set => skillScrollViewPreviousIndex = value; }
     public int SkillScrollViewNewIndex { get => skillScrollViewNewIndex; set => skillScrollViewNewIndex = value; }
+    public float ScrollViewHeight { get => scrollViewHeight; set => scrollViewHeight = value; }
+    public float DistanceToSnap { get => distanceToSnap; set => distanceToSnap = value; }
 }
 

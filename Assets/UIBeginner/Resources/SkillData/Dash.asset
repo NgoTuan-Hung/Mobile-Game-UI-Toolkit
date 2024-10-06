@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1abbaa17d04ad418a739a4c4d912f7, type: 3}
+  m_Name: Dash
+  m_EditorClassIdentifier: 
+  skillName: Dash
+  skillImage: {fileID: 2800000, guid: 6a9d91f831b2a364099b44ed32b30319, type: 3}
+  skillHelperImage: {fileID: 2800000, guid: 313bcbadd1958a7488346e0a0b89a3f7, type: 3}
+  skillHelperDescription: 
+  skillButtonIndex: 3
