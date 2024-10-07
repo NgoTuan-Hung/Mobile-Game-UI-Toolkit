@@ -64,8 +64,11 @@ public class MainView : MonoBehaviour
         {
             var newSkillHolder = skillHolderTemplate.Instantiate();
             new skillHolderView(skillData, newSkillHolder);
+            var skillTooltip = new SkillTooltipView(skillTooltipTemplate.Instantiate(), skillData.skillName, skillData.skillHelperImage, skillData.skillHelperDescription).VisualElement();
+            string tooltipId = "helper__skill-info__" + skillData.name;
+            UIManager.AddHelper(tooltipId, skillTooltip);
 
-            newSkillHolder.style.height = skillScrollViews[skillData.skillButtonIndex].contentContainer.resolvedStyle.height;
+            newSkillHolder.AddToClassList(tooltipId);
             newSkillHolder.AddToClassList("has-helper");
             newSkillHolder.AddToClassList("helper-type-skill-info");
             newSkillHolder.AddToClassList("helper-invisible");
@@ -98,7 +101,7 @@ public class MainView : MonoBehaviour
     public void SkillScrollViewEvent(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
         // play sound if scroll view scroll passed a element
-        skillScrollViewUIInfo.SkillScrollViewNewIndex = (int)(skillScrollViewUIInfo.ScrollView.verticalScroller.value / skillScrollViewUIInfo.ScrollViewHeight);
+        skillScrollViewUIInfo.SkillScrollViewNewIndex = (int)Math.Floor(skillScrollViewUIInfo.ScrollView.verticalScroller.value / skillScrollViewUIInfo.ScrollViewHeight + 0.5f);
         if (skillScrollViewUIInfo.SkillScrollViewNewIndex != skillScrollViewUIInfo.SkillScrollViewPreviousIndex)
         {
             audioSource.Play();

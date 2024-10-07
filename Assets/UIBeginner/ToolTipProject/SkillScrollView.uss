@@ -6,9 +6,9 @@ ScrollView .unity-scroll-view__content-container {
 }
 
 ScrollView {
-    width: auto;
-    height: 150px;
     align-self: center;
+    width: 150px;
+    height: 150px;
 }
 
 .safe-area {
@@ -33,4 +33,17 @@ ScrollView {
 }
 
 .layer1 {
+}
+
+.test {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    flex-grow: 1;
+}
+
+.test1 {
+    width: 150px;
+    height: 150px;
 }
