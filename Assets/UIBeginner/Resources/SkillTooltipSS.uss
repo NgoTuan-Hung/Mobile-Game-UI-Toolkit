@@ -1,4 +1,4 @@
-.skill-tooltip {
+.tooltip {
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.5s;
@@ -14,11 +14,11 @@
     position: absolute;
 }
 
-.skill-tooltip-showup {
+.tooltip-showup {
     opacity: 1;
 }
 
-#skill-tooltip__exit-button {
+#tooltip__exit-button {
     position: absolute;
     align-self: flex-end;
     background-image: url("project://database/Assets/UIBeginner/ToolTipProject/x.png?fileID=2800000&guid=bcdf420c72a3c774c8d801911445f8ee&type=3#x");
@@ -29,4 +29,7 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroll-view__content-container {
 }

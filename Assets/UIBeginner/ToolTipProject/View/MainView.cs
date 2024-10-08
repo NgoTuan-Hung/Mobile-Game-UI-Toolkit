@@ -16,9 +16,8 @@ public class MainView : MonoBehaviour
     // [SerializeField] private VisualTreeAsset helperLensTemplate;
 
     List<ScrollView> skillScrollViews;
-    VisualElement root, safeAreaVE;
-    VisualElement skillTooltipRoot, skillTooltip, helperLensRoot;
-    VisualElement testObject;
+    VisualElement root, safeAreaVE, helperLensRoot;
+    StyleSheet skillTooltipSS;
     [SerializeField] private AudioClip scrollSound;
     [SerializeField] private AudioSource audioSource;
 
@@ -59,12 +58,17 @@ public class MainView : MonoBehaviour
     public void InitializeSkillHolderList()
     {
         List<SkillData> skillDatas = Resources.LoadAll<SkillData>("SkillData").ToList();
+        skillTooltipSS = Resources.Load<StyleSheet>("SkillTooltipSS");
 
         skillDatas.ForEach(skillData => 
         {
             var newSkillHolder = skillHolderTemplate.Instantiate();
+            skillScrollViews[skillData.skillButtonIndex].contentContainer.Add(newSkillHolder);
             new skillHolderView(skillData, newSkillHolder);
-            var skillTooltip = new SkillTooltipView(skillTooltipTemplate.Instantiate(), skillData.skillName, skillData.skillHelperImage, skillData.skillHelperDescription).VisualElement();
+            var skillTooltip = new SkillTooltipView(skillTooltipTemplate.Instantiate(), skillData.skillName, skillData.skillHelperImage, skillData.skillHelperDescription, skillTooltipSS).VisualElement();
+            newSkillHolder.GetLayer().Add(skillTooltip);
+            skillTooltip.style.position = new StyleEnum<Position>(Position.Absolute);
+            skillTooltip.style.left = new StyleLength(99999f);
             string tooltipId = "helper__skill-info__" + skillData.name;
             UIManager.AddHelper(tooltipId, skillTooltip);
 
@@ -72,8 +76,6 @@ public class MainView : MonoBehaviour
             newSkillHolder.AddToClassList("has-helper");
             newSkillHolder.AddToClassList("helper-type-skill-info");
             newSkillHolder.AddToClassList("helper-invisible");
-
-            skillScrollViews[skillData.skillButtonIndex].contentContainer.Add(newSkillHolder);
         });
 
         skillScrollViews.ForEach(skillScrollView => 

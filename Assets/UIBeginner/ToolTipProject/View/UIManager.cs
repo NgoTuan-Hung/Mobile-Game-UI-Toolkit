@@ -15,4 +15,12 @@ public static class UIManager
     {
         return helpers[name];
     }
+
+    public static void ChangeAllHelperOpacity(float opacity)
+    {
+        foreach (var helper in helpers.Values)
+        {
+            helper.style.opacity = opacity;
+        }
+    }
 }

@@ -7,19 +7,13 @@ using UnityEngine.UIElements;
 
 public class HelperLensDragAndDropManipulator : PointerManipulator
 {
-    VisualElement root, lens, skillTooltip, skillTooltipRoot;
+    VisualElement root, lens;
     private VisualTreeAsset skillTooltipTemplate;
     public HelperLensDragAndDropManipulator(VisualElement target, VisualTreeAsset skillTooltipTemplate)
     {
         this.target = target;
         lens = target.Children().First();
         root = target.parent.parent;
-        skillTooltipRoot = skillTooltipTemplate.Instantiate();
-        skillTooltip = skillTooltipRoot.Q<VisualElement>("skill-tooltip");
-        root.Add(skillTooltip);
-        skillTooltip.PlaceBehind(target.parent);
-        skillTooltip.styleSheets.Add(Resources.Load<StyleSheet>("SkillTooltipSS"));
-        skillTooltip.style.left = 99999f;
     }
 
     protected override void RegisterCallbacksOnTarget()
@@ -51,6 +45,7 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
         target.CapturePointer(evt.pointerId);
         target.AddToClassList("in-use");
         target.RemoveFromClassList("not-use");
+        UIManager.ChangeAllHelperOpacity(0.5f);
     }
 
     private void OnPointerUp(PointerUpEvent evt)
@@ -58,6 +53,8 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
         target.ReleasePointer(evt.pointerId);
         target.RemoveFromClassList("in-use");
         target.AddToClassList("not-use");
+
+        UIManager.ChangeAllHelperOpacity(1f);
 
         UQueryBuilder<VisualElement> allHelpers = root.Query<VisualElement>(className: "has-helper");
         UQueryBuilder<VisualElement> overlappingHelper = allHelpers.Where(OverlappingHelper);
@@ -67,9 +64,11 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
 
         if (clothestHelper != null)
         {
-            skillTooltip.style.left = evt.position.x + skillTooltip.worldBound.width > root.worldBound.width ? evt.position.x - skillTooltip.worldBound.width : evt.position.x;
-            skillTooltip.style.top = evt.position.y + skillTooltip.worldBound.height > root.worldBound.height ? evt.position.y - skillTooltip.worldBound.height : clothestHelper.worldBound.position.y;
-            skillTooltip.AddToClassList("skill-tooltip-showup");
+            VisualElement tooltip = UIManager.GetHelper(GetTooltipId(clothestHelper));
+            tooltip.BringToFront();
+            tooltip.style.left = evt.position.x + tooltip.layout.width > root.layout.width ? evt.position.x - tooltip.layout.width : evt.position.x;
+            tooltip.style.top = evt.position.y + tooltip.layout.height > root.layout.height ? evt.position.y - tooltip.layout.height : clothestHelper.worldBound.position.y;
+            tooltip.AddToClassList("tooltip-showup");
         }
     }
 
@@ -114,5 +113,15 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
     public Vector2 GetRootLocalPosition(VisualElement helper)
     {
         return root.WorldToLocal(helper.GetWorldPosition());
+    }
+
+    public string GetTooltipId(VisualElement helper)
+    {
+        if (helper.ClassListContains("helper-type-skill-info"))
+        {
+            return helper.GetClasses().Where(c => c.StartsWith("helper__skill-info__")).First();
+        }
+
+        return "";
     }
 }
