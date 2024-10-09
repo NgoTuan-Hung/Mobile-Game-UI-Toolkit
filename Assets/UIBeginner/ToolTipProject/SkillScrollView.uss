@@ -32,9 +32,6 @@ ScrollView {
 .has-helper {
 }
 
-.layer1 {
-}
-
 .test {
     margin-top: 5px;
     margin-right: 5px;
@@ -46,4 +43,11 @@ ScrollView {
 .test1 {
     width: 150px;
     height: 150px;
+}
+
+.layer {
+    position: absolute;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
 }

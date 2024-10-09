@@ -1,0 +1,31 @@
+.menu-button {
+    cursor: url("project://database/Assets/UIBeginner/ToolTipProject/pointer.png?fileID=2800000&guid=e1183967457ad5f499b4df95670d2319&type=3#pointer");
+    background-color: rgb(74, 131, 253);
+    font-size: 36px;
+    color: rgb(223, 223, 223);
+    padding-top: 6px;
+    padding-right: 21px;
+    padding-bottom: 6px;
+    padding-left: 21px;
+    height: 120%;
+}
+
+.menu-button-selected {
+    background-color: rgb(48, 48, 48);
+}
+
+.test-label {
+    white-space: normal;
+    font-size: 48px;
+    color: rgb(210, 210, 210);
+    -unity-text-align: upper-left;
+}
+
+#unity-drag-container
+{
+    height: 200%;
+    width: 50%;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: absolute;
+}

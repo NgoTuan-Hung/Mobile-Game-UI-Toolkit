@@ -45,7 +45,7 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
         target.CapturePointer(evt.pointerId);
         target.AddToClassList("in-use");
         target.RemoveFromClassList("not-use");
-        UIManager.ChangeAllHelperOpacity(0.3f);
+        GameUIManager.ChangeAllHelperOpacity(0.3f);
     }
 
     private void OnPointerUp(PointerUpEvent evt)
@@ -54,7 +54,7 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
         target.RemoveFromClassList("in-use");
         target.AddToClassList("not-use");
 
-        UIManager.ChangeAllHelperOpacity(1f);
+        GameUIManager.ChangeAllHelperOpacity(1f);
 
         UQueryBuilder<VisualElement> allHelpers = root.Query<VisualElement>(className: "has-helper");
         UQueryBuilder<VisualElement> overlappingHelper = allHelpers.Where(OverlappingHelper);
@@ -64,7 +64,7 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
 
         if (clothestHelper != null)
         {
-            VisualElement tooltip = UIManager.GetHelper(GetTooltipId(clothestHelper));
+            VisualElement tooltip = GameUIManager.GetHelper(GetTooltipId(clothestHelper));
             tooltip.BringToFront();
             tooltip.style.left = evt.position.x + tooltip.layout.width > root.layout.width ? evt.position.x - tooltip.layout.width : evt.position.x;
             tooltip.style.top = evt.position.y + tooltip.layout.height > root.layout.height ? evt.position.y - tooltip.layout.height : clothestHelper.worldBound.position.y;

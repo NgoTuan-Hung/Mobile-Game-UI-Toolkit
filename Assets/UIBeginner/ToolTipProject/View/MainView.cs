@@ -16,7 +16,7 @@ public class MainView : MonoBehaviour
     // [SerializeField] private VisualTreeAsset helperLensTemplate;
 
     List<ScrollView> skillScrollViews;
-    VisualElement root, safeAreaVE, helperLensRoot;
+    VisualElement root, helperLensRoot;
     StyleSheet skillTooltipSS;
     [SerializeField] private AudioClip scrollSound;
     [SerializeField] private AudioSource audioSource;
@@ -30,18 +30,6 @@ public class MainView : MonoBehaviour
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
-
-        /* Calculate the safe area so UIs don't touch unreachable parts of the screen */
-        safeAreaVE = root.Q<VisualElement>("safe-area") ;
-        Rect safeArea = Screen.safeArea;
-        Vector2 leftTop = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(safeArea.xMin, Screen.height - safeArea.yMax));
-        Vector2 rightBottom = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(Screen.width - safeArea.xMax, safeArea.yMin));
-
-        safeAreaVE.style.paddingLeft = leftTop.x;
-        safeAreaVE.style.paddingTop = leftTop.y;
-        safeAreaVE.style.paddingRight = rightBottom.x;
-        safeAreaVE.style.paddingBottom = rightBottom.y;
-        /*  */
 
         skillScrollViews = root.Query<ScrollView>().ToList();
 
@@ -69,7 +57,7 @@ public class MainView : MonoBehaviour
             skillTooltip.style.position = new StyleEnum<Position>(Position.Absolute);
             skillTooltip.style.left = new StyleLength(99999f);
             string tooltipId = "helper__skill-info__" + skillData.name;
-            UIManager.AddHelper(tooltipId, skillTooltip);
+            GameUIManager.AddHelper(tooltipId, skillTooltip);
 
             newSkillHolder.AddToClassList(tooltipId);
             newSkillHolder.AddToClassList("has-helper");

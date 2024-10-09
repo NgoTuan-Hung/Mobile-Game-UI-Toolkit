@@ -1,9 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/UIBeginner/ToolTipProject/test.uss?fileID=7433441132597879392&amp;guid=9ffc33e6233377748aa663bf254add4a&amp;type=3#test" />
-    <ui:VisualElement style="width: 500px; height: 500px;">
-        <ui:VisualElement class="child" style="flex-grow: 0; position: relative;" />
-        <ui:VisualElement class="child" style="flex-grow: 0; position: relative;" />
-        <ui:VisualElement class="child" style="flex-grow: 0; position: relative;" />
-        <ui:VisualElement class="child" style="flex-grow: 0; position: relative;" />
-    </ui:VisualElement>
-</ui:UXML>
