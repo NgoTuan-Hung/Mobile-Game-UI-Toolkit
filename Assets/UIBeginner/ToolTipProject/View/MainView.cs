@@ -31,22 +31,21 @@ public class MainView : MonoBehaviour
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
 
+        /* Calculate the safe area so UIs don't touch unreachable parts of the screen */
         safeAreaVE = root.Q<VisualElement>("safe-area") ;
         Rect safeArea = Screen.safeArea;
         Vector2 leftTop = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(safeArea.xMin, Screen.height - safeArea.yMax));
-        Vector2 rightBottom = RuntimePanelUtils.ScreenToPanel
-        (   
-            root.panel,
-            new Vector2(Screen.width - safeArea.xMax, safeArea.yMin
-        ));
+        Vector2 rightBottom = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(Screen.width - safeArea.xMax, safeArea.yMin));
 
         safeAreaVE.style.paddingLeft = leftTop.x;
         safeAreaVE.style.paddingTop = leftTop.y;
         safeAreaVE.style.paddingRight = rightBottom.x;
         safeAreaVE.style.paddingBottom = rightBottom.y;
+        /*  */
 
         skillScrollViews = root.Query<ScrollView>().ToList();
 
+        /* Create a helper lens and assign drag and drop logic to it */
         helperLensRoot = root.Q<VisualElement>("helper-lens");
         helperLensRoot.style.position = Position.Absolute;
         HelperLensDragAndDropManipulator dragAndDropManipulator = new HelperLensDragAndDropManipulator(helperLensRoot, skillTooltipTemplate);
@@ -54,7 +53,7 @@ public class MainView : MonoBehaviour
         InitializeSkillHolderList();
     }
 
-    [SerializeField] private int skillCount = 5;
+    /* Populate the skill slots info */
     public void InitializeSkillHolderList()
     {
         List<SkillData> skillDatas = Resources.LoadAll<SkillData>("SkillData").ToList();
@@ -93,13 +92,6 @@ public class MainView : MonoBehaviour
         });
     }
 
-    // Show tooltip on hover at mouse position
-    public void ShowTooltip(MouseEnterEvent evt)
-    {
-        var target = evt.target as VisualElement;
-        if (target == null) return;
-    }
-
     public void SkillScrollViewEvent(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
         // play sound if scroll view scroll passed a element
@@ -127,7 +119,6 @@ public class MainView : MonoBehaviour
         skillScrollViewUIInfo.DistanceToSnap = skillScrollViewUIInfo.ScrollViewHeight * distanceToSnapScale;
     }
 
-    [SerializeField] private float scrollSnapCheckDelay = 0.03f;
     [SerializeField] private float snapTime = 0.3f;
     [SerializeField] private float snapIntervalPortion = 0.1f;
     private float snapInterval;
@@ -137,11 +128,13 @@ public class MainView : MonoBehaviour
     [SerializeField] private int testIndex;
     public IEnumerator HandleScrollSnap(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
+        /* Find any first touch that overlaps the skill scroll view */
         Touch associatedTouch = new Touch();
         foreach (var touch in Touch.activeTouches)
         {
             if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
             {
+                /* Convert from screen space to panel space */
                 var touchPosition = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
 
                 if (skillScrollViewUIInfo.ScrollView.worldBound.Overlaps(new Rect(touchPosition, new Vector2(20, 20))))
@@ -152,30 +145,25 @@ public class MainView : MonoBehaviour
             }
         }
 
-        while (true)
-        {
-            yield return new WaitForSeconds(Time.deltaTime);
-
-            if (associatedTouch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
-            {
-                break;
-            }
-        }
+        /* snap logic only happens when we release the touch */
+        while (associatedTouch.phase != UnityEngine.InputSystem.TouchPhase.Ended) yield return new WaitForSeconds(Time.deltaTime);
 
         float prevPosition = float.MaxValue; 
         float finalPosition, currentPosition;
         int finalIndex;
-        while (true)
+
+        /* snap logic only happens when the scroll speed is low enough */
+        while (Math.Abs(skillScrollViewUIInfo.ScrollView.verticalScroller.value - prevPosition) > skillScrollViewUIInfo.DistanceToSnap)
         {
-            if (Math.Abs(skillScrollViewUIInfo.ScrollView.verticalScroller.value - prevPosition) < skillScrollViewUIInfo.DistanceToSnap)
-            {
-                skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = 0f;
-                break;
-            }
             prevPosition = skillScrollViewUIInfo.ScrollView.verticalScroller.value;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
-        }
+        } skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = 0f;
 
+        /* snap logic:
+        - Grab the element that the center of the scroll view is inside
+        - Lerp from the current scroll position to the element's position
+        - Snap to the element For more accurate snapping (since unity scroll view is very closed source and this snap behavior is not perfect)
+         */
         currentPosition = skillScrollViewUIInfo.ScrollView.verticalScroller.value;
         finalIndex = (int)Math.Floor(skillScrollViewUIInfo.ScrollView.verticalScroller.value/skillScrollViewUIInfo.ScrollViewHeight + 0.5f);
         finalPosition = finalIndex * skillScrollViewUIInfo.ScrollViewHeight;

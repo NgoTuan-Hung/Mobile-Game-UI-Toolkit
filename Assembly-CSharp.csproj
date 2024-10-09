@@ -108,8 +108,8 @@
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoInfoSO.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Base\UIScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Scripts\ScriptableObjects\TextScreenSO.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\Model\SkillData.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\AudioManager.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Model\SkillData.cs" />
     <Compile Include="Assets\UIBeginner\SomethingCool\SomethingCoolMainView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\GameScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\StateMachine.cs" />

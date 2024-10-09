@@ -45,7 +45,7 @@ public class HelperLensDragAndDropManipulator : PointerManipulator
         target.CapturePointer(evt.pointerId);
         target.AddToClassList("in-use");
         target.RemoveFromClassList("not-use");
-        UIManager.ChangeAllHelperOpacity(0.5f);
+        UIManager.ChangeAllHelperOpacity(0.3f);
     }
 
     private void OnPointerUp(PointerUpEvent evt)
