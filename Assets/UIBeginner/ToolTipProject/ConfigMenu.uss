@@ -18,6 +18,8 @@
     white-space: normal;
     font-size: 48px;
     color: rgb(210, 210, 210);
+    justify-content: center;
+    align-items: center;
 }
 
 SliderInt .unity-base-slider__label {
@@ -29,8 +31,37 @@ SliderInt .unity-base-slider__label {
     width: 30%;
 }
 
-.label1 {
+/* ----------------------------------------------------------- */
+#unity-drag-container {
+    justify-content: center;
+}
+
+.unity-toggle {
+    height: 100%;
+    width: 20%;
     flex-grow: 0;
-    height: 15%;
-    flex-direction: row;
+}
+
+.unity-toggle__input {
+    justify-content: center;
+    align-items: center;
+}
+
+#unity-checkmark {
+    width: 75px;
+    height: 75px;
+}
+/* ----------------------------------------------------------- */
+
+.unity-base-dropdown__item
+{
+    font-size:48px;
+}
+
+.label1 {
+    width: 30%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    -unity-text-align: middle-left;
 }
