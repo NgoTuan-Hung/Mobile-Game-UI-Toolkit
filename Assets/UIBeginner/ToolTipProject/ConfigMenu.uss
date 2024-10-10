@@ -18,14 +18,19 @@
     white-space: normal;
     font-size: 48px;
     color: rgb(210, 210, 210);
-    -unity-text-align: upper-left;
 }
 
-#unity-drag-container
-{
-    height: 200%;
-    width: 50%;
-    /* align-items: center; */
-    /* justify-content: center; */
-    position: absolute;
+SliderInt .unity-base-slider__label {
+    -unity-text-align: middle-left;
+    font-size: 48px;
+    padding-right: 30px;
+    align-self: center;
+    height: 100%;
+    width: 30%;
+}
+
+.label1 {
+    flex-grow: 0;
+    height: 15%;
+    flex-direction: row;
 }
