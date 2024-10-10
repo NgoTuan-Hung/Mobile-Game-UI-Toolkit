@@ -10,7 +10,8 @@ public class ConfigView : MonoBehaviour
     private void Awake() 
     {
         uIDocument = GetComponent<UIDocument>();
-        root = uIDocument.rootVisualElement;
+        root = uIDocument.rootVisualElement.parent;
+        print(root.name);
         AddDummyDropdownValue();
     }
 
@@ -22,10 +23,8 @@ public class ConfigView : MonoBehaviour
         dropdown.choices.Add("日本語");
         dropdown.choices.Add("Español");
         dropdown.choices.Add("Português");
-        dropdown.Query<Label>("unity-base-dropdown__label").ForEach(label => 
-        {
-            label.style.fontSize = 48;
-        });
+
+        print(root.Q<VisualElement>(classes: "unity-base-dropdown__item").name);
     }
 
     // Update is called once per frame

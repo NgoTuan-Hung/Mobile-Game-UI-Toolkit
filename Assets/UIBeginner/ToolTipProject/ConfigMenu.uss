@@ -31,7 +31,6 @@ SliderInt .unity-base-slider__label {
     width: 30%;
 }
 
-/* ----------------------------------------------------------- */
 #unity-drag-container {
     justify-content: center;
 }
@@ -51,11 +50,9 @@ SliderInt .unity-base-slider__label {
     width: 75px;
     height: 75px;
 }
-/* ----------------------------------------------------------- */
 
-.unity-base-dropdown__item
-{
-    font-size:48px;
+.unity-base-dropdown__item {
+    font-size: 48px;
 }
 
 .label1 {
@@ -64,4 +61,5 @@ SliderInt .unity-base-slider__label {
     color: rgb(255, 255, 255);
     font-size: 48px;
     -unity-text-align: middle-left;
+    -unity-font-definition: url("project://database/Assets/UIBeginner/ToolTipProject/Font/Square-Black%20SDF.asset?fileID=11400000&guid=1c90e76cc99f1464691e50d318f7a8a1&type=2#Square-Black SDF");
 }
