@@ -22,14 +22,6 @@
         <ui:VisualElement style="flex-grow: 1; background-color: rgb(48, 48, 48); align-self: center; width: 90%; margin-top: 9px;">
             <ui:VisualElement style="flex-grow: 0; width: 90%; align-self: center; height: 90%; top: 5%;">
                 <ui:SliderInt label="Volume" high-value="100" style="color: rgb(255, 255, 255);" />
-                <ui:VisualElement style="flex-direction: row; margin-top: 40px; height: 15%;">
-                    <ui:Label tabindex="-1" text="Ray Tracing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="label1" />
-                    <ui:Toggle value="false" />
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 0; margin-top: 40px; height: 15%; flex-direction: row; align-items: center;">
-                    <ui:Label tabindex="-1" text="Localization" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label1" />
-                    <ui:DropdownField style="height: 60%; width: 20%;" />
-                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

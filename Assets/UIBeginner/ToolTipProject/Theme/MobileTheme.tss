@@ -1,0 +1,23 @@
+@import url("unity-theme://default");
+VisualElement {}
+
+.unity-base-popup-field__text
+{
+    font-size: 48px;
+    -unity-font-definition: url("project://database/Assets/UIBeginner/ToolTipProject/Font/Square-Black%20SDF.asset?fileID=11400000&guid=1c90e76cc99f1464691e50d318f7a8a1&type=2#Square-Black SDF"); 
+}
+
+.unity-base-dropdown__item
+{
+    font-size: 48px;
+    -unity-font-definition: url("project://database/Assets/UIBeginner/ToolTipProject/Font/Square-Black%20SDF.asset?fileID=11400000&guid=1c90e76cc99f1464691e50d318f7a8a1&type=2#Square-Black SDF");
+}
+
+.unity-base-dropdown__container-outer
+{
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
+    border-bottom-right-radius: 34px;
+    border-bottom-left-radius: 34px;
+    overflow: hidden;
+}

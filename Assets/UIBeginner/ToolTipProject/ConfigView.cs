@@ -23,8 +23,6 @@ public class ConfigView : MonoBehaviour
         dropdown.choices.Add("日本語");
         dropdown.choices.Add("Español");
         dropdown.choices.Add("Português");
-
-        print(root.Q<VisualElement>(classes: "unity-base-dropdown__item").name);
     }
 
     // Update is called once per frame
