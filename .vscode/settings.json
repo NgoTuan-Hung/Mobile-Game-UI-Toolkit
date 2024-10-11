@@ -51,6 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "UIToolkit.sln",
+    "dotnet.defaultSolution": "UI-ToolKit.sln",
     "vstuc.refreshOnSave": true
 }

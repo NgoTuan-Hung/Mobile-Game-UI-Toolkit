@@ -7,6 +7,8 @@ public class ConfigView : MonoBehaviour
 {
     UIDocument uIDocument;
     VisualElement root;
+    ConfigData configData;
+
     private void Awake() 
     {
         uIDocument = GetComponent<UIDocument>();
@@ -23,6 +25,14 @@ public class ConfigView : MonoBehaviour
         dropdown.choices.Add("日本語");
         dropdown.choices.Add("Español");
         dropdown.choices.Add("Português");
+    }
+
+    public void PopulateView()
+    {
+        print("PopulateView");
+        print("not ok");
+        print("not ok");
+        print("not ok");
     }
 
     // Update is called once per frame

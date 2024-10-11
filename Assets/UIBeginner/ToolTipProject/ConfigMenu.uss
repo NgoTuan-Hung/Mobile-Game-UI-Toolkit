@@ -7,7 +7,8 @@
     padding-right: 21px;
     padding-bottom: 6px;
     padding-left: 21px;
-    height: 120%;
+    height: 100%;
+    -unity-font-definition: url("project://database/Assets/UIBeginner/ToolTipProject/Font/Square-Black%20SDF.asset?fileID=11400000&guid=1c90e76cc99f1464691e50d318f7a8a1&type=2#Square-Black SDF");
 }
 
 .menu-button-selected {
