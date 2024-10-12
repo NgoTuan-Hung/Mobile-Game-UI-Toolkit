@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/ToolTipProject/ConfigMenu.uss?fileID=7433441132597879392&amp;guid=dbfd18edd57e0094795d693ae238259c&amp;type=3#ConfigMenu" />
+    <ui:VisualElement class="config-item" style="flex-direction: row; height: 15%;">
+        <ui:Label tabindex="-1" text="Ray Tracing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="label1 config-label1" />
+        <ui:Toggle value="false" />
+    </ui:VisualElement>
+</ui:UXML>

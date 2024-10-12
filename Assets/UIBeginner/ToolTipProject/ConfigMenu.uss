@@ -1,4 +1,4 @@
-.menu-button {
+.config__menu-item {
     cursor: url("project://database/Assets/UIBeginner/ToolTipProject/pointer.png?fileID=2800000&guid=e1183967457ad5f499b4df95670d2319&type=3#pointer");
     background-color: rgb(74, 131, 253);
     font-size: 36px;
@@ -11,7 +11,7 @@
     -unity-font-definition: url("project://database/Assets/UIBeginner/ToolTipProject/Font/Square-Black%20SDF.asset?fileID=11400000&guid=1c90e76cc99f1464691e50d318f7a8a1&type=2#Square-Black SDF");
 }
 
-.menu-button-selected {
+.config__menu-item-selected {
     background-color: rgb(48, 48, 48);
 }
 
@@ -98,4 +98,20 @@ DropdownField {
 
 .config-item {
     margin-top: 40px;
+}
+
+.config__menu-content {
+    background-color: rgb(48, 48, 48);
+    align-self: center;
+    width: 90%;
+    margin-top: 9px;
+    flex-grow: 1;
+}
+
+.config__menu-content-inner {
+    flex-grow: 0;
+    width: 90%;
+    align-self: center;
+    height: 90%;
+    top: 5%;
 }

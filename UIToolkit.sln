@@ -5,10 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{CE609200-CA9F-6C9A-B95A-C51325E171B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastScriptReload.Editor", "FastScriptReload.Editor.csproj", "{03541BE2-AB70-5C19-135A-CB2386E96FFF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastScriptReload.Runtime", "FastScriptReload.Runtime.csproj", "{F6E5EA2E-D2E0-171A-2BC1-AD372BE7A56A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,14 +19,6 @@ Global
 		{CE609200-CA9F-6C9A-B95A-C51325E171B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE609200-CA9F-6C9A-B95A-C51325E171B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE609200-CA9F-6C9A-B95A-C51325E171B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03541BE2-AB70-5C19-135A-CB2386E96FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03541BE2-AB70-5C19-135A-CB2386E96FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03541BE2-AB70-5C19-135A-CB2386E96FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03541BE2-AB70-5C19-135A-CB2386E96FFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6E5EA2E-D2E0-171A-2BC1-AD372BE7A56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6E5EA2E-D2E0-171A-2BC1-AD372BE7A56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6E5EA2E-D2E0-171A-2BC1-AD372BE7A56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6E5EA2E-D2E0-171A-2BC1-AD372BE7A56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
