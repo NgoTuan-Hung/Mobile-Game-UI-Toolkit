@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
     <Style src="project://database/Assets/UIBeginner/ToolTipProject/ConfigMenu.uss?fileID=7433441132597879392&amp;guid=dbfd18edd57e0094795d693ae238259c&amp;type=3#ConfigMenu" />
-    <ui:VisualElement name="config__menu-root" style="flex-grow: 1; background-color: rgb(223, 223, 223);">
+    <ui:VisualElement name="config__menu-root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.5);">
         <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" name="config__menu" style="width: 90%; align-self: center; background-color: rgb(74, 131, 253);" />
     </ui:VisualElement>
 </ui:UXML>

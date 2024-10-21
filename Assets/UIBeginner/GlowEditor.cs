@@ -30,5 +30,8 @@ public class GlowEditor : EditorWindow
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UIBeginner/NewUXMLShit.uxml");
         VisualElement labelFromUXML_uxml = visualTree.Instantiate();
         root.Add(labelFromUXML_uxml);
+
+        //Doesn't work
+        Debug.Assert(true);
     }
 }
