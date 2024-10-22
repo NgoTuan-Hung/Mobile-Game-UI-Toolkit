@@ -3,11 +3,24 @@
     <Style src="project://database/Assets/UIBeginner/ToolTipProject/SkillScrollView.uss?fileID=7433441132597879392&amp;guid=8f37d1eb70233fb41b4cb3f761b6a52a&amp;type=3#SkillScrollView" />
     <ui:VisualElement name="Layer1" class="layer">
         <ui:VisualElement class="safe-area">
-            <ui:VisualElement name="main-view__skill-scroll-view-holder">
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; left: 85%; top: 0;" />
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="top: 25%; left: 70%; position: absolute;" />
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; left: 55%; top: 50%;" />
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; top: 75%; left: 40%;" />
+            <ui:VisualElement name="layer1__zone1" style="width: 100%; height: 50%;">
+                <ui:VisualElement name="main-view__option-container" style="flex-direction: row; align-self: flex-end;">
+                    <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="main-view__option-expand-button" style="width: 50px; height: 50px; background-image: url(&quot;project://database/Assets/UIBeginner/ToolTipProject/expand-down.png?fileID=2800000&amp;guid=e4e16c08bc2d6f343af3596d2a788b4a&amp;type=3#expand-down&quot;);" />
+                    <ui:ScrollView name="main-view__options" vertical-scroller-visibility="Hidden" mode="Horizontal" horizontal-scroller-visibility="Hidden" style="width: 200px; height: 50px;">
+                        <ui:VisualElement style="width: 50px; height: 50px; background-image: url(&quot;project://database/Assets/UIBeginner/ToolTipProject/settings-cogwheel-button.png?fileID=2800000&amp;guid=9e18ca88c1c0a2d45a64440e4324e381&amp;type=3#settings-cogwheel-button&quot;); margin-right: 10px; margin-left: 10px;" />
+                        <ui:VisualElement style="width: 50px; height: 50px; background-image: url(&quot;project://database/Assets/UIBeginner/ToolTipProject/heart-attack.png?fileID=2800000&amp;guid=59208542f898f7e4e9be8a4a6918c801&amp;type=3#heart-attack&quot;); margin-right: 10px; margin-left: 10px;" />
+                        <ui:VisualElement style="width: 50px; height: 50px; background-image: url(&quot;project://database/Assets/UIBeginner/ToolTipProject/sword.png?fileID=2800000&amp;guid=1f22641d3a27d1545b048189a33a636a&amp;type=3#sword&quot;); margin-right: 10px; margin-left: 10px;" />
+                        <ui:VisualElement style="width: 50px; height: 50px; background-image: url(&quot;project://database/Assets/UIBeginner/ToolTipProject/teleport.png?fileID=2800000&amp;guid=105f87d9db68da6478fdcd9b44c26488&amp;type=3#teleport&quot;); margin-right: 10px; margin-left: 10px;" />
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="layer1__zone2" style="flex-grow: 1; width: 100%; height: 50%; align-items: flex-start;">
+                <ui:VisualElement name="main-view__skill-scroll-view-holder" style="height: 100%; top: 0; width: 60%; align-self: flex-end;">
+                    <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; left: 85%; top: 0;" />
+                    <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="top: 25%; left: 70%; position: absolute;" />
+                    <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; left: 55%; top: 50%;" />
+                    <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; top: 75%; left: 40%;" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

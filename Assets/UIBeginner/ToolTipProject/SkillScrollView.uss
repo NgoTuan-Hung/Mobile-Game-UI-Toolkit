@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+#main-view__options .unity-scroll-view__content-container
+{
+    
+}
+
 .main-view__skill-scroll-view {
     align-self: center;
     width: 150px;
@@ -19,30 +24,7 @@
     align-self: center;
 }
 
-#main-view__skill-scroll-view-holder {
-    flex-grow: 0;
-    width: 60%;
-    align-self: flex-end;
-    overflow: hidden;
-    height: 60%;
-    left: 0;
-    top: 40%;
-}
-
 .has-helper {
-}
-
-.test {
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    flex-grow: 1;
-}
-
-.test1 {
-    width: 150px;
-    height: 150px;
 }
 
 .layer {

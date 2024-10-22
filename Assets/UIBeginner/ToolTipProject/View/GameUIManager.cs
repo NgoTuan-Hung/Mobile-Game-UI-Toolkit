@@ -34,6 +34,12 @@ public class GameUIManager : MonoBehaviour
     UIDocument mainUIDocument;
     VisualElement root;
     List<VisualElement> layers;
+
+    MainView mainView;
+    ConfigView configView; 
+    [SerializeField] private VisualTreeAsset configMenuVTA;
+    VisualElement configMenu; 
+
     private void Awake() 
     {
         mainUIDocument = GetComponent<UIDocument>();
@@ -43,6 +49,29 @@ public class GameUIManager : MonoBehaviour
         
         InitDefaultLayer();
         HandleSafeArea();
+
+        GetViewComponents();
+        InstantiateView();
+        InitViewComponents();
+    }
+
+    private void GetViewComponents()
+    {
+        mainView = GetComponent<MainView>();
+        configView = GetComponent<ConfigView>();
+    }
+
+    private void InstantiateView()
+    {
+        configMenu = configMenuVTA.Instantiate();
+        configMenu.name = "config__menu-root";
+        layers[1].Q(classes:"safe-area").Add(configMenu);
+    }
+
+    private void InitViewComponents()
+    {
+        mainView.Init();
+        configView.Init();
     }
 
     public void HandleSafeArea()

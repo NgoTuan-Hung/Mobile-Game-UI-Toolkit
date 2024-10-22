@@ -12,7 +12,7 @@ public class ConfigView : MonoBehaviour
     VisualTreeAsset configMenuContentAsset, configCheckboxAsset, configDropdownAsset, configSliderAsset;
     VisualElement currentSelectedMenuItem, currentDisplayedConfigContent;
 
-    private void Awake() 
+    public void Init()
     {
         uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement.Q<VisualElement>(name: "config__menu-root");
@@ -110,11 +110,5 @@ public class ConfigView : MonoBehaviour
         currentDisplayedConfigContent = configMenuContents[configMenu.contentContainer.IndexOf(menuItem)];
         currentDisplayedConfigContent.style.position = Position.Relative;
         currentDisplayedConfigContent.style.display = DisplayStyle.Flex;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 1783247535}
   - component: {fileID: 1783247536}
   - component: {fileID: 1783247537}
+  - component: {fileID: 1783247538}
   m_Layer: 0
   m_Name: ListSkill
   m_TagString: Untagged
@@ -523,6 +524,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf9c5cb0e22a6654783e9e7acf07910a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  configMenuVTA: {fileID: 9197481963319205126, guid: 978a9f498dc422f4bb70f908c23bd919, type: 3}
+--- !u!114 &1783247538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783247532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e76a948634e61940a482379974b5054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2064516911

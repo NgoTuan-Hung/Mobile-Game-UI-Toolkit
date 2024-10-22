@@ -21,17 +21,15 @@ public class MainView : MonoBehaviour
     [SerializeField] private AudioClip scrollSound;
     [SerializeField] private AudioSource audioSource;
 
-    public void Awake()
+    public void Init() 
     {
         snapInterval = snapTime * snapIntervalPortion;
         audioSource.clip = scrollSound;
-    }
-    private void OnEnable() 
-    {
+
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
 
-        skillScrollViews = root.Query<ScrollView>().ToList();
+        skillScrollViews = root.Query<ScrollView>(classes: "main-view__skill-scroll-view").ToList();
 
         /* Create a helper lens and assign drag and drop logic to it */
         helperLensRoot = root.Q<VisualElement>("helper-lens");
@@ -67,7 +65,7 @@ public class MainView : MonoBehaviour
 
         skillScrollViews.ForEach(skillScrollView => 
         {
-            skillScrollView.contentContainer.Children().First().RemoveFromClassList("helper-invisible");
+            skillScrollView.contentContainer.ElementAt(0).RemoveFromClassList("helper-invisible");
 
             SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollView, null);
 
