@@ -5,9 +5,31 @@
     justify-content: center;
 }
 
-#main-view__options .unity-scroll-view__content-container
-{
-    
+#main-view__options .unity-scroll-view__content-container {
+}
+
+.main-view__options-collapsed {
+    translate: -200px 0;
+    opacity: 0;
+}
+
+.main-view__option-expand-button-original {
+    width: 50px;
+    height: 50px;
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/expand-down.png?fileID=2800000&guid=e4e16c08bc2d6f343af3596d2a788b4a&type=3#expand-down");
+}
+
+.main-view__option-expand-button-collapsed {
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/expand.png?fileID=2800000&guid=654486a0882cd104aac8360062faa44e&type=3#expand");
+    width: 50px;
+    height: 50px;
+}
+
+.main-view__option-button {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .main-view__skill-scroll-view {

@@ -16,10 +16,11 @@ public class MainView : MonoBehaviour
     // [SerializeField] private VisualTreeAsset helperLensTemplate;
 
     List<ScrollView> skillScrollViews;
-    VisualElement root, helperLensRoot;
+    VisualElement root, helperLensRoot, optionExpandButton, options;
     StyleSheet skillTooltipSS;
     [SerializeField] private AudioClip scrollSound;
     [SerializeField] private AudioSource audioSource;
+    bool optionExpandButtonExpanded = true;
 
     public void Init() 
     {
@@ -37,6 +38,60 @@ public class MainView : MonoBehaviour
         HelperLensDragAndDropManipulator dragAndDropManipulator = new HelperLensDragAndDropManipulator(helperLensRoot, skillTooltipTemplate);
 
         InitializeSkillHolderList();
+
+        HandleOptionFunctionality();
+    }
+
+    public void HandleOptionFunctionality()
+    {
+        HandleOptionExpandButton();
+        PopulateOptions();
+    }
+
+    public void PopulateOptions()
+    {
+        List<MainViewOptionData> mainViewOptionDatas = Resources.LoadAll<MainViewOptionData>("UI/MainViewOptionData").ToList();
+        
+        mainViewOptionDatas.ForEach(mainViewOptionData => 
+        {
+            VisualElement visualElement = new();
+            visualElement.AddToClassList("main-view__option-button");
+            visualElement.style.backgroundImage = mainViewOptionData.icon;
+
+            switch(mainViewOptionData.functionName)
+            {
+                case "": break;
+                case "OpenSetting": 
+                {
+                    visualElement.RegisterCallback<MouseDownEvent>(evt => print("Open Setting"));
+                    break;
+                }
+                default: break;
+            }
+            
+            options.Add(visualElement);
+        });
+    }
+
+    public void HandleOptionExpandButton()
+    {
+        optionExpandButton = root.Q<VisualElement>(name: "main-view__option-expand-button");
+        options = root.Q<VisualElement>(name: "main-view__options");
+        optionExpandButton.RegisterCallback<PointerDownEvent>((evt) => 
+        {
+            if (optionExpandButtonExpanded)
+            {
+                optionExpandButtonExpanded = false;
+                optionExpandButton.AddToClassList("main-view__option-expand-button-collapsed");
+                options.AddToClassList("main-view__options-collapsed");
+            }
+            else
+            {
+                optionExpandButtonExpanded = true;
+                optionExpandButton.RemoveFromClassList("main-view__option-expand-button-collapsed");
+                options.RemoveFromClassList("main-view__options-collapsed");
+            }
+        });
     }
 
     /* Populate the skill slots info */
