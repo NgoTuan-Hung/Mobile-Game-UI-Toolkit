@@ -75,19 +75,22 @@
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\GameController.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\ScriptableObjects\AudioSettingsSO.cs" />
     <Compile Include="Assets\UIBeginner\SimpleCustomEditorShit.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\SkillHolderView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\States\DelayState.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\Model\ConfigContentItem.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\GameUIManager.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Utilities\Description.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Player\PlayerScript.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\SkillTooltipView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Events\GameEvents.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\Model\ConfigData.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\LevelSelectionScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoSelectionSetup.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\Other\SceneTool.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Model\ConfigContentItem.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Scripts\DemoTextScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\GameScreen\ResponseDisplay.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\BootloadScreen.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\View\GameUIManager.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\10_Custom controls\CustomControlsDemo.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Model\ConfigMenuItem.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\SettingsPresenter.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\4_UQueryDemo\UQueryDemo.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\ScriptableObjects\QuizSO.cs" />
@@ -104,6 +107,7 @@
     <Compile Include="Assets\UIBeginner\GlowEditor.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\GameScreen\ProgressDisplay.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Utilities\EventRegistry.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Model\MainViewOptionData.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Events\SettingsEvents.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\SettingsScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\Links\Link.cs" />
@@ -111,22 +115,22 @@
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoInfoSO.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Base\UIScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Scripts\ScriptableObjects\TextScreenSO.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\Model\SkillData.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\AudioManager.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\MainView.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\ViewBase.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Model\ConfigData.cs" />
     <Compile Include="Assets\UIBeginner\SomethingCool\SomethingCoolMainView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\GameScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\Interfaces\ILink.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\3_USSStylesDemo\StyleInfoSO.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Events\LevelSelectionEvents.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\View\SkillHolderView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\SequenceManager.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Model\SkillData.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\PauseScreen.cs" />
     <Compile Include="Assets\UIBeginner\SomethingCool\SomethingCoolController.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\SplashScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\2_FlexboxDemo\FlexboxDemo.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\View\SkillTooltipView.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\View\MainView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\LevelSelectionPresenter.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Utilities\NavigationBar.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Scripts\DemoEvents.cs" />
@@ -134,6 +138,7 @@
     <Compile Include="Assets\UIBeginner\SomethingCool\SomethingCoolListController.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\ScriptableObjects\MenuButtonSO.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoSelectionScreen.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\ConfigView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\MainMenuScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\5_Pseudo-classesDemo\PseudoClassesDemo.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\States\State.cs" />
@@ -144,18 +149,15 @@
     <Compile Include="Assets\UIBeginner\ToolTipProject\Other\VisualElementExtension.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoSelectionPresenter.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\MainViewUIBehavior.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\ConfigView.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\Model\ConfigMenuItem.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\10_Custom controls\CustomColorButton.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Events\UIEvents.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Utilities\NullRefChecker.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Gameplay\UserResponses.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\_StyleGuide\StyleExample.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Scripts\DemoBase.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\View\HelperLensDragAndDropManipulator.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Base\UIManager.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\ScriptableObjects\QuestionSO.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\View\ViewBase.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\HelperLensDragAndDropManipulator.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Managers\ScoreManager.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\8_EventDispatchDemo\EventDispatchDemo.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\StartScreen.cs" />
@@ -163,7 +165,6 @@
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Utilities\Coroutines.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\9_ManipulatorDemo\SimpleDragManipulator.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Gameplay\GameplaySounds.cs" />
-    <Compile Include="Assets\UIBeginner\ToolTipProject\Model\MainViewOptionData.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\States\AbstractState.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +182,7 @@
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\MainMenuScreen.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uss\LevelSelection.uss" />
     <None Include="Assets\UIBeginner\ToolTipProject\MainView.uxml" />
+    <None Include="Assets\UIBeginner\Resources\UI\MainView\HealthBar.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\1_UXMLVisualTreeDemo\Templates\parent-container.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Data\Resources\Uss\Tooltips.uss" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uss\EndScreen.uss" />
@@ -190,6 +192,7 @@
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\StartScreen.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\ScriptTemplates\83-C# Scriptable Object-NewScriptableObjectScript.cs.txt" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\SplashScreen.uxml" />
+    <None Include="Assets\UIBeginner\ToolTipProject\HealthBar.uss" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\SettingsScreen.uxml" />
     <None Include="Assets\UIBeginner\ToolTipProject\SkillTooltip.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\UIScreens.uxml" />
@@ -1092,6 +1095,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -1222,6 +1229,10 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">

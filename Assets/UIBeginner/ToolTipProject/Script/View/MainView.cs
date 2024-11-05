@@ -12,6 +12,7 @@ public class MainView : ViewBase
 {
     [SerializeField] private VisualTreeAsset skillHolderTemplate;
     [SerializeField] private VisualTreeAsset skillTooltipTemplate;
+    [SerializeField] private VisualTreeAsset healthBarTemplate;
     // [SerializeField] private VisualTreeAsset helperLensTemplate;
 
     List<ScrollView> skillScrollViews;
@@ -222,6 +223,25 @@ public class MainView : ViewBase
         }
         skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
         skillScrollViewUIInfo.ScrollView.ScrollTo(skillScrollViewUIInfo.ScrollView.contentContainer.Children().ElementAt(finalIndex));
+    }
+
+    public void InstantiateAndHandleHealthBar(Transform transform, Camera camera)
+    {
+        var healthBar = healthBarTemplate.Instantiate();
+        gameUIManager.GetLayer((int)GameUIManager.LayerUse.MainView).Add(healthBar);
+        StartCoroutine(handleHealthBarFloating(transform, healthBar, camera));
+    }
+
+    public IEnumerator handleHealthBarFloating(Transform transform, VisualElement healthBar, Camera camera)
+    {
+        Vector2 newPosition;
+        while (true)
+        {
+            newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, transform.position + new Vector3(0, 1.5f, 0), camera);
+            healthBar.transform.position = new Vector2(newPosition.x - 150, newPosition.y);
+
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+        }
     }
 }
 

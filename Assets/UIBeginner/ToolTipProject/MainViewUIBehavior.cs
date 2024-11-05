@@ -11,7 +11,6 @@ public class MainViewUIBehavior : MonoBehaviour
 
     private void Awake() {
         baseAction = new BaseAction();
-        EnhancedTouchSupport.Enable();
     }
 
     private void OnEnable() {

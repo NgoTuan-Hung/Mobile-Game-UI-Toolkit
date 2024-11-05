@@ -1,12 +1,13 @@
-
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.UIElements;
 
 public class GameUIManager : MonoBehaviour
 {
     public enum LayerUse
     {
+        MainView = 0,
         Config = 1
     }
     public static Dictionary<string, VisualElement> helpers = new Dictionary<string, VisualElement>();
@@ -46,6 +47,7 @@ public class GameUIManager : MonoBehaviour
 
     private void Awake() 
     {
+        EnhancedTouchSupport.Enable();
         mainUIDocument = GetComponent<UIDocument>();
         root = mainUIDocument.rootVisualElement;
         layers = root.Query<VisualElement>(classes: "layer").ToList();
@@ -118,5 +120,10 @@ public class GameUIManager : MonoBehaviour
     {
         layers[layerIndex].style.left = 99999f;
         layers[layerIndex].style.top = 99999f;
+    }
+
+    public VisualElement GetLayer(int layerIndex)
+    {
+        return layers[layerIndex];
     }
 }

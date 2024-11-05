@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/ToolTipProject/HealthBar.uss?fileID=7433441132597879392&amp;guid=35cd8ff901774514b8e4c8b1980f322b&amp;type=3#HealthBar" />
+    <ui:VisualElement class="health-bar" />
+</ui:UXML>
