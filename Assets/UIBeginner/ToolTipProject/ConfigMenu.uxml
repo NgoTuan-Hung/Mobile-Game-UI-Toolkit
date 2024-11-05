@@ -1,4 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
     <Style src="project://database/Assets/UIBeginner/ToolTipProject/ConfigMenu.uss?fileID=7433441132597879392&amp;guid=dbfd18edd57e0094795d693ae238259c&amp;type=3#ConfigMenu" />
-    <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" name="config__menu" style="align-self: center; background-color: rgb(74, 131, 253); width: 100%;" />
+    <ui:VisualElement name="config__menu-holder" style="width: 100%; flex-direction: row; height: 10%;">
+        <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" name="config__menu" style="align-self: center; background-color: rgb(74, 131, 253); width: 90%; height: 100%; flex-grow: 1;" />
+        <ui:Label tabindex="-1" text="X" parse-escape-sequences="true" display-tooltip-when-elided="true" name="config__exit-button" style="width: 5%; -unity-text-align: middle-center; font-size: 40px; height: 100%; background-color: rgb(255, 0, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+    </ui:VisualElement>
 </ui:UXML>

@@ -5,11 +5,10 @@ using System.Linq;
 using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-public class MainView : MonoBehaviour
+public class MainView : ViewBase
 {
     [SerializeField] private VisualTreeAsset skillHolderTemplate;
     [SerializeField] private VisualTreeAsset skillTooltipTemplate;
@@ -63,7 +62,10 @@ public class MainView : MonoBehaviour
                 case "": break;
                 case "OpenSetting": 
                 {
-                    visualElement.RegisterCallback<MouseDownEvent>(evt => print("Open Setting"));
+                    visualElement.RegisterCallback<MouseDownEvent>(evt => 
+                    {
+                        gameUIManager.ActivateLayer((int)GameUIManager.LayerUse.Config);
+                    });
                     break;
                 }
                 default: break;

@@ -5,6 +5,10 @@ using UnityEngine.UIElements;
 
 public class GameUIManager : MonoBehaviour
 {
+    public enum LayerUse
+    {
+        Config = 1
+    }
     public static Dictionary<string, VisualElement> helpers = new Dictionary<string, VisualElement>();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -59,12 +63,14 @@ public class GameUIManager : MonoBehaviour
     {
         mainView = GetComponent<MainView>();
         configView = GetComponent<ConfigView>();
+        mainView.GameUIManager = configView.GameUIManager = this;
     }
 
     private void InstantiateView()
     {
         configMenu = configMenuVTA.Instantiate();
         configMenu.name = "config__menu-root";
+        configMenu.style.flexGrow = 1;
         layers[1].Q(classes:"safe-area").Add(configMenu);
     }
 
@@ -100,5 +106,17 @@ public class GameUIManager : MonoBehaviour
             layers[i].style.left = 99999f;
             layers[i].style.top = 99999f;
         }
+    }
+
+    public void ActivateLayer(int layerIndex)
+    {
+        layers[layerIndex].style.left = 0;
+        layers[layerIndex].style.top = 0;
+    }
+
+    public void DeactivateLayer(int layerIndex)
+    {
+        layers[layerIndex].style.left = 99999f;
+        layers[layerIndex].style.top = 99999f;
     }
 }

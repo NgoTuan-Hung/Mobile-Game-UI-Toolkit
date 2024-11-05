@@ -4,10 +4,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class ConfigView : MonoBehaviour
+public class ConfigView : ViewBase
 {
     UIDocument uIDocument;
-    VisualElement root, configMenu;
+    VisualElement root, configMenu, configExitButton;
     ConfigData configData;
     VisualTreeAsset configMenuContentAsset, configCheckboxAsset, configDropdownAsset, configSliderAsset;
     VisualElement currentSelectedMenuItem, currentDisplayedConfigContent;
@@ -17,6 +17,11 @@ public class ConfigView : MonoBehaviour
         uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement.Q<VisualElement>(name: "config__menu-root");
         configMenu = root.Q<VisualElement>(name: "config__menu");
+        configExitButton = root.Q<VisualElement>(name : "config__exit-button");
+        configExitButton.RegisterCallback<PointerDownEvent>((evt) => 
+        {
+            gameUIManager.DeactivateLayer((int)GameUIManager.LayerUse.Config);
+        });
         
         configData = Resources.Load<ConfigData>("UI/ConfigData/Config");
         GetVisualTreeAsset();

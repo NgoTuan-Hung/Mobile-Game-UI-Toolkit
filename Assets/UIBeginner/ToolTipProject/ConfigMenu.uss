@@ -8,6 +8,7 @@
     padding-left: 21px;
     height: 100%;
     -unity-font-definition: url("project://database/Assets/UIBeginner/ToolTipProject/Font/Square-Black%20SDF.asset?fileID=11400000&guid=1c90e76cc99f1464691e50d318f7a8a1&type=2#Square-Black SDF");
+    -unity-text-align: middle-left;
 }
 
 .config__menu-item-selected {
@@ -102,9 +103,9 @@ DropdownField {
 .config__menu-content {
     background-color: rgb(48, 48, 48);
     align-self: center;
-    width: 90%;
     margin-top: 9px;
     flex-grow: 1;
+    width: 100%;
 }
 
 .config__menu-content-inner {
