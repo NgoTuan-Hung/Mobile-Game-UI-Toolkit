@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/ToolTipProject/Joystick.uss?fileID=7433441132597879392&amp;guid=f8f3816f37ea54a4d810272c5b786a76&amp;type=3#Joystick" />
+    <ui:VisualElement style="width: 250px; height: 250px;">
+        <ui:VisualElement class="better-joystick">
+            <ui:VisualElement class="better-inner-joystick" style="position: relative;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

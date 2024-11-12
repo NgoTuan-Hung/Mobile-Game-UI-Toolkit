@@ -11,14 +11,15 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="layer1__zone2" style="flex-grow: 1; width: 100%; height: 50%; align-items: flex-start;">
-                <ui:VisualElement name="main-view__skill-scroll-view-holder" style="height: 100%; top: 0; width: 60%; align-self: flex-end;">
+            <ui:VisualElement name="layer1__zone2" style="flex-grow: 1; width: 100%; height: 50%; flex-direction: row;">
+                <ui:VisualElement name="main-view__skill-scroll-view-holder" style="height: 100%; width: 60%; left: 40%;">
                     <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; left: 85%; top: 0;" />
                     <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="top: 25%; left: 70%; position: absolute;" />
                     <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; left: 55%; top: 50%;" />
                     <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; top: 75%; left: 40%;" />
                 </ui:VisualElement>
             </ui:VisualElement>
+            <BetterJoystick.Runtime.Joystick style="position: absolute; align-self: center;" />
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Layer2" class="layer">

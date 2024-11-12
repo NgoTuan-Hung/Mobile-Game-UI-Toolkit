@@ -229,10 +229,10 @@ public class MainView : ViewBase
     {
         var healthBar = healthBarTemplate.Instantiate();
         gameUIManager.GetLayer((int)GameUIManager.LayerUse.MainView).Add(healthBar);
-        StartCoroutine(handleHealthBarFloating(transform, healthBar, camera));
+        StartCoroutine(HandleHealthBarFloating(transform, healthBar, camera));
     }
 
-    public IEnumerator handleHealthBarFloating(Transform transform, VisualElement healthBar, Camera camera)
+    public IEnumerator HandleHealthBarFloating(Transform transform, VisualElement healthBar, Camera camera)
     {
         Vector2 newPosition;
         while (true)
