@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="Joystick" src="project://database/Assets/UIBeginner/ToolTipProject/Joystick.uxml?fileID=9197481963319205126&amp;guid=f57fe9bb277e9d443870d857d164c3b2&amp;type=3#Joystick" />
     <ui:Template name="HelperLens" src="project://database/Assets/UIBeginner/ToolTipProject/HelperLens.uxml?fileID=9197481963319205126&amp;guid=c871b99ade0afe440b4cf9ca74878ac8&amp;type=3#HelperLens" />
     <Style src="project://database/Assets/UIBeginner/ToolTipProject/SkillScrollView.uss?fileID=7433441132597879392&amp;guid=8f37d1eb70233fb41b4cb3f761b6a52a&amp;type=3#SkillScrollView" />
     <ui:VisualElement name="Layer1" class="layer">
@@ -12,6 +13,7 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="layer1__zone2" style="flex-grow: 1; width: 100%; height: 50%; flex-direction: row;">
+                <ui:Instance template="Joystick" name="Joystick" style="position: absolute;" />
                 <ui:VisualElement name="main-view__skill-scroll-view-holder" style="height: 100%; width: 60%; left: 40%;">
                     <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; left: 85%; top: 0;" />
                     <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="top: 25%; left: 70%; position: absolute;" />
@@ -19,7 +21,6 @@
                     <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; top: 75%; left: 40%;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <BetterJoystick.Runtime.Joystick style="position: absolute; align-self: center;" />
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Layer2" class="layer">

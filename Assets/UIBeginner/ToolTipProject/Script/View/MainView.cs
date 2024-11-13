@@ -37,8 +37,8 @@ public class MainView : ViewBase
         helperLensRoot.style.position = Position.Absolute;
         HelperLensDragAndDropManipulator dragAndDropManipulator = new HelperLensDragAndDropManipulator(helperLensRoot, skillTooltipTemplate);
 
-        InitializeSkillHolderList();
-
+        HandleSkillView();
+        HandleJoyStickView();
         HandleOptionFunctionality();
     }
 
@@ -98,7 +98,7 @@ public class MainView : ViewBase
     }
 
     /* Populate the skill slots info */
-    public void InitializeSkillHolderList()
+    public void HandleSkillView()
     {
         List<SkillData> skillDatas = Resources.LoadAll<SkillData>("SkillData").ToList();
         skillTooltipSS = Resources.Load<StyleSheet>("SkillTooltipSS");
@@ -173,21 +173,7 @@ public class MainView : ViewBase
     public IEnumerator HandleScrollSnap(SkillScrollViewUIInfo skillScrollViewUIInfo)
     {
         /* Find any first touch that overlaps the skill scroll view */
-        Touch associatedTouch = new Touch();
-        foreach (var touch in Touch.activeTouches)
-        {
-            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
-            {
-                /* Convert from screen space to panel space */
-                var touchPosition = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
-
-                if (skillScrollViewUIInfo.ScrollView.worldBound.Overlaps(new Rect(touchPosition, new Vector2(20, 20))))
-                {
-                    associatedTouch = touch;
-                    break;
-                }
-            }
-        }
+        Touch associatedTouch = TouchExtension.GetTouchOverlapVisualElement(skillScrollViewUIInfo.ScrollView, root.panel);
 
         /* snap logic only happens when we release the touch */
         while (associatedTouch.phase != UnityEngine.InputSystem.TouchPhase.Ended) yield return new WaitForSeconds(Time.deltaTime);
@@ -242,6 +228,68 @@ public class MainView : ViewBase
 
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
+    }
+
+    VisualElement joyStickHolder, joyStickOuter, joyStickInner;
+    float innerRadius, outerRadius, outerRadiusSqr; Vector2 joyStickCenterPosition, touchPos, centerToTouch; Vector3 joyStickInnerDefaultPosition;
+    public delegate void JoyStickMoveEvent(Vector2 value);
+    public JoyStickMoveEvent joyStickMoveEvent;
+    public void HandleJoyStickView()
+    {
+        joyStickHolder = root.Q<VisualElement>(name: "JoyStickHolder");
+        joyStickOuter = joyStickHolder.ElementAt(0);
+        joyStickInner = joyStickOuter.ElementAt(0);
+
+        joyStickOuter.RegisterCallback<GeometryChangedEvent>((evt) => 
+        {
+            PrepareValue();
+        });
+
+        joyStickInner.RegisterCallback<GeometryChangedEvent>((evt) => 
+        {
+            PrepareValue();
+        });
+        
+
+        joyStickOuter.RegisterCallback<PointerDownEvent>((evt) => 
+        {
+            Touch touch = TouchExtension.GetTouchOverlapVisualElement(joyStickOuter, root.panel);
+            touchPos = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
+            // Check if touch inside the circle
+
+            centerToTouch = touchPos - joyStickCenterPosition;
+            if (centerToTouch.sqrMagnitude < outerRadiusSqr) StartCoroutine(HandleJoyStick(touch));            
+        });
+    }
+
+    public void PrepareValue()
+    {
+        outerRadius = joyStickOuter.resolvedStyle.width / 2f;
+        outerRadiusSqr = outerRadius * outerRadius;
+        joyStickCenterPosition = new Vector2(joyStickOuter.worldBound.position.x + outerRadius, joyStickOuter.worldBound.position.y + outerRadius);
+        innerRadius = joyStickInner.resolvedStyle.width / 2f;
+        joyStickInnerDefaultPosition = new Vector3(outerRadius - innerRadius, outerRadius - innerRadius, joyStickInner.transform.position.z);
+        joyStickInner.transform.position = joyStickInnerDefaultPosition;
+    }
+
+    public IEnumerator HandleJoyStick(Touch touch)
+    {
+        while (touch.phase != UnityEngine.InputSystem.TouchPhase.Ended)
+        {
+            centerToTouch *= Math.Min(1f, outerRadius / centerToTouch.magnitude);
+            joyStickMoveEvent?.Invoke(centerToTouch);
+
+            joyStickInner.transform.position = joyStickOuter.WorldToLocal
+            (
+                joyStickCenterPosition + centerToTouch - new Vector2(innerRadius, innerRadius)
+            );
+
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+            touchPos = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
+            centerToTouch = touchPos - joyStickCenterPosition;
+        }
+
+        joyStickInner.transform.position = joyStickInnerDefaultPosition;
     }
 }
 
