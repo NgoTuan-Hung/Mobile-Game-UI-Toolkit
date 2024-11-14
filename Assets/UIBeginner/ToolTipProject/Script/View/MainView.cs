@@ -128,7 +128,11 @@ public class MainView : ViewBase
             SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollView, null);
 
             skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollViewUIInfo);
-            skillScrollView.RegisterCallback<PointerDownEvent>((evt) => {SkillScrollViewPointerDown(skillScrollViewUIInfo);});
+            skillScrollView.RegisterCallback<PointerDownEvent>((evt) => 
+            {
+                evt.StopPropagation();
+                SkillScrollViewPointerDown(skillScrollViewUIInfo);
+            });
             skillScrollView.RegisterCallback<GeometryChangedEvent>
             (
                 (evt) => SkillScrollViewGeometryChanged(skillScrollViewUIInfo)
@@ -253,6 +257,7 @@ public class MainView : ViewBase
 
         joyStickOuter.RegisterCallback<PointerDownEvent>((evt) => 
         {
+            evt.StopPropagation();
             Touch touch = TouchExtension.GetTouchOverlapVisualElement(joyStickOuter, root.panel);
             touchPos = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
             // Check if touch inside the circle
@@ -284,7 +289,7 @@ public class MainView : ViewBase
                 joyStickCenterPosition + centerToTouch - new Vector2(innerRadius, innerRadius)
             );
 
-            yield return new WaitForSeconds(Time.fixedDeltaTime);
+            yield return new WaitForSeconds(Time.deltaTime);
             touchPos = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
             centerToTouch = touchPos - joyStickCenterPosition;
         }

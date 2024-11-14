@@ -1,7 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.UIElements;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class GameUIManager : MonoBehaviour
 {
@@ -40,20 +42,25 @@ public class GameUIManager : MonoBehaviour
     VisualElement root;
     List<VisualElement> layers;
 
-    MainView mainView;
-    ConfigView configView; 
+    private MainView mainView;
+    private ConfigView configView; 
     [SerializeField] private VisualTreeAsset configMenuVTA;
-    VisualElement configMenu; 
+    VisualElement configMenu;
+
+    public MainView MainView { get => mainView; set => mainView = value; }
+    public ConfigView ConfigView { get => configView; set => configView = value; }
 
     private void Awake() 
     {
         EnhancedTouchSupport.Enable();
         mainUIDocument = GetComponent<UIDocument>();
         root = mainUIDocument.rootVisualElement;
+
         layers = root.Query<VisualElement>(classes: "layer").ToList();
         layers.Sort((ve1, ve2) => ve1.name.CompareTo(ve2.name));
-        
         InitDefaultLayer();
+        AddLayerEvent();
+
         HandleSafeArea();
 
         GetViewComponents();
@@ -110,6 +117,15 @@ public class GameUIManager : MonoBehaviour
         }
     }
 
+    public void AddLayerEvent()
+    {
+        layers[(int)LayerUse.MainView].RegisterCallback<PointerDownEvent>((evt) => 
+        {
+            Touch touch = TouchExtension.GetTouchOverlapRect(new Rect(evt.position, new Vector2(1, 1)), layers[0].panel);
+            StartCoroutine(MainViewSwipeHandle(touch));
+        });
+    }
+
     public void ActivateLayer(int layerIndex)
     {
         layers[layerIndex].style.left = 0;
@@ -125,5 +141,20 @@ public class GameUIManager : MonoBehaviour
     public VisualElement GetLayer(int layerIndex)
     {
         return layers[layerIndex];
+    }
+
+    public delegate void MainViewSwipeDelegate(Vector2 vector2);
+    public MainViewSwipeDelegate mainViewSwipeDelegate;
+    Vector2 previousSwipePosition, swipeVector;
+    public IEnumerator MainViewSwipeHandle(Touch touch)
+    {
+        previousSwipePosition = touch.screenPosition;
+        while (touch.phase != UnityEngine.InputSystem.TouchPhase.Ended)
+        {
+            swipeVector = touch.screenPosition - previousSwipePosition;
+            mainViewSwipeDelegate?.Invoke(swipeVector);
+            previousSwipePosition = touch.screenPosition;
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+        }
     }
 }
