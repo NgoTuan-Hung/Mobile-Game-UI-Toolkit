@@ -108,6 +108,7 @@
     <Compile Include="Assets\UIBeginner\GlowEditor.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\GameScreen\ProgressDisplay.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Utilities\EventRegistry.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\UIRenderer\TestVisualElement.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Model\MainViewOptionData.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Events\SettingsEvents.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\SettingsScreen.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Utilities\ExtensionMethods.cs" />
     <Compile Include="Assets\UIBeginner\SomethingCool\SomethingCoolListController.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\ScriptableObjects\MenuButtonSO.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\UIRenderer\TestVisualElementVectorApi.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoSelectionScreen.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\ConfigView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\MainMenuScreen.cs" />

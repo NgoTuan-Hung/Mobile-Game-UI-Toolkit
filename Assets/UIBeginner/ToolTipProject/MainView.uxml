@@ -5,6 +5,7 @@
     <ui:VisualElement name="Layer1" class="layer">
         <ui:VisualElement class="safe-area">
             <ui:VisualElement name="layer1__zone1" style="width: 100%; height: 50%;">
+                <TestVisualElementVectorApi style="position: absolute; width: 150px; height: 150px;" />
                 <ui:VisualElement name="main-view__option-container" style="flex-direction: row; align-self: flex-end;">
                     <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="main-view__option-expand-button" class="main-view__option-expand-button-original" />
                     <ui:VisualElement name="main-view__options-parent" style="flex-grow: 1; overflow: hidden;">
