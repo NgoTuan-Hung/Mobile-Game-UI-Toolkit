@@ -19,7 +19,7 @@ public class TestVisualElementVectorApi : VisualElement
 		var painter2D = meshGenerationContext.painter2D;
 		
 		painter2D.strokeColor = color;
-		painter2D.lineWidth = 20;
+		painter2D.lineWidth = 10;
 		painter2D.lineCap = LineCap.Round;
 		painter2D.lineJoin = LineJoin.Round;
 		

@@ -80,6 +80,7 @@
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\States\DelayState.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\GameUIManager.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Utilities\Description.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\UIRenderer\TestVisualElementArc.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\Script\Player\PlayerScript.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\SkillTooltipView.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Events\GameEvents.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Assets\UIBeginner\ToolTipProject\Script\UIRenderer\TestVisualElementVectorApi.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\0_DemoSelection\DemoSelectionScreen.cs" />
     <Compile Include="Assets\UIBeginner\ToolTipProject\Script\View\ConfigView.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\UIRenderer\HealthInnerUI.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Screens\MainMenuScreen.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\5_Pseudo-classesDemo\PseudoClassesDemo.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\StateMachine\States\State.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Utilities\NullRefChecker.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\Gameplay\UserResponses.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\_StyleGuide\StyleExample.cs" />
+    <Compile Include="Assets\UIBeginner\ToolTipProject\Script\UIRenderer\HealthUI.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Scripts\DemoBase.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\UI\Base\UIManager.cs" />
     <Compile Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\Scripts\ScriptableObjects\QuestionSO.cs" />
