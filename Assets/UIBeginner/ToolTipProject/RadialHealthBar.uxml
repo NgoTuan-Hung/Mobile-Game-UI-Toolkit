@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <RadialProgressUI start-color="#000000FF" end-color="#000000FF" progress="1" progress-width="2.5" StartColor="#000000FF" EndColor="#000000FF" Progress="1" ProgressWidth="5" style="width: 100px; height: 100px; position: relative; left: 0;">
+        <RadialProgressUI progress="0.89" progresswidth="25.5" progress-width="30" end-color="#00FF00F8" style="width: 70%; height: 70%; position: absolute; left: 15%; top: 15%;">
+            <RadialProgressUI start-color="#000000FF" end-color="#000000FF" progress-width="1.5" progress="1" style="position: absolute; width: 57.14%; height: 57.14%; left: 21.14%; top: 21.14%; display: flex;">
+                <RadialProgressUI start-color="#FF0000FF" end-color="#00FF00FF" progress="0.53" progress-width="20" style="width: 50%; height: 50%; position: absolute; left: 25%; top: 25%; display: flex;" />
+            </RadialProgressUI>
+        </RadialProgressUI>
+    </RadialProgressUI>
+</ui:UXML>

@@ -784,7 +784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368871773}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.005327588, y: 0.9913714, z: -0.04264998, w: -0.123836376}
+  m_LocalRotation: {x: -0.0053275833, y: 0.9913714, z: -0.04264992, w: -0.12383641}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1220,13 +1220,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillHolderTemplate: {fileID: 9197481963319205126, guid: b4520969730ca9147821e3cfef5ed886, type: 3}
   skillTooltipTemplate: {fileID: 9197481963319205126, guid: c578c08d3d8d43a45a2704bb37590449, type: 3}
-  healthBarTemplate: {fileID: 9197481963319205126, guid: 73888615f647c174fb2e5baae21bb279, type: 3}
+  healthBarTemplate: {fileID: 9197481963319205126, guid: 3f72ee5c05a99174db9a10e9d74fd4b9, type: 3}
   scrollSound: {fileID: 8300000, guid: e326be21875f7f44a936600669bb382c, type: 3}
   audioSource: {fileID: 2064516915}
   snapTime: 0.09
   snapIntervalPortion: 0.1
   distanceToSnapScale: 0.05
   testIndex: 1
+  healthBarOffset: {x: -0.5, y: 1.5, z: 0}
+  healthBarPositionLerpTime: 0.1
 --- !u!114 &1783247536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1811,7 +1813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073915363}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.007573282, y: 0.99043447, z: -0.060627874, w: -0.12371932}
+  m_LocalRotation: {x: -0.0075732763, y: 0.99043447, z: -0.060627837, w: -0.12371936}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
