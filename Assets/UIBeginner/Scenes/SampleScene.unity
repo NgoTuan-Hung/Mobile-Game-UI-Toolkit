@@ -332,7 +332,7 @@ Transform:
   m_GameObject: {fileID: 420813184}
   serializedVersion: 2
   m_LocalRotation: {x: 0.009822423, y: -0.9891678, z: 0.07863335, w: 0.12356111}
-  m_LocalPosition: {x: 0.0000004172325, y: 0, z: 0}
+  m_LocalPosition: {x: 0.0000004172325, y: 0.00000059604645, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -784,8 +784,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368871773}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0053275833, y: 0.9913714, z: -0.04264992, w: -0.12383641}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.005327594, y: 0.9913714, z: -0.042649966, w: -0.123836406}
+  m_LocalPosition: {x: 0, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillHolderTemplate: {fileID: 9197481963319205126, guid: b4520969730ca9147821e3cfef5ed886, type: 3}
   skillTooltipTemplate: {fileID: 9197481963319205126, guid: c578c08d3d8d43a45a2704bb37590449, type: 3}
-  healthBarTemplate: {fileID: 9197481963319205126, guid: 3f72ee5c05a99174db9a10e9d74fd4b9, type: 3}
+  healthBarTemplate: {fileID: 9197481963319205126, guid: 135c68ba23c990148852d029f790b26b, type: 3}
   scrollSound: {fileID: 8300000, guid: e326be21875f7f44a936600669bb382c, type: 3}
   audioSource: {fileID: 2064516915}
   snapTime: 0.09
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   distanceToSnapScale: 0.05
   testIndex: 1
   healthBarOffset: {x: -0.5, y: 1.5, z: 0}
-  healthBarPositionLerpTime: 0.1
+  healthBarPositionLerpTime: 0.05
 --- !u!114 &1783247536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,8 +1813,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073915363}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0075732763, y: 0.99043447, z: -0.060627837, w: -0.12371936}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.0075732833, y: 0.99043447, z: -0.060627837, w: -0.12371936}
+  m_LocalPosition: {x: 0, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

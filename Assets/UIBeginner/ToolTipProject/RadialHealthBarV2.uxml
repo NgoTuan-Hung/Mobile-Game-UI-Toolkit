@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/ToolTipProject/RadialHealthBarV2.uss?fileID=7433441132597879392&amp;guid=af766a87b2ee8d046bd5ce96d7e8ce88&amp;type=3#RadialHealthBarV2" />
+    <RadialProgressUI progress="1" progress-width="2.5" start-color="#000000FF" end-color="#000000FF" style="width: 50px; height: 50px;">
+        <RadialProgressUI progress-width="21" progress="0.8" end-color="#00FFFFFF" start-color="#6000FFFF" style="width: 45%; height: 45%; left: 28%; top: 27%; display: flex;" />
+    </RadialProgressUI>
+</ui:UXML>

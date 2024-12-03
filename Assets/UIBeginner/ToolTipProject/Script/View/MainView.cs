@@ -226,29 +226,28 @@ public class MainView : ViewBase
 	[SerializeField] private float healthBarPositionLerpTime = 0.5f;
 	public IEnumerator HandleHealthBarFloating(Transform transform, VisualElement healthBar, Camera camera)
 	{
-		Vector2 newPosition;
-		Vector3 newVector3Position = transform.position + healthBarOffset, prevVector3Position, expectedVector3Position;
+		Vector2 newVector2Position = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, transform.position + healthBarOffset, camera), prevVector2Position, expectedVector2Position;
+		
 		float currentTime = 0;
 		while (true)
 		{
-			prevVector3Position = newVector3Position;
-			newVector3Position = transform.position + healthBarOffset;
-			if (newVector3Position != prevVector3Position)
+			prevVector2Position = newVector2Position;
+			newVector2Position = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, transform.position + healthBarOffset, camera);
+			
+			if (prevVector2Position != newVector2Position)
 			{
 				currentTime = 0;
 				while (currentTime < healthBarPositionLerpTime + Time.fixedDeltaTime)
 				{
-					expectedVector3Position = Vector3.Lerp(prevVector3Position, newVector3Position, currentTime / healthBarPositionLerpTime);
-					newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, expectedVector3Position, camera);
-					healthBar.transform.position = new Vector2(newPosition.x, newPosition.y);
+					expectedVector2Position = Vector2.Lerp(prevVector2Position, newVector2Position, currentTime / healthBarPositionLerpTime);
+					healthBar.transform.position = new Vector2(expectedVector2Position.x, expectedVector2Position.y);
 					
 					currentTime += Time.fixedDeltaTime;
 					yield return new WaitForSeconds(Time.fixedDeltaTime);
 				}
 			}
 			
-			newPosition = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, newVector3Position, camera);
-			healthBar.transform.position = new Vector2(newPosition.x, newPosition.y);
+			healthBar.transform.position = new Vector2(newVector2Position.x, newVector2Position.y);
 
 			yield return new WaitForSeconds(Time.fixedDeltaTime);
 		}

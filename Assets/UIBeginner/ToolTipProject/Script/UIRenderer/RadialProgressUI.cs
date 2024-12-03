@@ -23,6 +23,8 @@ public class RadialProgressUI : VisualElement
 		painter2D.Arc(center, center.x, -90 + progress * 360, -90, ArcDirection.CounterClockwise);
 		painter2D.Stroke();
 	}
+	
+	static readonly CustomStyleProperty<float> cs_Progress = new CustomStyleProperty<float>("--progress");
 	float progress = 0f;
 	public float Progress
 	{

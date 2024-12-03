@@ -188,6 +188,7 @@
     <None Include="Assets\UIBeginner\SomethingCool\SomethingCool.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uxml\MainMenuScreen.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Quiz\UI\Uss\LevelSelection.uss" />
+    <None Include="Assets\UIBeginner\ToolTipProject\RadialHealthBarV2.uxml" />
     <None Include="Assets\UIBeginner\ToolTipProject\MainView.uxml" />
     <None Include="Assets\UIBeginner\Resources\UI\MainView\HealthBar.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\1_UXMLVisualTreeDemo\Templates\parent-container.uxml" />
@@ -270,6 +271,7 @@
     <None Include="Assets\UIBeginner\ToolTipProject\RadialHealthBar.uxml" />
     <None Include="Assets\Unity Technologies\QuizU - A UI Toolkit demo\Demos\Templates\demo-template-container.uxml" />
     <None Include="Assets\UIBeginner\ToolTipProject\SkillScrollView.uss" />
+    <None Include="Assets\UIBeginner\ToolTipProject\RadialHealthBarV2.uss" />
     <None Include="Assets\UIBeginner\ButtonGlow.uss" />
   </ItemGroup>
   <ItemGroup>
