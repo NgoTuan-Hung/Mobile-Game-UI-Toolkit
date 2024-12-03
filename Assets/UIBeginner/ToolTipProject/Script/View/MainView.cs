@@ -100,9 +100,11 @@ public class MainView : ViewBase
 	/* Populate the skill slots info */
 	public void HandleSkillView()
 	{
+		/* Load datas from scriptable object and create skill ui.
+		Also handle tooltip of each skill*/
 		List<SkillData> skillDatas = Resources.LoadAll<SkillData>("SkillData").ToList();
 		skillTooltipSS = Resources.Load<StyleSheet>("SkillTooltipSS");
-
+		
 		skillDatas.ForEach(skillData => 
 		{
 			var newSkillHolder = skillHolderTemplate.Instantiate();
@@ -121,18 +123,22 @@ public class MainView : ViewBase
 			newSkillHolder.AddToClassList("helper-invisible");
 		});
 
+		/* Handle scroll logic, scrolling, snapping */
 		skillScrollViews.ForEach(skillScrollView => 
 		{
-			skillScrollView.contentContainer.ElementAt(0).RemoveFromClassList("helper-invisible");
+			if (skillScrollView.contentContainer.childCount != 0) skillScrollView.contentContainer.ElementAt(0).RemoveFromClassList("helper-invisible");
 
 			SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollView, null);
 
 			skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollViewUIInfo);
+			
 			skillScrollView.RegisterCallback<PointerDownEvent>((evt) => 
 			{
 				evt.StopPropagation();
 				SkillScrollViewPointerDown(skillScrollViewUIInfo);
 			});
+			
+			/* Used to determine some final style of scrooll view (height,...)*/
 			skillScrollView.RegisterCallback<GeometryChangedEvent>
 			(
 				(evt) => SkillScrollViewGeometryChanged(skillScrollViewUIInfo)

@@ -331,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420813184}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.07924446, y: 0, z: 0, w: 0.9968552}
   m_LocalPosition: {x: 0, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -784,7 +784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368871773}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04298144, y: -4.4223246e-16, z: 8.103572e-17, w: 0.9990759}
+  m_LocalRotation: {x: 0.042981427, y: -1.4570986e-14, z: -1.0269957e-15, w: 0.9990759}
   m_LocalPosition: {x: 0, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 1783247537}
   - component: {fileID: 1783247538}
   m_Layer: 0
-  m_Name: ListSkill
+  m_Name: VIew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   snapIntervalPortion: 0.1
   distanceToSnapScale: 0.05
   testIndex: 1
-  healthBarOffset: {x: -0.5, y: 1.5, z: 0}
+  healthBarOffset: {x: -0.5, y: 1, z: 0}
   healthBarPositionLerpTime: 0.05
 --- !u!114 &1783247536
 MonoBehaviour:
@@ -1813,7 +1813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073915363}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.061099082, y: -0.000000016487006, z: 0.0000000010092269, w: 0.9981317}
+  m_LocalRotation: {x: 0.061099004, y: -0.000000041108855, z: 0.0000000025164109, w: 0.99813175}
   m_LocalPosition: {x: 0, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
