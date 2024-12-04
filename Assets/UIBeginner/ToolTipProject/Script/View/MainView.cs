@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
@@ -16,36 +14,56 @@ public class MainView : ViewBase
 	[SerializeField] private VisualTreeAsset skillTooltipTemplate;
 	[SerializeField] private VisualTreeAsset healthBarTemplate;
 	// [SerializeField] private VisualTreeAsset helperLensTemplate;
-
-	List<ScrollView> skillScrollViews;
-	VisualElement root, helperLensRoot, optionExpandButton, options;
 	StyleSheet skillTooltipSS;
 	[SerializeField] private AudioClip scrollSound;
 	[SerializeField] private AudioSource audioSource;
-	bool optionExpandButtonExpanded = true;
+	bool optionExpandButtonExpanded = true, scrollLockExpandButtonExpanded = true, 
+	lockExpandLocked = true;
 
 	public void Init() 
 	{
+		FindAllVisualElements();
 		snapInterval = snapTime * snapIntervalPortion;
 		audioSource.clip = scrollSound;
 
-		var uiDocument = GetComponent<UIDocument>();
-		root = uiDocument.rootVisualElement;
-
-		/* Create a helper lens and assign drag and drop logic to it */
-		helperLensRoot = root.Q<VisualElement>("helper-lens");
-		helperLensRoot.style.position = Position.Absolute;
 		HelperLensDragAndDropManipulator dragAndDropManipulator = new HelperLensDragAndDropManipulator(helperLensRoot, skillTooltipTemplate);
 
 		HandleSkillView();
 		HandleJoyStickView();
-		HandleOptionFunctionality();
+		HandleScrollLockExpandLock();
+		HandleExpandButton();
+		PopulateOptions();
 	}
 
-	public void HandleOptionFunctionality()
+	List<ScrollView> skillScrollViews;
+	VisualElement root, helperLensRoot, optionExpandButton, options, mainViewLayer, skillScrollViewHolder
+	, scrollLockParent, scrollLockExpandButton, scrollLockExpandLock, joyStickHolder, joyStickOuter, joyStickInner;
+	public void FindAllVisualElements()
 	{
-		HandleOptionExpandButton();
-		PopulateOptions();
+		var uiDocument = GetComponent<UIDocument>();
+		root = uiDocument.rootVisualElement;
+		
+		mainViewLayer = GameUIManager.Instance.Layers[(int)GameUIManager.LayerUse.MainView];
+		
+		/* Option Views */
+		optionExpandButton = mainViewLayer.Q<VisualElement>(name: "main-view__option-expand-button");
+		options = mainViewLayer.Q<VisualElement>(name: "main-view__options");
+		
+		/* ScrollView */
+		skillScrollViewHolder = mainViewLayer.Q<VisualElement>(name: "main-view__skill-scroll-view-holder");
+		skillScrollViews = skillScrollViewHolder.Query<ScrollView>(classes: "main-view__skill-scroll-view").ToList();
+		scrollLockParent = skillScrollViewHolder.Q<VisualElement>(name: "scroll-lock-view__lock-parent");
+		scrollLockExpandButton = skillScrollViewHolder.Q<VisualElement>(name: "scroll-lock-view__expand-button");
+		scrollLockExpandLock = scrollLockParent.Q<VisualElement>(name: "scroll-lock-view__lock-expand");
+		
+		/* JoyStick */
+		joyStickHolder = mainViewLayer.Q<VisualElement>(name: "JoyStickHolder");
+		joyStickOuter = joyStickHolder.ElementAt(0);
+		joyStickInner = joyStickOuter.ElementAt(0);
+		
+		/* Create a helper lens and assign drag and drop logic to it */
+		helperLensRoot = root.Q<VisualElement>("helper-lens");
+		helperLensRoot.style.position = Position.Absolute;
 	}
 
 	public void PopulateOptions()
@@ -76,10 +94,8 @@ public class MainView : ViewBase
 		});
 	}
 
-	public void HandleOptionExpandButton()
+	public void HandleExpandButton()
 	{
-		optionExpandButton = root.Q<VisualElement>(name: "main-view__option-expand-button");
-		options = root.Q<VisualElement>(name: "main-view__options");
 		optionExpandButton.RegisterCallback<PointerDownEvent>((evt) => 
 		{
 			if (optionExpandButtonExpanded)
@@ -95,9 +111,36 @@ public class MainView : ViewBase
 				options.RemoveFromClassList("main-view__options-collapsed");
 			}
 		});
+		
+		scrollLockExpandButton.RegisterCallback<PointerDownEvent>((evt) =>
+		{
+			if (lockExpandLocked) return;
+			if (scrollLockExpandButtonExpanded)
+			{
+				scrollLockExpandButtonExpanded = false;
+				scrollLockExpandButton.AddToClassList("main-view__expand-button-collapsed");
+				scrollLockParent.AddToClassList("scroll-lock-view__lock-parent-collapsed");
+			}
+			else
+			{
+				scrollLockExpandButtonExpanded = true;
+				scrollLockExpandButton.RemoveFromClassList("main-view__expand-button-collapsed");
+				scrollLockParent.RemoveFromClassList("scroll-lock-view__lock-parent-collapsed");
+			}
+		});
 	}
 	
-	VisualElement scrollLockParent;
+	private void HandleScrollLockExpandLock()
+	{
+		scrollLockExpandLock.RegisterCallback<MouseDownEvent>(evt => 
+		{
+			if (lockExpandLocked) scrollLockExpandLock.AddToClassList("scroll-lock-view__lock-expand-unlocked");
+			else scrollLockExpandLock.RemoveFromClassList("scroll-lock-view__lock-expand-unlocked");
+			lockExpandLocked = !lockExpandLocked;
+			
+		});
+	}
+
 	[SerializeField] private VisualTreeAsset scrollViewLockVTA;
 	/// <summary>
 	/// Handle scroll view lock (mostly skill)
@@ -134,9 +177,7 @@ public class MainView : ViewBase
 	/// Populate the skill slots info
 	/// </summary>
 	public void HandleSkillView()
-	{
-		skillScrollViews = root.Query<ScrollView>(classes: "main-view__skill-scroll-view").ToList();
-		
+	{	
 		/* Load datas from scriptable object and create skill ui.
 		Also handle tooltip of each skill*/
 		List<SkillData> skillDatas = Resources.LoadAll<SkillData>("SkillData").ToList();
@@ -161,8 +202,6 @@ public class MainView : ViewBase
 		});
 
 		/* Handle scroll logic, scrolling, snapping */
-		scrollLockParent = root.Q<VisualElement>(name: "scroll-lock-view__lock-parent");
-		
 		for (int i=0;i<skillScrollViews.Count;i++)
 		{
 			if (skillScrollViews[i].contentContainer.childCount != 0) skillScrollViews[i].contentContainer.ElementAt(0).RemoveFromClassList("helper-invisible");
@@ -323,16 +362,11 @@ public class MainView : ViewBase
 		}
 	}
 
-	VisualElement joyStickHolder, joyStickOuter, joyStickInner;
 	float innerRadius, outerRadius, outerRadiusSqr; Vector2 joyStickCenterPosition, touchPos, centerToTouch; Vector3 joyStickInnerDefaultPosition;
 	public delegate void JoyStickMoveEvent(Vector2 value);
 	public JoyStickMoveEvent joyStickMoveEvent;
 	public void HandleJoyStickView()
 	{
-		joyStickHolder = root.Q<VisualElement>(name: "JoyStickHolder");
-		joyStickOuter = joyStickHolder.ElementAt(0);
-		joyStickInner = joyStickOuter.ElementAt(0);
-
 		joyStickOuter.RegisterCallback<GeometryChangedEvent>((evt) => 
 		{
 			PrepareValue();

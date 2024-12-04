@@ -122,6 +122,29 @@
 .scroll-lock-view__lock-half-lock {
     height: 100%;
     width: 50px;
-    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/half-lock.png?fileID=2800000&guid=e8997bbead19d8b4aa494c657946faae&type=3#half-lock");
+    background-image: url('project://database/Assets/UIBeginner/ToolTipProject/Icon/half-lock.png?fileID=2800000&guid=e8997bbead19d8b4aa494c657946faae&type=3#half-lock');
     margin-right: 35px;
+}
+
+.scroll-lock-view__lock-parent-collapsed {
+    translate: 760px 0;
+    opacity: 0;
+}
+
+.scroll-lock-view__lock-expand-locked {
+    position: absolute;
+    right: 0;
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/lock_v2.png?fileID=2800000&guid=c22f4b54b20c7954c91d741d44c182f3&type=3#lock_v2");
+    height: 100%;
+    width: 50px;
+    margin-right: 35px;
+}
+
+.scroll-lock-view__lock-expand-unlocked {
+    right: 0;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    margin-right: 35px;
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/unlock_v2.png?fileID=2800000&guid=19d0e925db5082a40a23805e1d269849&type=3#unlock_v2");
 }

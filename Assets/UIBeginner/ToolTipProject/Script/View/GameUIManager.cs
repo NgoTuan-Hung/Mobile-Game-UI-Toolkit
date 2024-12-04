@@ -5,7 +5,7 @@ using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.UIElements;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-public class GameUIManager : MonoBehaviour
+public class GameUIManager : MonoSingleton<GameUIManager>
 {
 	public enum LayerUse
 	{
@@ -49,8 +49,9 @@ public class GameUIManager : MonoBehaviour
 
 	public MainView MainView { get => mainView; set => mainView = value; }
 	public ConfigView ConfigView { get => configView; set => configView = value; }
+    public List<VisualElement> Layers { get => layers; set => layers = value; }
 
-	private void Awake() 
+    private void Awake() 
 	{
 		EnhancedTouchSupport.Enable();
 		mainUIDocument = GetComponent<UIDocument>();
