@@ -8,6 +8,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
+public enum ScrollViewLockState {Locked = 0, Unlocked = 1, HalfLocked = 2}
+
 public class MainView : ViewBase
 {
 	[SerializeField] private VisualTreeAsset skillHolderTemplate;
@@ -29,8 +31,6 @@ public class MainView : ViewBase
 
 		var uiDocument = GetComponent<UIDocument>();
 		root = uiDocument.rootVisualElement;
-
-		skillScrollViews = root.Query<ScrollView>(classes: "main-view__skill-scroll-view").ToList();
 
 		/* Create a helper lens and assign drag and drop logic to it */
 		helperLensRoot = root.Q<VisualElement>("helper-lens");
@@ -85,21 +85,58 @@ public class MainView : ViewBase
 			if (optionExpandButtonExpanded)
 			{
 				optionExpandButtonExpanded = false;
-				optionExpandButton.AddToClassList("main-view__option-expand-button-collapsed");
+				optionExpandButton.AddToClassList("main-view__expand-button-collapsed");
 				options.AddToClassList("main-view__options-collapsed");
 			}
 			else
 			{
 				optionExpandButtonExpanded = true;
-				optionExpandButton.RemoveFromClassList("main-view__option-expand-button-collapsed");
+				optionExpandButton.RemoveFromClassList("main-view__expand-button-collapsed");
 				options.RemoveFromClassList("main-view__options-collapsed");
 			}
 		});
 	}
-
-	/* Populate the skill slots info */
+	
+	VisualElement scrollLockParent;
+	[SerializeField] private VisualTreeAsset scrollViewLockVTA;
+	/// <summary>
+	/// Handle scroll view lock (mostly skill)
+	/// . Edge case: when we are scrolling but click lock
+	/// </summary>
+	public void HandleScrollLock(SkillScrollViewUIInfo skillScrollViewUIInfo)
+	{	
+		switch (skillScrollViewUIInfo.ScrollViewLockState)
+		{
+			case ScrollViewLockState.Locked:
+			{
+				skillScrollViewUIInfo.ScrollViewLock.AddToClassList("scroll-lock-view__lock-unlocked");
+				skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.Unlocked;
+				break;
+			}
+			case ScrollViewLockState.Unlocked:
+			{
+				skillScrollViewUIInfo.ScrollViewLock.RemoveFromClassList("scroll-lock-view__lock-unlocked");
+				skillScrollViewUIInfo.ScrollViewLock.AddToClassList("scroll-lock-view__lock-half-lock");
+				skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.HalfLocked;
+				break;
+			}
+			case ScrollViewLockState.HalfLocked:
+			{
+				skillScrollViewUIInfo.ScrollViewLock.RemoveFromClassList("scroll-lock-view__lock-half-lock");
+				skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.Locked;
+				break;
+			}
+			default: break;
+		}
+	}
+	
+	/// <summary>
+	/// Populate the skill slots info
+	/// </summary>
 	public void HandleSkillView()
 	{
+		skillScrollViews = root.Query<ScrollView>(classes: "main-view__skill-scroll-view").ToList();
+		
 		/* Load datas from scriptable object and create skill ui.
 		Also handle tooltip of each skill*/
 		List<SkillData> skillDatas = Resources.LoadAll<SkillData>("SkillData").ToList();
@@ -124,31 +161,46 @@ public class MainView : ViewBase
 		});
 
 		/* Handle scroll logic, scrolling, snapping */
-		skillScrollViews.ForEach(skillScrollView => 
+		scrollLockParent = root.Q<VisualElement>(name: "scroll-lock-view__lock-parent");
+		
+		for (int i=0;i<skillScrollViews.Count;i++)
 		{
-			if (skillScrollView.contentContainer.childCount != 0) skillScrollView.contentContainer.ElementAt(0).RemoveFromClassList("helper-invisible");
+			if (skillScrollViews[i].contentContainer.childCount != 0) skillScrollViews[i].contentContainer.ElementAt(0).RemoveFromClassList("helper-invisible");
 
-			SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollView, null);
-
-			skillScrollView.verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollViewUIInfo);
+			SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollViews[i], i, null);
+			skillScrollViewUIInfo.ScrollViewLock = scrollViewLockVTA.Instantiate().ElementAt(0);
+			skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = 0;
+			skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.Locked;
+			skillScrollViewUIInfo.ScrollViewLock.RegisterCallback<PointerDownEvent>((evt) => 
+			{
+				evt.StopPropagation();
+				HandleScrollLock(skillScrollViewUIInfo);
+			});
 			
-			skillScrollView.RegisterCallback<PointerDownEvent>((evt) => 
+			scrollLockParent.Insert(0, skillScrollViewUIInfo.ScrollViewLock.parent);
+
+			skillScrollViews[i].verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollViewUIInfo);
+			
+			skillScrollViews[i].RegisterCallback<PointerDownEvent>((evt) => 
 			{
 				evt.StopPropagation();
 				SkillScrollViewPointerDown(skillScrollViewUIInfo);
 			});
 			
 			/* Used to determine some final style of scrooll view (height,...)*/
-			skillScrollView.RegisterCallback<GeometryChangedEvent>
+			skillScrollViews[i].RegisterCallback<GeometryChangedEvent>
 			(
 				(evt) => SkillScrollViewGeometryChanged(skillScrollViewUIInfo)
 			);
-		});
+		}
 	}
 
+	/// <summary>
+	/// Mostly used to play sound if scroll view scroll passed a element
+	/// </summary>
+	/// <param name="skillScrollViewUIInfo"></param>
 	public void SkillScrollViewEvent(SkillScrollViewUIInfo skillScrollViewUIInfo)
 	{
-		// play sound if scroll view scroll passed a element
 		skillScrollViewUIInfo.SkillScrollViewNewIndex = (int)Math.Floor(skillScrollViewUIInfo.ScrollView.verticalScroller.value / skillScrollViewUIInfo.ScrollViewHeight + 0.5f);
 		if (skillScrollViewUIInfo.SkillScrollViewNewIndex != skillScrollViewUIInfo.SkillScrollViewPreviousIndex)
 		{
@@ -162,6 +214,7 @@ public class MainView : ViewBase
 
 	public void SkillScrollViewPointerDown(SkillScrollViewUIInfo skillScrollViewUIInfo)
 	{
+		if (skillScrollViewUIInfo.ScrollViewLockState == ScrollViewLockState.Locked) return;
 		if (skillScrollViewUIInfo.ScrollSnapCoroutine != null) StopCoroutine(skillScrollViewUIInfo.ScrollSnapCoroutine);
 		skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
 		skillScrollViewUIInfo.ScrollSnapCoroutine = StartCoroutine(HandleScrollSnap(skillScrollViewUIInfo));
@@ -179,7 +232,6 @@ public class MainView : ViewBase
 	[SerializeField] private float distanceToSnapScale = 0.5f;
 	private float defaultScrollDecelerationRate = 0.135f;
 
-	[SerializeField] private int testIndex;
 	public IEnumerator HandleScrollSnap(SkillScrollViewUIInfo skillScrollViewUIInfo)
 	{
 		/* Find any first touch that overlaps the skill scroll view */
@@ -202,7 +254,7 @@ public class MainView : ViewBase
 		/* snap logic:
 		- Grab the element that the center of the scroll view is inside
 		- Lerp from the current scroll position to the element's position
-		- Snap to the element For more accurate snapping (since unity scroll view is very closed source and this snap behavior is not perfect)
+		- Snap to the element for more accurate snapping (Use unity internal function ScrollTo)
 		 */
 		currentPosition = skillScrollViewUIInfo.ScrollView.verticalScroller.value;
 		finalIndex = (int)Math.Floor(skillScrollViewUIInfo.ScrollView.verticalScroller.value/skillScrollViewUIInfo.ScrollViewHeight + 0.5f);
@@ -327,15 +379,19 @@ public class MainView : ViewBase
 public class SkillScrollViewUIInfo
 {
 	private ScrollView scrollView;
+	private VisualElement scrollViewLock;
+	private ScrollViewLockState scrollViewLockState;
+	private int scrollViewListIndex;
 	private Coroutine scrollSnapCoroutine;
 	private int skillScrollViewPreviousIndex = 0;
 	private int skillScrollViewNewIndex = 0;
 	private float scrollViewHeight = 0f;
 	private float distanceToSnap = 0f;
 
-	public SkillScrollViewUIInfo(ScrollView scrollView, Coroutine scrollSnapCoroutine)
+	public SkillScrollViewUIInfo(ScrollView scrollView, int scrollViewListIndex, Coroutine scrollSnapCoroutine)
 	{
 		this.scrollView = scrollView;
+		this.scrollViewListIndex = scrollViewListIndex;
 		this.scrollSnapCoroutine = scrollSnapCoroutine;
 	}
 
@@ -345,5 +401,8 @@ public class SkillScrollViewUIInfo
 	public int SkillScrollViewNewIndex { get => skillScrollViewNewIndex; set => skillScrollViewNewIndex = value; }
 	public float ScrollViewHeight { get => scrollViewHeight; set => scrollViewHeight = value; }
 	public float DistanceToSnap { get => distanceToSnap; set => distanceToSnap = value; }
+	public int ScrollViewListIndex { get => scrollViewListIndex; set => scrollViewListIndex = value; }
+	public VisualElement ScrollViewLock { get => scrollViewLock; set => scrollViewLock = value; }
+	public ScrollViewLockState ScrollViewLockState { get => scrollViewLockState; set => scrollViewLockState = value; }
 }
 

@@ -13,16 +13,42 @@
     opacity: 0;
 }
 
-.main-view__option-expand-button-original {
+.main-view__expand-button-original {
     width: 50px;
     height: 50px;
     background-image: url("project://database/Assets/UIBeginner/ToolTipProject/expand-down.png?fileID=2800000&guid=e4e16c08bc2d6f343af3596d2a788b4a&type=3#expand-down");
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
-.main-view__option-expand-button-collapsed {
+.main-view__expand-button-collapsed {
     background-image: url("project://database/Assets/UIBeginner/ToolTipProject/expand.png?fileID=2800000&guid=654486a0882cd104aac8360062faa44e&type=3#expand");
     width: 50px;
     height: 50px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .main-view__option-button {
@@ -77,4 +103,25 @@
 
 .test-scrollview {
     background-color: rgb(0, 0, 0);
+}
+
+.scroll-lock-view__lock {
+    height: 100%;
+    width: 50px;
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/lock.png?fileID=2800000&guid=23640369944c8a64ca4280cf2b33857d&type=3#lock");
+    margin-right: 35px;
+}
+
+.scroll-lock-view__lock-unlocked {
+    height: 100%;
+    width: 50px;
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/unlock.png?fileID=2800000&guid=b2ef5b9e837a60c46a431762976fa4f1&type=3#unlock");
+    margin-right: 35px;
+}
+
+.scroll-lock-view__lock-half-lock {
+    height: 100%;
+    width: 50px;
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/half-lock.png?fileID=2800000&guid=e8997bbead19d8b4aa494c657946faae&type=3#half-lock");
+    margin-right: 35px;
 }
