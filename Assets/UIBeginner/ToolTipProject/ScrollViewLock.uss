@@ -12,9 +12,9 @@
     margin-right: 35px;
 }
 
-.scroll-lock-view__lock-half-lock {
+.scroll-lock-view__lock-auto-lock {
     height: 100%;
     width: 50px;
-    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/half-lock.png?fileID=2800000&guid=e8997bbead19d8b4aa494c657946faae&type=3#half-lock");
+    background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/auto-lock.png?fileID=2800000&guid=e4453f8cee2cca24b947e114c7cafbe6&type=3#auto-lock");
     margin-right: 35px;
 }

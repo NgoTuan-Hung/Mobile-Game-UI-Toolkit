@@ -15,7 +15,7 @@
             </ui:VisualElement>
             <ui:Instance template="Joystick" name="Joystick" style="position: absolute; bottom: 200px;" />
             <ui:VisualElement name="main-view__skill-scroll-view-holder" style="height: 70%; width: 60%; position: relative; bottom: 0; align-self: flex-end;">
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; right: 510px; bottom: 170px;">
+                <ui:ScrollView name="ScrollView" vertical-scroller-visibility="Hidden" class="main-view__skill-scroll-view" style="position: absolute; right: 510px; bottom: 170px;">
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
                     <ui:Instance template="SkillHolder" name="SkillHolder" />

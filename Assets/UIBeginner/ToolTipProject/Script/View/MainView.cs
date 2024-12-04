@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-public enum ScrollViewLockState {Locked = 0, Unlocked = 1, HalfLocked = 2}
+public enum ScrollViewLockState {Locked = 0, Unlocked = 1, AutoLocked = 2}
 
 public class MainView : ViewBase
 {
@@ -116,13 +116,13 @@ public class MainView : ViewBase
 			case ScrollViewLockState.Unlocked:
 			{
 				skillScrollViewUIInfo.ScrollViewLock.RemoveFromClassList("scroll-lock-view__lock-unlocked");
-				skillScrollViewUIInfo.ScrollViewLock.AddToClassList("scroll-lock-view__lock-half-lock");
-				skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.HalfLocked;
+				skillScrollViewUIInfo.ScrollViewLock.AddToClassList("scroll-lock-view__lock-auto-lock");
+				skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.AutoLocked;
 				break;
 			}
-			case ScrollViewLockState.HalfLocked:
+			case ScrollViewLockState.AutoLocked:
 			{
-				skillScrollViewUIInfo.ScrollViewLock.RemoveFromClassList("scroll-lock-view__lock-half-lock");
+				skillScrollViewUIInfo.ScrollViewLock.RemoveFromClassList("scroll-lock-view__lock-auto-lock");
 				skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.Locked;
 				break;
 			}
@@ -168,8 +168,8 @@ public class MainView : ViewBase
 			if (skillScrollViews[i].contentContainer.childCount != 0) skillScrollViews[i].contentContainer.ElementAt(0).RemoveFromClassList("helper-invisible");
 
 			SkillScrollViewUIInfo skillScrollViewUIInfo = new SkillScrollViewUIInfo(skillScrollViews[i], i, null);
+			/* For each scroll view, we assign a lock to it */
 			skillScrollViewUIInfo.ScrollViewLock = scrollViewLockVTA.Instantiate().ElementAt(0);
-			skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = 0;
 			skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.Locked;
 			skillScrollViewUIInfo.ScrollViewLock.RegisterCallback<PointerDownEvent>((evt) => 
 			{
@@ -177,14 +177,22 @@ public class MainView : ViewBase
 				HandleScrollLock(skillScrollViewUIInfo);
 			});
 			
-			scrollLockParent.Insert(0, skillScrollViewUIInfo.ScrollViewLock.parent);
+			scrollLockParent.Insert(i, skillScrollViewUIInfo.ScrollViewLock.parent);
 
 			skillScrollViews[i].verticalScroller.valueChanged += evt => SkillScrollViewEvent(skillScrollViewUIInfo);
 			
 			skillScrollViews[i].RegisterCallback<PointerDownEvent>((evt) => 
 			{
-				evt.StopPropagation();
+				/* Check When locked is set to true, lock the scroll view. Also scroll happen at 
+				scrollview.contentContainer.PointerDownEvent(TrickleDown) so we can block it here */
+				if (skillScrollViewUIInfo.ScrollViewLockState == ScrollViewLockState.Locked) evt.StopPropagation();
 				SkillScrollViewPointerDown(skillScrollViewUIInfo);
+			}, TrickleDown.TrickleDown);
+			
+			skillScrollViews[i].RegisterCallback<PointerDownEvent>((evt) => 
+			{
+				/* Used to block touch screen event */
+				evt.StopPropagation();
 			});
 			
 			/* Used to determine some final style of scrooll view (height,...)*/
@@ -271,6 +279,10 @@ public class MainView : ViewBase
 		}
 		skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
 		skillScrollViewUIInfo.ScrollView.ScrollTo(skillScrollViewUIInfo.ScrollView.contentContainer.Children().ElementAt(finalIndex));
+		
+		/* If we choose half locked scroll view, we can handle it here, right after scrolling and snapping
+		is done */
+		if (skillScrollViewUIInfo.ScrollViewLockState == ScrollViewLockState.AutoLocked) HandleScrollLock(skillScrollViewUIInfo);
 	}
 
 	public void InstantiateAndHandleHealthBar(Transform transform, Camera camera)
