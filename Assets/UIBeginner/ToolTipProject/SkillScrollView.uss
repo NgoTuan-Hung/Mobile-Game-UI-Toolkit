@@ -148,3 +148,6 @@
     margin-right: 35px;
     background-image: url("project://database/Assets/UIBeginner/ToolTipProject/Icon/unlock_v2.png?fileID=2800000&guid=19d0e925db5082a40a23805e1d269849&type=3#unlock_v2");
 }
+
+.dynamic-ui__movable {
+}

@@ -10,7 +10,8 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 	public enum LayerUse
 	{
 		MainView = 0,
-		Config = 1
+		Config = 1,
+		DynamicUI = 2
 	}
 	public static Dictionary<string, VisualElement> helpers = new Dictionary<string, VisualElement>();
 
@@ -49,9 +50,9 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 
 	public MainView MainView { get => mainView; set => mainView = value; }
 	public ConfigView ConfigView { get => configView; set => configView = value; }
-    public List<VisualElement> Layers { get => layers; set => layers = value; }
+	public List<VisualElement> Layers { get => layers; set => layers = value; }
 
-    private void Awake() 
+	private void Awake() 
 	{
 		EnhancedTouchSupport.Enable();
 		mainUIDocument = GetComponent<UIDocument>();
@@ -67,6 +68,9 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 		GetViewComponents();
 		InstantiateView();
 		InitViewComponents();
+		
+		/* Testing */
+		TestDynamicUI();
 	}
 
 	private void GetViewComponents()
@@ -83,6 +87,7 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 		configMenu.style.flexGrow = 1;
 		layers[1].Q(classes:"safe-area").Add(configMenu);
 	}
+
 
 	private void InitViewComponents()
 	{
@@ -156,6 +161,68 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 			mainViewSwipeDelegate?.Invoke(swipeVector);
 			previousSwipePosition = touch.screenPosition;
 			yield return new WaitForSeconds(Time.fixedDeltaTime);
+		}
+	}
+	
+	/* Dynamic UI parts */
+	VisualElement dynamicUIButton;
+	Dictionary<int, VisualElement> dynamicUIDictionary = new Dictionary<int, VisualElement>();
+	List<VisualElement> moveableElements;
+	void TestDynamicUI()
+	{
+		dynamicUIButton = root.Q<Button>(name: "dynamic-ui-button");
+		var dynamicLayer = layers[(int)LayerUse.DynamicUI];
+		dynamicUIButton.RegisterCallback<PointerDownEvent>((evt) => 
+		{
+			evt.StopPropagation();
+		});
+		
+		dynamicUIButton.RegisterCallback<ClickEvent>((evt) => 
+		{
+			ActivateLayer((int)LayerUse.DynamicUI);
+		});
+		
+		moveableElements = root.Query<VisualElement>(classes: "dynamic-ui__movable").ToList();
+		
+		moveableElements.ForEach(element => 
+		{
+			VisualElement visualElement = new VisualElement();
+			visualElement.style.position = Position.Absolute;
+			visualElement.style.backgroundColor = new Color(0, 0, 0, 0.5f);
+			dynamicLayer.Add(visualElement);
+			
+			visualElement.style.width = 100;
+			visualElement.style.height = 100;
+			visualElement.style.left = element.worldBound.x;
+			visualElement.style.top = element.worldBound.y;
+			
+			// visualElement.worldBound.Set
+			// (
+			// 	element.worldBound.x,
+			// 	element.worldBound.y,
+			// 	element.worldBound.width,
+			// 	element.worldBound.height
+			// );
+			
+			dynamicUIDictionary.Add(visualElement.GetHashCode(), element);
+			
+			visualElement.RegisterCallback<PointerDownEvent>((evt) => 
+			{
+				Touch touch = TouchExtension.GetTouchOverlapVisualElement(visualElement, dynamicLayer.panel);
+				StartCoroutine(moveDynamicUI(touch, visualElement, dynamicUIDictionary[visualElement.GetHashCode()]));
+			});
+		});
+	}
+	
+	IEnumerator moveDynamicUI(Touch touch, VisualElement controlElement, VisualElement manipulatedElement)
+	{
+		while (touch.phase != UnityEngine.InputSystem.TouchPhase.Ended)
+		{
+			Vector2 touchPosition = RuntimePanelUtils.ScreenToPanel(controlElement.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
+			controlElement.transform.position = controlElement.parent.WorldToLocal(touchPosition);
+			manipulatedElement.transform.position = manipulatedElement.parent.WorldToLocal(touchPosition);
+		
+			yield return new WaitForSeconds(Time.fixedDeltaTime);	
 		}
 	}
 }

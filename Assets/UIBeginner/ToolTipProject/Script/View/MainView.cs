@@ -144,7 +144,7 @@ public class MainView : ViewBase
 	[SerializeField] private VisualTreeAsset scrollViewLockVTA;
 	/// <summary>
 	/// Handle scroll view lock (mostly skill)
-	/// . Edge case: when we are scrolling but click lock
+	/// . Lock state: Lock -> Unlocked -> AutoLocked -> Lock -> ...
 	/// </summary>
 	public void HandleScrollLock(SkillScrollViewUIInfo skillScrollViewUIInfo)
 	{	
@@ -234,7 +234,7 @@ public class MainView : ViewBase
 				evt.StopPropagation();
 			});
 			
-			/* Used to determine some final style of scrooll view (height,...)*/
+			/* Used to determine some final style of scroll view (height,...)*/
 			skillScrollViews[i].RegisterCallback<GeometryChangedEvent>
 			(
 				(evt) => SkillScrollViewGeometryChanged(skillScrollViewUIInfo)
@@ -319,11 +319,16 @@ public class MainView : ViewBase
 		skillScrollViewUIInfo.ScrollView.scrollDecelerationRate = defaultScrollDecelerationRate;
 		skillScrollViewUIInfo.ScrollView.ScrollTo(skillScrollViewUIInfo.ScrollView.contentContainer.Children().ElementAt(finalIndex));
 		
-		/* If we choose half locked scroll view, we can handle it here, right after scrolling and snapping
+		/* If we choose auto lock scroll view, we can handle it here, right after scrolling and snapping
 		is done */
 		if (skillScrollViewUIInfo.ScrollViewLockState == ScrollViewLockState.AutoLocked) HandleScrollLock(skillScrollViewUIInfo);
 	}
 
+	/// <summary>
+	/// Assign a health bar to a specific transform
+	/// </summary>
+	/// <param name="transform"></param>
+	/// <param name="camera"></param>
 	public void InstantiateAndHandleHealthBar(Transform transform, Camera camera)
 	{
 		var healthBar = healthBarTemplate.Instantiate();
@@ -333,16 +338,27 @@ public class MainView : ViewBase
 
 	[SerializeField] private Vector3 healthBarOffset = new Vector3(-0.5f, 1.5f, 0);
 	[SerializeField] private float healthBarPositionLerpTime = 0.5f;
+	/// <summary>
+	/// Handle floating health bar position every frame. Health bar will follow the transform with a little offset
+	/// and the health bar movement will be smoothed every specified duration (healthBarPositionLerpTime).
+	/// </summary>
+	/// <param name="transform"></param>
+	/// <param name="healthBar"></param>
+	/// <param name="camera"></param>
+	/// <returns></returns>
 	public IEnumerator HandleHealthBarFloating(Transform transform, VisualElement healthBar, Camera camera)
 	{
-		Vector2 newVector2Position = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, transform.position + healthBarOffset, camera), prevVector2Position, expectedVector2Position;
+		Vector2 newVector2Position = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, transform.position + healthBarOffset, camera)
+		, prevVector2Position, expectedVector2Position;
+		float currentTime;
 		
-		float currentTime = 0;
 		while (true)
 		{
 			prevVector2Position = newVector2Position;
+			/* Check current health bar position */
 			newVector2Position = RuntimePanelUtils.CameraTransformWorldToPanel(root.panel, transform.position + healthBarOffset, camera);
 			
+			/* Start lerping position for specified duration if position change detected. Note that we only lerp on screen space position.*/
 			if (prevVector2Position != newVector2Position)
 			{
 				currentTime = 0;
@@ -351,8 +367,7 @@ public class MainView : ViewBase
 					expectedVector2Position = Vector2.Lerp(prevVector2Position, newVector2Position, currentTime / healthBarPositionLerpTime);
 					healthBar.transform.position = new Vector2(expectedVector2Position.x, expectedVector2Position.y);
 					
-					currentTime += Time.fixedDeltaTime;
-					yield return new WaitForSeconds(Time.fixedDeltaTime);
+					yield return new WaitForSeconds(currentTime += Time.fixedDeltaTime);
 				}
 			}
 			
@@ -364,6 +379,9 @@ public class MainView : ViewBase
 
 	float innerRadius, outerRadius, outerRadiusSqr; Vector2 joyStickCenterPosition, touchPos, centerToTouch; Vector3 joyStickInnerDefaultPosition;
 	public delegate void JoyStickMoveEvent(Vector2 value);
+	/// <summary>
+	/// You can add your custom event here whenever joystick is moved, function will be populated with a vector2
+	/// </summary>
 	public JoyStickMoveEvent joyStickMoveEvent;
 	public void HandleJoyStickView()
 	{
@@ -400,18 +418,26 @@ public class MainView : ViewBase
 		joyStickInner.transform.position = joyStickInnerDefaultPosition;
 	}
 
+	/// <summary>
+	/// Handle joystick inner circle movement
+	/// </summary>
+	/// <param name="touch"></param>
+	/// <returns></returns>
 	public IEnumerator HandleJoyStick(Touch touch)
 	{
 		while (touch.phase != UnityEngine.InputSystem.TouchPhase.Ended)
 		{
+			/* Ensure touch is inside the circle */
 			centerToTouch *= Math.Min(1f, outerRadius / centerToTouch.magnitude);
+			/* Custom event will be executed here*/
 			joyStickMoveEvent?.Invoke(centerToTouch);
 
+			/* Make inner circle follow touch position within circle bound */
 			joyStickInner.transform.position = joyStickOuter.WorldToLocal
 			(
 				joyStickCenterPosition + centerToTouch - new Vector2(innerRadius, innerRadius)
 			);
-
+ 
 			yield return new WaitForSeconds(Time.deltaTime);
 			touchPos = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
 			centerToTouch = touchPos - joyStickCenterPosition;
