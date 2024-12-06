@@ -1,5 +1,5 @@
 .config__menu-item {
-    background-color: rgb(74, 131, 253);
+    background-color: rgb(40, 40, 40);
     font-size: 36px;
     color: rgb(223, 223, 223);
     padding-top: 6px;
@@ -12,7 +12,7 @@
 }
 
 .config__menu-item-selected {
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(60, 60, 60);
 }
 
 .test-label {
@@ -41,6 +41,10 @@ SliderInt #unity-drag-container {
 SliderInt .unity-base-slider__input {
     width: 30%;
     flex-grow: 0;
+}
+
+SliderInt #unity-tracker{
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .unity-toggle {
@@ -101,11 +105,23 @@ DropdownField {
 }
 
 .config__menu-content {
-    background-color: rgb(48, 48, 48);
+    background-color: rgba(0, 0, 0, 0.5);
     align-self: center;
     margin-top: 9px;
     flex-grow: 1;
     width: 100%;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .config__menu-content-inner {
@@ -114,4 +130,23 @@ DropdownField {
     align-self: center;
     height: 90%;
     top: 5%;
+}
+
+.config__config-button {
+    width: 150px;
+    height: 100px;
+    -unity-text-align: middle-center;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
 }

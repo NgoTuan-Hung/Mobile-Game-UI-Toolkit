@@ -10,6 +10,7 @@ VisualElement {}
 .unity-base-dropdown__item
 {
     font-size: 48px;
+    color: rgb(255, 255, 255);
     -unity-font-definition: url("project://database/Assets/UIBeginner/ToolTipProject/Font/Square-Black%20SDF.asset?fileID=11400000&guid=1c90e76cc99f1464691e50d318f7a8a1&type=2#Square-Black SDF");
 }
 
@@ -19,5 +20,28 @@ VisualElement {}
     border-top-right-radius: 34px;
     border-bottom-right-radius: 34px;
     border-bottom-left-radius: 34px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-bottom-width: 5px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 5px;
     overflow: hidden;
+    background-color: rgba(46, 55, 62, 0.5);
+}
+
+.unity-base-dropdown__container-outer ScrollView
+{
+    background-color: rgba(46, 55, 62, 0.5);
+}
+
+.unity-base-dropdown__container-outer #unity-content-and-vertical-scroll-container 
+{
+    background-color: rgba(46, 55, 62, 0.5);
+}
+
+.config-item DropdownField .unity-base-field__input{
+    background-color: rgba(46, 55, 62, 0.5);
 }

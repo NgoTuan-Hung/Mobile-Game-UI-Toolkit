@@ -6,14 +6,14 @@
     <ui:VisualElement name="Layer1" class="layer">
         <ui:VisualElement class="safe-area">
             <ui:VisualElement name="layer1__zone1" style="height: 50%;">
-                <ui:VisualElement name="main-view__option-container" style="flex-direction: row; align-self: flex-end; position: absolute;">
+                <ui:VisualElement name="main-view__option-container" class="dynamic-ui__movable" style="flex-direction: row; align-self: flex-end; position: absolute;">
                     <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="main-view__option-expand-button" class="main-view__expand-button-original" />
                     <ui:VisualElement name="main-view__options-parent" style="flex-grow: 1; overflow: hidden;">
                         <ui:ScrollView name="main-view__options" vertical-scroller-visibility="Hidden" mode="Horizontal" horizontal-scroller-visibility="Hidden" style="width: 200px; height: 50px; transition-property: translate, opacity; transition-duration: 0.5s, 0.3s; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; background-color: rgba(255, 255, 255, 0.5); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:Instance template="Joystick" name="Joystick" style="position: absolute; bottom: 200px;" />
+            <ui:Instance template="Joystick" name="Joystick" class="dynamic-ui__movable" style="position: absolute; bottom: 200px; width: 250px; height: 250px;" />
             <ui:VisualElement name="main-view__skill-scroll-view-holder" style="height: 70%; width: 60%; position: relative; bottom: 0; align-self: flex-end;">
                 <ui:ScrollView name="ScrollView" vertical-scroller-visibility="Hidden" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; right: 510px; bottom: 170px;">
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
@@ -28,19 +28,19 @@
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
                 </ui:ScrollView>
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; right: 340px; bottom: 170px;" />
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; right: 170px; bottom: 170px;" />
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; right: 0; bottom: 170px;" />
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; right: 510px; bottom: 0;">
+                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; right: 340px; bottom: 170px;" />
+                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; right: 170px; bottom: 170px;" />
+                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; right: 0; bottom: 170px;" />
+                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; right: 510px; bottom: 0;">
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
                 </ui:ScrollView>
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; right: 340px; bottom: 0;">
+                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; right: 340px; bottom: 0;">
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
                 </ui:ScrollView>
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; bottom: 0; right: 170px;">
+                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; bottom: 0; right: 170px;">
                     <ui:Instance template="SkillHolder" name="SkillHolder" />
                 </ui:ScrollView>
-                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view" style="position: absolute; bottom: 0; right: 0;">
+                <ui:ScrollView vertical-scroller-visibility="Hidden" name="ScrollView" class="main-view__skill-scroll-view dynamic-ui__movable" style="position: absolute; bottom: 0; right: 0;">
                     <ui:VisualElement name="SkillHolder" style="position: relative; right: 0; bottom: 0;">
                         <Style src="project://database/Assets/UIBeginner/ToolTipProject/SkillHolder.uss?fileID=7433441132597879392&amp;guid=6eb72e730b98c3b459748405555df513&amp;type=3#SkillHolder" />
                         <ui:VisualElement name="skill-holder-out" style="opacity: 0.5;">
@@ -48,7 +48,7 @@
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:ScrollView>
-                <ui:VisualElement name="scroll-lock-view" style="flex-grow: 0; height: 50px; position: absolute; flex-direction: row; align-self: flex-end; bottom: 350px;">
+                <ui:VisualElement name="scroll-lock-view" class="dynamic-ui__movable" style="flex-grow: 0; height: 50px; position: absolute; flex-direction: row; align-self: flex-end; bottom: 350px;">
                     <ui:VisualElement name="scroll-lock-view__lock-parent" style="flex-grow: 1; overflow: hidden; height: 50px; width: 750px; background-color: rgba(255, 255, 255, 0.5); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; flex-direction: row; transition-property: translate, opacity; transition-duration: 1s, 0.15s;">
                         <ui:VisualElement name="scroll-lock-view__lock-expand" class="scroll-lock-view__lock-expand-locked" />
                     </ui:VisualElement>
@@ -56,7 +56,7 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dynamic-ui-button" style="position: absolute; left: 1000px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; width: 150px; height: 100px; display: none;" />
+        <ui:Label tabindex="-1" text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dynamic-ui-button" style="position: absolute; width: 150px; height: 100px; -unity-text-align: middle-center; font-size: 37px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; background-color: rgba(255, 255, 255, 0.5); right: 100px; top: 100px;" />
     </ui:VisualElement>
     <ui:VisualElement name="Layer2" class="layer">
         <ui:VisualElement class="safe-area" />
