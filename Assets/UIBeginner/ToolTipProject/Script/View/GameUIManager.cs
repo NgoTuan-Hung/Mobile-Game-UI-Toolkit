@@ -68,9 +68,6 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 		GetViewComponents();
 		InstantiateView();
 		InitViewComponents();
-		
-		/* Testing */
-		TestDynamicUI();
 	}
 
 	private void GetViewComponents()
@@ -143,6 +140,33 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 		layers[layerIndex].style.left = 99999f;
 		layers[layerIndex].style.top = 99999f;
 	}
+	
+	public void ActivateOnlyLayer(LayerUse layerUse)
+	{
+		for (int i = 0; i < layers.Count; i++)
+		{
+			layers[i].style.left = 99999f;
+			layers[i].style.top = 99999f;
+		}
+		
+		layers[(int)layerUse].style.left = 0;
+		layers[(int)layerUse].style.top = 0;
+	}
+	
+	public void ActivateOnlyLayers(List<LayerUse> layerUses)
+	{
+		for (int i = 0; i < layers.Count; i++)
+		{
+			layers[i].style.left = 99999f;
+			layers[i].style.top = 99999f;
+		}
+		
+		for (int i = 0; i < layerUses.Count; i++)
+		{
+			layers[(int)layerUses[i]].style.left = 0;
+			layers[(int)layerUses[i]].style.top = 0;
+		}
+	}
 
 	public VisualElement GetLayer(int layerIndex)
 	{
@@ -161,60 +185,6 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 			mainViewSwipeDelegate?.Invoke(swipeVector);
 			previousSwipePosition = touch.screenPosition;
 			yield return new WaitForSeconds(Time.fixedDeltaTime);
-		}
-	}
-	
-	/* Dynamic UI parts */
-	VisualElement dynamicUIButton;
-	Dictionary<int, VisualElement> dynamicUIDictionary = new Dictionary<int, VisualElement>();
-	List<VisualElement> moveableElements;
-	void TestDynamicUI()
-	{
-		dynamicUIButton = root.Q<VisualElement>(name: "dynamic-ui-button");
-		var dynamicLayer = layers[(int)LayerUse.DynamicUI];
-		dynamicUIButton.RegisterCallback<PointerDownEvent>((evt) => 
-		{
-			evt.StopPropagation();
-			ActivateLayer((int)LayerUse.DynamicUI);
-		});
-		
-		moveableElements = root.Query<VisualElement>(classes: "dynamic-ui__movable").ToList();
-		
-		for (int i=0;i<moveableElements.Count;i++)
-		{
-			VisualElement visualElement = new VisualElement();
-			visualElement.style.position = Position.Absolute;
-			visualElement.style.backgroundColor = new Color(1, 1, 0, 0.5f);
-			dynamicLayer.Add(visualElement);
-			
-			moveableElements[i].RegisterCallback<GeometryChangedEvent>((evt) => 
-			{
-				var element = evt.currentTarget as VisualElement;
-				visualElement.style.width = element.worldBound.width;
-				visualElement.style.height = element.worldBound.height;
-				visualElement.transform.position = element.worldBound.position;
-			});
-			
-			dynamicUIDictionary.Add(visualElement.GetHashCode(), moveableElements[i]);
-			
-			visualElement.RegisterCallback<PointerDownEvent>((evt) => 
-			{
-				Touch touch = TouchExtension.GetTouchOverlapVisualElement(visualElement, dynamicLayer.panel);
-				StartCoroutine(MoveDynamicUI(touch, visualElement, dynamicUIDictionary[visualElement.GetHashCode()]));
-			});
-		}
-	}
-	
-	IEnumerator MoveDynamicUI(Touch touch, VisualElement controlElement, VisualElement manipulatedElement)
-	{
-		manipulatedElement.style.right = manipulatedElement.style.left = manipulatedElement.style.top = manipulatedElement.style.bottom = 0;
-		while (touch.phase != UnityEngine.InputSystem.TouchPhase.Ended)
-		{
-			Vector2 touchPosition = RuntimePanelUtils.ScreenToPanel(controlElement.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
-			controlElement.transform.position = controlElement.parent.WorldToLocal(touchPosition);
-			manipulatedElement.transform.position = manipulatedElement.parent.WorldToLocal(touchPosition);
-		
-			yield return new WaitForSeconds(Time.fixedDeltaTime);	
 		}
 	}
 }

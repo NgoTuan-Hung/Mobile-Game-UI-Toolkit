@@ -15,3 +15,4 @@ MonoBehaviour:
   configType: 2
   configContentItems:
   - {fileID: 11400000, guid: 29a9a07bc197cb345adf239201f0a453, type: 2}
+  - {fileID: 11400000, guid: 136fd91ccd03a1f4fa3c4e05f8356232, type: 2}

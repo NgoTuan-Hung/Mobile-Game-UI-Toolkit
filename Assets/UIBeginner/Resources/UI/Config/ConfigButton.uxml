@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UIBeginner/ToolTipProject/ConfigMenu.uss?fileID=7433441132597879392&amp;guid=dbfd18edd57e0094795d693ae238259c&amp;type=3#ConfigMenu" />
+    <ui:VisualElement class="config-item" style="width: 100%; height: 100px; flex-direction: row;">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" class="config-label1 menu-content-button__label" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" class="config__config-button config-label1 menu-content-button__button" />
+    </ui:VisualElement>
+</ui:UXML>

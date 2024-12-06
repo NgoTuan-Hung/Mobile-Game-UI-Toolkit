@@ -6,7 +6,7 @@
     <ui:VisualElement name="Layer1" class="layer">
         <ui:VisualElement class="safe-area">
             <ui:VisualElement name="layer1__zone1" style="height: 50%;">
-                <ui:VisualElement name="main-view__option-container" class="dynamic-ui__movable" style="flex-direction: row; align-self: flex-end; position: absolute;">
+                <ui:VisualElement name="main-view__option-container" class="dynamic-ui__movable" style="flex-direction: row; align-self: flex-end; position: absolute; width: 250px; height: 50px;">
                     <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="main-view__option-expand-button" class="main-view__expand-button-original" />
                     <ui:VisualElement name="main-view__options-parent" style="flex-grow: 1; overflow: hidden;">
                         <ui:ScrollView name="main-view__options" vertical-scroller-visibility="Hidden" mode="Horizontal" horizontal-scroller-visibility="Hidden" style="width: 200px; height: 50px; transition-property: translate, opacity; transition-duration: 0.5s, 0.3s; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; background-color: rgba(255, 255, 255, 0.5); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);" />
@@ -56,13 +56,13 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:Label tabindex="-1" text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dynamic-ui-button" style="position: absolute; width: 150px; height: 100px; -unity-text-align: middle-center; font-size: 37px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; background-color: rgba(255, 255, 255, 0.5); right: 100px; top: 100px;" />
     </ui:VisualElement>
     <ui:VisualElement name="Layer2" class="layer">
         <ui:VisualElement class="safe-area" />
     </ui:VisualElement>
     <ui:VisualElement name="Layer3" class="layer">
         <ui:VisualElement class="safe-area" />
+        <ui:Label tabindex="-1" text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dynamic-ui-button" style="position: absolute; width: 150px; height: 100px; -unity-text-align: middle-center; font-size: 37px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; background-color: rgba(255, 255, 255, 0.5); right: 100px; top: 100px;" />
     </ui:VisualElement>
     <ui:Instance template="HelperLens" name="HelperLens" style="width: 150px; position: absolute;" />
 </ui:UXML>
