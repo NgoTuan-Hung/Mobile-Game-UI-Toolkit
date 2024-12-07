@@ -81,8 +81,10 @@ public class MainView : ViewBase
 				case "": break;
 				case "OpenSetting": 
 				{
-					visualElement.RegisterCallback<MouseDownEvent>(evt => 
+					visualElement.RegisterCallback<PointerDownEvent>(evt => 
 					{
+						/* Used to block touch screen swipe event */
+						evt.StopPropagation();
 						gameUIManager.ActivateLayer((int)GameUIManager.LayerUse.Config);
 					});
 					break;
@@ -98,6 +100,8 @@ public class MainView : ViewBase
 	{
 		optionExpandButton.RegisterCallback<PointerDownEvent>((evt) => 
 		{
+			/* Used to block touch screen swipe event */
+			evt.StopPropagation();
 			if (optionExpandButtonExpanded)
 			{
 				optionExpandButtonExpanded = false;
@@ -114,6 +118,7 @@ public class MainView : ViewBase
 		
 		scrollLockExpandButton.RegisterCallback<PointerDownEvent>((evt) =>
 		{
+			evt.StopPropagation();
 			if (lockExpandLocked) return;
 			if (scrollLockExpandButtonExpanded)
 			{
@@ -212,6 +217,7 @@ public class MainView : ViewBase
 			skillScrollViewUIInfo.ScrollViewLockState = ScrollViewLockState.Locked;
 			skillScrollViewUIInfo.ScrollViewLock.RegisterCallback<PointerDownEvent>((evt) => 
 			{
+				/* Used to block touch screen swipe event */
 				evt.StopPropagation();
 				HandleScrollLock(skillScrollViewUIInfo);
 			});
@@ -230,7 +236,7 @@ public class MainView : ViewBase
 			
 			skillScrollViews[i].RegisterCallback<PointerDownEvent>((evt) => 
 			{
-				/* Used to block touch screen event */
+				/* Used to block touch screen swipe event */
 				evt.StopPropagation();
 			});
 			
@@ -332,6 +338,8 @@ public class MainView : ViewBase
 	public void InstantiateAndHandleHealthBar(Transform transform, Camera camera)
 	{
 		var healthBar = healthBarTemplate.Instantiate();
+		healthBar.style.flexGrow = 0f;
+		healthBar.style.position = Position.Absolute;
 		gameUIManager.GetLayer((int)GameUIManager.LayerUse.MainView).Add(healthBar);
 		StartCoroutine(HandleHealthBarFloating(transform, healthBar, camera));
 	}
@@ -384,20 +392,13 @@ public class MainView : ViewBase
 	/// </summary>
 	public JoyStickMoveEvent joyStickMoveEvent;
 	public void HandleJoyStickView()
-	{
-		joyStickOuter.RegisterCallback<GeometryChangedEvent>((evt) => 
-		{
-			PrepareValue();
-		});
-
-		joyStickInner.RegisterCallback<GeometryChangedEvent>((evt) => 
-		{
-			PrepareValue();
-		});
-		
+	{	
+		prepareJoyStickStartValue += PrepareJoyStickStartValue;
+		joyStickHolder.parent.RegisterCallback<GeometryChangedEvent>((evt) => PrepareValue());
 
 		joyStickOuter.RegisterCallback<PointerDownEvent>((evt) => 
 		{
+			/* Used to block touch screen swipe event */
 			evt.StopPropagation();
 			Touch touch = TouchExtension.GetTouchOverlapVisualElement(joyStickOuter, root.panel);
 			touchPos = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
@@ -407,15 +408,22 @@ public class MainView : ViewBase
 			if (centerToTouch.sqrMagnitude < outerRadiusSqr) StartCoroutine(HandleJoyStick(touch));            
 		});
 	}
-
-	public void PrepareValue()
+	
+	public void PrepareJoyStickStartValue()
 	{
 		outerRadius = joyStickOuter.resolvedStyle.width / 2f;
 		outerRadiusSqr = outerRadius * outerRadius;
-		joyStickCenterPosition = new Vector2(joyStickOuter.worldBound.position.x + outerRadius, joyStickOuter.worldBound.position.y + outerRadius);
 		innerRadius = joyStickInner.resolvedStyle.width / 2f;
 		joyStickInnerDefaultPosition = new Vector3(outerRadius - innerRadius, outerRadius - innerRadius, joyStickInner.transform.position.z);
 		joyStickInner.transform.position = joyStickInnerDefaultPosition;
+		prepareJoyStickStartValue -= PrepareJoyStickStartValue;
+	}
+
+	Action prepareJoyStickStartValue;
+	public void PrepareValue()
+	{
+		prepareJoyStickStartValue?.Invoke();
+		joyStickCenterPosition = new Vector2(joyStickOuter.worldBound.position.x + outerRadius, joyStickOuter.worldBound.position.y + outerRadius);
 	}
 
 	/// <summary>

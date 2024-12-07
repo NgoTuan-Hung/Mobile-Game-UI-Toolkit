@@ -1,9 +1,0 @@
-.fack {
-    width: 50%;
-}
-
-.fack:hover
-{
-    background-color: green;
-    background-image: none;
-}

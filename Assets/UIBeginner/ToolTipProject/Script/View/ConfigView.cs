@@ -211,11 +211,19 @@ public class ConfigView : ViewBase
 	IEnumerator MoveDynamicUI(Touch touch, VisualElement controlElement, VisualElement manipulatedElement)
 	{
 		manipulatedElement.style.right = manipulatedElement.style.left = manipulatedElement.style.top = manipulatedElement.style.bottom = 0;
+		
 		while (touch.phase != UnityEngine.InputSystem.TouchPhase.Ended)
 		{
 			Vector2 touchPosition = RuntimePanelUtils.ScreenToPanel(controlElement.panel, new Vector2(touch.screenPosition.x, Screen.height - touch.screenPosition.y));
 			controlElement.transform.position = controlElement.parent.WorldToLocal(touchPosition);
 			manipulatedElement.transform.position = manipulatedElement.parent.WorldToLocal(touchPosition);
+		
+			/* Because we are using translate when moving the dynamic UI, GeometryChangedEvent will not be called. If we want
+			some custom call back when moving the dynamic UI, we can use manually call GeometryChangedEvent. Then we can register
+			GeometryChangedEvent on manipulatedElement. */
+			using GeometryChangedEvent evt = GeometryChangedEvent.GetPooled();
+			evt.target = manipulatedElement;
+			manipulatedElement.SendEvent(evt);
 		
 			yield return new WaitForSeconds(Time.fixedDeltaTime);	
 		}

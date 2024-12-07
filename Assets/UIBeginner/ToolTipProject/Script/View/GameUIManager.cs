@@ -63,11 +63,11 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 		InitDefaultLayer();
 		AddLayerEvent();
 
-		HandleSafeArea();
-
 		GetViewComponents();
 		InstantiateView();
 		InitViewComponents();
+		
+		HandleSafeArea();
 	}
 
 	private void GetViewComponents()
